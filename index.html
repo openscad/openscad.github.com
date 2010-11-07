@@ -1,2 +1,129 @@
-<h1>OpenSCAD</h1>
-<p>Front page test</p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>OpenSCAD - The Programmers Solid 3D CAD Modeller</title>
+<style type="text/css"><!--
+.prototype {
+	padding-left:2em;
+	font-size:larger;
+	font-weight:bolder;
+	font-family:monospace;
+}
+--></style>
+</head><body>
+
+<h1>OpenSCAD - The Programmers Solid 3D CAD Modeller</h1>
+
+<h3>About OpenSCAD</h3>
+
+<p>OpenSCAD is a software for creating solid 3D CAD objects. It is free
+software and available for Linux/UNIX, MS Windows and Apples OS X.</p>
+
+<p>Unlike most free software for creating 3D models (such as the famous
+application <a href="http://en.wikipedia.org/wiki/Blender_%28software%29">Blender</a>)
+it does not focus on the artistic aspects of 3D modelling but instead on the <a
+href="http://en.wikipedia.org/wiki/CAD">CAD</a> aspects. Thus it might be the
+application you are looking for when you are planning to create 3D models of
+machine parts but pretty sure is not what you are looking for when you are more
+interested in creating computer-animated movies.</p>
+
+<p>OpenSCAD is not an interactive modeller. Instead it is something like a
+3D-compiler that reads in a script file that describes the object and renders
+the 3D model from this script file (see examples below). This gives you (the
+designer) full control over the modelling process and enables you to easily
+change any step in the modelling process or make designes that are defined by
+configurable parameters.</p>
+
+<p>OpenSCAD provides two main modelling techniques: First there is <a
+href="http://en.wikipedia.org/wiki/Constructive_solid_geometry">constructive
+solid geometry (aka CSG)</a> and second there is extrusion of 2D outlines. As
+data exchange format format for this 2D outlines Autocad DXF files are used.
+In addition to 2D paths for extrusion it is also possible to read design parametes
+from DXF files. Besides DXF files OpenSCAD can read and create 3D models in the STL
+and OFF file formats.</p>
+
+<h3>Usage Examples</h3>
+<p>The sources to all examples are also bundled with the OpenSCAD source
+distribution and can be checked out from or browsed online in the <a
+href="http://svn.clifford.at/openscad/trunk/examples/">OpenSCAD
+Subversion Repository</a>.</p>
+<p align="center"><img src="example1.png"/></p>
+<p align="center"><img src="example2.png"/></p>
+
+<a name="download">
+<h3>Licence</h3>
+OpenSCAD is <a href="http://en.wikipedia.org/wiki/Free_Software">Free
+Software</a> under the terms of the <a
+href="http://svn.clifford.at/openscad/trunk/COPYING">GNU GENERAL PUBLIC LICENSE
+Version 2</a>.
+
+<h3>Download Releases</h3>
+<p><ul>
+<li style="padding-bottom:0.5em">Latest source release:<br/>
+	<a href="download/openscad-2010.05.src.tar.gz">openscad-2010.05.src.tar.gz</a></li>
+<li style="padding-bottom:0.5em">Latest pre compiled Linux x86 binaries:<br/>
+	<a href="download/openscad-2010.05.linux-x86.tar.gz">openscad-2010.05.linux-x86.tar.gz</a></li>
+<li style="padding-bottom:0.5em">Latest pre compiled OS X binaries:<br/>
+	<a href="download/openscad-2010.05.dmg">openscad-2010.05.dmg</a></li>
+<li style="padding-bottom:0.5em">Latest pre compiled Windows binaries:<br/>
+	<a href="download/openscad-2010.05.win32.zip">openscad-2010.05.win32.zip</a></li>
+<li style="padding-bottom:0.5em">Browse current and older releases:<br/>
+	<a href="download/">Direct link to download directory</a></li>
+</ul></p>
+
+<h3>Download Development Snapshots</h3>
+
+<p><ul>
+<li style="padding-bottom:0.5em">Development snapshot OS X binaries:<br/>
+	<a href="http://www.kintel.net/public/openscad-latest.dmg">openscad-latest.dmg</a></li>
+<li style="padding-bottom:0.5em">Development snapshot Win32 binaries:<br/>
+	<a href="http://meta23.net/openscad/">Directory Index</a></li>
+<li style="padding-bottom:0.5em">Latest development sources:<br/>
+	<a href="http://svn.clifford.at/openscad/trunk">Subversion Trunk</a></li>
+</ul></p>
+
+<h3>Download OpenSCAD Designs</h3>
+
+<p><ul>
+<li style="padding-bottom:0.5em">OpenSCAD Designs on Thingiverse:<br/>
+	<a href="http://www.thingiverse.com/tag:openscad">Things tagged with 'OpenSCAD'</a>
+<li style="padding-bottom:0.5em">Example Designs from OpenSCAD sources:<br/>
+	<a href="http://svn.clifford.at/openscad/trunk/examples/">Examples Directory in Subversion Trunk</a></li>
+</ul></p>
+
+<h3>Build dependencies</h3>
+<p>OpenSCAD is using the <a href="http://www.qtsoftware.com/">Qt4</a>, the <a
+href="http://www.opencsg.org/">OpenCSG library</a> and the <a
+href="http://www.cgal.org/">CGAL library</a>. This libraries are bundled with
+the pre compiled binaries. In addition to this libaries a GNU C compiler, the
+bison parser generator and some other tools are needed for building OpenSCAD
+from the sources. The binary releases include this libraries, so no extra
+software needs to be installed to get the precompiled binary packages
+running.</p>
+
+<h3>User Manual</h3>
+
+<p>The OpenSCAD User Manual is hosted on wikibooks:<br/>
+<a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual">http://en.wikibooks.org/wiki/OpenSCAD_User_Manual</a></p>
+
+<p>This User Manual is work in progress and everyone who is willing to help extending/improving it is very welcome!</p>
+
+<h3>Other Tutorials</h3>
+
+<ul>
+<li><a href="http://edutechwiki.unige.ch/en/OpenScad_beginners_tutorial"/>EduTechWiki - OpenScad beginners tutorial</a></li>
+<li><a href="http://hackaday.com/2010/01/12/how-to-make-a-printable-ces-badge/">Hack a Day: How To: Make a Printable CES Badge</a></li>
+<li><a href="http://blog.makezine.com/archive/2009/12/make_projects_-_easy_3d_models_with.html">Make: Projects - Simple 3D models with OpenSCAD</a></li>
+<li><a href="http://www.iheartrobotics.com/search/label/OpenSCAD">I Heart Robotics: OpenSCAD</a></li>
+</ul>
+
+<h3>Mailing List</h3>
+<p>We have a mailing list. You can subscribe to the list or browse the list archives <a href="http://rocklinux.net/mailman/listinfo/openscad">here</a>.</p>
+
+<h3>See also</h3>
+<p>Have a look <a href="http://www.google.at/search?q=openscad+-%22Open+CAD%22+-%22Opens+CAD%22">what Google has about OpenSCAD</a>.</p>
+
+<h3>Author</h3>
+<p>OpenSCAD has been written by <a href="http://www.clifford.at/">Clifford Wolf</a>.</p>
+
+</body></html>
+
