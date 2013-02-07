@@ -5,12 +5,12 @@
     <link>http://openscad.org/appcast-snapshots.xml</link>
     <language>en</language>      
     <item>
-      <title>OpenSCAD 2013.03</title>
+      <title>OpenSCAD 2013.03.20</title>
       <pubDate>2013.03</pubDate>
       <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/master/RELEASE_NOTES</sparkle:releaseNotesLink>
       <enclosure url="https://openscad.googlecode.com/files/OpenSCAD-2013.02.07.dmg"
-                 sparkle:version="2013.03.10"
-                 sparkle:shortVersionString="2013.03"
+                 sparkle:version="2013.03.20"
+                 sparkle:shortVersionString="2013.03.20"
                  length="23842592" 
                  type="application/octet-stream"/>
     </item>
