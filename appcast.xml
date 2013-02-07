@@ -8,10 +8,10 @@
       <title>OpenSCAD 2013.03</title>
       <pubDate>2013.03.10</pubDate>
       <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/openscad-2013.02/RELEASE_NOTES</sparkle:releaseNotesLink>
-      <enclosure url="https://openscad.googlecode.com/files/OpenSCAD-2013.01.dmg"
+      <enclosure url="http://vraag.local/~kintel/OpenSCAD-2013.03.dmg"
                  sparkle:version="2013.03.10"
                  sparkle:shortVersionString="2013.03"
-                 length="22820011"
+                 length="23724535"
                  type="application/octet-stream"/>
     </item>
   </channel>
