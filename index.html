@@ -5,18 +5,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<title>OpenSCAD - The Programmers Solid 3D CAD Modeller</title>
 
-	<script type="text/javascript">
-	/* <![CDATA[ */
-	    (function() {
-	        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-	        s.type = 'text/javascript';
-	        s.async = true;
-	        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-	        t.parentNode.insertBefore(s, t);
-	    })();
-	/* ]]> */
-	</script>
-
 	<link href="assets/css/style.css" rel="stylesheet"/>
   
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
@@ -32,53 +20,8 @@
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/waypoints-sticky.min.js"></script>
 
-	<script>
-	var pageHeight = $(window).height();
-	$(document).ready(function() {
-
-		var OSName="Unknown OS";
-		if (navigator.appVersion.indexOf("Win")!=-1) { OSName="Windows"; downloadLink = "https://openscad.googlecode.com/files/OpenSCAD-2013.01-Installer.exe";}
-		if (navigator.appVersion.indexOf("Mac")!=-1) { OSName="Mac OS X"; downloadLink = "https://openscad.googlecode.com/files/OpenSCAD-2013.01.dmg"; }
-		if (navigator.appVersion.indexOf("X11")!=-1) { OSName="Linux"; downloadLink = "downloads.html#linux"; }
-		if (navigator.appVersion.indexOf("Linux")!=-1) { OSName="Linux"; downloadLink = "downloads.html#linux"; }
-
-		$("#home-download a#download-link").attr("href",downloadLink);
-		$("#home-download-link h4").append(OSName);
-		
-		$('.top').click(function(){$('body').scrollTo($('body'),700,{offset:{top:-20}});});
-				
-		$('.sticky').waypoint('sticky');
-		
-		$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
-
-		$('section ul li').prepend("» ");
-		
-		var news, i;
-		
-		$.get('news.html', function(data) {
-
-			$html      = $(data)
-			$entries    = $html.find('article section');
-
-			i=0;
-
-			$entries.each(function(){
-				$title    = $(this).find('.title').html();
-				$date    = $(this).find('.date').html();
-				$content    = $(this).find('.entry').html();
-				$shortContent = jQuery.trim($content).substring(0, 150).split(" ").slice(0, -1).join(" ") + "...";
-				if(i<3){
-				$('#sidebar ul').append("<li style='padding-bottom:10px;'><strong><small>"+$date+"</small><strong><br/><a class='underline' href='news.html#"+$(this).attr("id")+"'>"+$title+"</a><br/><small>"+$shortContent+"</small></li>");				
-				}
-				i++;
-			});
-		}, "html");
-
-		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });		
-
-		});
-		
-	</script>
+	<script src="assets/js/home.js"></script>
+	<script src="assets/js/header.js"></script>
 
 </head>
 <body>

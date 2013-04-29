@@ -5,37 +5,12 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<title>OpenSCAD - News</title>
 
-	<script type="text/javascript">
-	/* <![CDATA[ */
-	    (function() {
-	        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
-	        s.type = 'text/javascript';
-	        s.async = true;
-	        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
-	        t.parentNode.insertBefore(s, t);
-	    })();
-	/* ]]> */
-	</script>
-
 	<link href="assets/css/style.css" rel="stylesheet"/>
   
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
-	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'/>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
-
-	<!-- fancyBox -->
-	<script type="text/javascript" src="assets/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-	<link rel="stylesheet" href="assets/js/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
-	<script type="text/javascript" src="assets/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4"></script>
-
-	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
-
-	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
 	<!-- One-Page-Nav  -->
 	<script src="assets/js/jquery.scrollTo.js"></script>
@@ -45,32 +20,8 @@
 	<script src="assets/js/waypoints.min.js"></script>
 	<script src="assets/js/waypoints-sticky.min.js"></script>
 
-
-	<script>
-	var pageHeight = $(window).height();
-	$(document).ready(function() {
-		
-		
-		$('.top').click(function(){$('body').scrollTo($('body'),700,{offset:{top:-20}});});
-		
-		$(".fancybox").fancybox();
-		$(".gallery a").fancybox();
-		
-		$('.sticky').waypoint('sticky');
-		
-		$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
-
-		$('section ul li').prepend("» ");
-		
-		$("article section").each(function(){
-			$('#sidebar ul').append("<li><a href='#"+$(this).attr("id")+"'>"+$(this).find(".title").text()+"</a></li>");
-		});
-
-		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
-
-		});
-		
-	</script>
+	<script src="assets/js/news.js"></script>
+	<script src="assets/js/header.js"></script>
 
 </head>
 <body>
