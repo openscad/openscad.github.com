@@ -61,6 +61,8 @@
 
 		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
 
+		$('section ul li').prepend("» ");	
+
 	});
 	</script>
 
@@ -118,17 +120,29 @@
 		
 		<section id="license">
 			<h1>License</h1>
-			<p>OpenSCAD is Free Software (http://www.gnu.org/philosophy/free-sw.html) released under the General Public License version 2 (http://www.gnu.org/licenses/gpl-2.0.html).</p>
+			<p>OpenSCAD is <a href="http://www.gnu.org/philosophy/free-sw.html" target="_blank">Free Software</a>) released under the <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">General Public License version 2</a>.</p>
 		</section>
 		
 		<section id="underlying-technology">
 			<h1>Underlying Technology</h1>
-			<p>OpenSCAD builds on top of a number of free software libraries; is uses Qt (qt-project.org) for user interface, CGAL (cgal.org) for CSG evaluation, OpenCSG and OpenGL for CSG previews, as well as boost, eigen and glew.</p>
+			<p>OpenSCAD builds on top of a number of free software libraries; is uses <a href="http://qt-project.org" target="_blank">Qt</a> for user interface, <a href="http://cgal.org" target="_blank">CGAL</a> for CSG evaluation, OpenCSG and OpenGL for CSG previews, as well as boost, eigen and glew.</p>
 		</section>
 		
 		<section id="related-projects">
 			<h1>Related Projects</h1>
-			<p>Gallery? Examples? Links to cool things people have done?</p>
+
+			<p>A number of projects were inspired by OpenSCAD, or in some other way is related to OpenSCAD. This is an incomplete list of some project worth taking a look at:</p>
+				<ul>
+				  <li><a href="http://openjscad.org/">OpenJSCAD</a></li>
+				  <li><a href="http://www.fabfabbers.com/">FABFabbers</a></li>
+				  <li><a href="http://coffeescad.net/">CoffeeSCad</a></li>
+				  <li><a href="http://gilesbathgate.com/category/rapcad/">RapCAD</a></li>
+				  <li><a href="http://www.implicitcad.org/">ImplicitCAD</a></li>
+				  <li><a href="http://openscad.net">OpenSCAD.net</a></li>
+				</ul>
+			</section>
+
+
 		</section>
 
 	</article>
