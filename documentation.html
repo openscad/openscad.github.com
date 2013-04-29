@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>OpenSCAD - Documentation</title>
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	    (function() {
+	        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+	        s.type = 'text/javascript';
+	        s.async = true;
+	        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+	        t.parentNode.insertBefore(s, t);
+	    })();
+	/* ]]> */
+	</script>
+
+	<link href="assets/css/style.css" rel="stylesheet">
+  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/modernizr-1.7.min.js"></script>
+
+	<!-- fancyBox -->
+	<script type="text/javascript" src="assets/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<link rel="stylesheet" href="assets/js/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4"></script>
+
+	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- One-Page-Nav  -->
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.nav.js"></script>
+
+	<!--waypoints-->
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/waypoints-sticky.min.js"></script>
+
+
+	<script>
+	var pageHeight = $(window).height();
+	$(document).ready(function() {
+		
+		
+		$('.top').click(function(){$('body').scrollTo($('body'),700,{offset:{top:-20}});});
+
+		$(".fancybox").fancybox();
+		$(".gallery a").fancybox();
+		
+		$('.sticky').waypoint('sticky');
+		
+		$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
+
+		/*initialize */
+		var playlist_id, playlist_title, playlist_thumb, video_id, video_title, video_frame;
+		/*retrieve playlist data from openscad user*/
+		$.getJSON('https://gdata.youtube.com/feeds/api/users/openscad/playlists?v=2&alt=jsonc', function(response) {
+			$.each(response.data.items, function(key, val) {
+				var playlist_id = val.id;
+				/*retrieve data from single playlist*/
+				$.getJSON('https://gdata.youtube.com/feeds/api/playlists/'+playlist_id+'?v=2&alt=jsonc', function(response) {
+					playlist_title = response.data.title;
+					playlist_thumb = response.data.thumbnail.hqDefault;
+
+					$("#tutorials-video").append("<div id="+playlist_id+" class='tutorial-links multi'><div class='img-container'><img src='"+playlist_thumb+"' width='320' height='200'/></div><div class='text-container'><h2>"+playlist_title+"</h2></div></div>");
+					/*append video titles*/
+				  $.each(response.data.items, function(key, val) {
+						video_id = val.video.id;
+						video_title = val.video.title;
+						$("#"+playlist_id+" .text-container").append("<h3><span class='video_link link' id='"+video_id+"'>"+video_title+"</span></h3>");
+				  });
+						
+					/*display video on click*/
+					$(".video_link").click(function(){
+						video_frame = '<iframe width="320" height="200" src="http://www.youtube.com/embed/'+$(this).attr("id")+'" frameborder="0" allowfullscreen></iframe>';
+						$(this).parent().parent().parent().find(".img-container").html(video_frame);
+						$(this).parent().parent().find(".current").removeClass("current");
+						$(this).addClass("current");
+					});
+				});
+			});			
+		});
+
+		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
+
+	});
+	</script>
+	
+
+</head>
+<body>
+
+<div id="page-wrap">
+<header>
+	<div class="clear"></div>
+	<div id="logo" class="left"></div>
+	<div id="donate" class="right">
+		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a>
+	</div>
+	<div id="title" style="margin-top:35px; width:620px;">
+		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
+		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+	</div>
+
+	<div id="navigation">
+	<div id="navigation-inner">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li class="current"><a href="documentation.html">Documentation</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
+    </ul>
+	</div>
+	</div>
+</header>
+
+<div id="page-content">
+	
+	<div id="sidebar" class="sticky">
+		<h1>Documentation</h1>
+		<ul>
+			<li><a href="#user-manual">OpenSCAD User Manual</a></li>
+			<li><a href="#cheat-sheet">Code Cheat Sheet</a></li>
+			<li><a href="#tutorials-blogs">Tutorials - Articles / Blogs</a></li>
+			<li><a href="#tutorials-video">Tutorials - Video</a></li>
+		</ul>
+	</div>
+	
+	<article>
+		<section id="user-manual">
+			<h1>OpenSCAD User Manual</h1>
+			<h2>Table of Contents</h2>
+			<ol>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Introduction" target="_blank" title="OpenSCAD User Manual/Introduction">Introduction</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/First_Steps" target="_blank" title="OpenSCAD User Manual/First Steps">First Steps</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_User_Interface" target="_blank" title="OpenSCAD User Manual/The OpenSCAD User Interface">The OpenSCAD User Interface</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language" target="_blank" title="OpenSCAD User Manual/The OpenSCAD Language">The OpenSCAD Language</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem" target="_blank" title="OpenSCAD User Manual/Using the 2D Subsystem">Using the 2D Subsystem</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/STL_Import_and_Export" target="_blank" title="OpenSCAD User Manual/STL Import and Export">STL Import and Export</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/STL_Import" target="_blank" title="OpenSCAD User Manual/STL Import">STL Import</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/STL_Export" target="_blank" title="OpenSCAD User Manual/STL Export">STL Export</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Commented_Example_Projects" target="_blank" title="OpenSCAD User Manual/Commented Example Projects">Commented Example Projects</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment" target="_blank" title="OpenSCAD User Manual/Using OpenSCAD in a command line environment">Using OpenSCAD in a command line environment</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_OpenSCAD_from_Sources" target="_blank" title="OpenSCAD User Manual/Building OpenSCAD from Sources">Building OpenSCAD from Sources</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_on_Linux/UNIX" target="_blank" title="OpenSCAD User Manual/Building on Linux/UNIX">Building on Linux/UNIX</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Cross-compiling_for_Windows_on_Linux_or_Mac_OS_X" target="_blank" title="OpenSCAD User Manual/Cross-compiling for Windows on Linux or Mac OS X">Cross-compiling for Windows on Linux or Mac OS X</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_on_Windows" target="_blank" title="OpenSCAD User Manual/Building on Windows">Building on Windows</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Building_on_Mac_OS_X" target="_blank" title="OpenSCAD User Manual/Building on Mac OS X">Building on Mac OS X</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries" target="_blank" title="OpenSCAD User Manual/Libraries">Libraries</a></li>
+				<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Command_Glossary" target="_blank" title="OpenSCAD User Manual/Command Glossary">Glossary</a></li>
+				<li><a href="/w/index.php?title=OpenSCAD_User_Manual/Index&amp;action=edit&amp;redlink=1" target="_blank" title="OpenSCAD User Manual/Index (does not exist)">Index</a></li>
+			</ol>
+			
+		</section>
+
+		<section id="cheat-sheet">
+			<h1>Code Cheat Sheet</h1>
+			<a href="http://www.openscad.org/cheatsheet/" target="_blank"><img class="imgLink" src="assets/img/openSCAD_cheat_sheet.png" width="680"/></a>
+		</section>
+
+		<section id="tutorials-blogs">
+			<h1>Tutorials - Articles / Blogs</h1>
+			
+			<a href="http://peak5390.wordpress.com/2013/01/08/an-introduction-to-3d-modeling-with-openscad-openscad-basics" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/peak5390-tutorial.png" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>An Introduction to 3d Modeling with openSCAD – openSCAD Basics</h2>
+					<h3>by Eric Matthes</h3>
+					<h3>January 8, 2013</h3>
+				</div>
+			</div>
+			</a>
+
+			<a href="http://www.makerbot.com/blog/2012/11/08/openscad-design-tips" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/makerblock-tutorials.jpg" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>AnOpenSCAD Tutorial Series on the Makerbot blog</h2>
+					<h3>by MakerBlock</h3>
+					<h3>2011-2013</h3>
+				</div>
+			</div>
+			</a>
+
+			<a href="http://blog.thingiverse.com/2011/01/28/open-scad-tutorial-roundup" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/allanecker-tutorial.jpg" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>OpenSCAD Tutorial Roundup on the Thingiverse blog</h2>
+					<h3>by Allan Ecker</h3>
+					<h3>Jan 28, 2011</h3>
+				</div>
+			</div>
+			</a>
+
+			<a href="http://edutechwiki.unige.ch/en/OpenScad_beginners_tutorial" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/edutech-tutorial.png" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>OpenScad beginners tutorial at EduTechWiki</h2>
+					<h3>by Daniel K. Schneider</h3>
+					<h3>Mar 17, 2010 - May 2012</h3>
+				</div>
+			</div>
+			</a>
+
+			<a href="http://blog.makezine.com/archive/2009/12/make_projects_-_easy_3d_models_with.html" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/makeblog-tutorial.png" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>Make: Projects - Simple 3D models with OpenSCAD</h2>
+					<h3>by Sean Michael Ragan</h3>
+					<h3>Dec 2009</h3>
+				</div>
+			</div>
+			</a>
+
+			<a href="http://www.iheartrobotics.com/search/label/OpenSCAD" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/iheartrobotics-tutorial.jpg" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>I Heart Robotics: OpenSCAD</h2>
+				</div>
+			</div>
+			</a>
+
+			<a href="http://www.iearobotics.com/blog/2012/09/13/enhancing-openscad-ii-bevel-library" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/iearobotics-blog.png" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>Enhancing openscad series at Iearobotics blog</h2>
+					<h3>by Juan González Gómez</h3>
+					<h3>Sep 2012</h3>
+				</div>
+			</div>
+			</a>
+			
+			<a href="http://hackaday.com/2010/01/12/how-to-make-a-printable-ces-badge/" target="_blank">
+			<div class="tutorial-links">
+				<div class="img-container">
+					<img src="assets/img/hackaday-badge.png" width="320" height="200"/>
+				</div>
+				<div class="text-container">
+					<h2>How To: Make a Printable CES Badge at Hackaday</h2>
+					<h3>by Devlin Thyne</h3>
+					<h3>Jan 2010</h3>
+				</div>
+			</div>
+			</a>
+
+			<div class="clear"></div>
+		</section>
+		
+		<section id="tutorials-video">
+			<h1>Tutorials - Video</h1>
+		</section>
+	
+	</article>
+
+<div class="clear"></div>
+
+</div><!--#page-content end-->
+
+<footer>
+	
+</footer>
+</div><!--#page-wrap end-->
+
+</body>
+</html>

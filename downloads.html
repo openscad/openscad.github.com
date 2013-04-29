@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>OpenSCAD - Downloads</title>
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	    (function() {
+	        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+	        s.type = 'text/javascript';
+	        s.async = true;
+	        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+	        t.parentNode.insertBefore(s, t);
+	    })();
+	/* ]]> */
+	</script>
+
+	<link href="assets/css/style.css" rel="stylesheet">
+  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/modernizr-1.7.min.js"></script>
+
+	<!-- fancyBox -->
+	<script type="text/javascript" src="assets/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<link rel="stylesheet" href="assets/js/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4"></script>
+
+	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- One-Page-Nav  -->
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.nav.js"></script>
+
+	<!--waypoints-->
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/waypoints-sticky.min.js"></script>
+
+
+	<script>
+	var pageHeight = $(window).height();
+	$(document).ready(function() {
+		
+		$('.top').click(function(){$('body').scrollTo($('body'),700,{offset:{top:-20}});});
+		
+		$(".fancybox").fancybox();
+		$(".gallery a").fancybox();
+		
+		$('.sticky').waypoint('sticky');
+		
+		$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
+
+		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
+	});
+	</script>
+
+</head>
+<body>
+
+<div id="page-wrap">
+<header>
+	<div class="clear"></div>
+	<div id="logo" class="left"></div>
+	<div id="donate" class="right">
+		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a>
+	</div>
+	<div id="title" style="margin-top:35px; width:620px;">
+		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
+		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+	</div>
+
+	<div id="navigation">
+	<div id="navigation-inner">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li class="current"><a href="downloads.html">Downloads</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
+    </ul>
+	</div>
+	</div>
+</header>
+
+<div id="page-content">
+	
+	<div id="sidebar" class="sticky">
+		<h1>Downloads</h1>
+		<ul>
+			<li><a href="#osx">Mac OS X</a></li>
+			<li><a href="#windows">Windows</a></li>
+			<li><a href="#linux">Linux</a></li>
+			<li><a href="#other-systems">Other Systems</a></li>
+			<li><a href="#source-code">Source Code</a></li>
+			<li><a href="#snapshots">Development Snapshots</a></li>
+		</ul>
+	</div>
+	
+	<article>
+		<section id="osx">
+			<h1>Mac OS X</h1>
+			<div class="subsection">
+				<p>System requirements: Mac OS X 10.6 or newer</p>
+				<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.01.dmg">
+				<button>
+					<h3>OpenSCAD-2013.01</h3>
+					<small>32/64 bit Intel - dmg package - 22 MB</small>
+				</button>
+				</a>
+			</div>
+			<div class="subsection">
+				<p>OpenSCAD is also available on <a href="http://www.macports.org/" target="_blank">MacPorts</a>:</p>
+				<pre>
+					<code>$ sudo port install openscad</code>
+				</pre>
+			</div>
+		</section>
+
+		<section id="windows">
+			<h1>Windows</h1>
+			<p>System requirements: Windows XP or newer on x86/x64</p>
+			<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.01-Installer.exe">
+			<button class="left">
+				<h3>OpenSCAD-2013.01</h3>
+				<small>exe installer - 7 MB</small>
+			</button>
+			</a>
+			<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.01.zip">
+			<button>
+				<h3>OpenSCAD-2013.01</h3>
+				<small>zip package - 7 MB</small>
+			</button>
+			</a>
+		</section>
+
+		<section id="linux">
+			<h1>Linux</h1>
+			<div id="ubuntu" class="subsection">
+				<h2>Ubuntu / Kubuntu</h2>
+				<p>There is a PPA (private package archive) for OpenSCAD that is maintained by <a href="https://launchpad.net/~chrysn" target="_blank">chrysn</a>.<br />Installing OpenSCAD on Ubuntu/Kubuntu boils down to running the following commands:</p>
+				<pre>
+					<code>$ sudo add-apt-repository ppa:chrysn/openscad</code>
+					<code>$ sudo apt-get update</code>
+					<code>$ sudo apt-get install openscad</code>
+				</pre>
+			</div>
+			<div id="fedora" class="subsection">
+				<h2>Fedora</h2>
+				<p>OpenSCAD is available in Fedora 17+ official repositories. So installing OpenSCAD on Fedora boils down to running the following command:</p>
+				<pre>
+					<code># yum install openscad</code>
+				</pre>
+				<p>If you want the MCAD library:</p>
+				<pre>
+					<code># yum install openscad-MCAD</code>
+				</pre>
+			</div>
+			<div id="opensuse" class="subsection">
+				<h2>openSuse</h2>
+				<p>OpenSCAD is available from the <a href="https://build.opensuse.org/package/show?package=openscad&project=graphics" target="_blank">openSUSE build service</a>.</p>
+			</div>
+			<div id="other-linux" class="subsection">
+				<h2>Other Linux</h2>
+				<p>The following generic Linux packages are available:</p>
+				<a href="https://openscad.googlecode.com/files/openscad-2013.01.x86-32.tar.gz">
+				<button class="left">
+					<h3>OpenSCAD-2013.01</h3>
+					<small>x86 (32-bit) - tgz archive - 17 MB</small>
+				</button>
+				</a>
+				<a href="https://openscad.googlecode.com/files/openscad-2013.01.x86-64.tar.gz">
+				<button>
+					<h3>OpenSCAD-2013.01</h3>
+					<small>x64 (64-bit) - tgz archive - 16 MB</small>
+				</button>
+				</a>
+			</div>
+		</section>
+
+		<section id="other-systems">
+			<h1>Other Systems</h1>
+			<p>It's possible to build OpenSCAD on other systems as long as a C++ compiler and the prerequisite software libraries are available.</p>
+			<p>OpenSCAD is reported to build and run on FreeBSD and NetBSD, but no binary packages are available for these systems.</p>
+		</section>
+
+		<section id="source-code">
+			<h1>Source Code</h1>
+			<p>You can also access the latest source code on github: <a href="https://github.com/openscad/openscad" target="_blank">openscad/openscad on github</a></p>
+		</section>
+		
+		<section id="snapshots">
+			<h1>Development Snapshots</h1>
+
+			<div id="snapshots-osx" class="subsection">
+				<h2>Mac OS X</h2>
+				<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.04.09.dmg">
+				<button>
+					<h3>OpenSCAD-2013.04.09</h3>
+					<small>32/64 bit Intel - dmg package - 27 MB</small>
+				</button>
+				</a>
+			</div>
+
+			<div id="snapshots-windows" class="subsection">
+				<h2>Windows</h2>
+				<a href="http://openscad.googlecode.com/files/OpenSCAD-2013.03.09-Installer.exe">
+				<button class="left">
+					<h3>OpenSCAD-2013.03.09</h3>
+					<small>exe installer - 7 MB</small>
+				</button>
+				</a>
+				<a href="http://openscad.googlecode.com/files/OpenSCAD-2013.01.08.zip">
+				<button>
+					<h3>OpenSCAD-2013.01</h3>
+					<small>zip package - 7 MB</small>
+				</button>
+				</a>
+			</div>
+
+			<div id="snapshots-linux" class="subsection">
+				<h2>Linux</h2>
+				<a href="https://openscad.googlecode.com/files/openscad-2013.01.09.x86-32.tar.gz">
+				<button class="left">
+					<h3>OpenSCAD-2013.01</h3>
+					<small>x86 (32-bit) - tgz archive - 16 MB</small>
+				</button>
+				</a>
+				<a href="https://openscad.googlecode.com/files/openscad-2013.01.10.x86-64.tar.gz">
+				<button>
+					<h3>OpenSCAD-2013.01</h3>
+					<small>x64 (64-bit) - tgz archive - 17 MB</small>
+				</button>
+				</a>
+			</div>
+
+		</section>
+		
+</article>
+
+<div class="clear"></div>
+
+</div><!--#page-content end-->
+
+<footer>
+	
+</footer>
+</div><!--#page-wrap end-->
+
+</body>
+</html>

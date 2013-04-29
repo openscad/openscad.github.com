@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>OpenSCAD - The Programmers Solid 3D CAD Modeller</title>
+	<title>OpenSCAD - Community</title>
 
 	<script type="text/javascript">
 	/* <![CDATA[ */
@@ -17,10 +17,10 @@
 	/* ]]> */
 	</script>
 
-	<link href="assets/css/style.css" rel="stylesheet"/>
+	<link href="assets/css/style.css" rel="stylesheet">
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
-	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
@@ -50,9 +50,10 @@
 	var pageHeight = $(window).height();
 	$(document).ready(function() {
 		
-		alert($.browser.version);
 		
 		$('.top').click(function(){$('body').scrollTo($('body'),700,{offset:{top:-20}});});
+
+		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
 		
 		$(".fancybox").fancybox();
 		$(".gallery a").fancybox();
@@ -61,30 +62,22 @@
 		
 		$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
 
+	   $("#mailing-list-irc form").submit(function() {
+	     var url = $(this).attr('action') + '?' + $(this).serialize();
+	     $.get(url, function(r) {
+				alert("success");
+	     });
+	     return false;
+	   });
+	
+	
 		$('section ul li').prepend("» ");
-		
-		var news, i;
-		
-		$.get('news.html', function(data) {
-
-			$html      = $(data)
-			$entries    = $html.find('article section');
-
-			i=0;
-
-			$entries.each(function(){
-				$title    = $(this).find('.title').html();
-				$date    = $(this).find('.date').html();
-				$content    = $(this).find('.entry').html();
-				$shortContent = jQuery.trim($content).substring(0, 150).split(" ").slice(0, -1).join(" ") + "...";
-				if(i<3){
-				$('#sidebar ul').append("<li style='padding-bottom:10px;'><strong><small>"+$date+"</small><strong><br/><a href='news.html#"+$(this).attr("id")+"'>"+$title+"</a><br/><small>"+$shortContent+"</small></li>");				
-				}
-				i++;
-			});
-		}, "html");
-
-		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });		
+	
+	
+		setTimeout(function(){
+			document.title = 'OpenSCAD - Community';
+		},2000);
+	
 
 		});
 		
@@ -104,17 +97,17 @@
 		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
 		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
 	</div>
-	
+
 	<div id="navigation">
 	<div id="navigation-inner">
     <ul class="nav">
-      <li class="current"><a href="index.html">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="news.html">News</a></li>
       <li><a href="downloads.html">Downloads</a></li>
       <li><a href="documentation.html">Documentation</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="community.html">Community</a></li>
+      <li class="current"><a href="community.html">Community</a></li>
       <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
     </ul>
 	</div>
@@ -124,38 +117,58 @@
 <div id="page-content">
 	
 	<div id="sidebar" class="sticky">
-		<h1>Recent News</h1>
+		<h1>Community</h1>
 		<ul>
+<!--			<li><a href="#user-manual">Code Examples</a></li>-->
+<li><a href="#get-involved">Get Involved</a></li>
+<li><a href="#mailing-list">Mailing List</a></li>
+<li><a href="#irc">IRC Channel</a></li>
+<li><a href="#forum">Forum</a></li>
 		</ul>
 	</div>
 	
 	<article>
 
-		<section>
-			<h1><strong><span class="green">Open</span>SCAD</strong> is a software for creating solid 3D CAD objects.</h1>
-			<h1 class="normal">It is free software and available for Linux/UNIX, MS Windows and Mac OS X.</h1>
-
-			<img style="border:1px solid #eee; border-radius:8px; margin:20px 0px 40px 0px;" src="assets/img/screenshot.png"/>
-
-<!--
-			<div style="width:100px; float:left; margin-left:80px; text-align:center;">
-			<h2>Report a Bug</h2>
-			<img src="assets/img/bug.png"/>
-			</div>
--->
-
-			<a href="">
-			<div id="home-download">
-				<div style="position:absolute; top:10px; background:#e5f1d3; height:55px; width:350px; border-radius:12px; border:4px solid #233d00;">
-					<div style="width:250px; position:absolute; top:1px; left:90px;">
-					<h1 style="margin:2px; padding:0px;">Download OpenSCAD</h1>
-					<h4>Version 2.05 Mac OS X | Windows</h4>
-					<h4 style="position:relative; top:12px;">Other Systems and Versions</h4>
-					</div>
-				</div>
-				<div style="position:absolute; background:url('assets/img/download.png'); height:106px; width:101px;"></div>
-			</div>
-			</a>
+		<section id="get-involved">
+			<h1>Get Involved</h1>
+			<h2>Users</h2>
+			<ul>
+				<li>subscribe to the <a href="#mailing-list">mailing list</a> or <a href="#forum">forums</a> or join our <a href="#irc">IRC channel</a> and contribute to the user community by answering requests and take part in discussions</li>
+				<li>Reports bugs and improve or validate bug reports on our issue tracker</li>
+				<li>Improve documentation (it's a wiki)</li>
+			</ul>
+			<h2>Web developers</h2>
+			<ul>
+				<li>Improve the website</li>
+			</ul>
+			<h2>Programmers</h2>
+			<ul>
+				<li>Fix bugs</li>
+				<li>Write (better) tests</li>
+				<li>Implement new features</li>
+				<li>Refactor or clean up code</li>
+			</ul>
+		</section>
+	
+		<section id="mailing-list">
+			<h1>Mailing List</h1>
+			
+			<form action="http://rocklinux.net/mailman/subscribe/openscad" method="POST" target="_blank">
+			  E-mail: <input name="email" /><input type="submit" value="Sign Me Up!" />
+			  </form>
+			
+		</section>
+		
+		<section id="irc">
+			<h1>IRC Channel</h1>
+			<h2><a href="irc:openscad@irc.freenode.net" target="_blank">#openscad on irc.freenode.net</a></h2>
+		</section>
+		
+		<section id="forum">
+			<h1>Forum</h1>
+			<h2><a href="http://forum.openscad.org" target="_blank">http://forum.openscad.org</a></h2>
+			<a id="nabblelink" href="http://forum.openscad.org/">OpenSCAD</a>
+			<script src="http://forum.openscad.org/embed/f1"></script>
 		</section>
 
 	</article>

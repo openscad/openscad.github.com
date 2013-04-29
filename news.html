@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>OpenSCAD - News</title>
+
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	    (function() {
+	        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
+	        s.type = 'text/javascript';
+	        s.async = true;
+	        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+	        t.parentNode.insertBefore(s, t);
+	    })();
+	/* ]]> */
+	</script>
+
+	<link href="assets/css/style.css" rel="stylesheet"/>
+  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'/>
+
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/modernizr-1.7.min.js"></script>
+
+	<!-- fancyBox -->
+	<script type="text/javascript" src="assets/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+	<link rel="stylesheet" href="assets/js/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.4"></script>
+
+	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+	<link rel="stylesheet" href="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+	<script type="text/javascript" src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- One-Page-Nav  -->
+	<script src="assets/js/jquery.scrollTo.js"></script>
+	<script src="assets/js/jquery.nav.js"></script>
+
+	<!--waypoints-->
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/waypoints-sticky.min.js"></script>
+
+
+	<script>
+	var pageHeight = $(window).height();
+	$(document).ready(function() {
+		
+		
+		$('.top').click(function(){$('body').scrollTo($('body'),700,{offset:{top:-20}});});
+		
+		$(".fancybox").fancybox();
+		$(".gallery a").fancybox();
+		
+		$('.sticky').waypoint('sticky');
+		
+		$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
+
+		$('section ul li').prepend("» ");
+		
+		$("article section").each(function(){
+			$('#sidebar ul').append("<li><a href='#"+$(this).attr("id")+"'>"+$(this).find(".title").text()+"</a></li>");
+		});
+
+		$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
+
+		});
+		
+	</script>
+
+</head>
+<body>
+
+<div id="page-wrap">
+<header>
+	<div class="clear"></div>
+	<div id="logo" class="left"></div>
+	<div id="donate" class="right">
+		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a>
+	</div>
+	<div id="title" style="margin-top:35px; width:620px;">
+		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
+		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+	</div>
+
+	<div id="navigation">
+	<div id="navigation-inner">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="current"><a href="news.html">News</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
+    </ul>
+	</div>
+	</div>
+</header>
+
+<div id="page-content">
+	
+	<div id="sidebar" class="sticky">
+		<h1>News</h1>
+		<ul>
+		</ul>
+	</div>
+	
+	<article>
+
+		<section id="20130317">
+			<h1 class="title">OpenSCAD release: 2013.03</h1>
+			<h2 class="date">17 Jan 2013</h2>
+			<div class="entry">
+			<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from http://openscad.org. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+			<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
+			<p>Have fun,<br />-Marius</p>
+			
+			<h2>Summary of changes in this release:</h2>
+			<h3>Features</h3>
+			<ul>
+				<li>Snappier GUI while performing CGAL computations (computations running in separate thread)</li>
+				<li>The size of the misc. caches can now be adjusted from Preferences</li>
+				<li>The limit for when to disable OpenCSG can now be adjusted from Preferences</li>
+				<li>Added Dot product operator: vec * vec</li>
+				<li>Added Matrix multiplication operator: vec * mat, mat * mat</li>
+				<li>Added search() function</li>
+				<li>Dependencies are now tracked - any changes in uses/included files will be detected and cause a recompile</li>
+				<li>The OPENSCADPATH environment variable is now implemented will have precedence when searching for libraries</li>
+				<li>.csg files can now be opened from the GUI</li>
+				<li>linear_extrude() will now assume that the first parameter means 'height' if it's a number</li>
+			</ul>
+			<h3>Bugfixes</h3>
+			<ul>
+				<li>use'ing an non-existing file sometimes crashed under Windows</li>
+				<li>Better font handling: Ensure a monospace font is chosen as default</li>
+				<li>Division by zero caused hang in some cases (e.g. sin(1/0))</li>
+				<li>Larger minkowski operations sometimes caused a crash after a CGAL assert was thrown</li>
+				<li>Fixed crashes in shared_ptr.hpp (or similar places) due bugs in cache management and CSG normalization</li>
+				<li>scale() with a scale factor of zero could cause a crash</li>
+				<li>Fixed a number of issues related to use/include</li>
+				<li>Providing an unknown parameter on the cmd-line caused a crash</li>
+				<li>cmd-line overrides using -D now also work for USEd modules</li>
+				<li>Modifier characters can now be used in front of if statements</li>
+				<li>rotate() with a vector argument with less that 3 elements used uninitialized variables, ending up being non-deterministic.</li>
+				<li>.csg files will now have relative filenames whenever possible</li>
+				<li>Don't just ignore geometric nodes having zero volume/area - when doing difference/intersection, they tend to turn negative objects into positive ones.</li>
+				<li>Always use utf-8 file encoding, also under Windows</li>
+				<li>A lot of build script fixes</li>
+				<li>Some other crash bugs fixes</li>
+			</ul>
+			<h3>Deprecations</h3>
+			<ul>
+			<li>The old include syntax "<filename.scad>" without the include keyword is no longer supported and will cause a syntax error.</li>
+			</ul>
+			</div>
+		</section>
+
+		<section id="20130217">
+			<h1 class="title">OpenSCAD release: 2013.02</h1>
+			<h2 class="date">17 Feb 2013</h2>
+			<div class="entry">
+			<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from http://openscad.org. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+			<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
+			<p>Have fun,<br />-Marius</p>
+			
+			<h2>Summary of changes in this release:</h2>
+			<h3>Features</h3>
+			<ul>
+				<li>Snappier GUI while performing CGAL computations (computations running in separate thread)</li>
+				<li>The size of the misc. caches can now be adjusted from Preferences</li>
+				<li>The limit for when to disable OpenCSG can now be adjusted from Preferences</li>
+				<li>Added Dot product operator: vec * vec</li>
+				<li>Added Matrix multiplication operator: vec * mat, mat * mat</li>
+				<li>Added search() function</li>
+				<li>Dependencies are now tracked - any changes in uses/included files will be detected and cause a recompile</li>
+				<li>The OPENSCADPATH environment variable is now implemented will have precedence when searching for libraries</li>
+				<li>.csg files can now be opened from the GUI</li>
+				<li>linear_extrude() will now assume that the first parameter means 'height' if it's a number</li>
+			</ul>
+			<h3>Bugfixes</h3>
+			<ul>
+				<li>use'ing an non-existing file sometimes crashed under Windows</li>
+				<li>Better font handling: Ensure a monospace font is chosen as default</li>
+				<li>Division by zero caused hang in some cases (e.g. sin(1/0))</li>
+				<li>Larger minkowski operations sometimes caused a crash after a CGAL assert was thrown</li>
+				<li>Fixed crashes in shared_ptr.hpp (or similar places) due bugs in cache management and CSG normalization</li>
+				<li>scale() with a scale factor of zero could cause a crash</li>
+				<li>Fixed a number of issues related to use/include</li>
+				<li>Providing an unknown parameter on the cmd-line caused a crash</li>
+				<li>cmd-line overrides using -D now also work for USEd modules</li>
+				<li>Modifier characters can now be used in front of if statements</li>
+				<li>rotate() with a vector argument with less that 3 elements used uninitialized variables, ending up being non-deterministic.</li>
+				<li>.csg files will now have relative filenames whenever possible</li>
+				<li>Don't just ignore geometric nodes having zero volume/area - when doing difference/intersection, they tend to turn negative objects into positive ones.</li>
+				<li>Always use utf-8 file encoding, also under Windows</li>
+				<li>A lot of build script fixes</li>
+				<li>Some other crash bugs fixes</li>
+			</ul>
+			<h3>Deprecations</h3>
+			<ul>
+			<li>The old include syntax "<filename.scad>" without the include keyword is no longer supported and will cause a syntax error.</li>
+			</ul>
+			</div>
+		</section>
+
+		<section id="20130117">
+			<h1 class="title">OpenSCAD release: 2013.01</h1>
+			<h2 class="date">17 Jan 2013</h2>
+			<div class="entry">
+			<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from http://openscad.org. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+			<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
+			<p>Have fun,<br />-Marius</p>
+			
+			<h2>Summary of changes in this release:</h2>
+			<h3>Features</h3>
+			<ul>
+				<li>Snappier GUI while performing CGAL computations (computations running in separate thread)</li>
+				<li>The size of the misc. caches can now be adjusted from Preferences</li>
+				<li>The limit for when to disable OpenCSG can now be adjusted from Preferences</li>
+				<li>Added Dot product operator: vec * vec</li>
+				<li>Added Matrix multiplication operator: vec * mat, mat * mat</li>
+				<li>Added search() function</li>
+				<li>Dependencies are now tracked - any changes in uses/included files will be detected and cause a recompile</li>
+				<li>The OPENSCADPATH environment variable is now implemented will have precedence when searching for libraries</li>
+				<li>.csg files can now be opened from the GUI</li>
+				<li>linear_extrude() will now assume that the first parameter means 'height' if it's a number</li>
+			</ul>
+			<h3>Bugfixes</h3>
+			<ul>
+				<li>use'ing an non-existing file sometimes crashed under Windows</li>
+				<li>Better font handling: Ensure a monospace font is chosen as default</li>
+				<li>Division by zero caused hang in some cases (e.g. sin(1/0))</li>
+				<li>Larger minkowski operations sometimes caused a crash after a CGAL assert was thrown</li>
+				<li>Fixed crashes in shared_ptr.hpp (or similar places) due bugs in cache management and CSG normalization</li>
+				<li>scale() with a scale factor of zero could cause a crash</li>
+				<li>Fixed a number of issues related to use/include</li>
+				<li>Providing an unknown parameter on the cmd-line caused a crash</li>
+				<li>cmd-line overrides using -D now also work for USEd modules</li>
+				<li>Modifier characters can now be used in front of if statements</li>
+				<li>rotate() with a vector argument with less that 3 elements used uninitialized variables, ending up being non-deterministic.</li>
+				<li>.csg files will now have relative filenames whenever possible</li>
+				<li>Don't just ignore geometric nodes having zero volume/area - when doing difference/intersection, they tend to turn negative objects into positive ones.</li>
+				<li>Always use utf-8 file encoding, also under Windows</li>
+				<li>A lot of build script fixes</li>
+				<li>Some other crash bugs fixes</li>
+			</ul>
+			<h3>Deprecations</h3>
+			<ul>
+			<li>The old include syntax "<filename.scad>" without the include keyword is no longer supported and will cause a syntax error.</li>
+			</ul>
+			</div>
+		</section>
+		
+		<section id="20130117">
+			<h1 class="title">OpenSCAD release: 2013.01</h1>
+			<h2 class="date">17 Jan 2013</h2>
+			<div class="entry">
+			<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from http://openscad.org. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+			<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
+			<p>Have fun,<br />-Marius</p>
+			
+			<h2>Summary of changes in this release:</h2>
+			<h3>Features</h3>
+			<ul>
+				<li>Snappier GUI while performing CGAL computations (computations running in separate thread)</li>
+				<li>The size of the misc. caches can now be adjusted from Preferences</li>
+				<li>The limit for when to disable OpenCSG can now be adjusted from Preferences</li>
+				<li>Added Dot product operator: vec * vec</li>
+				<li>Added Matrix multiplication operator: vec * mat, mat * mat</li>
+				<li>Added search() function</li>
+				<li>Dependencies are now tracked - any changes in uses/included files will be detected and cause a recompile</li>
+				<li>The OPENSCADPATH environment variable is now implemented will have precedence when searching for libraries</li>
+				<li>.csg files can now be opened from the GUI</li>
+				<li>linear_extrude() will now assume that the first parameter means 'height' if it's a number</li>
+			</ul>
+			<h3>Bugfixes</h3>
+			<ul>
+				<li>use'ing an non-existing file sometimes crashed under Windows</li>
+				<li>Better font handling: Ensure a monospace font is chosen as default</li>
+				<li>Division by zero caused hang in some cases (e.g. sin(1/0))</li>
+				<li>Larger minkowski operations sometimes caused a crash after a CGAL assert was thrown</li>
+				<li>Fixed crashes in shared_ptr.hpp (or similar places) due bugs in cache management and CSG normalization</li>
+				<li>scale() with a scale factor of zero could cause a crash</li>
+				<li>Fixed a number of issues related to use/include</li>
+				<li>Providing an unknown parameter on the cmd-line caused a crash</li>
+				<li>cmd-line overrides using -D now also work for USEd modules</li>
+				<li>Modifier characters can now be used in front of if statements</li>
+				<li>rotate() with a vector argument with less that 3 elements used uninitialized variables, ending up being non-deterministic.</li>
+				<li>.csg files will now have relative filenames whenever possible</li>
+				<li>Don't just ignore geometric nodes having zero volume/area - when doing difference/intersection, they tend to turn negative objects into positive ones.</li>
+				<li>Always use utf-8 file encoding, also under Windows</li>
+				<li>A lot of build script fixes</li>
+				<li>Some other crash bugs fixes</li>
+			</ul>
+			<h3>Deprecations</h3>
+			<ul>
+			<li>The old include syntax "<filename.scad>" without the include keyword is no longer supported and will cause a syntax error.</li>
+			</ul>
+			</div>
+		</section>
+		
+
+	</article>
+
+<div class="clear"></div>
+
+</div><!--#page-content end-->
+
+<footer>
+	
+</footer>
+</div><!--#page-wrap end-->
+
+</body>
+</html>
