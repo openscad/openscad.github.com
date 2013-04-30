@@ -63,11 +63,11 @@
 	
 	<article>
 
-		<section id="20130317">
-			<h1 class="title">OpenSCAD release: 2013.03</h1>
+		<section id="20130117">
+			<h1 class="title">OpenSCAD release: 2013.01</h1>
 			<h2 class="date">17 Jan 2013</h2>
 			<div class="entry">
-				<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from http://openscad.org. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+				<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from <a href="http://openscad.org">openscad.org</a>. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
 				<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
 				<p>Have fun,<br />-Marius</p>
 			
@@ -106,16 +106,16 @@
 				</ul>
 				<h3>Deprecations</h3>
 				<ul>
-				<li>The old include syntax "<filename.scad>" without the include keyword is no longer supported and will cause a syntax error.</li>
+				<li>The old include syntax "&lt;filename.scad&gt;" without the include keyword is no longer supported and will cause a syntax error.</li>
 				</ul>
 			</div>
 		</section>
 
-		<section id="20130217">
+		<section id="20111229">
 			<h1 class="title">OpenSCAD release: 2011.12</h1>
 			<h2 class="date">29 Dec 2011</h2>
 			<div class="entry">
-			  <p>I've just released OpenSCAD 2011.12. The source package as well as the Mac OS X binaries can be downloaded from http://openscad.org. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+			  <p>I've just released OpenSCAD 2011.12. The source package as well as the Mac OS X binaries can be downloaded from <a href="http://openscad.org">openscad.org</a>. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
 			  <p>This release of OpenSCAD has taken a lot of time to get out the door, primarily due to the backend being refactored to facilitate further development and the introduction of a regression test framework. The combination of these should make it possible to do more rapid releases in the future.</p>
 			  <p>Thanks a lot to all contributors!</p>
 				<p>Have fun,<br />-Marius</p>
@@ -130,8 +130,7 @@
 			    <li>The version_num() function will return the OpenSCAD version as a number, e.g. 20110923</li>
 			    <li>hull() Now supports 3D objects</li>
 			    <li>hull() with 2D object can now use for loops and boolean operations as children</li>
-			    <li>New import() statement reads the correct file format based on the filename extension</li>
-			    <li>.stl, .dxf and .off is supported)</li>
+			    <li>New import() statement reads the correct file format based on the filename extension (.stl, .dxf and .off is supported)</li>
 			    <li>The color() statement now supports an alpha parameter, e.g. color(c=[1,0,0], alpha=0.4)</li>
 			    <li>The color() statement now supports specifying colors as strings, e.g. color("Red")</li>
 			    <li>The color() statement now overrides colors specified further down in the tree</li>
@@ -161,8 +160,7 @@
 			  <ul>
 			    <li>dxf_linear_extrude() and dxf_rotate_extrude() are now deprecated.</li>
 			    <li>se linear_extrude() and rotate_extrude() instead.</li>
-			    <li>The file, layer, origin and scale parameters to linear_extrude() and rotate_extrude()</li>
-			    <li>re now deprecated. Use an import() child instead.</li>
+			    <li>The file, layer, origin and scale parameters to linear_extrude() and rotate_extrude() are now deprecated. Use an import() child instead.</li>
 			    <li>import_dxf(), import_stl() and import_off() are now deprecated. Use import() instead.</li>
 			    <li>When exporting geometry from the cmd-line, use the universal -o option. It will export to the correct file format based on the given suffix (dxf, stl, off). The -x and -s parameters are still working but deprecated.</li>
 			    <li>F2 and F3 for Save and Reload is now deprecated</li>
