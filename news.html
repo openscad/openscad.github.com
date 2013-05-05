@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>OpenSCAD - News</title>
+
+	<link href="assets/css/style.css" rel="stylesheet"/>
+  
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/modernizr-1.7.min.js"></script>
+
+	<!-- One-Page-Nav  -->
+	<script src="assets/js/jquery.scrollTo.js"></script>
+
+	<!--waypoints-->
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/waypoints-sticky.min.js"></script>
+
+	<script src="assets/js/news.js"></script>
+	<script src="assets/js/header.js"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-26999768-1']);
+          _gaq.push(['_setDomainName', 'openscad.org']);
+          _gaq.push(['_trackPageview']);
+          
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+</head>
+<body>
+
+<div id="page-wrap">
+<header>
+	<div class="clear"></div>
+	<div id="logo" class="left"></div>
+	<div id="donate" class="right">
+		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a>
+	</div>
+	<div id="title" style="margin-top:35px; width:620px;">
+		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
+		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+	</div>
+
+	<div id="navigation">
+	<div id="navigation-inner">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="current"><a href="news.html">News</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
+    </ul>
+	</div>
+	</div>
+</header>
+
+<div id="page-content">
+	
+	<div id="sidebar" class="sticky">
+		<h1>News</h1>
+		<ul>
+		</ul>
+	</div>
+	
+	<article>
+
+		<section id="20130505">
+			<h1 class="title">New Website</h1>
+			<h2 class="date">5 May 2013</h2>
+			<div class="entry">
+				<p>After years of ignoring the OpenSCAD website, it's finally time to give it a well-deserved facelift. The whole site is fully reworked, the content has been made a lot more available, especially the <a href="documentation.html">documentation</a>. We've also launched a web forum mirror of the mailing list at <a href="http://forum.openscad.org">forum.openscad.org</a>. The <a href="gallery.html">gallery</a> page is still work in progress and will gradually be populated with a better selection of examples.</p>
+                                <p><a href="mailto:marius@kintel.net">Feedback</a>, suggestions for changes or patches are welcome (PS! the website is a <a href="https://github.com/openscad/openscad.github.com">git repository</a>).</p>
+				<p>Thanks to <a href="http://janetingley.com">Jane Tingley</a> and <a href="http://maxstein.net">Max Stein</a> for helping out with content, visual design and web development.</p>
+                </section>
+		<section id="20130117">
+			<h1 class="title">OpenSCAD release: 2013.01</h1>
+			<h2 class="date">17 Jan 2013</h2>
+			<div class="entry">
+				<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from <a href="http://openscad.org">openscad.org</a>. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+				<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
+				<p>Have fun,<br />-Marius</p>
+			
+				<h2>Summary of changes in this release:</h2>
+				<h3>Features</h3>
+				<ul>
+					<li>Snappier GUI while performing CGAL computations (computations running in separate thread)</li>
+					<li>The size of the misc. caches can now be adjusted from Preferences</li>
+					<li>The limit for when to disable OpenCSG can now be adjusted from Preferences</li>
+					<li>Added Dot product operator: vec * vec</li>
+					<li>Added Matrix multiplication operator: vec * mat, mat * mat</li>
+					<li>Added search() function</li>
+					<li>Dependencies are now tracked - any changes in uses/included files will be detected and cause a recompile</li>
+					<li>The OPENSCADPATH environment variable is now implemented will have precedence when searching for libraries</li>
+					<li>.csg files can now be opened from the GUI</li>
+					<li>linear_extrude() will now assume that the first parameter means 'height' if it's a number</li>
+				</ul>
+				<h3>Bugfixes</h3>
+				<ul>
+					<li>use'ing an non-existing file sometimes crashed under Windows</li>
+					<li>Better font handling: Ensure a monospace font is chosen as default</li>
+					<li>Division by zero caused hang in some cases (e.g. sin(1/0))</li>
+					<li>Larger minkowski operations sometimes caused a crash after a CGAL assert was thrown</li>
+					<li>Fixed crashes in shared_ptr.hpp (or similar places) due bugs in cache management and CSG normalization</li>
+					<li>scale() with a scale factor of zero could cause a crash</li>
+					<li>Fixed a number of issues related to use/include</li>
+					<li>Providing an unknown parameter on the cmd-line caused a crash</li>
+					<li>cmd-line overrides using -D now also work for USEd modules</li>
+					<li>Modifier characters can now be used in front of if statements</li>
+					<li>rotate() with a vector argument with less that 3 elements used uninitialized variables, ending up being non-deterministic.</li>
+					<li>.csg files will now have relative filenames whenever possible</li>
+					<li>Don't just ignore geometric nodes having zero volume/area - when doing difference/intersection, they tend to turn negative objects into positive ones.</li>
+					<li>Always use utf-8 file encoding, also under Windows</li>
+					<li>A lot of build script fixes</li>
+					<li>Some other crash bugs fixes</li>
+				</ul>
+				<h3>Deprecations</h3>
+				<ul>
+				<li>The old include syntax "&lt;filename.scad&gt;" without the include keyword is no longer supported and will cause a syntax error.</li>
+				</ul>
+			</div>
+		</section>
+
+		<section id="20111229">
+			<h1 class="title">OpenSCAD release: 2011.12</h1>
+			<h2 class="date">29 Dec 2011</h2>
+			<div class="entry">
+			  <p>I've just released OpenSCAD 2011.12. The source package as well as the Mac OS X binaries can be downloaded from <a href="http://openscad.org">openscad.org</a>. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
+			  <p>This release of OpenSCAD has taken a lot of time to get out the door, primarily due to the backend being refactored to facilitate further development and the introduction of a regression test framework. The combination of these should make it possible to do more rapid releases in the future.</p>
+			  <p>Thanks a lot to all contributors!</p>
+				<p>Have fun,<br />-Marius</p>
+			
+				<h2>Summary of changes in this release:</h2>
+			  <h3>Features</h3>
+			  <ul>
+			    <li>The MCAD library is now bundled with OpenSCAD</li>
+			    <li>Added len() function. Takes one vector or string parameter and returns its length.</li>
+			    <li>The index operator [] now works on strings</li>
+			    <li>The version() function will return the OpenSCAD version as a vector, e.g. [2011, 09]</li>
+			    <li>The version_num() function will return the OpenSCAD version as a number, e.g. 20110923</li>
+			    <li>hull() Now supports 3D objects</li>
+			    <li>hull() with 2D object can now use for loops and boolean operations as children</li>
+			    <li>New import() statement reads the correct file format based on the filename extension (.stl, .dxf and .off is supported)</li>
+			    <li>The color() statement now supports an alpha parameter, e.g. color(c=[1,0,0], alpha=0.4)</li>
+			    <li>The color() statement now supports specifying colors as strings, e.g. color("Red")</li>
+			    <li>The color() statement now overrides colors specified further down in the tree</li>
+			    <li>if()/else() and the ternary operator can now take any value type as parameter. false, 0, empty string and empty vector or illegal value type will evaluate as false, everything else as true.</li>
+			    <li>Strings can now be lexographically compared using the <, <=, >, >= operators</li>
+			    <li>Added PI constant.</li>
+			    <li>Number literals in scientific notation are now accepted by the parser</li>
+			    <li>Added import and export of the OFF file format</li>
+			    <li>Now uses standard shortcuts for save, reload and quit on Linux and Windows. F2/F3 will still work but is deprecated.</li>
+			  </ul>
+			  <i>Bugfixes:</i>
+			  <ul>
+			    <li>Complex CSG models sometimes took extremely long time to normalize before OpenCSG preview</li>
+			    <li>square() crashed if any of the dimensions were zero</li>
+			    <li>Flush Caches didn't flush cached USE'd modules</li>
+			    <li>STL export should be a bit more robust</li>
+			    <li>Dropping a file into the editor under Windows didn't work (double C:/C:/ problem)</li>
+			    <li>On some platforms it was possible to insertion rich text in the editor, causing confusion.</li>
+			    <li>Less crashes due to CGAL assertions</li>
+			    <li>OpenCSG should now work on systems with OpenGL 1.x, given that the right extensions are available</li>
+			    <li>include now searches librarydir</li>
+			    <li>The $fs parameter yielded only half the number of segments it should have</li>
+			    <li>surface(center=true) is now correctly centered in the XY plane</li>
+			  </ul>
+
+			  <i>Deprecations:</i>
+			  <ul>
+			    <li>dxf_linear_extrude() and dxf_rotate_extrude() are now deprecated.</li>
+			    <li>se linear_extrude() and rotate_extrude() instead.</li>
+			    <li>The file, layer, origin and scale parameters to linear_extrude() and rotate_extrude() are now deprecated. Use an import() child instead.</li>
+			    <li>import_dxf(), import_stl() and import_off() are now deprecated. Use import() instead.</li>
+			    <li>When exporting geometry from the cmd-line, use the universal -o option. It will export to the correct file format based on the given suffix (dxf, stl, off). The -x and -s parameters are still working but deprecated.</li>
+			    <li>F2 and F3 for Save and Reload is now deprecated</li>
+				</ul>
+			</div>
+		</section>
+
+
+
+	</article>
+
+<div class="clear"></div>
+
+</div><!--#page-content end-->
+
+<footer>
+	
+</footer>
+</div><!--#page-wrap end-->
+
+</body>
+</html>
