@@ -206,6 +206,7 @@ small {font-size:11px;}
 
 button {padding:5px 5px 10px 5px; margin-bottom:10px;}
 button.left {margin-right:5px;}
+button.last {clear:both;}
 
 h1 a, h2 a, h3 a, h4 a, h5 a{text-decoration:none;}
 
