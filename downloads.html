@@ -36,6 +36,7 @@
 	<script type="text/javascript">
 	  var snapshot_links = {};
 	  var snapshot_names = {};
+	  var snapshot_sizes = {};
 	</script>
 	<script src="inc/mac_snapshot_links.js"></script>
 	<script src="inc/win_snapshot_links.js"></script>
@@ -43,10 +44,13 @@
 	<script type="text/javascript">
 	  jQuery(document).ready(function(){
 	    for (var linkname in snapshot_links) {
-	      $("a[href="+linkname+"]").attr('href',snapshot_links[linkname] );
+	      $("a[href="+linkname+"]").attr( 'href',snapshot_links[linkname] );
 	    }
 	    for (var name in snapshot_names) {
-	      $("h3[id="+name+"]").text(snapshot_names[name] );
+	      $("h3[id="+name+"]").text( snapshot_names[name] );
+	    }
+	    for (var sizetag in snapshot_sizes) {
+	      $("small[id="+sizetag+"]").text( snapshot_sizes[sizetag] );
 	    }
 	  });
 	</script>
@@ -205,7 +209,7 @@
 				<a href="MAC_SNAPSHOT_URL">
 				<button>
 					<h3 id="MAC_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
-					<small>32/64 bit Intel - dmg package - 23 MB</small>
+					<small>32/64 bit Intel - dmg package - </small><small id="MAC_SNAPSHOT_SIZE">?? MB</small>
 				</button>
 				</a>
 			</div>
@@ -215,13 +219,13 @@
 				<a href="WIN32_SNAPSHOT1_URL">
 				<button class="left">
 					<h3 id="WIN32_SNAPSHOT1_NAME">OpenSCAD yy.mm.dd</h3>
-					<small>exe installer - 7.5 MB</small>
+					<small>exe installer - </small><small id="WIN32_SNAPSHOT1_SIZE">?? MB</small>
 				</button>
 				</a>
 				<a href="WIN32_SNAPSHOT2_URL">
 				<button>
 					<h3 id="WIN32_SNAPSHOT2_NAME">OpenSCAD yy.mm.dd</h3>
-					<small>zip package - 7.5 MB</small>
+					<small>zip package - </small><small id="WIN32_SNAPSHOT2_SIZE">?? MB</small>
 				</button>
 				</a>
 			</div>
@@ -231,13 +235,13 @@
 				<a href="LIN32_SNAPSHOT_URL">
 				<button class="left">
 					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
-					<small>x86 (32-bit) - tgz archive - 16 MB</small>
+					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_SNAPSHOT_SIZE">?? MB</small>
 				</button>
 				</a>
 				<a href="LIN64_SNAPSHOT_URL">
 				<button>
 					<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
-					<small>x64 (64-bit) - tgz archive - 17 MB</small>
+					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
 				</button>
 				</a>
 			</div>
