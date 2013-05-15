@@ -34,23 +34,19 @@
 	</script>
 
 	<script type="text/javascript">
-	  var snapshot_links = {};
-	  var snapshot_names = {};
-	  var snapshot_sizes = {};
+	  var snapinfo = {};
 	</script>
 	<script src="inc/mac_snapshot_links.js"></script>
 	<script src="inc/win_snapshot_links.js"></script>
 	<script src="inc/linux_snapshot_links.js"></script>
 	<script type="text/javascript">
 	  jQuery(document).ready(function(){
-	    for (var linkname in snapshot_links) {
-	      $("a[href="+linkname+"]").attr( 'href',snapshot_links[linkname] );
-	    }
-	    for (var name in snapshot_names) {
-	      $("h3[id="+name+"]").text( snapshot_names[name] );
-	    }
-	    for (var sizetag in snapshot_sizes) {
-	      $("small[id="+sizetag+"]").text( snapshot_sizes[sizetag] );
+	    for (var snapid in snapinfo) {
+	      if ( snapid.indexOf( "_URL" ) >= 0 ) {
+	        $("a[id="+snapid+"]").attr( 'href',snapinfo[snapid] );
+	      } else { 
+	        $("#"+snapid).text( snapinfo[snapid] );
+	      }
 	    }
 	  });
 	</script>
@@ -206,7 +202,7 @@
 
 			<div id="snapshots-osx" class="subsection">
 				<h2>Mac OS X</h2>
-				<a href="MAC_SNAPSHOT_URL">
+				<a id="MAC_SNAPSHOT_URL" href="https://openscad.googlecode.com/files">
 				<button>
 					<h3 id="MAC_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>32/64 bit Intel - dmg package - </small><small id="MAC_SNAPSHOT_SIZE">?? MB</small>
@@ -216,13 +212,13 @@
 
 			<div id="snapshots-windows" class="subsection">
 				<h2>Windows</h2>
-				<a href="WIN32_SNAPSHOT1_URL">
+				<a id="WIN32_SNAPSHOT1_URL" href="https://openscad.googlecode.com/files">
 				<button class="left">
 					<h3 id="WIN32_SNAPSHOT1_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>exe installer - </small><small id="WIN32_SNAPSHOT1_SIZE">?? MB</small>
 				</button>
 				</a>
-				<a href="WIN32_SNAPSHOT2_URL">
+				<a id="WIN32_SNAPSHOT2_URL" href="https://openscad.googlecode.com/files">
 				<button>
 					<h3 id="WIN32_SNAPSHOT2_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>zip package - </small><small id="WIN32_SNAPSHOT2_SIZE">?? MB</small>
@@ -232,13 +228,13 @@
 
 			<div id="snapshots-linux" class="subsection">
 				<h2>Linux</h2>
-				<a href="LIN32_SNAPSHOT_URL">
+				<a id="LIN32_SNAPSHOT_URL" href="https://openscad.googlecode.com/files">
 				<button class="left">
 					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_SNAPSHOT_SIZE">?? MB</small>
 				</button>
 				</a>
-				<a href="LIN64_SNAPSHOT_URL">
+				<a id="LIN64_SNAPSHOT_URL" href="https://openscad.googlecode.com/files">
 				<button>
 					<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
