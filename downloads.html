@@ -20,7 +20,7 @@
 	<script src="assets/js/waypoints-sticky.min.js"></script>
 
 	<script src="assets/js/header.js"></script>
-        <script type="text/javascript">
+	<script type="text/javascript">
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-26999768-1']);
           _gaq.push(['_setDomainName', 'openscad.org']);
@@ -31,7 +31,26 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-        </script>
+	</script>
+
+	<script type="text/javascript">
+	  var snapshot_links = {};
+	  var snapshot_names = {};
+	</script>
+	<script src="inc/mac_snapshot_links.js"></script>
+	<script src="inc/win_snapshot_links.js"></script>
+	<script src="inc/linux_snapshot_links.js"></script>
+	<script type="text/javascript">
+	  jQuery(document).ready(function(){
+	    for (var linkname in snapshot_links) {
+	      $("a[href="+linkname+"]").attr('href',snapshot_links[linkname] );
+	    }
+	    for (var name in snapshot_names) {
+	      $("h3[id="+name+"]").text(snapshot_names[name] );
+	    }
+	  });
+	</script>
+
 </head>
 <body>
 
@@ -183,9 +202,9 @@
 
 			<div id="snapshots-osx" class="subsection">
 				<h2>Mac OS X</h2>
-				<a href="http://openscad.googlecode.com/files/OpenSCAD-2013.05.13.dmg">
+				<a href="MAC_SNAPSHOT_URL">
 				<button>
-					<h3>OpenSCAD-2013.05.13</h3>
+					<h3 id="MAC_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>32/64 bit Intel - dmg package - 23 MB</small>
 				</button>
 				</a>
@@ -193,15 +212,15 @@
 
 			<div id="snapshots-windows" class="subsection">
 				<h2>Windows</h2>
-				<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.05.12-x86-32-Installer.exe">
+				<a href="WIN32_SNAPSHOT1_URL">
 				<button class="left">
-					<h3>OpenSCAD-2013.05.12</h3>
+					<h3 id="WIN32_SNAPSHOT1_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>exe installer - 7.5 MB</small>
 				</button>
 				</a>
-				<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.05.12-x86-32.zip">
+				<a href="WIN32_SNAPSHOT2_URL">
 				<button>
-					<h3>OpenSCAD-2013.05.12</h3>
+					<h3 id="WIN32_SNAPSHOT2_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>zip package - 7.5 MB</small>
 				</button>
 				</a>
@@ -209,15 +228,15 @@
 
 			<div id="snapshots-linux" class="subsection">
 				<h2>Linux</h2>
-				<a href="https://openscad.googlecode.com/files/openscad-2013.01.x86-32.tar.gz">
+				<a href="LIN32_SNAPSHOT_URL">
 				<button class="left">
-					<h3>OpenSCAD-2013.01</h3>
+					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>x86 (32-bit) - tgz archive - 16 MB</small>
 				</button>
 				</a>
-				<a href="https://openscad.googlecode.com/files/openscad-2013.01.x86-64.tar.gz">
+				<a href="LIN64_SNAPSHOT_URL">
 				<button>
-					<h3>OpenSCAD-2013.01</h3>
+					<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD yy.mm.dd</h3>
 					<small>x64 (64-bit) - tgz archive - 17 MB</small>
 				</button>
 				</a>
