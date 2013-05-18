@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
+	<meta charset="UTF-8"> 
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<link type="text/css" rel="stylesheet" href="css/normalize.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="css/fonts.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="css/main.css" media="all" />
+	<link type="text/css" rel="stylesheet" href="css/print.css" media="print" />
+	<title>OpenSCAD CheatSheet</title>
+</head>
+<body>
+	<section>
+  	<h1>OpenSCAD CheatSheet</h1>
+		<section>
+			<article>
+				<h2>Syntax</h2>
+				<code>var = value;</code>
+				<code>module name(&hellip;) { &hellip; }<br/>
+				name();</code>
+				<code>function name(&hellip;) = &hellip;<br/>
+				name();</code>
+				<code>include &lt;&hellip;.scad&gt;</code>
+				<code>use &lt;&hellip;.scad&gt;</code>
+			</article>
+			<article>
+				<h2>2D</h2>
+				<code>circle(radius)</code>
+				<code>square(size,center)</code>
+				<code>square([width,height],center)</code>
+				<code>polygon([points])</code>
+				<code>polygon([points],[paths])</code>
+			</article>
+			<article>
+				<h2>3D</h2>
+				<code>sphere(radius)</code>
+				<code>cube(size)</code>
+				<code>cube([width,height,depth])</code>
+				<code>cylinder(h,r,center)</code>
+				<code>cylinder(h,r1,r2,center)</code>
+				<code>polyhedron(points, triangles, convexity)</code>
+			</article>
+		</section>
+		
+		<section>
+			<article>
+				<h2>Transformations</h2>
+				<code>translate([x,y,z])</code>
+				<code>rotate([x,y,z])</code>
+				<code>scale([x,y,z])</code>
+				<code>resize([x,y,z],auto)</code>
+				<code>mirror([x,y,z])</code>
+				<code>multmatrix(m)</code>
+				<code>color("colorname")</code>
+				<code>color([r, g, b, a])</code>
+				<code>hull()</code>
+				<code>minkowski()</code>
+			</article>
+			<article>
+				<h2>Boolean operations</h2>
+				<code>union()</code>
+				<code>difference()</code>
+				<code>intersection()</code>
+			</article>
+			<article>
+				<h2>Modifier Characters</h2>
+				<dl>
+					<dt><code>*</code></dt>
+					<dd>disable</dd>
+					<dt><code>!</code></dt>
+					<dd>show only</dd>
+					<dt><code>#</code></dt>
+					<dd>highlight</dd>
+					<dt><code>%</code></dt>
+					<dd>transparent</dd>
+				</dl>
+			</article>
+		</section>
+		
+		<section>
+			<article>
+				<h2>Mathematical</h2>
+				<code>abs</code>
+				<code>sign</code>
+				<code>acos</code>
+				<code>asin</code>
+				<code>atan</code>
+				<code>atan2</code>
+				<code>sin</code>
+				<code>cos</code>
+				<code>floor</code>
+				<code>round</code>
+				<code>ceil</code>
+				<code>ln</code>
+				<code>len</code>
+				<code>log</code>
+				<code>lookup</code>
+				<code>min</code>
+				<code>max</code>
+				<code>pow</code>
+				<code>sqrt</code>
+				<code>exp</code>
+				<code>rands</code>
+			</article>
+		</section>
+		
+		<section>
+			<article>
+				<h2>Other</h2>
+				<code>echo(&hellip;)</code>
+				<code>str(&hellip;)</code>
+				<code>for (i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
+				<code>for (i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
+				<code>for (i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
+				<code>intersection_for(i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
+				<code>intersection_for(i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
+				<code>intersection_for(i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
+				<code>if (&hellip;) { &hellip; }</code>
+				<code>assign (&hellip;) { &hellip; }</code>
+				<code>search(&hellip;)</code>
+				<code>import("&hellip;.stl")</code>
+				<code>linear_extrude(height,center,convexity,twist,slices)</code>
+				<code>rotate_extrude(convexity)</code>
+				<code>surface(file = "&hellip;.dat",center,convexity)</code>
+				<code>projection(cut)</code>
+				<code>render(convexity)</code>
+			</article>
+			<article>
+				<h2>Special variables</h2>
+				<dl>
+					<dt><code>$fa</code></dt>
+					<dd>minimum angle</dd>
+					<dt><code>$fs</code></dt>
+					<dd>minimum size</dd>
+					<dt><code>$fn</code></dt>
+					<dd>number of fragments</dd>
+					<dt><code>$t</code></dt>
+					<dd>animation step</dd>
+				</dl>
+			</article>
+		</section>
+		<section>
+			<article class="info">
+				<h2>Links</h2>
+				<ul>
+					<li><a href="http://www.openscad.org/" target="_blank">Official website</a></li>
+					<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual" target="_blank">Manual</a></li>
+					<li><a href="https://github.com/elmom/MCAD" target="_blank">MCAD library</a></li>
+					<li><a href="http://fablabamersfoort.nl/book/openscad" target="_blank">Other links</a></li>
+				</ul>
+			</article>			
+		  <article class="info">
+				<h2>Examples</h2>
+				<code>cylinder(10,5,5);</code>
+				<code>cylinder(h=10,r=5);</code>
+			</article>	
+		</section>		
+			
+		<footer><a href="https://github.com/openscad/OpenSCAD-CheatSheet" target="_blank">Code</a> / <a href="https://github.com/openscad/OpenSCAD-CheatSheet/issues" target="_blank">Issues</a><br/>
+		By <a href="http://www.peteruithoven.nl" target="_blank">Peter Uithoven</a> @ <a href="http://www.fablabamersfoort.nl" target="_blank">Fablab Amersfoort</a> (<a href="http://freedomdefined.org/Licenses/CC-BY" target="_blank">CC-BY</a>)</footer>
+	</section>
+</body>
+</html>
