@@ -34,18 +34,22 @@
 	</script>
 
 	<script type="text/javascript">
-	  var snapinfo = {};
+	  var fileinfo = {};
 	</script>
 	<script src="inc/mac_snapshot_links.js"></script>
 	<script src="inc/win_snapshot_links.js"></script>
 	<script src="inc/linux_snapshot_links.js"></script>
+	<script src="inc/mac_release_links.js"></script>
+	<script src="inc/win_release_links.js"></script>
+	<script src="inc/linux_release_links.js"></script>
+	<script src="inc/src_release_links.js"></script>
 	<script type="text/javascript">
 	  jQuery(document).ready(function(){
-	    for (var snapid in snapinfo) {
-	      if ( snapid.indexOf( "_URL" ) >= 0 ) {
-	        $("a[id="+snapid+"]").attr( 'href',snapinfo[snapid] );
+	    for (var fileid in fileinfo) {
+	      if (fileid.indexOf("_URL") >= 0) {
+	        $("a[id="+fileid+"]").attr('href',fileinfo[fileid]);
 	      } else { 
-	        $("#"+snapid).text( snapinfo[snapid] );
+	        $("#"+fileid).text(fileinfo[fileid]);
 	      }
 	    }
 	  });
@@ -101,10 +105,10 @@
 			<h1>Mac OS X</h1>
 			<div class="subsection">
 				<p>System requirements: Mac OS X 10.6 or newer</p>
-				<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.01.dmg">
+				<a id="MAC_RELEASE_URL" href="https://openscad.googlecode.com/files">
 				<button>
-					<h3>OpenSCAD-2013.01</h3>
-					<small>32/64 bit Intel - dmg package - 22 MB</small>
+					<h3 id="MAC_RELEASE_NAME">OpenSCAD</h3>
+					<small>32/64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small>
 				</button>
 				</a>
 			</div>
@@ -119,16 +123,16 @@
 		<section id="windows">
 			<h1>Windows</h1>
 			<p>System requirements: Windows XP or newer on x86/x64</p>
-			<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.01-Installer.exe">
+			<a id="WIN32_RELEASE1_URL" href="https://openscad.googlecode.com/files">
 			<button class="left">
-				<h3>OpenSCAD-2013.01</h3>
-				<small>exe installer - 7 MB</small>
+			  <h3 id="WIN32_RELEASE1_NAME">OpenSCAD</h3>
+			  <small>x86 (32-bit) exe installer - </small><small id="WIN32_RELEASE1_SIZE">?? MB</small>
 			</button>
 			</a>
-			<a href="https://openscad.googlecode.com/files/OpenSCAD-2013.01.zip">
+			<a id="WIN32_RELEASE2_URL" href="https://openscad.googlecode.com/files">
 			<button>
-				<h3>OpenSCAD-2013.01</h3>
-				<small>zip package - 7 MB</small>
+			  <h3 id="WIN32_RELEASE2_NAME">OpenSCAD</h3>
+			  <small>x86 (32-bit) zip package - </small><small id="WIN32_RELEASE2_SIZE">?? MB</small>
 			</button>
 			</a>
 		</section>
@@ -162,16 +166,16 @@
 			<div id="other-linux" class="subsection">
 				<h2>Other Linux</h2>
 				<p>The following generic Linux packages are available:</p>
-				<a href="https://openscad.googlecode.com/files/openscad-2013.01.x86-32.tar.gz">
+				<a id="LIN32_RELEASE_URL" href="https://openscad.googlecode.com/files">
 				<button class="left">
-					<h3>OpenSCAD-2013.01</h3>
-					<small>x86 (32-bit) - tgz archive - 17 MB</small>
+					<h3 id="LIN32_RELEASE_NAME">OpenSCAD</h3>
+					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_RELEASE_SIZE">?? MB</small>
 				</button>
 				</a>
-				<a href="https://openscad.googlecode.com/files/openscad-2013.01.x86-64.tar.gz">
+				<a id="LIN64_RELEASE_URL" href="https://openscad.googlecode.com/files">
 				<button>
-					<h3>OpenSCAD-2013.01</h3>
-					<small>x64 (64-bit) - tgz archive - 16 MB</small>
+					<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3>
+					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_RELEASE_SIZE">?? MB</small>
 				</button>
 				</a>
 			</div>
@@ -186,10 +190,10 @@
                 <a href="https://github.com/openscad/openscad"><img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 		<section id="source-code" class="github-ribbon">
 			<h1>Source Code</h1>
-                        <a href="https://openscad.googlecode.com/files/openscad-2013.01.src.tar.gz">
+			<a id="SRC_RELEASE_URL" href="https://openscad.googlecode.com/files">
 			<button class="left, last">
-			  <h3>OpenSCAD-2013.01</h3>
-			  <small>source code - tgz archive 3.3 MB</small>
+			  <h3 id="SRC_RELEASE_NAME">OpenSCAD</h3>
+			  <small>source code - tgz archive -</small><small id="SRC_RELEASE_SIZE">?? MB</small>
 			</button>
                         </a>
 			<p>You can also access the latest source code on github: <a href="https://github.com/openscad/openscad" target="_blank">openscad/openscad on github</a></p>

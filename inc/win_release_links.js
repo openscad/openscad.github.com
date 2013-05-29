@@ -1,0 +1,6 @@
+fileinfo['WIN32_RELEASE1_URL'] = 'https://openscad.googlecode.com/files/OpenSCAD-2013.01-Installer.exe'
+fileinfo['WIN32_RELEASE2_URL'] = 'https://openscad.googlecode.com/files/OpenSCAD-2013.01.zip'
+fileinfo['WIN32_RELEASE1_NAME'] = 'OpenSCAD 2013.01'
+fileinfo['WIN32_RELEASE2_NAME'] = 'OpenSCAD 2013.01'
+fileinfo['WIN32_RELEASE1_SIZE'] = '7 MB'
+fileinfo['WIN32_RELEASE2_SIZE'] = '7 MB'
