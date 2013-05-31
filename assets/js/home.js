@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 	var OSName="Unknown OS";
-	if (navigator.appVersion.indexOf("Win")!=-1) { OSName="Windows"; downloadLink = fileinfo[WIN32_RELEASE1_URL];}
-	if (navigator.appVersion.indexOf("Mac")!=-1) { OSName="Mac OS X"; downloadLink = fileinfo[MAC_RELEASE1_URL]; }
+	if (navigator.appVersion.indexOf("Win")!=-1) { OSName="Windows"; downloadLink = fileinfo['WIN32_RELEASE1_URL'];}
+	if (navigator.appVersion.indexOf("Mac")!=-1) { OSName="Mac OS X"; downloadLink = fileinfo['MAC_RELEASE_URL']; }
 	if (navigator.appVersion.indexOf("X11")!=-1) { OSName="Linux"; downloadLink = "downloads.html#linux"; }
 	if (navigator.appVersion.indexOf("Linux")!=-1) { OSName="Linux"; downloadLink = "downloads.html#linux"; }
 
@@ -12,7 +12,6 @@ $(document).ready(function() {
 	var news, i;
 	
 	$.get('news.html', function(data) {
-
 		$html      = $(data)
 		$entries    = $html.find('article section');
 
