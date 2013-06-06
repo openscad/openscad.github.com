@@ -8,5 +8,5 @@ fileinfo['WIN32_SNAPSHOT1_URL'] = 'https://openscad.googlecode.com/files/OpenSCA
 fileinfo['WIN32_SNAPSHOT2_URL'] = 'https://openscad.googlecode.com/files/OpenSCAD-2013.06.06-x86-32.zip'
 fileinfo['WIN32_SNAPSHOT1_NAME'] = 'OpenSCAD 2013.06.06'
 fileinfo['WIN32_SNAPSHOT2_NAME'] = 'OpenSCAD 2013.06.06'
-fileinfo['WIN32_SNAPSHOT1_SIZE'] = 'B'
-fileinfo['WIN32_SNAPSHOT2_SIZE'] = 'B'
+fileinfo['WIN32_SNAPSHOT1_SIZE'] = '7.6MB'
+fileinfo['WIN32_SNAPSHOT2_SIZE'] = '7.6MB'
