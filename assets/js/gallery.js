@@ -4,7 +4,7 @@ $(document).ready(function() {
   var id, title, url, image, image_thumb, image_preview, creator_name, creator_url;
   /*retrieve data from openscad tag*/
 
-  $.when($.getJSON('inc/thingiverse-gallery.json'), $.getJSON('inc/thingiverse-recent.json')).done(function(r1, r2) {
+  $.when($.getJSON('inc/static-gallery.json'), $.getJSON('inc/thingiverse-gallery.json'), $.getJSON('inc/thingiverse-recent.json')).done(function(r1, r2) {
     var things = r1[0].concat(r2[0]);
     $.each(things, function(key, val) {
       id = val.id;
