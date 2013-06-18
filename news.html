@@ -73,7 +73,82 @@
 	</div>
 	
 	<article>
+		<section id="20130618">
+		  <h1 class="title">OpenSCAD release: 2013.06</h1>
+		  <h2 class="date">18 Jun 2013</h2>
+		  <div class="entry">
+                    <p>OpenSCAD 2013.06 has just been released!</p>
+                    <p>The source code, as well as the Mac OS X binaries can be <a href="downloads.html">downloaded</a>. Binaries for Windows and Linux will trickle in when they've been built and tested.</p>
 
+                    <p>Thanks goes to everyone who's contributed to this release, through
+                      development, bug reports, email discussions and being willing to use
+                      development snapshots.</p>
+
+                    <p>As usual, we've added and modified a few language features, as well as
+                      added functionality in the GUI and cmd-line tools, as well as a long
+                      list of bugfixes and stability improvements.</p>
+
+                    <p>A summary of changes since last release follows.</p>
+
+                    <p>Take care,<br/> -Marius</p>
+
+                    <h2>Summary of changes</h2>
+                    <h3>Language Features</h3>
+                    <ul>
+                      <li>linear_extrude now takes a scale parameter:<br/>
+                        <code>linear_extrude(height=a, slices=b, twist=c, scale=[x,y])</code></li>
+                      <li>Recursive use of modules is now supported (including cascading child() operations), see <a href="https://github.com/openscad/openscad/blob/master/examples/example024.scad">example024</a></br></li>
+                      <li>Parameter list values can now depend on earlier values: <code>for (i=[0:2], j=[0:i])</code></li>
+                      <li>value assignments in parameters can now depend on already declared parameters</li>
+                      <li>Added <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize">resize()</a> module</li>
+                    </ul>
+                    <h3>Program Features</h3>
+                    <ul>
+                      <li>Added basic syntax highlighting in the editor</li>
+                      <li>There is now a <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries#Library_Locations">built-in library path</a> in user-space</li>
+                      <li>Commandline output to PNG, with various camera and rendering settings.<br/>        
+                        Run <code>openscad -h</code> to see usage info or see the <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment">user manual</a></li>
+                      <li>Attempting to open or drag&drop dxf, off or stl files in the GUI will now create an import statement.</li>
+                      <li>The preview operator (%) will now preserve any manually set color</li>
+                      <li>The highlight operator (#) will now color the object in transparent red</li>
+                      <li>Mac: Added document icon</li>
+                      <li>Mac: Added auto-update check</li>
+                      <li>Windows: Better cmd-line support using the openscad.com executable</li>
+                    </ul>
+                    
+                    <h3>Bugfixes</h3>
+                    <ul>
+                      <li>Importing files is now always relative to the importing script, also for libraries</li>
+                      <li>We didn't always print a warning when CSG normalization created too many elements</li>
+                      <li>Binary STLs can now be read on big endian architectures</li>
+                      <li>Some binary STLs couldn't be read</li>
+                      <li>Fixed some issues related to ARM builds</li>
+                      <li>CGAL triangulation more lenient - enables partial rendering of 'bad' DXF data</li>
+                      <li>The Automatic Reload feature is now more robust</li>
+                      <li>If a file couldn't be saved it no longer fails silently</li>
+                      <li>Fixed a number of crashes related to CGAL and OpenCSG rendering or complex models</li>
+                      <li>The lookup() function had bad boundary condition behavior</li>
+                      <li>The surface() module failed when the .dat file lacked a trailing newline</li>
+                      <li>The hull() module could crash if any of the children were empty objects</li>
+                      <li>Some problems using unicode filenames have been fixed</li>
+                    </ul>
+                    
+                    <h3>Misc</h3>
+                    <ul>
+                      <li>Build scripts have been further improved</li>
+                      <li>Regression test now creates single monolithic .html file for easier uploading</li>
+                      <li>Regression test auto-starts & stops Xvfb / Xvnc if on headless unix machine</li>
+                      <li>The backend is finally independent of Qt</li>
+                      <li>Windows: We now have a 64-bit version</li>
+                    </ul>
+                    
+                    <h3>Known Bugs</h3>
+                    <ul>
+                      <li>Linux: command-line png rendering on Gallium is flaky.<br/>
+                        Workaround: use CGAL --render or hardware rendering.</li>
+                    </ul>
+		  </div>
+                </section>
 		<section id="20130505">
 			<h1 class="title">New Website</h1>
 			<h2 class="date">5 May 2013</h2>
