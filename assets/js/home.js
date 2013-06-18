@@ -1,13 +1,29 @@
 $(document).ready(function() {
 
 	var OSName="Unknown OS";
-	if (navigator.appVersion.indexOf("Win")!=-1) { OSName="Windows"; downloadLink = fileinfo['WIN32_RELEASE1_URL'];}
-	if (navigator.appVersion.indexOf("Mac")!=-1) { OSName="Mac OS X"; downloadLink = fileinfo['MAC_RELEASE_URL']; }
-	if (navigator.appVersion.indexOf("X11")!=-1) { OSName="Linux"; downloadLink = "downloads.html#linux"; }
-	if (navigator.appVersion.indexOf("Linux")!=-1) { OSName="Linux"; downloadLink = "downloads.html#linux"; }
+	if (navigator.appVersion.indexOf("Win")!=-1) { 
+          OSName="Windows"; 
+          DLName = fileinfo['WIN32_RELEASE1_NAME'];
+          downloadLink = fileinfo['WIN32_RELEASE1_URL'];
+        }
+	else if (navigator.appVersion.indexOf("Mac")!=-1) { 
+          OSName="Mac OS X"; 
+          DLName = fileinfo['MAC_RELEASE_NAME'];
+          downloadLink = fileinfo['MAC_RELEASE_URL']; 
+        }
+	else if (navigator.appVersion.indexOf("X11")!=-1) { 
+          OSName="Linux"; 
+          DLName = fileinfo['MAC_RELEASE_NAME'];
+          downloadLink = "downloads.html#linux"; 
+        }
+	else if (navigator.appVersion.indexOf("Linux")!=-1) {
+          OSName="Linux"; 
+          DLName = fileinfo['MAC_RELEASE_NAME'];
+          downloadLink = "downloads.html#linux"; 
+        }
 
 	$("#home-download a#download-link").attr("href",downloadLink);
-	$("#home-download-link h4").append(OSName);
+	$("#home-download-link h4").text(DLName + " " + OSName);
 	
 	var news, i;
 	
