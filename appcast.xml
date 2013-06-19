@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
-    <title>OpenSCAD Development Snapshots</title>
-    <link>http://openscad.org/appcast-snapshots.xml</link>
+    <title>OpenSCAD Updates</title>
+    <link>http://openscad.org/appcast.xml</link>
     <language>en</language>
     <item>
       <title>OpenSCAD 2013.06</title>
