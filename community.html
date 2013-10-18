@@ -41,7 +41,20 @@
 	<div class="clear"></div>
 	<div id="logo" class="left"></div>
 	<div id="donate" class="right">
-		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a>
+		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
+          <script src="http://coinwidget.com/widget/coin.js"></script>
+          <script>
+            CoinWidgetCom.go({
+	    wallet_address: "18Eakg4ZCjjfVajXGvyntLKsEJYvZuT49C"
+	    , currency: "bitcoin"
+	    , counter: "count"
+	    , alignment: "bl"
+	    , qrcode: true
+	    , auto_show: false
+	    , lbl_button: "Donate"
+	    , lbl_address: "Bitcoin Address:"
+            });
+          </script>
 	</div>
 	<div id="title" style="margin-top:35px; width:620px;">
 		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
