@@ -8,11 +8,11 @@
       <title>OpenSCAD 2013.10.26</title>
       <pubDate>2013.10.26</pubDate>
       <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/master/RELEASE_NOTES</sparkle:releaseNotesLink>
-      <enclosure url="http://files.googlecode.com/OpenSCAD-2013.10.26.dmg"
+      <enclosure url="http://files.openscad.org/OpenSCAD-2013.10.26.dmg"
                  sparkle:version="2013.10.26"
                  sparkle:shortVersionString="2013.10.26"
-                 sparkle:dsaSignature="MC0CFHc8yFpSuffJDtucxB5QfGCcC+MYAhUAzkVUiHv/SAJeR3kUdEtvGrNCX+I="
-                 length="14039424" 
+                 sparkle:dsaSignature="MC0CFQCWe3Y721CJfB8VuYb8mUHPaLuzpAIUfgkiNSurWZUC5FI3+fyJjVRSI0Q="
+                 length="14057491" 
                  type="application/octet-stream"/>
     </item>
   </channel>
