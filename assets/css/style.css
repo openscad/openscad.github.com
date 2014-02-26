@@ -148,6 +148,8 @@ header a:hover {text-decoration:underline;}
 #logo{background:url('../img/logo.png'); width:150px; height:150px; margin:0px 20px 0px 10px;}
 #logo-title{}
 
+.newsimg {float:left; width:150px; height:150px; margin:4px 12px 0px 0px;}
+
 #donate {margin-top:10px;}
 #donate h4 {margin-bottom:5px; font-weight:600;}
 	
