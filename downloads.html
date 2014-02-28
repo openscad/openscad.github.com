@@ -174,7 +174,11 @@
 			<h1>Linux</h1>
 			<div id="ubuntu" class="subsection">
 				<h2>Ubuntu / Kubuntu</h2>
-				<p>There is a PPA (private package archive) for OpenSCAD that is maintained by <a href="https://launchpad.net/~chrysn" target="_blank">chrysn</a>.<br />Installing OpenSCAD on Ubuntu/Kubuntu boils down to running the following commands:</p>
+				<p>OpenSCAD is available in the repositories.
+				<pre>
+					<code>$ sudo apt-get install openscad</code>
+				</pre>
+				<p>There is a PPA (private package archive) for more recent versions of OpenSCAD that is maintained by <a href="https://launchpad.net/~chrysn" target="_blank">chrysn</a>. To install, run the following commands:</p>
 				<pre>
 					<code>$ sudo add-apt-repository ppa:chrysn/openscad</code>
 					<code>$ sudo apt-get update</code>
@@ -183,7 +187,7 @@
 			</div>
 			<div id="fedora" class="subsection">
 				<h2>Fedora</h2>
-				<p>OpenSCAD is available in Fedora official repositories. So installing OpenSCAD on Fedora boils down to running the following command:</p>
+				<p>OpenSCAD is available in Fedora official repositories. To install, run the following command:</p>
 				<pre>
 					<code># yum install openscad</code>
 				</pre>
@@ -204,7 +208,7 @@
 			</div>
 			<div id="other-linux" class="subsection">
 				<h2>Other Linux</h2>
-				<p>The following generic Linux packages are available:</p>
+				<p>The following generic binary Linux packages are available:</p>
 				<a id="LIN32_RELEASE_URL" href="http://files.openscad.org">
 				<button class="left, download-button">
 					<h3 id="LIN32_RELEASE_NAME">OpenSCAD</h3>
@@ -223,13 +227,19 @@
 		<section id="bsd">
 			<h1>BSD</h1>
 			<div id="netbsd" class="subsection">
-				<h2>NetBSD</h2>
-				<p>OpenSCAD is available in NetBSD 6.1+ pkgsrc. <a href="http://pkgin.net/">Set up pkgin</a> and run this command:</p>
+				<h2>NetBSD (>6.1)</h2>
+				<p><a href="http://pkgin.net/">Set up pkgin</a> and run this command:</p>
 				<pre>
 					<code># pkgin install openscad</code>
 				</pre>
 			</div>
-	<div id="openbsd" class="subsection">
+			<div id="openbsd" class="subsection">
+				<h2>FreeBSD (>10)</h2>
+				<pre>
+					<code># pkg install openscad</code>
+				</pre>
+			</div>
+			<div id="openbsd" class="subsection">
 				<h2>OpenBSD</h2>
 				<p>OpenSCAD is available for amd64, i386 and macppc in OpenBSD packages:</p>
 				<pre>
@@ -241,7 +251,6 @@
 		<section id="other-systems">
 			<h1>Other Systems</h1>
 			<p>It's possible to build OpenSCAD on other systems as long as a C++ compiler and the prerequisite software libraries are available.</p>
-			<p>OpenSCAD is reported to build and run on FreeBSD but there are no updated binary packages available.</p>
 		</section>
 
                 <a href="https://github.com/openscad/openscad"><img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
