@@ -1,3 +1,3 @@
-fileinfo['SRC_RELEASE_URL'] = 'https://openscad.googlecode.com/files/openscad-2013.06.src.tar.gz'
-fileinfo['SRC_RELEASE_NAME'] = 'OpenSCAD 2013.06'
-fileinfo['SRC_RELEASE_SIZE'] = '3.9 MB'
+fileinfo['SRC_RELEASE_URL'] = 'http://files.openscad.org/openscad-2014.03.src.tar.gz'
+fileinfo['SRC_RELEASE_NAME'] = 'OpenSCAD 2014.03'
+fileinfo['SRC_RELEASE_SIZE'] = '4.2 MB'
