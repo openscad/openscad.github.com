@@ -86,6 +86,82 @@
 	</div>
 	
 	<article>
+		<section id="20140309">
+		  <h1 class="title">OpenSCAD release: 2014.03</h1>
+		  <h2 class="date">9 Mar 2014</h2>
+		  <div class="entry">
+                    <p>OpenSCAD 2014.03 has just been released!</p>
+                    <p>The source code, as well as binaries for Mac OS X, Windows and Linux are ready for <a href="downloads.html">download</a>.</p>
+
+                    <p>Lots of thanks go to everyone who've
+                       contributed to this release through
+                       development, testing, bug reports, discussions
+                       and bounties.</p>
+
+                    <p>A summary of changes since last release follows.</p>
+
+                    <p>Take care,<br/> -Marius</p>
+
+                    <h2>Summary of changes</h2>
+                    <h3>Language Features</h3>
+                    <ul>
+                      <li>Added diameter argument: circle(d), cylinder(d, d1, d2) and sphere(d)</li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#parent_module.28n.29_and_.24parent_modules">parent_module() and $parent_modules</a></li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#children_.28previously:_child.29">children()</a> as a replacement for child()</li>
+                      <li>Unicode strings (using UTF-8) are now correctly handled</li>
+                      <li><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Conditional_and_Iterator_Functions">Ranges</a> can have a negative step value</li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#norm">norm()</a> and  <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#cross">cross()</a> functions</li>
+                    </ul>
+                    
+                    <h3>Program Features</h3>
+                    <ul>
+                      <li>Cmd-line: <code>--info</code> parameter prints system/library info</li>
+                      <li>Cmd-line: <code>--csglimit</code> parameter to change CSG rendering limit</li>
+                      <li>Cmd-line: Better handling of cmd-line arguments under Windows</li>
+                      <li>GUI: Added Reset View</li>
+                      <li>GUI: Added Search&amp;Replace in editor</li>
+                      <li>GUI: Syntax highlighting now has a dark background theme</li>
+                      <li>GUI: We now create a backup file before rendering to allow for recovery if OpenSCAD crashes/freezes</li>
+                      <li>GUI: Accessibility features enabled (e.g. screenreading)</li>
+                    </ul>
+                    
+                    <h3>Bugfixes/improvements</h3>
+                    <ul>
+                      <li>Reading empty STL files sometimes caused a crash</li>
+                      <li><code>OPENSCADPATH</code> now uses semicolon as path separator under Windows</li>
+                      <li>polyhedron() is now much more robust handling almost planar polygons</li>
+                      <li>Automatic reloads of large designs are more robust</li>
+                      <li>Boolean logic in if() statements are now correctly short-circuited</li>
+                      <li>rands() with zero range caused an infinite loop</li>
+                      <li>resize(, auto=true) didn't work when shrinking objects</li>
+                      <li>The $children variable sometimes misbehaved due to dynamic scoping</li>
+                      <li>The --camera cmd-line option behaved differently then the corresponding GUI function</li>
+                      <li>PNG export now doesn't leak transparency settings into the target image</li>
+                      <li>Improved performance of 3D hull() operations</li>
+                      <li>Some editor misbehaviors were fixed</li>
+                      <li>Stability fixes of CGAL-related crashes</li>
+                      <li>Windows cmd-line can now handle spaces in filenames</li>
+                      <li>Default CSG rendering limit is now 100K elements</li>
+                      <li>Fixed a crash reading DXF files using comma as decimal separator</li>
+                      <li>Fixed a crash running the cmd-line without a HOME env. variable</li>
+                      <li>Intersecting something with nothing now correctly results in an empty object</li>
+                    </ul>
+                    
+                    <h3>Deprecations</h3>
+                    <ul>
+                      <li>child() is no longer supported. Use children() instead.</li>
+                      <li>polyhedron(triangles=[...]): Use polyhedron(faces=[...]) instead.</li>
+                    </ul>
+                    
+                    <h3>Misc</h3>
+                    <ul>
+                      <li>Test framework now shares more code with the GUI app</li>
+                      <li>Test report can now be automatically uploaded to dinkypage.com</li>
+                      <li>Better compatibility with BSD systems</li>
+                      <li>Qt5 support</li>
+                    </ul>
+		  </div>
+                </section>
 		<section id="20140224">
 		  <h1 class="title">Google Summer of Code 2014</h1>
 		  <h2 class="date">24 Feb 2014</h2>
