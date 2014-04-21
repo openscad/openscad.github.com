@@ -8,6 +8,7 @@
       <title>OpenSCAD 2014.03</title>
       <pubDate>2014.03.09</pubDate>
       <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/openscad-2014.03/RELEASE_NOTES</sparkle:releaseNotesLink>
+      <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
       <enclosure url="http://files.openscad.org/OpenSCAD-2014.03.dmg"
                  sparkle:version="2014.03.09"
                  sparkle:shortVersionString="2014.03"
