@@ -1,3 +1,3 @@
-fileinfo['MAC_SNAPSHOT_URL'] = 'http://files.openscad.org/OpenSCAD-2014.03.dmg'
-fileinfo['MAC_SNAPSHOT_NAME'] = 'OpenSCAD 2014.03'
-fileinfo['MAC_SNAPSHOT_SIZE'] = '13.4 MB'
+fileinfo['MAC_SNAPSHOT_URL'] = 'http://files.openscad.org/snapshotsOpenSCAD-2014.04.25.dmg'
+fileinfo['MAC_SNAPSHOT_NAME'] = 'OpenSCAD 2014.04.25'
+fileinfo['MAC_SNAPSHOT_SIZE'] = '14.3 MB'
