@@ -5,15 +5,15 @@
     <link>http://openscad.org/appcast-snapshots.xml</link>
     <language>en</language>
     <item>
-      <title>OpenSCAD 2014.05.17</title>
-      <pubDate>2014.05.17</pubDate>
+      <title>OpenSCAD 2014.05.29</title>
+      <pubDate>2014.05.29</pubDate>
       <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/master/RELEASE_NOTES</sparkle:releaseNotesLink>
       <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
-      <enclosure url="http://files.openscad.org/OpenSCAD-2014.05.17.dmg"
-                 sparkle:version="2014.05.17"
-                 sparkle:shortVersionString="2014.05.17"
-                 sparkle:dsaSignature="MCwCFCNFson81fml02UNdPg0WdmjS7xGAhRs3bmnLUA70SBf5sA0E3s1/5qnQw=="
-                 length="14979790" 
+      <enclosure url="http://files.openscad.org/OpenSCAD-2014.05.29.dmg"
+                 sparkle:version="2014.05.29"
+                 sparkle:shortVersionString="2014.05.29"
+                 sparkle:dsaSignature="MC0CFQCQLGKL232BP10OwIRU2YA2625t9AIUKOi5pRiguzqoFy5W5CZQF0Sqscc="
+                 length="20060271" 
                  type="application/octet-stream"/>
     </item>
   </channel>
