@@ -42,9 +42,6 @@ header h2 {
 section {
 	float: left;
 }
-section section {
-	height: 36.7em; /* damn shame */
-}
 section section article {
 	float: none;
 }
