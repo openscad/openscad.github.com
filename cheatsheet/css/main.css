@@ -3,19 +3,19 @@ body {
 	font-size: 100%;
 	line-height: 1em;
 	color: #999;
-	
-	padding: 0.6em;	
+	padding: 0.6em;
 }
-a{
+
+a {
 	color: #447FFF;
 }
+
 h1 {
-  font-family: "UbuntuMonoBold", "Ubuntu Mono", 'courier new', monospace, sans-serif;
+	font-family: "UbuntuMonoBold", "Ubuntu Mono", 'courier new', monospace, sans-serif;
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1.8em;
 	color: #DEBA00;
-	
 	margin: 0 0 0.6em 0;
 }
 
@@ -25,12 +25,11 @@ header h1 {
 }
 
 h2 {
-  font-family: "UbuntuMonoBold", "Ubuntu Mono", 'courier new', monospace, sans-serif;
-  font-weight: normal;
+	font-family: "UbuntuMonoBold", "Ubuntu Mono", 'courier new', monospace, sans-serif;
+	font-weight: normal;
 	font-style: normal;
 	font-size: 1.4em;
 	color: #79A22E;
-	
 	margin: 0 0 10px 0;
 }
 
@@ -42,9 +41,11 @@ header h2 {
 section {
 	float: left;
 }
+
 section section article {
 	float: none;
 }
+
 article {
 	background: #FFFFDD;
 	-webkit-border-radius: 0.6em;
@@ -55,10 +56,12 @@ article {
 	margin: 0 0.6em 0.6em 0;
 	border: 1px solid #DEBA00;
 }
+
 article.info {
 	background: #fff;
 	border: 1px solid #ddd;
 }
+
 article.info h2 {
 	color: #bbb;
 }
@@ -66,10 +69,10 @@ article.info h2 {
 code {
 	font-family: "UbuntuMonoRegular", "Ubuntu Mono", 'courier new', monospace, sans-serif;
 	color: #000;
-	
 	display: block;
 	margin: 0 0 0.5em 0;
 }
+
 code span {
 	color: #999;
 }
@@ -77,17 +80,21 @@ code span {
 dt code {
 	display: inline;
 }
+
 dt {
 	float: left;
 	clear: left;
 }
+
 dd {
 	margin: 0 0 .5em 2em;
 }
+
 ul {
 	margin: 0 0 0.5em;
-  padding: 0 1em;
+	padding: 0 1em;
 }
+
 ul li {
 	/*margin: 0 0 0.2em 0;*/
 	line-height: 1.2em;
@@ -100,6 +107,7 @@ footer {
 	margin: 0 0.6em 0.6em 0;
 	text-align: right;
 }
+
 .clear {
 	clear: both;
 }
@@ -109,6 +117,7 @@ footer {
 	top: 0;
 	right:0;
 }
+
 .fork img{
 	border: none;
 }
