@@ -18,6 +18,12 @@ h1 {
 	
 	margin: 0 0 0.6em 0;
 }
+
+header h1 {
+	display: inline-block;
+	margin-right: 1ex;
+}
+
 h2 {
   font-family: "UbuntuMonoBold", "Ubuntu Mono", 'courier new', monospace, sans-serif;
   font-weight: normal;
@@ -27,6 +33,12 @@ h2 {
 	
 	margin: 0 0 10px 0;
 }
+
+header h2 {
+	display: inline;
+	color: #bbb;
+}
+
 section {
 	float: left;
 }
