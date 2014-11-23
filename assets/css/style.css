@@ -351,6 +351,7 @@ a:active #home-download-link{
 .tutorial-links img {border:1px solid #ddd; border-radius:8px;}
 .tutorial-links iframe {border:1px solid #ddd; border-radius:8px;}
 .tutorial-links .img-container {float:left; width:320px; margin-right:20px;}
+.tutorial-links .img-title {float:left; width:300px; font-size: 50%; font-weight: normal; font-family: sans-serif; }
 .tutorial-links .text-container {float:left; width:300px;}
 
 .tutorial-links.multi:hover {opacity:1;}
