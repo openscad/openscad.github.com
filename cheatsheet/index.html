@@ -98,6 +98,7 @@
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ceil">ceil</a></code>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ln">ln</a></code>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#len">len</a></code>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#let">let</a></code>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#log">log</a></code>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#pow">pow</a></code>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sqrt">sqrt</a></code>
@@ -122,7 +123,7 @@
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#parent_module.28n.29_and_.24parent_modules">parent_module</a>(idx)</code>
 			</article>
 		</section>
-
+            
 		<section>
 			<article>
 				<h2>Other</h2>
@@ -143,6 +144,16 @@
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Render">render</a>(convexity)</code>
 				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Modules#children">children</a>([idx])</code>
 			</article>
+                </section>
+		<section>
+			<article>
+                                <h2>List Comprehensions</h2>
+                                <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (i = <i>range</i>|<i>list</i>) i ]</code>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if">Conditions</a> [ for (i = &hellip;) if (condition(i)) i ] </code>
+				<code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#let">Assignments</a> [ for (i = &hellip;) let (assignments) a ] </code>
+                        </article>
+                </section>
+                <section>
 			<article>
 				<h2>Special variables</h2>
 				<dl>
@@ -154,19 +165,28 @@
 					<dd>number of fragments</dd>
 					<dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24t">$t</a></code></dt>
 					<dd>animation step</dd>
+
+                                        <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpr</a></code></dt>
+					<dd>viewport rotation angles in degrees</dd>
+                                        <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpt</a></code></dt>
+					<dd>viewport translation</dd>
+                                        <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpd</a></code></dt>
+					<dd>viewport camera distance</dd>
 				</dl>
 			</article>
 		</section>
-		<section>
+                
+                <br clear="all"/>
+		
+                <section>
 			<article class="info">
-				<h2>Links</h2>
-				<ul>
-					<li><a href="http://www.openscad.org/" target="_blank">Official website</a></li>
-					<li><a href="https://github.com/openscad/openscad" target="_blank">Code</a> | <a href="https://github.com/openscad/openscad/issues" target="_blank">Issues</a></li>
-					<li><a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual" target="_blank">Manual</a></li>
-					<li><a href="https://github.com/openscad/MCAD" target="_blank">MCAD library</a></li>
-					<li><a href="http://fablabamersfoort.nl/book/openscad" target="_blank">Other links</a></li>
-				</ul>
+                            <em>Links:</em>
+					<a href="http://www.openscad.org/" target="_blank">Official website</a>
+					| <a href="https://github.com/openscad/openscad" target="_blank">Code</a>
+                                        | <a href="https://github.com/openscad/openscad/issues" target="_blank">Issues</a>
+					| <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual" target="_blank">Manual</a>
+					| <a href="https://github.com/openscad/MCAD" target="_blank">MCAD library</a>
+					| <a href="http://fablabamersfoort.nl/book/openscad" target="_blank">Other links</a>
 			</article>
 		</section>
 	</section>
