@@ -336,6 +336,10 @@
 
 			<div id="snapshots-linux" class="subsection">
 				<h2>Linux</h2>
+                                
+                                <p>Please try the automatically built snapshots first if you are running a supported distribution 
+                                   (see <a href="#snapshots-linux-auto">below</a>).</p>
+                                
 				<a id="LIN32_SNAPSHOT_URL" href="http://files.openscad.org">
 				<button class="left, download-button">
 					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD</h3>
@@ -348,9 +352,70 @@
 					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
 				</button>
 				</a>
-				<h3>Fedora</h3>
-				<p>There is a RPM repository with nightly OpenSCAD development snapshots on <a href="http://copr.fedoraproject.org/coprs/churchyard/openscad-devel/">copr.fedoraproject.org</a>.</p>
 			</div>
+
+                        <div id="snapshots-linux-auto" class="subsection">
+                            <h1>Snapshots for specific Linux distributions</h1>
+
+                            <h2>Debian / Ubuntu packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
+                        
+                            <p>The packages are automatically built based on the <a href="https://github.com/openscad/openscad/tree/master">master branch</a>
+                                on github.</p>
+                            <p>For those packages, the release key must be added with apt-key to the key-ring to allow
+                                apt-get / aptitude to validate the packages.<br/>
+                                Key ID: 30EB8E08 (valid till 2016-11-28)<br/>
+                                Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</p>
+
+                            <pre>
+                                <small><code># wget -qO - http://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
+                            </pre>
+
+                            <br/>
+                            <p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
+                                file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.
+
+                            <h3>Debian 7 (Wheezy)</h3>
+
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_7.0/ ./</code></small>
+                            </pre>
+                            <h3>Ubuntu 14.04 LTS</h3>
+
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_14.04/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 14.10 / Debian 8 (Jessie) - not yet released, currently also called "testing"</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_14.10/ ./</code></small>
+                            </pre>
+
+                            <h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
+                            
+                            <h3>openSUSE 13.1</h3>
+                            <pre>
+                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_13.1/</code></small>
+                            </pre>
+                            
+                            <h3>openSUSE 13.2</h3>
+                            <pre>
+                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_13.2/</code></small>
+                            </pre>
+                            
+                            <h3>openSUSE Tumbleweed</h3>
+                            <pre>
+                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
+                            </pre>
+                            
+                            <h3>openSUSE Factory</h3>
+                            <pre>
+                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Factory/</code></small>
+                            </pre>
+                            
+                            <h2>Fedora packages built on Copr</h2>
+
+                            <p>RPM repository with nightly OpenSCAD development snapshots on <a href="http://copr.fedoraproject.org/coprs/churchyard/openscad-devel/">copr.fedoraproject.org</a>.</p>
+                        </div>
 
 		</section>
 		
