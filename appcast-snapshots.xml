@@ -9,7 +9,7 @@
       <pubDate>2015.01.21</pubDate>
       <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/master/RELEASE_NOTES</sparkle:releaseNotesLink>
       <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
-      <enclosure url="http://files.openscad.org/OpenSCAD-2015.01.21.dmg"
+      <enclosure url="http://files.openscad.org/snapshots/OpenSCAD-2015.01.21.dmg"
                  sparkle:version="2015.01.21"
                  sparkle:shortVersionString="2015.01.21"
                  sparkle:dsaSignature="MCwCFDJRcnMS49DYlZRumSx58aDqHyHXAhQxz3A/RRNLRVs1xMxHi4Ujm3+Drg=="
