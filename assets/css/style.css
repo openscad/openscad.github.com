@@ -392,3 +392,22 @@ span.link:hover {text-decoration:underline;}
 @media all and (orientation: landscape) {
 	
 }
+
+/* Social media icons */
+ 
+i.fa {
+	width: 30px;
+	height: 30px;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.fa-twitter {
+	color:#00aced
+}
+.fa-google-plus {
+	color:#dd4b39
+}
+
+
