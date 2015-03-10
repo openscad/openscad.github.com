@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
-    <title>OpenSCAD Development Snapshots</title>
-    <link>http://openscad.org/appcast-snapshots.xml</link>
+    <title>OpenSCAD Updates</title>
+    <link>http://openscad.org/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>OpenSCAD 2015.03.04</title>
-      <pubDate>2015.03.04</pubDate>
-      <sparkle:releaseNotesLink>https://raw.github.com/openscad/openscad/master/releases/2014.QX.md</sparkle:releaseNotesLink>
+      <title>OpenSCAD 2015.03</title>
+      <pubDate>2015.03.06</pubDate>
+      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/openscad-2015.03/releases/2015.03.md</sparkle:releaseNotesLink>
       <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
-      <enclosure url="http://files.openscad.org/snapshots/OpenSCAD-2015.03.04.dmg"
-                 sparkle:version="2015.03.04"
-                 sparkle:shortVersionString="2015.03.04"
-                 sparkle:dsaSignature="MCwCFCMftrTHZXR8X4ZPYjDb283Ga7BgAhQittPU3rLCbSzQehhRCUwtAzHZ0w=="
-                 length="22465961" 
+      <enclosure url="http://files.openscad.org/OpenSCAD-2015.03.dmg"
+                 sparkle:version="2015.03.06"
+                 sparkle:shortVersionString="2015.03"
+                 sparkle:dsaSignature="MCsCExMdeYq9N+juFM6ZyOq61j9/tNQCFFrFCfHfas3JNk82jSRemwncFO6T"
+                 length="22341714"
                  type="application/octet-stream"/>
     </item>
   </channel>
