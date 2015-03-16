@@ -1,10 +1,25 @@
 $(document).ready(function() {
 
+  var w = window.navigator.platform;
+  var bits = 32;
+  fi = function(s) {
+    return window.navigator.userAgent.indexOf(s) > -1;
+  };
+  if (fi('x86_64') || fi('x86-64') || fi('Win64') || fi('x64;') || fi('amd64') || fi('AMD64') || fi('WOW64') || fi('x64_64') || w === 'MacIntel' || w === 'Linux x86_64') {
+    bits = 64;
+  }
+  
 	var OSName="Unknown OS";
 	if (navigator.appVersion.indexOf("Win")!=-1) { 
           OSName="Windows"; 
-          DLName = fileinfo['WIN32_RELEASE1_NAME'];
-          downloadLink = fileinfo['WIN32_RELEASE1_URL'];
+          if (bits == 64) {
+            DLName = fileinfo['WIN64_RELEASE1_NAME'];
+            downloadLink = fileinfo['WIN64_RELEASE1_URL'];
+          }
+          else {
+            DLName = fileinfo['WIN32_RELEASE1_NAME'];
+            downloadLink = fileinfo['WIN32_RELEASE1_URL'];
+          }
         }
 	else if (navigator.appVersion.indexOf("Mac")!=-1) { 
           OSName="Mac OS X"; 
