@@ -6,14 +6,14 @@
     <language>en</language>
     <item>
       <title>OpenSCAD 2015.03-1</title>
-      <pubDate>2015.03.13</pubDate>
+      <pubDate>2015.04.21</pubDate>
       <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/openscad-2015.03-1/releases/2015.03.md</sparkle:releaseNotesLink>
       <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
       <enclosure url="http://files.openscad.org/OpenSCAD-2015.03-1.dmg"
-                 sparkle:version="2015.03.13"
+                 sparkle:version="2015.04.21"
                  sparkle:shortVersionString="2015.03-1"
-                 sparkle:dsaSignature="MCwCFFP9XQcId6mS5NpXKrvRraBeiNG7AhRs07bk2rJBIRJu8qLbWul7xvmIVA=="
-                 length="22420274"
+                 sparkle:dsaSignature="MC4CFQDHh/fetoXEqV/3NjaZVSOWVnaTFQIVAKaFRfBbkUTe1V9TIlkx5pPgdjgl"
+                 length="22498242"
                  type="application/octet-stream"/>
     </item>
   </channel>
