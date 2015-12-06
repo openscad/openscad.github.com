@@ -48,17 +48,17 @@
 <div id="page-wrap">
 <header>
 	<div class="clear"></div>
-	<div id="logo" class="left"></div>
+	<div id="logo" class="left"><img src="assets/img/logo.png"></div>
 	<div id="donate" class="right">
-        <div id="paypal" style="margin-bottom:5px;">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="7ZQNEVE87X2KN">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using PayPal">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-          </form>
+          <div id="paypal" style="margin-bottom:5px;">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="7ZQNEVE87X2KN">
+              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using PayPal">
+              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            </form>
           </div>
-	  <a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
+	  <div><a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a></div>
           <script src="http://coinwidget.com/widget/coin.js"></script>
           <script>
             CoinWidgetCom.go({
@@ -73,9 +73,9 @@
             });
           </script>
 	</div>
-	<div id="title" style="margin-top:35px; width:620px;">
+	<div id="title">
 		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
-		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+		<h2 class="subtitle" style="position:relative;">The Programmers Solid 3D CAD Modeller</h2>
 	</div>
 	
 	<div id="navigation">
@@ -96,20 +96,15 @@
 
 <div id="page-content">
 	
-	<div id="sidebar">
-		<h1>Recent News</h1>
-		<ul>
-		</ul>
-	</div>
 	
-	<article>
+	<article class="home-page">
 
 		<section>
 			<h1><strong><span class="green">Open</span>SCAD</strong> is a software for creating solid 3D CAD objects.</h1>
 			<h1 class="normal">It is free software and available for Linux/UNIX, MS Windows and Mac OS X.</h1>
-
-			<img src="assets/img/screenshot.png"/>
-
+			<div class="openscad-screenshot">
+				<img src="assets/img/screenshot.png"/>
+			</div>
 <!--
 			<div style="width:100px; float:left; margin-left:80px; text-align:center;">
 			<h2>Report a Bug</h2>
@@ -120,20 +115,25 @@
 
 			<div id="home-download">
 				<a id="download-link" href="downloads.html">
-				<div id="home-download-link">
-					<div style="width:250px; position:absolute; top:1px; left:90px;">
+				   <div id="home-download-link">
+					<div class="link-label">
 					<h1 style="margin:2px; padding:0px;">Download OpenSCAD</h1>
 					<h4></h4>
 					</div>
-				<div id="home-download-logo"></div>
-			</div>
-			</a>
-				<h4 style="position:absolute; left:135px; bottom:35px;"><a href="downloads.html">Other OSs and Versions</a></h4>
+					<div id="home-download-logo"></div>
+				   </div>
+				</a>
+				<div class="download-link2"><a href="downloads.html">Other OSs and Versions</a></div>
 			</div>
 		</section>
 
 	</article>
 
+	<div id="sidebar">
+		<h1>Recent News</h1>
+		<ul>
+		</ul>
+	</div>
 <div class="clear"></div>
 
 </div><!--#page-content end-->

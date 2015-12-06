@@ -12,7 +12,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 }									
 
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
-
+section { display:inline-block;}
 /* Responsive images and other embedded objects
    Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
    There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
@@ -132,9 +132,9 @@ body {
 	background:#fff;
 }
 
-#page-wrap {width:1000px; margin:0px auto; border:1px solid #fff; padding:20px;}
+#page-wrap {width:80%; margin:0px auto; border:1px solid #fff; padding:20px;}
 
-header {background:#fff; padding:10px 20px 12px 20px; position:relative;
+header {background:#fff; padding:10px 20px 12px 20px; width:95%;
 -moz-box-shadow: 1px 1px 12px 2px #aaa;
 -webkit-box-shadow: 1px 1px 12px 2px #aaa;
 box-shadow:         1px 1px 12px 2px #aaa;
@@ -145,7 +145,7 @@ header a {color: #1b2f01; text-decoration:none;}
 header a:hover {text-decoration:underline;}
 
 
-#logo{background:url('../img/logo.png'); width:150px; height:150px; margin:0px 20px 0px 10px;}
+#logo{width:150px; height:150px; margin:0px 20px 0px 10px;}
 #logo-title{}
 
 .newsimg {float:left; width:150px; margin:4px 12px 0px 0px;}
@@ -160,14 +160,18 @@ border: none !important;
 opacity:0.8;
 }
 
-
+#title {
+	margin-top:35px;
+	width:70%;
+}
 #page-content {
-	position:relative; background:#f2f2ee; padding:20px 20px 0px 20px;
+	background:#f2f2ee; padding:20px 20px 0px 20px;
+	width:95%;
 	-moz-box-shadow: 1px 1px 12px 2px #aaa; -webkit-box-shadow: 1px 1px 12px 2px #aaa; box-shadow: 1px 1px 12px 2px #aaa;
 	border-radius:0px 0px 12px 12px;
 }
 
-#sidebar{width:220px; padding:10px; float:left; background:#fff; border-radius:8px; border:1px solid #ddd; margin-bottom:20px;}
+#sidebar{width:220px; padding:10px; display:inline-block; background:#fff; border-radius:8px; border:1px solid #ddd; margin-bottom:20px;}
 
 .sticky-wrapper {float:left; padding:0px 0px 0px 0px; margin-right:20px;}
 
@@ -177,7 +181,7 @@ opacity:0.8;
 
 //#sidebar .current {text-decoration:underline;}
 
-article{width:695px; float:left; margin-left:20px; padding:0px; }
+article{width:70%; display:inline-block; margin-left:2%; padding:0px; }
 article.full{}
 
 section {margin-bottom:20px; background:#fff; border-radius:8px; border:1px solid #ddd; padding:10px 20px 20px 20px;}
@@ -260,7 +264,7 @@ ul.bullet li{line-height:200%;}
 
 li{line-height:180%;}
 
-#navigation {text-align:right; margin-top:35px;}
+#navigation {text-align:center; margin-top:35px;}
 
 #navigation-inner {
 	margin-left: 0px;
@@ -325,11 +329,11 @@ li{line-height:180%;}
 }
 
 
-#home-download {text-align:center; position:relative; margin-top:0px; height:130px; left:150px; width:355px;}
+#home-download {text-align:center; position:relative; margin:0 auto; height:130px; width:55%;}
 
-#home-download-link {position:absolute; top:10px; background:#e5f1d3; height:55px; width:350px; border-radius:12px; border:4px solid #233d00;}
+#home-download-link {position:absolute; top:10px; background:#e5f1d3; height:55px; width:100%; border-radius:12px; border:4px solid #233d00;}
 
-#home-download-logo {position:absolute; background:url('../img/download.png'); height:106px; width:101px;}
+#home-download-logo {position:absolute; background:url('../img/download.png') no-repeat no-repeat; height:106px; width:101px;}
 
 .underline {text-decoration:underline;}
 
@@ -410,4 +414,85 @@ i.fa {
 	color:#dd4b39
 }
 
-
+.openscad-screenshot {
+	width:100%;
+	margin:auto;
+	height:auto;
+}
+.openscad-screenshot img {
+	width:100%;
+}
+.link-label {
+	 width:70%; position:absolute; top:1px; left:90px;
+}
+.download-link2 a{
+	position:absolute;
+	top:75px;	
+	left:35%;
+}
+.subtitle { left:45px; }
+#sidebar {float:left;}
+@media screen and (max-width: 1150px) {
+	article {width:60%;}
+}
+@media screen and (max-width: 1120px) {
+	#page-wrap {
+		width:90%;
+	}
+}
+@media screen and (max-width: 950px) {
+	#home-download {
+		width:80%;
+	}
+}
+@media screen and (max-width: 760px) {
+	article {width:50%;}
+}
+@media screen and (max-width: 660px) {
+	#home-download {
+		width:100%;
+	}
+	#home-download-logo {
+		display:none;
+	}
+	.link-label {
+		width:100%;
+		left:10px;
+	}
+	.download-link2 a {
+		left:25%;
+	}
+}	
+@media screen and (max-width: 610px) {
+	#logo {
+		width:100px;
+		height:100px;
+		margin-top:35px;
+	}
+	#donate { margin-top:35px; }
+	.subtitle {
+		left:10px;
+	}
+	article {
+		width:95%;
+	}
+	#sidebar {width:95%;}
+	.sticky-wrapper { width:95%; margin-left:3%;}
+}	
+@media screen and (max-width: 500px) {
+	#title {
+		width:90%;
+	}
+	#donate {
+		width:90%;
+		margin-bottom:20px;
+		margin-left:-10px;
+	}
+	#paypal, #donate iframe { 
+		float:left; 
+		margin-right:8px;
+	}	
+	#page-wrap {
+		margin:0px;
+		padding:6px;
+	}
