@@ -41,6 +41,14 @@
 	<div class="clear"></div>
 	<div id="logo" class="left"></div>
 	<div id="donate" class="right">
+        <div id="paypal" style="margin-bottom:5px;">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="7ZQNEVE87X2KN">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using PayPal">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          </div>
 		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
           <script src="http://coinwidget.com/widget/coin.js"></script>
           <script>
@@ -86,6 +94,91 @@
 	</div>
 	
 	<article>
+		<section id="20150310">
+		  <h1 class="title">OpenSCAD release: 2015.03</h1>
+		  <h2 class="date">10 Mar 2015</h2>
+		  <div class="entry">
+                    <p>OpenSCAD 2015.03 has just been released!</p>
+                    <p>This release adds a number of features which has been in development for some time. Most prominent are text(), offset() and list comprehension functionality, as well as a better editor and other GUI improvements implemented during last year’s Google Summer of Code.</p>
+
+                    <p>The source code, as well as binaries for Mac OS X, Windows and Linux are ready for <a href="downloads.html">download</a>.</p>
+
+                    <p>Lots of thanks go to everyone who have contributed to this release through development, translation, bug reports, bug fixes, documentation, discussions, as well as testing the development snapshots!</p>
+
+                    <p>A summary of changes since last release follows.</p>
+
+                    <p>Take care,<br/> -Marius</p>
+
+                    <h2>Summary of changes</h2>
+                    <h3>Language Features</h3>
+                    <ul>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text">text()</a> module for 2D text</li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#offset">offset()</a> module for 2D offsets</li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions">list comprehensions</a> and <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#let">let()</a></li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#concat">concat()</a> function</li>
+                      <li>Added <a href="">chr()</a> function</li>
+                      <li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Surface">surface()</a> can now take PNG images as input</li>
+                      <li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#min">min()</a> and <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#max">max()</a> can now take a vector argument</li>
+                      <li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">2D minkowski</a> can now handle polygons with holes</li>
+                      <li>Variables can now be <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">assigned in local blocks</a> without using assign()</li>
+                    </ul>
+                    <h3>Program Features</h3>
+                    <ul>
+                      <li>Added Toolbar icons</li>
+                      <li>New code editor based on <a href="http://www.riverbankcomputing.co.uk/software/qscintilla/intro">QScintilla</a></li>
+                      <li>Added Splash screen</li>
+                      <li>Added SVG export</li>
+                      <li>Added AMF export</li>
+                      <li>Added --viewall and --autocenter cmd-line parameters</li>
+                      <li>GUI is now translated into German, Czech, Spanish, French and Russian</li>
+                      <li>MDI (Multiple Document Interface) is now available on all platforms</li>
+                      <li>Color schemes for viewer and editor can be user-edited using JSON files</li>
+                      <li>GUI components are now dockable</li>
+                      <li>Added Tickmarks on axes</li>
+                    </ul>
+                    <h3>Bugfixes/improvements</h3>
+                    <ul>
+                      <li>Performance improvement: 2D (clipper), preview, hull, minkowski, surface</li>
+                      <li>Performance improvement: Reduce duplicate evaluation of identical expressions</li>
+                      <li>Better recursion behavior</li>
+                      <li>STL export and import is now more robust</li>
+                      <li>Internal cavities are better supported</li>
+                      <li>New examples</li>
+                      <li>Windows cmd-line behaves better</li>
+                      <li>Better mirror() and scale() behavior when using negative factors</li>
+                    </ul>
+                    <h3>Deprecations</h3>
+                    <ul>
+                      <li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#polyhedron">polyhedron()</a> now takes a faces= argument rather than triangles=</li>
+                      <li>assign() is no longer needed. Local variables can be created in any scope</li>
+                    </ul>
+		  </div>
+                </section>
+		<section id="20150304">
+		  <h1 class="title">Google Summer of Code 2015</h1>
+		  <h2 class="date">4 Mar 2015</h2>
+		  <div class="entry">
+                    <p><img class="newsimg" src="images/GoogleSummerOfCode-2015.png"/>
+		    OpenSCAD, in collaboration with <a href="http://brlcad.org/wiki/Google_Summer_of_Code/Project_Ideas">BRL-CAD</a>, has again been accepted to <a href="https://www.google-melange.com/gsoc/homepage/google/gsoc2015">Google Summer of Code</a>!</p>
+                    <p>Project suggestions have been posted to <a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks">the wiki</a>. If you're interested in participating, please get in touch on the <a href="http://openscad.org/community.html#mailing-list">mailing list</a> or <a href="http://openscad.org/community.html#irc">IRC</a> to discuss details and to help you get your feet wet. We're also open to new ideas.</p>
+                    <p>If you're interested, please familiarize yourself with the <a href="http://brlcad.org/wiki/Google_Summer_of_Code/Project_Ideas">requirements and application process</a>.</p>
+		    <p><small>Logo (c) Google CC-BY-NC-ND 3.0</small></p>
+		    <br clear="all"/>
+                    <p>Suggested projects include:</p>
+                    <ul>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Form-based-script-parameterization">Form-based Customization</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Improve-DXF-import-and-export">Improve DXF Import and Export</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#openscad-standard-library">OpenSCAD Standard Library</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Improve-OpenGL-rendering">OpenGL framework</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#persistant-caching">Persistent Caching</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Multi-threaded-geometry-rendering">Multi-threaded Geometry Evaluation</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Survey-of-CSG-algorithms">Survey and prototype of CSG algorithms</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#issue-handling">Issue handling and bug squashing</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#test-framework-improvements">Test Framework Improvements</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#larger-tasks-for-particularly-experienced-people">...and more</a></li>
+                    </ul>
+		  </div>
+                </section>
 		<section id="20140930">
 		  <h1 class="title">Merged: Google Summer of Code</h1>
 		  <h2 class="date">30 Sep 2014</h2>
@@ -198,7 +291,6 @@
                       <li><a href="https://github.com/openscad/openscad/wiki/Ideas:-GSoC-2014#wiki-web-front-end">Web front-end</a></li>
                       <li><a href="https://github.com/openscad/openscad/wiki/Ideas:-GSoC-2014#wiki-larger-tasks-for-particularly-experienced-people">Larger tasks for particularly experienced people</a></li>
                     </ul>
-                    </p>
 		  </div>
                 </section>
 		<section id="20130618">
@@ -225,7 +317,7 @@
                     <ul>
                       <li>linear_extrude now takes a scale parameter:<br/>
                         <code>linear_extrude(height=a, slices=b, twist=c, scale=[x,y])</code></li>
-                      <li>Recursive use of modules is now supported (including cascading child() operations), see <a href="https://github.com/openscad/openscad/blob/master/examples/example024.scad">example024</a></br></li>
+                      <li>Recursive use of modules is now supported (including cascading child() operations), see <a href="https://github.com/openscad/openscad/blob/master/examples/example024.scad">example024</a><br/></li>
                       <li>Parameter list values can now depend on earlier values: <code>for (i=[0:2], j=[0:i])</code></li>
                       <li>value assignments in parameters can now depend on already declared parameters</li>
                       <li>Added <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize">resize()</a> module</li>
@@ -236,7 +328,7 @@
                       <li>There is now a <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries#Library_Locations">built-in library path</a> in user-space</li>
                       <li>Commandline output to PNG, with various camera and rendering settings.<br/>        
                         Run <code>openscad -h</code> to see usage info or see the <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment">user manual</a></li>
-                      <li>Attempting to open or drag&drop dxf, off or stl files in the GUI will now create an import statement.</li>
+                      <li>Attempting to open or drag&amp;drop dxf, off or stl files in the GUI will now create an import statement.</li>
                       <li>The preview operator (%) will now preserve any manually set color</li>
                       <li>The highlight operator (#) will now color the object in transparent red</li>
                       <li>Mac: Added document icon</li>
@@ -265,7 +357,7 @@
                     <ul>
                       <li>Build scripts have been further improved</li>
                       <li>Regression test now creates single monolithic .html file for easier uploading</li>
-                      <li>Regression test auto-starts & stops Xvfb / Xvnc if on headless unix machine</li>
+                      <li>Regression test auto-starts &amp; stops Xvfb / Xvnc if on headless unix machine</li>
                       <li>The backend is finally independent of Qt</li>
                       <li>Windows: We now have a 64-bit version</li>
                     </ul>

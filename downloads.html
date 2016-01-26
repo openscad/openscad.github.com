@@ -74,6 +74,14 @@
 	<div class="clear"></div>
 	<div id="logo" class="left"></div>
 	<div id="donate" class="right">
+        <div id="paypal" style="margin-bottom:5px;">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="7ZQNEVE87X2KN">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using PayPal">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          </div>
 		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
           <script src="http://coinwidget.com/widget/coin.js"></script>
           <script>
@@ -183,9 +191,8 @@
 				<pre>
 					<code>$ sudo apt-get install openscad</code>
 				</pre>
-				<h2>Ubuntu 14.04 LTS</h2>
-                                <p>The LTS version ships a very old version of OpenSCAD, to update to the latest release add the following
-                                    <a href="https://launchpad.net/~openscad/+archive/ubuntu/releases">PPA</a> before installing OpenSCAD.</p>
+                                <p>However, some distributions come with old versions of OpenSCAD. To update to the latest release add the following
+                                    <a href="https://launchpad.net/~openscad/+archive/ubuntu/releases">PPA</a> before installing OpenSCAD:</p>
 				<pre>
 					<code>$ sudo add-apt-repository ppa:openscad/releases</code>
 				</pre>
@@ -200,6 +207,7 @@
 				<pre>
 					<code># yum install openscad-MCAD</code>
 				</pre>
+				<p>Please note that you'll find OpenSCAD 2014.03 in Fedora 21 and lower. In case you'd like to use 2015.03 in Fedora 21, you can use <a href="https://copr.fedoraproject.org/coprs/churchyard/openscad-2015.03/">a Copr repo with it</a>.</a></p>
 			</div>
 			<div id="opensuse" class="subsection">
 				<h2>openSUSE</h2>
@@ -376,19 +384,28 @@
                                 file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.
 
                             <h3>Debian 7 (Wheezy)</h3>
-
                             <pre>
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_7.0/ ./</code></small>
                             </pre>
-                            <h3>Ubuntu 14.04 LTS</h3>
 
+                            <h3>Debian 8 (Jessie)</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_8.0/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 14.04 LTS</h3>
                             <pre>
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_14.04/ ./</code></small>
                             </pre>
 
-                            <h3>Ubuntu 14.10 / Debian 8 (Jessie) - not yet released, currently also called "testing"</h3>
+                            <h3>Ubuntu 14.10</h3>
                             <pre>
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_14.10/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 15.04</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_15.04/ ./</code></small>
                             </pre>
 
                             <h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
