@@ -196,6 +196,7 @@
                                     <a href="https://launchpad.net/~openscad/+archive/ubuntu/releases">PPA</a> before installing OpenSCAD:</p>
 				<pre>
 					<code>$ sudo add-apt-repository ppa:openscad/releases</code>
+					<code>$ sudo apt-get update</code>
 				</pre>
 			</div>
 			<div id="fedora" class="subsection">
@@ -384,11 +385,6 @@
                             <p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
                                 file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.
 
-                            <h3>Debian 7 (Wheezy)</h3>
-                            <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_7.0/ ./</code></small>
-                            </pre>
-
                             <h3>Debian 8 (Jessie)</h3>
                             <pre>
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_8.0/ ./</code></small>
@@ -407,6 +403,16 @@
                             <h3>Ubuntu 15.04</h3>
                             <pre>
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_15.04/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 15.10</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_15.10/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 16.04</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_16.04/ ./</code></small>
                             </pre>
 
                             <h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
