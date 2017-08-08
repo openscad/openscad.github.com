@@ -160,9 +160,9 @@ border: none !important;
 opacity:0.8;
 }
 
-
 #page-content {
-	position:relative; background:#f2f2ee; padding:20px 20px 0px 20px;
+	background:#ffffe5; /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */																					 
+	position:relative; padding:20px 20px 0px 20px;
 	-moz-box-shadow: 1px 1px 12px 2px #aaa; -webkit-box-shadow: 1px 1px 12px 2px #aaa; box-shadow: 1px 1px 12px 2px #aaa;
 	border-radius:0px 0px 12px 12px;
 }
@@ -225,9 +225,24 @@ h5 {font-size:11px; line-height:150%; padding-bottom:2px;}
 
 
 header h1 {font-size:28px; margin:0px; padding:0px; font-weight:600; line-height:140%;}
-header h2 {font-size:20px; margin:0px; padding:0px; font-weight:500; line-height:100%;}
+header h2 {font-size:20px; margin:0px; padding:0px; font-weight:600; line-height:100%;}
 header h3 {font-size:16px; margin:0px; padding:0px; font-weight:600; line-height:100%;}
 header h4 {font-size:12px; margin:0px; padding:0px; font-weight:500; line-height:100%;}
+
+/* colour the header 'Open' & 'SCAD' and make bolder and chunky
+like the cornfield default scheme from colormap.cc
+Open - #9dcb51;} OPENCSG_FACE_BACK_COLOR - green
+SCAD - #f9d72c;} OPENCSG_FACE_FRONT_COLOR - yellow
+ - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above 
+*/
+header h1.title {color:#f9d72c; letter-spacing:-1px; font-weight:700;}
+header h1 span.green {color:#9dcb51; letter-spacing:0px;}
+
+header h2.subtitle {color:black; letter-spacing:-1px;}
+
+/* colour OPEN & SCAD in the home sub-page heading the same*/
+section h1 strong {color:#f9d72c; font-weight:700; letter-spacing:-1px;}
+section h1 strong span.green {color:#9dcb51; letter-spacing:0px;}
 
 .clear {clear:both;}
 .left {float:left;}
