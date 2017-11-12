@@ -346,25 +346,48 @@
 
 			<div id="snapshots-linux" class="subsection">
 				<h2>Linux</h2>
-<!-- Stand-alone binaries not currently being built
                                 <p>Please try the automatically built snapshots first if you are running a supported distribution 
-                                   (see <a href="#snapshots-linux-auto">below</a>).</p>
+                                   (see <a href="#snapshots-linux-auto">below</a>), the following AppImage builds are still
+                                   experimental.</p>
                                 
-				<a id="LIN32_SNAPSHOT_URL" href="http://files.openscad.org">
+				<table>
+				<tr>
+				<td align="center">
+				<!-- <a id="LIN32_SNAPSHOT_URL" href="http://files.openscad.org"> -->
 				<button class="left, download-button">
-					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_SNAPSHOT_SIZE">?? MB</small>
+					<strike><h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD</h3></strike>
+					<strike><small>x86 (32-bit) - </small><small id="LIN32_SNAPSHOT_SIZE">?? MB</small></strike>
 				</button>
-				</a>
+				<!-- </a> -->
+				</td>
+				<td align="center">
 				<a id="LIN64_SNAPSHOT_URL" href="http://files.openscad.org">
 				<button class="download-button">
 					<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3>
-					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
+					<small>x64 (64-bit) - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
 				</button>
 				</a>
-  -->
-
-                        <div id="snapshots-linux" class="subsection">
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+				<a id="ARM32_SNAPSHOT_URL" href="http://files.openscad.org">
+				<button class="download-button">
+					<h3 id="ARM32_SNAPSHOT_NAME">OpenSCAD</h3>
+					<small>ARM (32-bit/armv7l) - </small><small id="ARM32_SNAPSHOT_SIZE">?? MB</small>
+				</button>
+				</a>
+				</td>
+				<td align="center">
+				<a id="ARM64_SNAPSHOT_URL" href="http://files.openscad.org">
+				<button class="download-button">
+					<h3 id="ARM64_SNAPSHOT_NAME">OpenSCAD</h3>
+					<small>ARM (64-bit/aarch64) - </small><small id="ARM64_SNAPSHOT_SIZE">?? MB</small>
+				</button>
+				</a>
+				</td>
+				</tr>
+				</table>
                             <p>The packages are automatically built based on the <a href="https://github.com/openscad/openscad/tree/master">master branch</a>
                                 on github.</p>
                             <p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to install the development
