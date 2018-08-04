@@ -26,6 +26,8 @@
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-26999768-1']);
           _gaq.push(['_setDomainName', 'openscad.org']);
+          _gaq.push(['_gat._anonymizeIp']); // For gdpr
+          _gaq.push(['_gat._forceSSL']); // Send all hits using SSL, even from insecure (HTTP) pages.
           _gaq.push(['_trackPageview']);
           
           (function() {
