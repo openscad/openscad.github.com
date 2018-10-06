@@ -38,6 +38,10 @@ header h2 {
 	color: #bbb;
 }
 
+header h2 a {
+	color: #bbb;
+}
+
 section {
 	float: left;
 }
