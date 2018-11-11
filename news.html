@@ -7,7 +7,7 @@
 
 	<link href="assets/css/style.css" rel="stylesheet"/>
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
@@ -94,6 +94,75 @@
 	</div>
 	
 	<article>
+		<section id="20181105">
+		  <h1 class="title">Work in Progress</h1>
+		  <h2 class="date">5 Nov 2018</h2>
+		  <div class="entry">
+		    <img class="newsimg" src="images/openclipart-j4p4n-newsicon.svg" title="News"/>
+                    <p>After a quiet summer, there's now progress integrating a number of features
+                    that were cooking in development branches for quite some time.</p>
+                    <br clear="all"/>
+                    <dl>
+                    <dt>3D-Mouse support</dt>
+                    <dd>Even though the initial effort was to support 3D-Mouse devices, specifically
+                    the relatively affordable range of SpaceMouse/SpaceNavigator products from
+                    3Dconnexion, OpenSCAD will support various input devices (e.g. Joysticks and
+                    and Gamepads) depending on the platform it's running on.<br>
+                    The preferences dialog allows configuration of the behavior of the input devices
+                    regarding control of the 3D viewport and mapping buttons to user interface
+                    actions.</dd>
+                    <dt>Customizer</dt>
+                    <dd>Inspired by the Thingiverse Customizer, this will allow customizing designs
+                    via a simple user interface and save sets of parameter presets.
+		    While this feature has been available in the development snapshots for
+                    a while now, there were lots of improvements lately to both usability of the
+                    interface as well as correctly handling of parameters hints specfied in the
+                    model source code.</dd>
+                    <dt>3MF Import/Export</dt>
+                    <dd>The 3D Manufacturing Format (3MF) as defined by the <a href="https://3mf.io/">
+                    3MF Consortium</a> is one of the contenders to take over from STL. With
+                    support for extended features like colors, materials, properties, multiple
+                    volumes and the possibility to extend with both public and private features,
+                    it's much more versatile than the (for 3d printing) commonly used STL format.
+                    As additional reason for this format being a very attractive option is that
+                    its <a href=https://3mf.io/specification/">Specification</a> and
+                    <a href="https://github.com/3MFConsortium/lib3mf/">reference implementation</a>
+                    are freely available and useable in Open Source projects.</dd>
+                    </dl>
+		    <br clear="all"/>
+		    <p>At this point all of the features are available in the latest development
+		    snapshots but are still marked as <i>experimental</i> which means they need
+		    to be specifically enabled in the preferences dialog.</p>
+		  </div>
+                </section>
+		<section id="20180218">
+		  <h1 class="title">Google Summer of Code 2018</h1>
+		  <h2 class="date">18 Feb 2018</h2>
+		  <div class="entry">
+                    <p><img class="newsimg" src="images/GoogleSummerOfCode-2016.png" title="Logo (c) Google CC BY-NC-ND 3.0"/></p>
+		    OpenSCAD, in collaboration with <a href="http://brlcad.org/wiki/Google_Summer_of_Code/Project_Ideas">BRL-CAD</a>, has again been accepted to <a href="https://summerofcode.withgoogle.com">Google Summer of Code</a>!</p>
+		    <p>Checkout the <a href="https://developers.google.com/open-source/gsoc/resources/downloads/GSoC2018Presentation.pdf">GSoC presentation</a> for a quick overview of what the program provides and how it works.</p>
+                    <p>Project suggestions have been posted to <a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks">the wiki</a>. If you're interested in participating, please get in touch on the <a href="http://openscad.org/community.html#mailing-list">mailing list</a> or <a href="http://openscad.org/community.html#irc">IRC</a> to discuss details and to help you get your feet wet. We're also open to new ideas.</p>
+                    <p>If you're interested, please familiarize yourself with the <a href="http://brlcad.org/wiki/Google_Summer_of_Code/Project_Ideas">requirements and application process</a>.</p>
+		    <p>Student application is open from March 12 till March 27 (16:00 UTC! - <a href="https://summerofcode.withgoogle.com/how-it-works/#timeline">full timeline</a>) but don't wait for registration to open to get started! Discussing projects early is highly encuraged for improving chances of acceptance.</p>
+		    <br clear="all"/>
+                    <p>Suggested projects include:</p>
+                    <ul>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Improve-DXF-import-and-export">Improve DXF Import and Export</a></li>
+		      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Add-support-for-exporting-models-in-STEP-format">Add support for exporting models in STEP format</a></li>
+		      <li><a href="https://github.com/openscad/openscad/wiki/Project:-Improve-Text-Editor">Improve text editor with new IDE style features</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#openscad-standard-library">OpenSCAD Standard Library</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Improve-OpenGL-rendering">OpenGL framework</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#persistant-caching">Persistent Caching</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Multi-threaded-geometry-rendering">Multi-threaded Geometry Evaluation</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Project%3A-Survey-of-CSG-algorithms">Survey and prototype of CSG algorithms</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#issue-handling">Issue handling and bug squashing</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#test-framework-improvements">Test Framework Improvements</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#svg-import">SVG import</a></li>
+                      <li><a href="https://github.com/openscad/openscad/wiki/Ideas-for-Development-Tasks#larger-tasks-for-particularly-experienced-people">...and more</a></li>
+                    </ul>
+		  </div>
+                </section>
 		<section id="20170323">
 		  <h1 class="title">Google Summer of Code 2017</h1>
 		  <h2 class="date">23 Mar 2017</h2>
@@ -389,14 +458,14 @@
                       <li>Recursive use of modules is now supported (including cascading child() operations), see <a href="https://github.com/openscad/openscad/blob/master/examples/example024.scad">example024</a><br/></li>
                       <li>Parameter list values can now depend on earlier values: <code>for (i=[0:2], j=[0:i])</code></li>
                       <li>value assignments in parameters can now depend on already declared parameters</li>
-                      <li>Added <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize">resize()</a> module</li>
+                      <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize">resize()</a> module</li>
                     </ul>
                     <h3>Program Features</h3>
                     <ul>
                       <li>Added basic syntax highlighting in the editor</li>
-                      <li>There is now a <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries#Library_Locations">built-in library path</a> in user-space</li>
+                      <li>There is now a <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries#Library_Locations">built-in library path</a> in user-space</li>
                       <li>Commandline output to PNG, with various camera and rendering settings.<br/>        
-                        Run <code>openscad -h</code> to see usage info or see the <a href="http://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment">user manual</a></li>
+                        Run <code>openscad -h</code> to see usage info or see the <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment">user manual</a></li>
                       <li>Attempting to open or drag&amp;drop dxf, off or stl files in the GUI will now create an import statement.</li>
                       <li>The preview operator (%) will now preserve any manually set color</li>
                       <li>The highlight operator (#) will now color the object in transparent red</li>

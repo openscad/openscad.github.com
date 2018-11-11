@@ -1,7 +1,7 @@
-fileinfo['LIN32_RELEASE_URL'] = 'http://files.openscad.org/openscad-2014.03.x86-32.tar.gz';
-fileinfo['LIN32_RELEASE_NAME'] = 'OpenSCAD 2014.03';
-fileinfo['LIN32_RELEASE_SIZE'] = '21.9 MB';
+fileinfo['LIN32_RELEASE_URL'] = 'N/A';
+fileinfo['LIN32_RELEASE_NAME'] = 'N/A';
+fileinfo['LIN32_RELEASE_SIZE'] = '0 MB';
 
-fileinfo['LIN64_RELEASE_URL'] = 'http://files.openscad.org/openscad-2014.03.x86-64.tar.gz';
-fileinfo['LIN64_RELEASE_NAME'] = 'OpenSCAD 2014.03';
-fileinfo['LIN64_RELEASE_SIZE'] = '21.5 MB';
+fileinfo['LIN64_RELEASE_URL'] = 'https://download.opensuse.org/repositories/home:/t-paul/AppImage/OpenSCAD-Release-latest-x86_64.AppImage';
+fileinfo['LIN64_RELEASE_NAME'] = 'OpenSCAD 2015.03-3';
+fileinfo['LIN64_RELEASE_SIZE'] = '22 MB';

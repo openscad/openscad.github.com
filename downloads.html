@@ -11,7 +11,7 @@
 
 	<link href="assets/css/style.css" rel="stylesheet">
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 	<noscript>
 	 <center>
@@ -187,7 +187,8 @@
 			<h1>Linux</h1>
 			<div id="ubuntu" class="subsection">
 				<h2>Debian / Ubuntu / Kubuntu</h2>
-				<p>OpenSCAD is available in the repositories of recent distributions.
+				<p>OpenSCAD is available in the repositories of most recent distributions
+				   (Currently <a href="https://bugs.launchpad.net/ubuntu/+source/openscad/+bug/1766555">missing</a> in Ubuntu 18.04).
 				<pre>
 					<code>$ sudo apt-get install openscad</code>
 				</pre>
@@ -209,7 +210,6 @@
 				<pre>
 					<code># yum install openscad-MCAD</code>
 				</pre>
-				<p>Please note that you'll find OpenSCAD 2014.03 in Fedora 21 and lower. In case you'd like to use 2015.03 in Fedora 21, you can use <a href="https://copr.fedoraproject.org/coprs/churchyard/openscad-2015.03/">a Copr repo with it</a>.</a></p>
 			</div>
 			<div id="opensuse" class="subsection">
 				<h2>openSUSE</h2>
@@ -223,17 +223,11 @@
 			</div>
 			<div id="other-linux" class="subsection">
 				<h2>Other Linux</h2>
-				<p>The following generic binary Linux packages are available:</p>
-				<a id="LIN32_RELEASE_URL" href="http://files.openscad.org">
-				<button class="left, download-button">
-					<h3 id="LIN32_RELEASE_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_RELEASE_SIZE">?? MB</small>
-				</button>
-				</a>
+				<p>The AppImage package is intended to run on any recent Linux distribution. For more information about how AppImages work, see the <a href="https://appimage.org/">AppImage WebSite</a>.</p>
 				<a id="LIN64_RELEASE_URL" href="http://files.openscad.org">
 				<button class="download-button">
 					<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3>
-					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_RELEASE_SIZE">?? MB</small>
+					<small>x64 (64-bit) - AppImage -</small><small id="LIN64_RELEASE_SIZE">?? MB</small>
 				</button>
 				</a>
 			</div>
@@ -312,12 +306,14 @@
 				</button>
 				</a>
 
+				<!--
 				<a id="WIN32_SNAPSHOT3_URL" href="http://files.openscad.org">
 				<button class="download-button">
 					<h3 id="WIN32_SNAPSHOT3_NAME">OpenSCAD</h3>
 					<small>x86 (32-bit) test suite - </small><small id="WIN32_SNAPSHOT3_SIZE">?? MB</small>
 				</button>
 				</a>
+				-->
 
 				<br clear="both"/>
 
@@ -335,40 +331,50 @@
 				</button>
 				</a>
 
+				<!--
 				<a id="WIN64_SNAPSHOT3_URL" href="http://files.openscad.org">
 				<button class="download-button">
 					<h3 id="WIN64_SNAPSHOT3_NAME">OpenSCAD</h3>
 					<small>x86 (64-bit) test suite - </small><small id="WIN64_SNAPSHOT3_SIZE">?? MB</small>
 				</button>
 				</a>
+				-->
 
 			</div>
 
 			<div id="snapshots-linux" class="subsection">
-				<h2>Linux</h2>
-<!-- Stand-alone binaries not currently being built
-                                <p>Please try the automatically built snapshots first if you are running a supported distribution 
-                                   (see <a href="#snapshots-linux-auto">below</a>).</p>
-                                
-				<a id="LIN32_SNAPSHOT_URL" href="http://files.openscad.org">
-				<button class="left, download-button">
-					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_SNAPSHOT_SIZE">?? MB</small>
-				</button>
-				</a>
-				<a id="LIN64_SNAPSHOT_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3>
-					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
-				</button>
-				</a>
-  -->
+			    <h2>Linux - AppImage</h2>
+                            <p>Please try the automatically built snapshots first if you are running a supported
+				distribution (see <a href="#snapshots-linux-distro">below</a>), the following
+				AppImage builds are still experimental.</p>
 
-                        <div id="snapshots-linux" class="subsection">
+			    <p>Right now only the Intel/64-bit AppImage build is working, we'd like to provide
+				the Intel/32-bit and ARM 32/64-bit builds, but there are currently some issues
+				with the OBS builds that need investigation.</p>
+			    <p><a id="LIN64_SNAPSHOT_URL" href="http://files.openscad.org">
+				<button class="download-button">
+				    <h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3>
+				    <small>x64 (64-bit) - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
+				</button>
+			    </a></p>
+
+			    <h2>Linux - Snap</h2>
+                            <p><a href="https://snapcraft.io/openscad-nightly">Snap packages</a> are available,
+				as those are built against an older Ubuntu (16.04) those are using some older
+				components which can cause known display issues, so if possible use one of the
+				specific distribution packages below.</p>
+			    <p>Install with</p>
+                            <pre>
+                                <small><code># snap install openscad-nightly</code></small>
+                            </pre>
+
+			    <h2><a id="snapshots-linux-distro">Linux - Distribution Packages</a></h2>
                             <p>The packages are automatically built based on the <a href="https://github.com/openscad/openscad/tree/master">master branch</a>
                                 on github.</p>
-                            <p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to install the development
-                                snapshot packages in parallel to the release version from the official repositories.</p>
+
+                            <p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to
+				install the development snapshot packages in parallel to the release version
+				from the official repositories.</p>
 
                             <h2>Debian / Ubuntu packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
                         
@@ -397,31 +403,41 @@
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_9.0/ ./</code></small>
                             </pre>
 
+                            <h3>Debian Testing</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_Testing_standard/ ./</code></small>
+                            </pre>
+
                             <h3>Ubuntu 16.04</h3>
                             <pre>
                                 <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_16.04/ ./</code></small>
                             </pre>
 
-                            <h3>Ubuntu 16.10</h3>
+                            <h3>Ubuntu 17.10</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_16.10/ ./</code></small>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_17.10/ ./</code></small>
                             </pre>
 
-                            <h3>Ubuntu 17.04</h3>
+                            <h3>Ubuntu 18.04</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_17.04/ ./</code></small>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_18.04/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 18.10</h3>
+                            <pre>
+                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_18.10/ ./</code></small>
                             </pre>
 
                             <h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
                             
-                            <h3>openSUSE Leap 42.2</h3>
-                            <pre>
-                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_42.2/</code></small>
-                            </pre>
-                            
-                            <h3>openSUSE Leap 42.3</h3>
+                            <h3>openSUSE Leap 42.3 (64-bit only)</h3>
                             <pre>
                                 <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_42.3/</code></small>
+                            </pre>
+                            
+                            <h3>openSUSE Leap 15.0 (64-bit only)</h3>
+                            <pre>
+                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.0/</code></small>
                             </pre>
                             
                             <h3>openSUSE Tumbleweed</h3>
@@ -429,9 +445,37 @@
                                 <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
                             </pre>
                             
-                            <h2>Fedora packages built on Copr</h2>
+                            <h2>Fedora packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
 
-                            <p>RPM repository with nightly OpenSCAD development snapshots on <a href="http://copr.fedoraproject.org/coprs/churchyard/openscad-devel/">copr.fedoraproject.org</a>.</p>
+                            <h3>Fedora 24</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_24/</code></small>
+                            </pre>
+
+                            <h3>Fedora 25</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_25/</code></small>
+                            </pre>
+                            
+                            <h3>Fedora 26</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_26/</code></small>
+                            </pre>
+                            
+                            <h3>Fedora 27 (64-bit only)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_27/</code></small>
+                            </pre>
+                            
+                            <h3>Fedora 28 (64-bit only)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_28/</code></small>
+                            </pre>
+
+                            <h3>Fedora Rawhide</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_Rawhide/</code></small>
+                            </pre>
 
                             <h2>Arch Linux</h2>
                             To install OpenSCAD from git on Arch Linux the <a href="https://aur.archlinux.org/packages/openscad-git/">openscad-git pkgbuild</a>

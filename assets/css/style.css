@@ -209,6 +209,8 @@ section ul li{padding-left:10px;}
 
 small {font-size:11px;}
 
+dt {font-weight: bold;}
+
 button {padding:5px 5px 10px 5px; margin-bottom:10px;}
 button.left {margin-right:5px;}
 button.last {clear:both;}
