@@ -1,4 +1,4 @@
-fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2018.11.20'
+fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.01.08'
 fileinfo['WIN_SNAPSHOT_SIZE']   = '19 MB'
 fileinfo['WIN32_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.01.08.ci1082-x86-32'
 fileinfo['WIN64_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.01.08.ci1084-x86-64'
