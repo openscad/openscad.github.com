@@ -1,15 +1,9 @@
-fileinfo['LIN32_SNAPSHOT_URL'] = '';
-fileinfo['LIN32_SNAPSHOT_NAME'] = 'OpenSCAD AppImage';
-fileinfo['LIN32_SNAPSHOT_SIZE'] = '16.9 MB';
+fileinfo['LIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.01.10'
+fileinfo['LIN_SNAPSHOT_SIZE']   = '35 MB'
+fileinfo['LIN64_SNAPSHOT_URL'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.01.10.ai1117-x86_64.AppImage'
 
-fileinfo['LIN64_SNAPSHOT_URL'] = 'https://download.opensuse.org/repositories/home:/t-paul/AppImage/OpenSCAD-Nightly-latest-x86_64.AppImage';
-fileinfo['LIN64_SNAPSHOT_NAME'] = 'OpenSCAD AppImage';
-fileinfo['LIN64_SNAPSHOT_SIZE'] = '17.3 MB';
-
-fileinfo['ARM32_SNAPSHOT_URL'] = 'https://download.opensuse.org/repositories/home:/t-paul/AppImage.arm/OpenSCAD-latest-armv7l.AppImage';
-fileinfo['ARM32_SNAPSHOT_NAME'] = 'OpenSCAD AppImage';
-fileinfo['ARM32_SNAPSHOT_SIZE'] = '15.6 MB';
-
-fileinfo['ARM64_SNAPSHOT_URL'] = 'https://download.opensuse.org/repositories/home:/t-paul/AppImage.arm/OpenSCAD-latest-aarch64.AppImage';
-fileinfo['ARM64_SNAPSHOT_NAME'] = 'OpenSCAD AppImage';
-fileinfo['ARM64_SNAPSHOT_SIZE'] = '16.9 MB';
+fileinfo['LIN64_SNAPSHOT_NAME'] = fileinfo['LIN_SNAPSHOT_NAME']
+fileinfo['LIN64_SNAPSHOT_SIZE'] = fileinfo['LIN_SNAPSHOT_SIZE']
+fileinfo['LIN64_SNAPSHOT_ASC_URL'] = fileinfo['LIN64_SNAPSHOT_URL'] + '.asc'
+fileinfo['LIN64_SNAPSHOT_SHA1_URL'] = fileinfo['LIN64_SNAPSHOT_URL'] + '.sha1'
+fileinfo['LIN64_SNAPSHOT_SHA256_URL'] = fileinfo['LIN64_SNAPSHOT_URL'] + '.sha256'
