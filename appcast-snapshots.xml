@@ -12,8 +12,8 @@
       <enclosure url="https://files.openscad.org/snapshots/OpenSCAD-2019.02.23.dmg"
                  sparkle:version="2019.02.23"
                  sparkle:shortVersionString="2019.02.23"
-                 sparkle:dsaSignature="MC4CFQCEN4M58HOg2QOR69RJr0oKmdIb9gIVAJ+3FbBmyqFzuR1dzJN6x/uqk4eR"
-                 length="25899038" 
+                 sparkle:dsaSignature="MC0CFHlMUJuHEt5UqFvrqn+4hvFfOqjkAhUArtaTUhfSj5ErQLhRzLlvWPoFC9E="
+                 length="25915931" 
                  type="application/octet-stream"/>
     </item>
   </channel>
