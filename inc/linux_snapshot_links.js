@@ -1,6 +1,6 @@
-fileinfo['LIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.01-RC3.1'
+fileinfo['LIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.01-RC4'
 fileinfo['LIN_SNAPSHOT_SIZE']   = '35 MB'
-fileinfo['LIN64_SNAPSHOT_URL'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.01-RC3.1-x86_64.AppImage'
+fileinfo['LIN64_SNAPSHOT_URL'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.01-RC4-x86_64.AppImage'
 
 fileinfo['LIN64_SNAPSHOT_NAME'] = fileinfo['LIN_SNAPSHOT_NAME']
 fileinfo['LIN64_SNAPSHOT_SIZE'] = fileinfo['LIN_SNAPSHOT_SIZE']
