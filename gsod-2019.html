@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>OpenSCAD - Google Season of Docs</title>
+
+	<link href="assets/css/style-gsod.css" rel="stylesheet"/>
+  
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
+
+    <style>
+        img { padding: 0 1em 0 1em; }
+        table { border-spacing: 0; border-collapse: collapse; }
+        th { background-color: #ffffe5; }
+        th, td { border-style: solid; padding: 4px; text-align: left; vertical-align: top; }
+    </style>
+</head>
+<body>
+
+<div id="page-wrap">
+
+<div id="page-content">
+
+<h1><span class="green">Open</span><span class="yellow">SCAD</span> - Google Season of Docs</h1>
+
+<h2>About OpenSCAD</h2>
+
+<img src="images/openscad.png" width="100" align="left">
+<p><a href="https://www.openscad.org/">OpenSCAD</a> is software for creating solid 3D CAD models. It is free software and available for Linux/UNIX, Windows and Mac OS X.</p>
+
+<p>OpenSCAD is not an interactive modeller. It reads a script containing a textual description of a 3D design and generates the model from that. This gives the designer full control over the modelling process and makes it possible to easily change any step in the modelling process or make designs that are defined by configurable parameters.</p>
+
+<p>OpenSCAD provides two main modelling techniques: First there is constructive solid geometry (aka CSG) and second there is extrusion of 2D outlines.</p>
+
+<p>Source code is available via <a href="https://github.com/openscad/openscad">github repository</a> and the existing documentation can be found on Wikibooks: <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">User Manual & Language Reference</a>, <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/FAQ">FAQ</a> and <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Tips_and_Tricks">Tips & Tricks</a></p>
+
+<h2>About Google Season of Docs</h2>
+
+<img src="images/SeasonofDocs_Icon_Grey_72ppi-2019.png" width="100" align="left">
+<p><i>"The goal of <a href="https://developers.google.com/season-of-docs/">Season of Docs</a> is to provide a framework for technical writers and open source projects to work together towards the common goal of improving an open source project's documentation. For technical writers who are new to open source, the program provides an opportunity to gain experience in contributing to open source projects. For technical writers who're already working in open source, the program provides a potentially new way of working together. Season of Docs also gives open source projects an opportunity to engage more of the technical writing community.</i></p>
+
+<p>All the details about how it works including guides for both Technical Writers and Mentors are available from the main web site. The following links are just some short cuts for some of the most important pages.
+<ul>
+    <li>Google Season of Docs <a href="https://developers.google.com/season-of-docs/docs/timeline">Timeline</a></li>
+    <li><a href="https://developers.google.com/season-of-docs/docs/faq">Frequently asked questions</a> (FAQ)</li>
+    <li><a href="https://developers.google.com/season-of-docs/terms/program-rules"> Season of Docs 2019 Program Rules </a></li>
+</ul></p>
+
+<h2>Community</h2>
+
+<p>The main area where OpenSCAD is used is designing and creating models for 3D printing. There are even complete <a href="https://github.com/Metamaquina/Metamaquina2">3D printers</a> or <a href="https://github.com/carlosgs/Cyclone-PCB-Factory/">CNC mills</a> designed in OpenSCAD, but the more common use case is for people to design "things" for their own use. Most notably <a href="https://www.thingiverse.com/">Thingiverse</a>, a site hosting and sharing a huge amount of 3D printable designs uses OpenSCAD as base for it's Customizer which allows people to modify the <a href=https://www.thingiverse.com/customizable/">parmametric designs</a> uploaded there to fit their needs and print those.</p>
+
+<p>There are lots of other possible uses though, including math art like the <a href="https://mathgrrl.com/hacktastic/2018/11/the-snowflake-machine-2/">Snowflake Machine</a> by Laura Taalman and the <a href="http://kitwallace.co.uk/3d/knot.xq?knot-number=&selected-knot=2&components=1&crossings=&id=&action=view">Knot</a> and <a href="http://kitwallace.co.uk/3d/solid-index.xq?mode=full">Polyhedra</a> generators by Chris (Kit) Wallace. OpenSCAD helped <a href="https://www.poetryfoundation.org/harriet/2015/04/come-say-hello-at-awp-see-the-first-3d-printed-broadside">3D printing poetry</a> in both English and Braille in a tangible way, but can do <a href="https://twitter.com/awilkes/status/1116975681710120960">Train Trecks</a>, announce the <a href="https://twitter.com/caterpillar/status/1116976472013639680">new era</a> in Japan, design in a <a href="https://twitter.com/ferjerez3d/status/960311552627879936">single tweet</a> or just <a href="https://twitter.com/mikekuniavsky/status/1090651208681848838">keep things organized.</a></p>
+
+<h2>Project Proposals</h2>
+
+<h3>Create an OpenSCAD Tutorial</h3>
+
+<p>There is currently no official tutorial which guides the user from starting the application the first time, to the first 3D model. While there are many wildly different use cases, the main one is creating models for 3D printing.</p>
+
+<table>
+    <tr>
+        <th>Target Audience</th>
+        <td>People who own, or just bought a 3D printer and want to go from just downloading ready made models from web sites like Thingiverse to creating their own designs.</td>
+    </tr>
+    <tr>
+        <th>Scope</th>
+        <td>Assumption of the tutorial is that installation of the application is already done, so the user is ready to try the first examples but has otherwise no further knowledge about OpenSCAD. At the end of the tutorial the user should have the knowledge to create reasonably complex models.</td>
+    </tr>
+    <tr>
+        <th>Current state</th>
+        <td>No existing tutorial yet</td>
+    </tr>
+    <tr>
+        <th>Expected license</th>
+        <td>CC-BY-SA or similar, code snippets must be CC0</td>
+    </tr>
+</table>
+
+<p>The tutorial could be split into 2 sections, the first one could introduce the basic modelling techniques and the second one would build on that by selecting a number of useful designs and showing how to approach modelling those.</p>
+
+<h3>Create an OpenSCAD Introduction for use in Education</h3>
+
+<p>As can be seen in various posts on social media, OpenSCAD is already used in education. So far there is not much support for this, neither in form of specific documentation or examples included in the releases.</p>
+
+<p>Ideally the introduction would be structured in a way that it covers different topics in a modular way, so new modules covering other use cases can be added later while still maintaining the overall structure of the document.</p>
+
+<p>Possible topics to cover, other/more suggestions welcome:
+<ul>
+    <li>Math Art</li>
+    <li>Recursive functions</li>
+    <li>Visualization of Geometry</li>
+    <li>Graphical display of sequences (fibonacci)</li>
+    <li>All about vectors</li>
+    <li>Platonic solids</li>
+    <li>Creating 3D shapes</li>
+    <li>Simple animations for Physics</li>
+</ul></p>
+
+<table>
+    <tr>
+        <th>Target Audience</th>
+        <td>Educators using the introduction for courses or as base for their own scripts.</td>
+    </tr>
+    <tr>
+        <th>Scope</th>
+        <td>The documentation should initially cover maybe 2 or 3 different topics and should be structured in a way to be extensible later with other topics.</td>
+    </tr>
+    <tr>
+        <th>Current state</th>
+        <td>No existing introduction yet</td>
+    </tr>
+    <tr>
+        <th>Expected license</th>
+        <td>CC-BY-SA or similar, code snippets must be CC0</td>
+    </tr>
+</table>
+
+<h3>Improve the OpenSCAD User Manual</h3>
+
+<p>The OpenSCAD User Manual is maintained at Wikibooks which has the benefit that users can easily contribute changes but it does mean less control regarding what's documented and changed. The manual is usable and has some basic information, but is not that well structured and also skips over some important topics.</p>
+
+<p>It's ok to propose a new workflow / hosting for the documentation if there's a good argument for that which promises also long term maintenance.</p>
+
+<table>
+    <tr>
+        <th>Target Audience</th>
+        <td>All users of the OpenSCAD (the application including the built-in editor, customizer and animation features), so the manual should cover the most important scenarios and features of the application.</td>
+    </tr>
+    <tr>
+        <th>Scope</th>
+        <td>Scope of the manual is to explain the possibilities the user interface gives (as opposed to the modelling language which is covered by the Language Manual).</td>
+    </tr>
+    <tr>
+        <th>Current state</th>
+        <td>Bits and Pieces exist but it's not well structured and is in part written with too much focus on the developer perspective<br><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual</a></td>
+    </tr>
+    <tr>
+        <th>Expected license</th>
+        <td>CC-BY-SA or similar, code snippets must be CC0</td>
+    </tr>
+</table>
+
+<h3>Improve the OpenSCAD Language Reference Manual</h3>
+
+<p>The OpenSCAD Language Reference Manual together with the Language Cheat Sheet is an important resource when creating OpenSCAD designs as it collects information about all built-in language features and descriptions of the parameters available. For newer features the manual also started to collect the information which version of OpenSCAD is required for specific features. This can be very important for users that need to target a specific OpenSCAD version, e.g. the one used by the Thingiverse Customizer.</p>
+
+<p>The current version of this manual is quite usable and should cover almost all the functions and modules that are available. There is still lots of room for improvement like unifying the writing style and creating better images showing the result of the examples. One interesting option would be to automatically generate parts of the documentation (text structure and/or images). Alternatively a set of rules for generating new entries could already help a lot.</p>
+
+<p>It's ok to propose a new workflow / hosting for the documentation if there's a good argument for that which promises also long term maintenance.</p>
+
+<table>
+    <tr>
+        <th>Target Audience</th>
+        <td>All users of OpenSCAD who create new or modify existing designs.</td>
+    </tr>
+    <tr>
+        <th>Scope</th>
+        <td>Scope of the manual is to explain every bulit-in language feature in detail in a clearly structured way. Ideally there should be cross references for features that can be used in multiple contexts.</td>
+    </tr>
+    <tr>
+        <th>Current state</th>
+        <td>Relatively complete and reasonably structured documentation exists, but it's lacking a single style, clear references and a good list of examples with reference pictures.<br><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual</a></td>
+    </tr>
+    <tr>
+        <th>Expected license</th>
+        <td>CC-BY-SA or similar, code snippets must be CC0</td>
+    </tr>
+</table>
+
+<h3>Create an interactive Tips & Tricks Guide for OpenSCAD</h3>
+
+<p>We have a <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Tips_and_Tricks">Tips & Tricks guide</a> which is meant to help users with various skill level by providing code snippets for topics that come up multiple times. This includes simple coding techniques for calculating values like selectively counting values in a list or geometric topics like stacking different sized objects.</p>
+
+<p>The main idea for this project is to provide a framework for presenting the tips in a more interactive way using standard web techniques. This would either pick a number of existing tips or create some new ones based on research on sites like the <a href="http://forum.openscad.org/">OpenSCAD forum</a>, <a href="https://stackoverflow.com/tags/openscad">StackOverflow</a> and <a href="https://www.thingiverse.com/groups/openscad/forums/general">Thingiverse Discussion Group</a>. Interactive in that context means to break down the more complex tips into smaller steps and present them to the user in a way that it's possible to interactively move though the steps and maybe also modify some of the parameters on the way.</p>
+
+<table>
+    <tr>
+        <th>Target Audience</th>
+        <td>New or novice users who are not fully confident using just the reference manual. Some basic language knowledge is assumed, so it's not expected to present very core concepts.</td>
+    </tr>
+    <tr>
+        <th>Scope</th>
+        <td>A selection of tips and tricks with medium to complex difficulty which can be broken down into multiple steps and visualized in a way that makes them easier to understand and apply to other designs.</td>
+    </tr>
+    <tr>
+        <th>Current state</th>
+        <td>No presentation exists yet, but there is a list of Tips & Tricks collected on the Wikimedia page.<br><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Tips_and_Tricks">https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Tips_and_Tricks</a></td>
+    </tr>
+    <tr>
+        <th>Expected license</th>
+        <td>CC-BY-SA or similar, code snippets must be CC0</td>
+    </tr>
+</table>
+
+<h2>Contact</h2>
+
+<b>Links:</b>
+<ul>
+    <li><b>Contact address:</b> <a href="mailto:gsod2019@openscad.org">gsod2019@openscad.org</a></li>
+    <li><b>Github organization:</b> <a href="https://github.com/openscad/">https://github.com/openscad/openscad/</a></li>
+    <li><b>Forum/Mailing list:</b> <a href="http://forum.openscad.org/">http://forum.openscad.org/</a></li>
+    <li><b>IRC channel #openscad on freenode:</b> <a href="https://webchat.freenode.net/?channels=openscad">https://webchat.freenode.net/?channels=openscad</a></li>
+</ul>
+<b>People:</b>
+<ul>
+    <li><b><a href="https://github.com/kintel">kintel</a></b> (IRC: kintel)</li>
+    <li><b><a href="https://github.com/t-paul">t-paul</a></b> (IRC: teepee)</li>
+</ul>
+
+<hr>
+
+<small>Portions of this page are reproduced from work created and <a href="https://developers.google.com/readme/policies/">shared by Google</a> and used according to terms described in the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons 3.0 Attribution License</a> | Logo - source: <a href="https://developers.google.com/season-of-docs/docs/press">https://developers.google.com/season-of-docs/docs/press</a> | Citation in Paragraph "About Google Season of Docs" - source: <a href="https://developers.google.com/season-of-docs/docs/">https://developers.google.com/season-of-docs/docs/</a></small>
+
+</div>
+
+</body>
+</html>
