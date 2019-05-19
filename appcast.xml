@@ -5,15 +5,15 @@
     <link>https://openscad.org/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>OpenSCAD 2019.01-RC4</title>
-      <pubDate>2019.03.24</pubDate>
-      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/openscad-2019.01-RC4/releases/2019.01.md</sparkle:releaseNotesLink>
+      <title>OpenSCAD 2019.05</title>
+      <pubDate>2019.05.10</pubDate>
+      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/openscad-2019.05/releases/2019.05.md</sparkle:releaseNotesLink>
       <sparkle:minimumSystemVersion>10.9.0</sparkle:minimumSystemVersion>
-      <enclosure url="https://files.openscad.org/OpenSCAD-2019.01-RC4.dmg"
-                 sparkle:version="2019.03.24"
-                 sparkle:shortVersionString="2019.01-RC4"
-                 sparkle:dsaSignature="MC0CFQCViRHwyP+rJN6yvXObMjfvOqoKrwIUfcMgL45wBZ9WjSW6qpGEEIaf62Q="
-                 length="25920726"
+      <enclosure url="https://files.openscad.org/OpenSCAD-2019.05.dmg"
+                 sparkle:version="2019.05.10"
+                 sparkle:shortVersionString="2019.05"
+                 sparkle:dsaSignature="MCwCFFRzrQn/FJTaQZC+r1L7O8IuyueUAhQIvjp/gKj1VoSrnfQqjqjRtjHmdg=="
+                 length="25828077"
                  type="application/octet-stream"/>
     </item>
   </channel>
