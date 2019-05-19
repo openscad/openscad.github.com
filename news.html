@@ -98,7 +98,7 @@
 		  <h1 class="title">OpenSCAD release: 2019.05</h1>
 		  <h2 class="date">16 May 2019</h2>
 		  <div class="entry">
-                    <p>This release adds a number of features which have been in development for the last 4 years. Some of the larger program features are Customizer, which was first started as a Google Summer of Code project and 3D input device support. The OpenSCAD language itself and standard library has seen a number of iterative improvements</p>
+                    <p>This release adds a number of features which have been in development for the last 4 years. Some of the larger program features are Customizer, which was first started as a Google Summer of Code project, and 3D input device support. The OpenSCAD language itself and standard library has seen a number of iterative improvements</p>
 
                     <p>The source code, as well as binaries for Mac OS X, Windows and Linux are ready for <a href="downloads.html">download</a>.</p>
 
@@ -106,29 +106,28 @@
 
                     <p>A summary of changes since last release follows.</p>
 
-                    <p>Enjoy,<br/> The OpenSCAD Development Team</p>
+                    <p>Enjoy,<br/><br/>The OpenSCAD Development Team</p>
 
                     <h2>Summary of changes</h2>
                     <h3>Language Features</h3>
 		    <ul>
-<li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#assert">assert()</a> module</li>
+<li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#assert">assert() module</a> and <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Using_assertions_in_function">assert() function</a></li>
 <li>Added <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Let_Statement">let()</a> module</li>
 <li>Added <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/String_Functions#ord">ord()</a> function</li>
 <li>Added <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#Echo_Function">echo()</a> function</li>
-<li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#Using_assertions_in_function">assert()</a> function</li>
 <li>Added type testing functions: <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#is_undef">is_undef()</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#is_list">is_list()</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#is_num">is_num()</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#is_bool">is_bool()</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#is_string">is_string()</a>
 <li>New special variable: <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Other_Language_Features#%24preview">$preview</a></li>
 <li>List comprehension updates: <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/List_Comprehensions#if%2Felse">if/else condition</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/List_Comprehensions#each">each keyword</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/List_Comprehensions#for">C-style for loop</a>, <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/List_Comprehensions#for">looping over characters of a string</a></li>
 <li>rotate_extrude(): Added <a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/2D_to_3D_Extrusion#Rotate_Extrude">angle parameter</a></li>
-<li>import() now supports SVG, 3MF and AMF</li>
-<li>color() now supports hex color codes</li>
+<li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Importing_Geometry#import">import()</a> now supports SVG, 3MF and AMF</li>
+<li><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color()</a> now supports hex color codes</li>
 </ul>
 <h3>Program Features</h3>
 <ul>
 <li><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/WIP#Customizer">Customizer</a>: Allow parametrizing design parameters with GUI customization</li>
 <li><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/WIP/Inputdriver">3D-Mouse / Joystick / Gamepad</a> support</li>
 <li>3D Printing support: Purchase from a print service partner or print to Octoprint</li>
-<li>New export file formats: <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/STL_Import_and_Export">SVG, 3MF, AMF</a></li>
+<li>New export file formats: <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/STL_Import_and_Export#Export_Commands">SVG, 3MF, AMF</a></li>
 <li>Quick-edit and preview of values using Alt-Arrows (Shift-Alt-Arrows on macOS)</li>
 <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment">--view</a> cmd-line parameter</li>
 <li>Play sound notification on render complete</li>
