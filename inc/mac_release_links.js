@@ -1,3 +1,5 @@
-fileinfo['MAC_RELEASE_URL'] = 'https://files.openscad.org/OpenSCAD-2015.03-3.dmg'
-fileinfo['MAC_RELEASE_NAME'] = 'OpenSCAD 2015.03-3'
-fileinfo['MAC_RELEASE_SIZE'] = '23 MB'
+fileinfo['MAC_RELEASE_URL'] = 'https://files.openscad.org/OpenSCAD-2019.05.dmg'
+fileinfo['MAC_RELEASE_NAME'] = 'OpenSCAD 2019.05'
+fileinfo['MAC_RELEASE_SIZE'] = '25 MB'
+fileinfo['MAC_RELEASE_SHA256_URL'] = fileinfo['MAC_RELEASE_URL'] + '.sha256'
+fileinfo['MAC_RELEASE_SHA512_URL'] = fileinfo['MAC_RELEASE_URL'] + '.sha512'

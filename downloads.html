@@ -122,25 +122,28 @@
 	<div id="sidebar" class="sticky">
 		<h1>Downloads</h1>
 		<ul>
-			<li><a href="#osx">Mac OS X</a></li>
+			<li><a href="#osx">macOS</a></li>
 			<li><a href="#windows">Windows</a></li>
 			<li><a href="#linux">Linux</a></li>
 			<li><a href="#other-systems">Other Systems</a></li>
 			<li><a href="#source-code">Source Code</a></li>
 			<li><a href="#snapshots">Development Snapshots</a></li>
 			<li><a href="#priorreleases">Prior Releases</a></li>
+			<li><a href="#pgp">PGP Signature</a></li>
 		</ul>
 	</div>
 	
 	<article>
 		<section id="osx">
-			<h1>Mac OS X</h1>
+			<h1>macOS</h1>
 			<div class="subsection">
-				<p>System requirements: Mac OS X 10.7 or newer</p>
+				<p>System requirements: OS X 10.9 or newer</p>
 				<a id="MAC_RELEASE_URL" href="https://files.openscad.org">
 				<button class="download-button">
 					<h3 id="MAC_RELEASE_NAME">OpenSCAD</h3>
-					<small>64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small>
+					<small>64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small><br/>
+					<small><a id="MAC_RELEASE_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="MAC_RELEASE_SHA512_URL" href="">sha512</a></small>
 				</button>
 				</a>
 			</div>
@@ -155,31 +158,39 @@
 		<section id="windows">
 			<h1>Windows</h1>
 			<p>System requirements: Windows XP or newer on x86 32/64 bit</p>
-			<a id="WIN32_RELEASE1_URL" href="https://files.openscad.org">
-			<button class="left, download-button">
-			  <h3 id="WIN32_RELEASE1_NAME">OpenSCAD</h3>
-			  <small>x86 (32-bit) exe installer - </small><small id="WIN32_RELEASE1_SIZE">?? MB</small>
-			</button>
-			</a>
-			<a id="WIN32_RELEASE2_URL" href="https://files.openscad.org">
-			<button class="download-button">
-			  <h3 id="WIN32_RELEASE2_NAME">OpenSCAD</h3>
-			  <small>x86 (32-bit) zip package - </small><small id="WIN32_RELEASE2_SIZE">?? MB</small>
-			</button>
-			</a>
+			<div class="left, download-button">
+				<a id="WIN32_RELEASE_INSTALLER_URL" href="https://files.openscad.org">
+			  <h3 id="WIN32_RELEASE_INSTALLER_NAME">OpenSCAD</h3></a>
+				<small>x86 (32-bit) - exe installer - </small><small id="WIN32_RELEASE_INSTALLER_SIZE">?? MB</small><br>
+				<small><a id="WIN32_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN32_RELEASE_INSTALLER_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN32_RELEASE_INSTALLER_SHA512_URL" href="">sha512</a></small>
+			</div>
+			<div class="download-button">
+				<a id="WIN32_RELEASE_ZIP_URL" href="https://files.openscad.org">
+			  <h3 id="WIN32_RELEASE_ZIP_NAME">OpenSCAD</h3></a>
+				<small>x86 (32-bit) - zip package - </small><small id="WIN32_RELEASE_ZIP_SIZE">?? MB</small><br>
+				<small><a id="WIN32_RELEASE_ZIP_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN32_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN32_RELEASE_ZIP_SHA512_URL" href="">sha512</a></small>
+			</div>
 			<br clear="both"/>
-			<a id="WIN64_RELEASE1_URL" href="https://files.openscad.org">
-			<button class="left, download-button">
-			  <h3 id="WIN64_RELEASE1_NAME">OpenSCAD</h3>
-			  <small>x86 (64-bit) exe installer - </small><small id="WIN64_RELEASE1_SIZE">?? MB</small>
-			</button>
-			</a>
-			<a id="WIN64_RELEASE2_URL" href="https://files.openscad.org">
-			<button class="download-button">
-			  <h3 id="WIN64_RELEASE2_NAME">OpenSCAD</h3>
-			  <small>x86 (64-bit) zip package - </small><small id="WIN64_RELEASE2_SIZE">?? MB</small>
-			</button>
-			</a>
+			<div class="left, download-button">
+				<a id="WIN64_RELEASE_INSTALLER_URL" href="https://files.openscad.org">
+			  <h3 id="WIN64_RELEASE_INSTALLER_NAME">OpenSCAD</h3></a>
+				<small>x86 (64-bit) - exe installer - </small><small id="WIN64_RELEASE_INSTALLER_SIZE">?? MB</small><br>
+				<small><a id="WIN64_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN64_RELEASE_INSTALLER_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN64_RELEASE_INSTALLER_SHA512_URL" href="">sha512</a></small>
+			</div>
+			<div class="download-button">
+				<a id="WIN64_RELEASE_ZIP_URL" href="https://files.openscad.org">
+			  <h3 id="WIN64_RELEASE_ZIP_NAME">OpenSCAD</h3></a>
+				<small>x86 (64-bit) - zip package - </small><small id="WIN64_RELEASE_ZIP_SIZE">?? MB</small><br>
+				<small><a id="WIN64_RELEASE_ZIP_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN64_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN64_RELEASE_ZIP_SHA512_URL" href="">sha512</a></small>
+			</div>
 		</section>
 
 		<section id="linux">
@@ -223,12 +234,14 @@
 			<div id="other-linux" class="subsection">
 				<h2>Other Linux</h2>
 				<p>The AppImage package is intended to run on any recent Linux distribution. For more information about how AppImages work, see the <a href="https://appimage.org/">AppImage WebSite</a>.</p>
-				<a id="LIN64_RELEASE_URL" href="https://files.openscad.org">
-				<button class="download-button">
-					<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3>
-					<small>x64 (64-bit) - AppImage -</small><small id="LIN64_RELEASE_SIZE">?? MB</small>
-				</button>
-				</a>
+				<div class="download-button">
+					<a id="LIN64_RELEASE_URL" href="https://files.openscad.org">
+					<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3></a>
+					<small>x86 (64-bit) - AppImage - </small><small id="LIN64_RELEASE_SIZE">?? MB</small><br>
+					<small><a id="LIN64_RELEASE_ASC_URL" href="">asc</a></small> -
+					<small><a id="LIN64_RELEASE_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="LIN64_RELEASE_SHA512_URL" href="">sha512</a></small>
+				</div>
 			</div>
 		</section>
 
@@ -267,7 +280,10 @@
 			<a id="SRC_RELEASE_URL" href="https://files.openscad.org">
 			<button class="left, last, download-button">
 			  <h3 id="SRC_RELEASE_NAME">OpenSCAD</h3>
-			  <small>source code - tgz archive -</small><small id="SRC_RELEASE_SIZE">?? MB</small>
+			  <small>source code - tgz archive -</small><small id="SRC_RELEASE_SIZE">?? MB</small><br/>
+			  <small><a id="SRC_RELEASE_ASC_URL" href="">asc</a></small> - 
+			  <small><a id="SRC_RELEASE_SHA256_URL" href="">sha256</a></small> - 
+			  <small><a id="SRC_RELEASE_SHA512_URL" href="">sha512</a></small>
 			</button>
                         </a>
 			<p>You can also access the latest source code on github: <a href="https://github.com/openscad/openscad" target="_blank">openscad/openscad on github</a></p>
@@ -279,7 +295,7 @@
 			<p>Development snapshots are built irregularly. If you want access to a more recent development snapshot, please contact the <a href="community.html#mailing-list">mailing list</a>.<p>
 
 			<div id="snapshots-osx" class="subsection">
-				<h2>Mac OS X</h2>
+				<h2>macOS</h2>
 				<a id="MAC_SNAPSHOT_URL" href="https://files.openscad.org">
 				<button class="download-button">
 					<h3 id="MAC_SNAPSHOT_NAME">OpenSCAD</h3>
@@ -294,33 +310,33 @@
 				<div class="left, download-button">
 					<a id="WIN32_SNAPSHOT_INSTALLER_URL" href="https://files.openscad.org">
 					<h3 id="WIN32_SNAPSHOT_INSTALLER_NAME">OpenSCAD</h3></a>
-					<small>x86 (32-bit) exe installer - </small><small id="WIN32_SNAPSHOT_INSTALLER_SIZE">?? MB</small><br>
-				        <small><a id="WIN32_SNAPSHOT_INSTALLER_SHA1_URL" href="">sha1</a></small> -
-				        <small><a id="WIN32_SNAPSHOT_INSTALLER_SHA256_URL" href="">sha256</a></small>
+					<small>x86 (32-bit) - exe installer - </small><small id="WIN32_SNAPSHOT_INSTALLER_SIZE">?? MB</small><br>
+					<small><a id="WIN32_SNAPSHOT_INSTALLER_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN32_SNAPSHOT_INSTALLER_SHA256_URL" href="">sha256</a></small>
 				</div>
 
 				<div class="download-button">
 					<a id="WIN32_SNAPSHOT_ZIP_URL" href="https://files.openscad.org">
 					<h3 id="WIN32_SNAPSHOT_ZIP_NAME">OpenSCAD</h3></a>
-					<small>x86 (32-bit) zip package - </small><small id="WIN32_SNAPSHOT_ZIP_SIZE">?? MB</small><br>
-				        <small><a id="WIN32_SNAPSHOT_ZIP_SHA1_URL" href="">sha1</a></small> -
-				        <small><a id="WIN32_SNAPSHOT_ZIP_SHA256_URL" href="">sha256</a></small>
+					<small>x86 (32-bit) - zip package - </small><small id="WIN32_SNAPSHOT_ZIP_SIZE">?? MB</small><br>
+					<small><a id="WIN32_SNAPSHOT_ZIP_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN32_SNAPSHOT_ZIP_SHA256_URL" href="">sha256</a></small>
 				</div>
 
 				<div class="left, download-button">
 					<a id="WIN64_SNAPSHOT_INSTALLER_URL" href="https://files.openscad.org">
 					<h3 id="WIN64_SNAPSHOT_INSTALLER_NAME">OpenSCAD</h3></a>
-					<small>x86 (64-bit) exe installer - </small><small id="WIN64_SNAPSHOT_INSTALLER_SIZE">?? MB</small><br>
-				        <small><a id="WIN64_SNAPSHOT_INSTALLER_SHA1_URL" href="">sha1</a></small> -
-				        <small><a id="WIN64_SNAPSHOT_INSTALLER_SHA256_URL" href="">sha256</a></small>
+					<small>x86 (64-bit) - exe installer - </small><small id="WIN64_SNAPSHOT_INSTALLER_SIZE">?? MB</small><br>
+					<small><a id="WIN64_SNAPSHOT_INSTALLER_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN64_SNAPSHOT_INSTALLER_SHA256_URL" href="">sha256</a></small>
 				</div>
 
 				<div class="download-button">
 					<a id="WIN64_SNAPSHOT_ZIP_URL" href="https://files.openscad.org">
 					<h3 id="WIN64_SNAPSHOT_ZIP_NAME">OpenSCAD</h3></a>
-					<small>x86 (64-bit) zip package - </small><small id="WIN64_SNAPSHOT_ZIP_SIZE">?? MB</small><br>
-				        <small><a id="WIN64_SNAPSHOT_ZIP_SHA1_URL" href="">sha1</a></small> -
-				        <small><a id="WIN64_SNAPSHOT_ZIP_SHA256_URL" href="">sha256</a></small>
+					<small>x86 (64-bit) - zip package - </small><small id="WIN64_SNAPSHOT_ZIP_SIZE">?? MB</small><br>
+					<small><a id="WIN64_SNAPSHOT_ZIP_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN64_SNAPSHOT_ZIP_SHA256_URL" href="">sha256</a></small>
 				</div>
 			</div>
 
@@ -333,10 +349,10 @@
 			    <div class="left, download-button">
 				<a id="LIN64_SNAPSHOT_URL" href="https://files.openscad.org">
 				<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3></a>
-				<small>x86 (64-bit) AppImage - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small><br>
-				<small><a id="LIN64_SNAPSHOT_SHA1_URL" href="">sha1</a></small> -
+				<small>x86 (64-bit) - AppImage - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small><br>
+				<small><a id="LIN64_SNAPSHOT_ASC_URL" href="">asc</a></small> -
 				<small><a id="LIN64_SNAPSHOT_SHA256_URL" href="">sha256</a></small>
-			    </div>
+			</div>
 
 			    <h2>Linux - Snap</h2>
                             <p><a href="https://snapcraft.io/openscad-nightly">Snap packages</a> are available,
@@ -487,6 +503,12 @@
 			<h1>Prior Releases</h1>
 
 			<p>Prior releases are available at <a href="https://files.openscad.org">files.openscad.org</a></p>
+		</section>
+
+		<section id="pgp">
+			<h1>PGP Signature</h1>
+
+			<p>Any signed downloads will use the OpenSCAD Development Team's PGP key: <a href="OpenSCAD_public_key.asc">OpenSCAD_public_key.asc</a> (ID: 22164A0F, fingerprint: E2EB DADD 336F F516 ADD5  1A78 F3E1 2CCC 2216 4A0)</p>
 		</section>
 
 
