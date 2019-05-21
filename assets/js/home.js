@@ -13,12 +13,12 @@ $(document).ready(function() {
 	if (navigator.appVersion.indexOf("Win")!=-1) { 
           OSName="Windows"; 
           if (bits == 64) {
-            DLName = fileinfo['WIN64_RELEASE1_NAME'];
-            downloadLink = fileinfo['WIN64_RELEASE1_URL'];
+            DLName = fileinfo['WIN64_RELEASE_INSTALLER_NAME'];
+            downloadLink = fileinfo['WIN64_RELEASE_INSTALLER_URL'];
           }
           else {
-            DLName = fileinfo['WIN32_RELEASE1_NAME'];
-            downloadLink = fileinfo['WIN32_RELEASE1_URL'];
+            DLName = fileinfo['WIN32_RELEASE_INSTALLER_NAME'];
+            downloadLink = fileinfo['WIN32_RELEASE_INSTALLER_URL'];
           }
         }
 	else if (navigator.appVersion.indexOf("Mac")!=-1) { 
