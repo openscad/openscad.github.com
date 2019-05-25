@@ -125,3 +125,39 @@ footer {
 .fork img{
 	border: none;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: #79A22E;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  padding: 8px;
+  border-radius: 6px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 3em;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #79A22E transparent transparent transparent;
+}
