@@ -1,7 +1,9 @@
-fileinfo['LIN32_SNAPSHOT_URL'] = 'http://files.openscad.org/snapshots/openscad-2014.10.02.x86-32.tar.gz';
-fileinfo['LIN32_SNAPSHOT_NAME'] = 'OpenSCAD 2014.10.02';
-fileinfo['LIN32_SNAPSHOT_SIZE'] = '36.8 MB';
+fileinfo['LIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.01-RC4'
+fileinfo['LIN_SNAPSHOT_SIZE']   = '35 MB'
+fileinfo['LIN64_SNAPSHOT_URL'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.05.19.ai2702-x86_64.AppImage'
 
-fileinfo['LIN64_SNAPSHOT_URL'] = 'http://files.openscad.org/snapshots/openscad-2014.10.02.x86-64.tar.gz';
-fileinfo['LIN64_SNAPSHOT_NAME'] = 'OpenSCAD 2014.10.02';
-fileinfo['LIN64_SNAPSHOT_SIZE'] = '35.9 MB';
+fileinfo['LIN64_SNAPSHOT_NAME'] = fileinfo['LIN_SNAPSHOT_NAME']
+fileinfo['LIN64_SNAPSHOT_SIZE'] = fileinfo['LIN_SNAPSHOT_SIZE']
+fileinfo['LIN64_SNAPSHOT_ASC_URL'] = fileinfo['LIN64_SNAPSHOT_URL'] + '.asc'
+fileinfo['LIN64_SNAPSHOT_SHA256_URL'] = fileinfo['LIN64_SNAPSHOT_URL'] + '.sha256'
+fileinfo['LIN64_SNAPSHOT_SHA512_URL'] = fileinfo['LIN64_SNAPSHOT_URL'] + '.sha512'

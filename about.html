@@ -11,7 +11,7 @@
 	        var s = document.createElement('script'), t = document.getElementsByTagName('script')[0];
 	        s.type = 'text/javascript';
 	        s.async = true;
-	        s.src = 'http://api.flattr.com/js/0.6/load.js?mode=auto';
+	        s.src = 'https://api.flattr.com/js/0.6/load.js?mode=auto';
 	        t.parentNode.insertBefore(s, t);
 	    })();
 	/* ]]> */
@@ -19,8 +19,8 @@
 
 	<link href="assets/css/style.css" rel="stylesheet">
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
@@ -63,7 +63,7 @@
           </form>
           </div>
 		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
-          <script src="http://coinwidget.com/widget/coin.js"></script>
+          <script src="assets/widget_coin/coin.js"></script>
           <script>
             CoinWidgetCom.go({
 	    wallet_address: "18Eakg4ZCjjfVajXGvyntLKsEJYvZuT49C"
@@ -90,6 +90,7 @@
       <li><a href="news.html">News</a></li>
       <li><a href="downloads.html">Downloads</a></li>
       <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="libraries.html">Libraries</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="community.html">Community</a></li>
       <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
@@ -117,7 +118,7 @@
 			<h1>About OpenSCAD</h1>
 			<p>OpenSCAD is software for creating solid 3D CAD models. It is free software and available for Linux/UNIX, Windows and Mac OS X. Unlike most free software for creating 3D models (such as Blender) it does not focus on the artistic aspects of 3D modelling but instead on the CAD aspects. Thus it might be the application you are looking for when you are planning to create 3D models of machine parts but pretty sure is not what you are looking for when you are more interested in creating computer-animated movies.</p>
 			<p>OpenSCAD is not an interactive modeller. Instead it is something like a 3D-compiler that reads in a script file that describes the object and renders the 3D model from this script file. This gives you (the designer) full control over the modelling process and enables you to easily change any step in the modelling process or make designs that are defined by configurable parameters.</p>
-			<p>OpenSCAD provides two main modelling techniques: First there is constructive solid geometry (aka CSG) and second there is extrusion of 2D outlines. As data exchange format format for this 2D outlines Autocad DXF files are used. In addition to 2D paths for extrusion it is also possible to read design parameters from DXF files. Besides DXF files OpenSCAD can read and create 3D models in the STL and OFF file formats.</p>
+			<p>OpenSCAD provides two main modelling techniques: First there is constructive solid geometry (aka CSG) and second there is extrusion of 2D outlines. Autocad DXF files can be used as the data exchange format for such 2D outlines. In addition to 2D paths for extrusion it is also possible to read design parameters from DXF files. Besides DXF files OpenSCAD can read and create 3D models in the STL and OFF file formats.</p>
 		</section>
 		
 		<section id="contact" class="entry">
@@ -141,12 +142,9 @@
 			<p>A number of projects were inspired by OpenSCAD, or in some other way is related to OpenSCAD. This is an incomplete list of some project worth taking a look at:</p>
 				<ul>
 				  <li><a href="http://openjscad.org/">OpenJSCAD</a></li>
-				  <li><a href="http://www.fabfabbers.com/">FABFabbers</a></li>
-				  <li><a href="http://coffeescad.net/">CoffeeSCad</a></li>
 				  <li><a href="http://gilesbathgate.com/category/rapcad/">RapCAD</a></li>
 				  <li><a href="http://www.implicitcad.org/">ImplicitCAD</a></li>
 				  <li><a href="http://openscad.net">OpenSCAD.net</a></li>
-				  <li><a href="https://cubehero.com">Cubehero</a></li>
 				  <li><a href="http://libre3d.com/">Libre 3D</a></li>
 				</ul>
 			</section>

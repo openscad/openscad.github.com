@@ -1,0 +1,24 @@
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* Stylings
+-------------------------------------------------------------------------------*/
+
+body {
+	color:#1b2f01;
+	font-family:"Open Sans"; font-size:14px;
+	background:#fff;
+}
+
+#page-wrap {width:1000px; margin:0px auto; border:1px solid #fff; padding:20px;}
+
+#page-content {
+	background:#fff;
+	position:relative; padding:20px 20px 20px 20px;
+	-moz-box-shadow: 1px 1px 12px 2px #aaa; -webkit-box-shadow: 1px 1px 12px 2px #aaa; box-shadow: 1px 1px 12px 2px #aaa;
+	border-radius:12px 12px 12px 12px;
+}
+
+.green{color:#518e04;}
+
+.yellow{color:#f9d72c;}

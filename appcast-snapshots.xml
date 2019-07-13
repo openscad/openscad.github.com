@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
     <title>OpenSCAD Development Snapshots</title>
-    <link>http://openscad.org/appcast-snapshots.xml</link>
+    <link>https://openscad.org/appcast-snapshots.xml</link>
     <language>en</language>
     <item>
-      <title>OpenSCAD 2017.08.03</title>
-      <pubDate>2017.08.03</pubDate>
+      <title>OpenSCAD 2019.03.03</title>
+      <pubDate>2019.03.03</pubDate>
       <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/master/releases/2015.XX.md</sparkle:releaseNotesLink>
-      <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
-      <enclosure url="http://files.openscad.org/snapshots/OpenSCAD-2017.08.03.dmg"
-                 sparkle:version="2017.08.03"
-                 sparkle:shortVersionString="2017.08.03"
-                 sparkle:dsaSignature="MC0CFQDD8sRIurNbJMUBFmHdGArWDUe4KgIUdO+OxE9gkxDkDCjFxxTAQeoi5HM="
-                 length="27529081" 
+      <sparkle:minimumSystemVersion>10.9.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://files.openscad.org/snapshots/OpenSCAD-2019.03.03.dmg"
+                 sparkle:version="2019.03.03"
+                 sparkle:shortVersionString="2019.03.03"
+                 sparkle:dsaSignature="MCwCFFShjPMu7S2jEIs47TF25js692x9AhQmT4evFMJRmZ0fJw6nxbCqiQRPPA=="
+                 length="25917084" 
                  type="application/octet-stream"/>
     </item>
   </channel>

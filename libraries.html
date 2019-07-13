@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>OpenSCAD - Libraries</title>
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+  <script src="assets/js/jquery-1.9.1.min.js"></script>
+  <script src="assets/js/modernizr-1.7.min.js"></script>
+
+  <!-- One-Page-Nav  -->
+  <script src="assets/js/jquery.scrollTo.js"></script>
+
+  <!--waypoints-->
+  <script src="assets/js/waypoints.min.js"></script>
+  <script src="assets/js/waypoints-sticky.min.js"></script>
+
+  <script src="assets/js/documentation.js"></script>
+  <script src="assets/js/header.js"></script>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-26999768-1']);
+          _gaq.push(['_setDomainName', 'openscad.org']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+</script>
+</head>
+<body>
+
+<div id="page-wrap">
+<header>
+  <div class="clear"></div>
+  <div id="logo" class="left"></div>
+  <div id="donate" class="right">
+        <div id="paypal" style="margin-bottom:5px;">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="7ZQNEVE87X2KN">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using PayPal">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+          </form>
+          </div>
+    <a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
+          <script src="assets/widget_coin/coin.js"></script>
+          <script>
+            CoinWidgetCom.go({
+      wallet_address: "18Eakg4ZCjjfVajXGvyntLKsEJYvZuT49C"
+      , currency: "bitcoin"
+      , counter: "count"
+      , alignment: "bl"
+      , qrcode: true
+      , auto_show: false
+      , lbl_button: "Donate"
+      , lbl_address: "Bitcoin Address:"
+            });
+          </script>
+  </div>
+  <div id="title" style="margin-top:35px; width:620px;">
+    <h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
+    <h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+  </div>
+
+  <div id="navigation">
+  <div id="navigation-inner">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li class="current"><a href="libraries.html">Libraries</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
+    </ul>
+  </div>
+  </div>
+</header>
+
+<div id="page-content">
+
+  <div id="sidebar" class="sticky">
+    <h1>Libraries</h1>
+    <ul>
+      <li><a href="#general">General</a></li>
+    </ul>
+  </div>
+
+  <article>
+    <section id="General">
+      <h1>General</h1>
+      <img class="libimg" src="images/bosl.gif" width="200" align="right">
+      <h2>BOSL</h2>
+      <p>The Belfry OpenScad Library - A library of tools, shapes, and helpers to make OpenScad easier to use.</p>
+      <ul>
+        <li><a href="https://github.com/revarbat/BOSL">Library</a></li>
+        <li><a href="https://github.com/revarbat/BOSL/wiki">Documentation</a></li>
+        <li>License: BSD-2-Clause</li>
+      </ul>
+      <p style="clear: both"></p>
+      <img class="libimg" src="images/dotscad.gif" width="200" align="right">
+      <h2>dotSCAD</h2>
+      <p>Reduce the burden of 3D modeling in mathematics.</p>
+      <ul>
+        <li><a href="https://github.com/JustinSDK/dotSCAD">Library</a></li>
+        <li><a href="https://openhome.cc/eGossip/OpenSCAD/">Documentation</a></li>
+        <li>License: LGPL-3.0-only</li>
+      </ul>
+      <p style="clear: both"></p>
+      <img class="libimg" src="https://raw.githubusercontent.com/nophead/NopSCADlib/master/libtest.png" width="200" align="right">
+      <h2>NopSCADlib</h2>
+      <p>An ever expanding library of parts modelled in OpenSCAD useful for 3D printers and enclosures for electronics, etc.</p>
+      <ul>
+        <li><a href="https://github.com/nophead/NopSCADlib">Library</a></li>
+        <li><a href="https://github.com/nophead/NopSCADlib/blob/master/readme.md">Documentation</a></li>
+        <li>License: GPL-3.0-or-later</li>
+      </ul>
+      <p style="clear: both"></p>
+      <img class="libimg" src="images/bolts.gif" width="200" align="right">
+      <h2>BOLTS</h2>
+      <p>BOLTS is an Open Library of Technical Specifications.</p>
+      <ul>
+        <li><a href="https://github.com/boltsparts/BOLTS">Library</a></li>
+        <li><a href="https://boltsparts.github.io/en/index.html">Documentation</a></li>
+        <li>License: LGPL-2.1-or-later | GPL-3.0-only</li>
+      </ul>
+      <p style="clear: both"></p>
+    </section>
+
+  </article>
+
+<div class="clear"></div>
+
+</div><!--#page-content end-->
+
+<footer>
+
+</footer>
+</div><!--#page-wrap end-->
+
+</body>
+</html>

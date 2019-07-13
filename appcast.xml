@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
   <channel>
     <title>OpenSCAD Updates</title>
-    <link>http://openscad.org/appcast.xml</link>
+    <link>https://openscad.org/appcast.xml</link>
     <language>en</language>
     <item>
-      <title>OpenSCAD 2015.03-3</title>
-      <pubDate>2016.02.23</pubDate>
-      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/openscad-2015.03-3/releases/2015.03.md</sparkle:releaseNotesLink>
-      <sparkle:minimumSystemVersion>10.7.0</sparkle:minimumSystemVersion>
-      <enclosure url="http://files.openscad.org/OpenSCAD-2015.03-3.dmg"
-                 sparkle:version="2016.02.23"
-                 sparkle:shortVersionString="2015.03-3"
-                 sparkle:dsaSignature="MCwCFAokRjONxOrq5NKuRYlrU7y20jEnAhRuC1BVPbEYfJWnXKbNeGGOYpbSbw=="
-                 length="24161272"
+      <title>OpenSCAD 2019.05</title>
+      <pubDate>2019.05.10</pubDate>
+      <sparkle:releaseNotesLink>https://raw.githubusercontent.com/openscad/openscad/openscad-2019.05/releases/2019.05.md</sparkle:releaseNotesLink>
+      <sparkle:minimumSystemVersion>10.9.0</sparkle:minimumSystemVersion>
+      <enclosure url="https://files.openscad.org/OpenSCAD-2019.05.dmg"
+                 sparkle:version="2019.05.10"
+                 sparkle:shortVersionString="2019.05"
+                 sparkle:dsaSignature="MCwCFFRzrQn/FJTaQZC+r1L7O8IuyueUAhQIvjp/gKj1VoSrnfQqjqjRtjHmdg=="
+                 length="25828077"
                  type="application/octet-stream"/>
     </item>
   </channel>

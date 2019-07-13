@@ -2,7 +2,7 @@
 <html lang="en">
 	<!--[if lt IE 9]>
 	Your web browser is too old to be compatible with our download page. Please
-	visit <a href="http://files.openscad.org">http://files.openscad.org</a> 
+	visit <a href="https://files.openscad.org">https://files.openscad.org</a> 
 	directly to download the file you wish to use. Thanks.
 	<![endif]-->
 <head>
@@ -11,14 +11,7 @@
 
 	<link href="assets/css/style.css" rel="stylesheet">
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-
-	<noscript>
-	 <center>
-	  Your browser has javascript disabled -- file links will go to a folder on <a href="http://files.openscad.org.">files.openscad.org</a><br>
-	  Please find your desired file inside the folder.
-	 </center>
-	</noscript>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
@@ -31,7 +24,7 @@
 	<script src="assets/js/waypoints-sticky.min.js"></script>
 
 	<script src="assets/js/header.js"></script>
-	<script type="text/javascript">
+	<script>
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-26999768-1']);
           _gaq.push(['_setDomainName', 'openscad.org']);
@@ -44,7 +37,7 @@
           })();
 	</script>
 
-	<script type="text/javascript">
+	<script>
 	  var fileinfo = {};
 	</script>
 	<script src="inc/mac_snapshot_links.js"></script>
@@ -54,7 +47,7 @@
 	<script src="inc/win_release_links.js"></script>
 	<script src="inc/linux_release_links.js"></script>
 	<script src="inc/src_release_links.js"></script>
-	<script type="text/javascript">
+	<script>
 	  jQuery(document).ready(function(){
 	    for (var fileid in fileinfo) {
 	      if (fileid.indexOf("_URL") >= 0) {
@@ -65,9 +58,15 @@
 	    }
 	  });
 	</script>
-
 </head>
 <body>
+
+<noscript>
+	<div style="text-align: center; background-color: #ffe8e8">
+	<p>Your browser has javascript disabled -- file links will go to a folder on <a href="https://files.openscad.org.">files.openscad.org</a></p>
+	<p>Please find your desired file inside the folder.</p>
+	</div>
+</noscript>
 
 <div id="page-wrap">
 <header>
@@ -78,12 +77,12 @@
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="7ZQNEVE87X2KN">
-            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="Donate using PayPal">
-            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" name="submit" alt="Donate using PayPal">
+            <img alt="" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
           </form>
           </div>
 		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
-          <script src="http://coinwidget.com/widget/coin.js"></script>
+          <script src="assets/widget_coin/coin.js"></script>
           <script>
             CoinWidgetCom.go({
 	    wallet_address: "18Eakg4ZCjjfVajXGvyntLKsEJYvZuT49C"
@@ -110,6 +109,7 @@
       <li><a href="news.html">News</a></li>
       <li class="current"><a href="downloads.html">Downloads</a></li>
       <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="libraries.html">Libraries</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="community.html">Community</a></li>
       <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
@@ -123,25 +123,28 @@
 	<div id="sidebar" class="sticky">
 		<h1>Downloads</h1>
 		<ul>
-			<li><a href="#osx">Mac OS X</a></li>
+			<li><a href="#osx">macOS</a></li>
 			<li><a href="#windows">Windows</a></li>
 			<li><a href="#linux">Linux</a></li>
 			<li><a href="#other-systems">Other Systems</a></li>
 			<li><a href="#source-code">Source Code</a></li>
 			<li><a href="#snapshots">Development Snapshots</a></li>
 			<li><a href="#priorreleases">Prior Releases</a></li>
+			<li><a href="#pgp">PGP Signature</a></li>
 		</ul>
 	</div>
 	
 	<article>
 		<section id="osx">
-			<h1>Mac OS X</h1>
+			<h1>macOS</h1>
 			<div class="subsection">
-				<p>System requirements: Mac OS X 10.7 or newer</p>
-				<a id="MAC_RELEASE_URL" href="http://files.openscad.org">
+				<p>System requirements: OS X 10.9 or newer</p>
+				<a id="MAC_RELEASE_URL" href="https://files.openscad.org">
 				<button class="download-button">
 					<h3 id="MAC_RELEASE_NAME">OpenSCAD</h3>
-					<small>64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small>
+					<small>64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small><br/>
+					<small><a id="MAC_RELEASE_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="MAC_RELEASE_SHA512_URL" href="">sha512</a></small>
 				</button>
 				</a>
 			</div>
@@ -156,38 +159,47 @@
 		<section id="windows">
 			<h1>Windows</h1>
 			<p>System requirements: Windows XP or newer on x86 32/64 bit</p>
-			<a id="WIN32_RELEASE1_URL" href="http://files.openscad.org/files">
-			<button class="left, download-button">
-			  <h3 id="WIN32_RELEASE1_NAME">OpenSCAD</h3>
-			  <small>x86 (32-bit) exe installer - </small><small id="WIN32_RELEASE1_SIZE">?? MB</small>
-			</button>
-			</a>
-			<a id="WIN32_RELEASE2_URL" href="http://files.openscad.org">
-			<button class="download-button">
-			  <h3 id="WIN32_RELEASE2_NAME">OpenSCAD</h3>
-			  <small>x86 (32-bit) zip package - </small><small id="WIN32_RELEASE2_SIZE">?? MB</small>
-			</button>
-			</a>
+			<div class="left, download-button">
+				<a id="WIN32_RELEASE_INSTALLER_URL" href="https://files.openscad.org">
+			  <h3 id="WIN32_RELEASE_INSTALLER_NAME">OpenSCAD</h3></a>
+				<small>x86 (32-bit) - exe installer - </small><small id="WIN32_RELEASE_INSTALLER_SIZE">?? MB</small><br>
+				<small><a id="WIN32_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN32_RELEASE_INSTALLER_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN32_RELEASE_INSTALLER_SHA512_URL" href="">sha512</a></small>
+			</div>
+			<div class="download-button">
+				<a id="WIN32_RELEASE_ZIP_URL" href="https://files.openscad.org">
+			  <h3 id="WIN32_RELEASE_ZIP_NAME">OpenSCAD</h3></a>
+				<small>x86 (32-bit) - zip package - </small><small id="WIN32_RELEASE_ZIP_SIZE">?? MB</small><br>
+				<small><a id="WIN32_RELEASE_ZIP_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN32_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN32_RELEASE_ZIP_SHA512_URL" href="">sha512</a></small>
+			</div>
 			<br clear="both"/>
-			<a id="WIN64_RELEASE1_URL" href="http://files.openscad.org">
-			<button class="left, download-button">
-			  <h3 id="WIN64_RELEASE1_NAME">OpenSCAD</h3>
-			  <small>x86 (64-bit) exe installer - </small><small id="WIN64_RELEASE1_SIZE">?? MB</small>
-			</button>
-			</a>
-			<a id="WIN64_RELEASE2_URL" href="http://files.openscad.org">
-			<button class="download-button">
-			  <h3 id="WIN64_RELEASE2_NAME">OpenSCAD</h3>
-			  <small>x86 (64-bit) zip package - </small><small id="WIN64_RELEASE2_SIZE">?? MB</small>
-			</button>
-			</a>
+			<div class="left, download-button">
+				<a id="WIN64_RELEASE_INSTALLER_URL" href="https://files.openscad.org">
+			  <h3 id="WIN64_RELEASE_INSTALLER_NAME">OpenSCAD</h3></a>
+				<small>x86 (64-bit) - exe installer - </small><small id="WIN64_RELEASE_INSTALLER_SIZE">?? MB</small><br>
+				<small><a id="WIN64_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN64_RELEASE_INSTALLER_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN64_RELEASE_INSTALLER_SHA512_URL" href="">sha512</a></small>
+			</div>
+			<div class="download-button">
+				<a id="WIN64_RELEASE_ZIP_URL" href="https://files.openscad.org">
+			  <h3 id="WIN64_RELEASE_ZIP_NAME">OpenSCAD</h3></a>
+				<small>x86 (64-bit) - zip package - </small><small id="WIN64_RELEASE_ZIP_SIZE">?? MB</small><br>
+				<small><a id="WIN64_RELEASE_ZIP_ASC_URL" href="">asc</a></small> -
+				<small><a id="WIN64_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN64_RELEASE_ZIP_SHA512_URL" href="">sha512</a></small>
+			</div>
 		</section>
 
 		<section id="linux">
 			<h1>Linux</h1>
 			<div id="ubuntu" class="subsection">
 				<h2>Debian / Ubuntu / Kubuntu</h2>
-				<p>OpenSCAD is available in the repositories of recent distributions.
+				<p>OpenSCAD is available in the repositories of most recent distributions
+				   (Currently <a href="https://bugs.launchpad.net/ubuntu/+source/openscad/+bug/1766555">missing</a> in Ubuntu 18.04).
 				<pre>
 					<code>$ sudo apt-get install openscad</code>
 				</pre>
@@ -209,7 +221,6 @@
 				<pre>
 					<code># yum install openscad-MCAD</code>
 				</pre>
-				<p>Please note that you'll find OpenSCAD 2014.03 in Fedora 21 and lower. In case you'd like to use 2015.03 in Fedora 21, you can use <a href="https://copr.fedoraproject.org/coprs/churchyard/openscad-2015.03/">a Copr repo with it</a>.</a></p>
 			</div>
 			<div id="opensuse" class="subsection">
 				<h2>openSUSE</h2>
@@ -223,19 +234,15 @@
 			</div>
 			<div id="other-linux" class="subsection">
 				<h2>Other Linux</h2>
-				<p>The following generic binary Linux packages are available:</p>
-				<a id="LIN32_RELEASE_URL" href="http://files.openscad.org">
-				<button class="left, download-button">
-					<h3 id="LIN32_RELEASE_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_RELEASE_SIZE">?? MB</small>
-				</button>
-				</a>
-				<a id="LIN64_RELEASE_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3>
-					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_RELEASE_SIZE">?? MB</small>
-				</button>
-				</a>
+				<p>The AppImage package is intended to run on any recent Linux distribution. For more information about how AppImages work, see the <a href="https://appimage.org/">AppImage WebSite</a>.</p>
+				<div class="download-button">
+					<a id="LIN64_RELEASE_URL" href="https://files.openscad.org">
+					<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3></a>
+					<small>x86 (64-bit) - AppImage - </small><small id="LIN64_RELEASE_SIZE">?? MB</small><br>
+					<small><a id="LIN64_RELEASE_ASC_URL" href="">asc</a></small> -
+					<small><a id="LIN64_RELEASE_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="LIN64_RELEASE_SHA512_URL" href="">sha512</a></small>
+				</div>
 			</div>
 		</section>
 
@@ -248,7 +255,7 @@
 					<code># pkgin install openscad</code>
 				</pre>
 			</div>
-			<div id="openbsd" class="subsection">
+			<div id="freebsd" class="subsection">
 				<h2>FreeBSD (>=10)</h2>
 				<pre>
 					<code># pkg install openscad</code>
@@ -271,10 +278,13 @@
                 <a href="https://github.com/openscad/openscad"><img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 		<section id="source-code" class="github-ribbon">
 			<h1>Source Code</h1>
-			<a id="SRC_RELEASE_URL" href="http://files.openscad.org">
+			<a id="SRC_RELEASE_URL" href="https://files.openscad.org">
 			<button class="left, last, download-button">
 			  <h3 id="SRC_RELEASE_NAME">OpenSCAD</h3>
-			  <small>source code - tgz archive -</small><small id="SRC_RELEASE_SIZE">?? MB</small>
+			  <small>source code - tgz archive -</small><small id="SRC_RELEASE_SIZE">?? MB</small><br/>
+			  <small><a id="SRC_RELEASE_ASC_URL" href="">asc</a></small> - 
+			  <small><a id="SRC_RELEASE_SHA256_URL" href="">sha256</a></small> - 
+			  <small><a id="SRC_RELEASE_SHA512_URL" href="">sha512</a></small>
 			</button>
                         </a>
 			<p>You can also access the latest source code on github: <a href="https://github.com/openscad/openscad" target="_blank">openscad/openscad on github</a></p>
@@ -286,8 +296,8 @@
 			<p>Development snapshots are built irregularly. If you want access to a more recent development snapshot, please contact the <a href="community.html#mailing-list">mailing list</a>.<p>
 
 			<div id="snapshots-osx" class="subsection">
-				<h2>Mac OS X</h2>
-				<a id="MAC_SNAPSHOT_URL" href="http://files.openscad.org">
+				<h2>macOS</h2>
+				<a id="MAC_SNAPSHOT_URL" href="https://files.openscad.org">
 				<button class="download-button">
 					<h3 id="MAC_SNAPSHOT_NAME">OpenSCAD</h3>
 					<small>64 bit Intel - dmg package - </small><small id="MAC_SNAPSHOT_SIZE">?? MB</small>
@@ -298,140 +308,203 @@
 			<div id="snapshots-windows" class="subsection">
 				<h2>Windows</h2>
 
-				<a id="WIN32_SNAPSHOT1_URL" href="http://files.openscad.org">
-				<button class="left, download-button">
-					<h3 id="WIN32_SNAPSHOT1_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) exe installer - </small><small id="WIN32_SNAPSHOT1_SIZE">?? MB</small>
-				</button>
-				</a>
+				<div class="left, download-button">
+					<a id="WIN32_SNAPSHOT_INSTALLER_URL" href="https://files.openscad.org">
+					<h3 id="WIN32_SNAPSHOT_INSTALLER_NAME">OpenSCAD</h3></a>
+					<small>x86 (32-bit) - exe installer - </small><small id="WIN32_SNAPSHOT_INSTALLER_SIZE">?? MB</small><br>
+					<small><a id="WIN32_SNAPSHOT_INSTALLER_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN32_SNAPSHOT_INSTALLER_SHA256_URL" href="">sha256</a></small>
+				</div>
 
-				<a id="WIN32_SNAPSHOT2_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="WIN32_SNAPSHOT2_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) zip package - </small><small id="WIN32_SNAPSHOT2_SIZE">?? MB</small>
-				</button>
-				</a>
+				<div class="download-button">
+					<a id="WIN32_SNAPSHOT_ZIP_URL" href="https://files.openscad.org">
+					<h3 id="WIN32_SNAPSHOT_ZIP_NAME">OpenSCAD</h3></a>
+					<small>x86 (32-bit) - zip package - </small><small id="WIN32_SNAPSHOT_ZIP_SIZE">?? MB</small><br>
+					<small><a id="WIN32_SNAPSHOT_ZIP_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN32_SNAPSHOT_ZIP_SHA256_URL" href="">sha256</a></small>
+				</div>
 
-				<a id="WIN32_SNAPSHOT3_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="WIN32_SNAPSHOT3_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) test suite - </small><small id="WIN32_SNAPSHOT3_SIZE">?? MB</small>
-				</button>
-				</a>
+				<div class="left, download-button">
+					<a id="WIN64_SNAPSHOT_INSTALLER_URL" href="https://files.openscad.org">
+					<h3 id="WIN64_SNAPSHOT_INSTALLER_NAME">OpenSCAD</h3></a>
+					<small>x86 (64-bit) - exe installer - </small><small id="WIN64_SNAPSHOT_INSTALLER_SIZE">?? MB</small><br>
+					<small><a id="WIN64_SNAPSHOT_INSTALLER_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN64_SNAPSHOT_INSTALLER_SHA256_URL" href="">sha256</a></small>
+				</div>
 
-				<br clear="both"/>
-
-				<a id="WIN64_SNAPSHOT1_URL" href="http://files.openscad.org">
-				<button class="left, download-button">
-					<h3 id="WIN64_SNAPSHOT1_NAME">OpenSCAD</h3>
-					<small>x86 (64-bit) exe installer - </small><small id="WIN64_SNAPSHOT1_SIZE">?? MB</small>
-				</button>
-
-				</a>
-				<a id="WIN64_SNAPSHOT2_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="WIN64_SNAPSHOT2_NAME">OpenSCAD</h3>
-					<small>x86 (64-bit) zip package - </small><small id="WIN64_SNAPSHOT2_SIZE">?? MB</small>
-				</button>
-				</a>
-
-				<a id="WIN64_SNAPSHOT3_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="WIN64_SNAPSHOT3_NAME">OpenSCAD</h3>
-					<small>x86 (64-bit) test suite - </small><small id="WIN64_SNAPSHOT3_SIZE">?? MB</small>
-				</button>
-				</a>
-
+				<div class="download-button">
+					<a id="WIN64_SNAPSHOT_ZIP_URL" href="https://files.openscad.org">
+					<h3 id="WIN64_SNAPSHOT_ZIP_NAME">OpenSCAD</h3></a>
+					<small>x86 (64-bit) - zip package - </small><small id="WIN64_SNAPSHOT_ZIP_SIZE">?? MB</small><br>
+					<small><a id="WIN64_SNAPSHOT_ZIP_ASC_URL" href="">asc</a></small> -
+					<small><a id="WIN64_SNAPSHOT_ZIP_SHA256_URL" href="">sha256</a></small>
+				</div>
 			</div>
 
 			<div id="snapshots-linux" class="subsection">
-				<h2>Linux</h2>
-<!-- Stand-alone binaries not currently being built
-                                <p>Please try the automatically built snapshots first if you are running a supported distribution 
-                                   (see <a href="#snapshots-linux-auto">below</a>).</p>
-                                
-				<a id="LIN32_SNAPSHOT_URL" href="http://files.openscad.org">
-				<button class="left, download-button">
-					<h3 id="LIN32_SNAPSHOT_NAME">OpenSCAD</h3>
-					<small>x86 (32-bit) - tgz archive - </small><small id="LIN32_SNAPSHOT_SIZE">?? MB</small>
-				</button>
-				</a>
-				<a id="LIN64_SNAPSHOT_URL" href="http://files.openscad.org">
-				<button class="download-button">
-					<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3>
-					<small>x64 (64-bit) - tgz archive -</small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small>
-				</button>
-				</a>
-  -->
+			    <h2>Linux - AppImage</h2>
+                            <p>Please try the automatically built snapshots first if you are running a supported
+				distribution (see <a href="#snapshots-linux-distro">below</a>), the following
+				AppImage builds are still experimental.</p>
 
-                        <div id="snapshots-linux" class="subsection">
+			    <div class="left, download-button">
+				<a id="LIN64_SNAPSHOT_URL" href="https://files.openscad.org">
+				<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3></a>
+				<small>x86 (64-bit) - AppImage - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small><br>
+				<small><a id="LIN64_SNAPSHOT_ASC_URL" href="">asc</a></small> -
+				<small><a id="LIN64_SNAPSHOT_SHA256_URL" href="">sha256</a></small>
+			</div>
+
+			    <h2>Linux - Snap</h2>
+                            <p><a href="https://snapcraft.io/openscad-nightly">Snap packages</a> are available,
+				as those are built against an older Ubuntu (16.04) those are using some older
+				components which can cause known display issues, so if possible use one of the
+				specific distribution packages below.</p>
+			    <p>Install with</p>
+                            <pre>
+                                <small><code># snap install openscad-nightly</code></small>
+                            </pre>
+
+			    <h2><a id="snapshots-linux-distro">Linux - Distribution Packages</a></h2>
                             <p>The packages are automatically built based on the <a href="https://github.com/openscad/openscad/tree/master">master branch</a>
                                 on github.</p>
-                            <p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to install the development
-                                snapshot packages in parallel to the release version from the official repositories.</p>
+
+                            <p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to
+				install the development snapshot packages in parallel to the release version
+				from the official repositories.</p>
 
                             <h2>Debian / Ubuntu packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
                         
                             <p>To install the packages, the release key must be added with apt-key to the key-ring to allow
                                 apt-get / aptitude to validate the packages.<br/>
-                                Key ID: 75F3214F30EB8E08 (valid till 2019-02-07)<br/>
+                                Key ID: 75F3214F30EB8E08 (valid till 2021-04-18)<br/>
                                 Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</p>
 
-			    <p>NOTE: If you get errors about an expired key valid till 2016-11-28, please re-import via the following command.</p>
+			    <p>NOTE: If you get errors about an expired key valid till 2019-02-07, please re-import via the following command.</p>
 
                             <pre>
-                                <small><code># wget -qO - http://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
+                                <small><code># wget -qO - https://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
                             </pre>
 
                             <br/>
                             <p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
-                                file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.
+                                file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.</p>
+				
+			    <p>The repository links below are shown as <code>https</code>, please check for your installation if <code>https</code> is supported. In Debian/Ubuntu this is usually handled by the <code>apt-transport-https</code> package. OBS also supports HTTP links, but it's recommended to use <code>https</code> whenever possible.</p>
 
                             <h3>Debian 8 (Jessie)</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_8.0/ ./</code></small>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_8.0/ ./</code></small>
                             </pre>
 
                             <h3>Debian 9 (Stretch)</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/Debian_9.0/ ./</code></small>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_9.0/ ./</code></small>
+                            </pre>
+
+                            <h3>Debian 10 (Buster)</h3>
+                            <pre>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_10/ ./</code></small>
+                            </pre>
+
+                            <h3>Debian Testing</h3>
+                            <pre>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Testing/ ./</code></small>
+                            </pre>
+
+                            <h3>Debian Unstable</h3>
+                            <pre>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Unstable/ ./</code></small>
                             </pre>
 
                             <h3>Ubuntu 16.04</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_16.04/ ./</code></small>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_16.04/ ./</code></small>
                             </pre>
 
-                            <h3>Ubuntu 16.10</h3>
+                            <h3>Ubuntu 17.10</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_16.10/ ./</code></small>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_17.10/ ./</code></small>
                             </pre>
 
-                            <h3>Ubuntu 17.04</h3>
+                            <h3>Ubuntu 18.04</h3>
                             <pre>
-                                <small><code>deb http://download.opensuse.org/repositories/home:/t-paul/xUbuntu_17.04/ ./</code></small>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_18.04/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 18.10</h3>
+                            <pre>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_18.10/ ./</code></small>
+                            </pre>
+
+                            <h3>Ubuntu 19.04</h3>
+                            <pre>
+                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_19.04/ ./</code></small>
                             </pre>
 
                             <h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
                             
-                            <h3>openSUSE Leap 42.2</h3>
+                            <h3>openSUSE Leap 42.3 (64-bit only)</h3>
                             <pre>
-                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_42.2/</code></small>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_42.3/</code></small>
                             </pre>
                             
-                            <h3>openSUSE Leap 42.3</h3>
+                            <h3>openSUSE Leap 15.0 (64-bit only)</h3>
                             <pre>
-                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_42.3/</code></small>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.0/</code></small>
                             </pre>
-                            
+
+                            <h3>openSUSE Leap 15.1 (64-bit only)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.1/</code></small>
+                            </pre>
+
                             <h3>openSUSE Tumbleweed</h3>
                             <pre>
-                                <small><code>http://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
                             </pre>
                             
-                            <h2>Fedora packages built on Copr</h2>
+                            <h2>Fedora packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
 
-                            <p>RPM repository with nightly OpenSCAD development snapshots on <a href="http://copr.fedoraproject.org/coprs/churchyard/openscad-devel/">copr.fedoraproject.org</a>.</p>
+                            <h3>Fedora 24</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_24/</code></small>
+                            </pre>
+
+                            <h3>Fedora 25</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_25/</code></small>
+                            </pre>
+                            
+                            <h3>Fedora 26</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_26/</code></small>
+                            </pre>
+                            
+                            <h3>Fedora 27 (64-bit only)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_27/</code></small>
+                            </pre>
+                            
+                            <h3>Fedora 28 (64-bit only)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_28/</code></small>
+                            </pre>
+
+                            <h3>Fedora 29 (x86_64, i586, armv7l, aarch64, ppc64le)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_29/</code></small>
+                            </pre>
+
+                            <h3>Fedora 30 (x86_64, i586, armv7l, aarch64, ppc64le)</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_30/</code></small>
+                            </pre>
+
+                            <h3>Fedora Rawhide</h3>
+                            <pre>
+                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_Rawhide/</code></small>
+                            </pre>
 
                             <h2>Arch Linux</h2>
                             To install OpenSCAD from git on Arch Linux the <a href="https://aur.archlinux.org/packages/openscad-git/">openscad-git pkgbuild</a>
@@ -444,7 +517,13 @@
 		<section id="priorreleases">
 			<h1>Prior Releases</h1>
 
-			<p>Prior releases are available at <a href="http://files.openscad.org">files.openscad.org</a></p>
+			<p>Prior releases are available at <a href="https://files.openscad.org">files.openscad.org</a></p>
+		</section>
+
+		<section id="pgp">
+			<h1>PGP Signature</h1>
+
+			<p>Any signed downloads will use the OpenSCAD Development Team's PGP key: <a href="OpenSCAD_public_key.asc">OpenSCAD_public_key.asc</a> (ID: 22164A0F, fingerprint: E2EB DADD 336F F516 ADD5  1A78 F3E1 2CCC 2216 4A0)</p>
 		</section>
 
 

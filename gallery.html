@@ -7,7 +7,7 @@
 
 	<link href="assets/css/style.css" rel="stylesheet">
   
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
@@ -26,6 +26,8 @@
           var _gaq = _gaq || [];
           _gaq.push(['_setAccount', 'UA-26999768-1']);
           _gaq.push(['_setDomainName', 'openscad.org']);
+          _gaq.push(['_gat._anonymizeIp']); // For gdpr
+          _gaq.push(['_gat._forceSSL']); // Send all hits using SSL, even from insecure (HTTP) pages.
           _gaq.push(['_trackPageview']);
           
           (function() {
@@ -51,7 +53,7 @@
           </form>
           </div>
 		<a class="FlattrButton" style="display:none;" rev="flattr" href="http://openscad.org"></a><br/>
-          <script src="http://coinwidget.com/widget/coin.js"></script>
+          <script src="assets/widget_coin/coin.js"></script>
           <script>
             CoinWidgetCom.go({
 	    wallet_address: "18Eakg4ZCjjfVajXGvyntLKsEJYvZuT49C"
@@ -78,6 +80,7 @@
       <li><a href="news.html">News</a></li>
       <li><a href="downloads.html">Downloads</a></li>
       <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="libraries.html">Libraries</a></li>
       <li class="current"><a href="gallery.html">Gallery</a></li>
       <li><a href="community.html">Community</a></li>
       <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
