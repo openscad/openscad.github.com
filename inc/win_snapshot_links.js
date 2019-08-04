@@ -1,7 +1,7 @@
-fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.07.28'
+fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.08.04'
 fileinfo['WIN_SNAPSHOT_SIZE']   = '19 MB'
-fileinfo['WIN32_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.07.28.ci3068-x86-32'
-fileinfo['WIN64_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.07.28.ci3069-x86-64'
+fileinfo['WIN32_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.08.04.ci3200-x86-32'
+fileinfo['WIN64_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.08.04.ci3199-x86-64'
 
 fileinfo['WIN32_SNAPSHOT_INSTALLER_URL'] = fileinfo['WIN32_SNAPSHOT_BASE'] + '-Installer.exe'
 fileinfo['WIN32_SNAPSHOT_INSTALLER_NAME'] = fileinfo['WIN_SNAPSHOT_NAME']
