@@ -1,5 +1,5 @@
-fileinfo['MAC_SNAPSHOT_URL'] = 'http://files.openscad.org/snapshots/OpenSCAD-2019.08.04.dmg'
-fileinfo['MAC_SNAPSHOT_NAME'] = 'OpenSCAD 2019.08.04'
+fileinfo['MAC_SNAPSHOT_URL'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.08.10.dmg'
+fileinfo['MAC_SNAPSHOT_NAME'] = 'OpenSCAD 2019.08.10'
 fileinfo['MAC_SNAPSHOT_SIZE'] = '25 MB'
 fileinfo['MAC_SNAPSHOT_SHA256_URL'] = fileinfo['MAC_SNAPSHOT_URL'] + '.sha256'
 fileinfo['MAC_SNAPSHOT_SHA512_URL'] = fileinfo['MAC_SNAPSHOT_URL'] + '.sha512'
