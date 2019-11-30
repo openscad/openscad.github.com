@@ -18,9 +18,11 @@
     document.addEventListener('DOMContentLoaded', function() {
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
+	$(".day-1 .door").addClass("transform");
         if (date.getUTCMonth() === 11) {
 	  for (day = 1;day <= date.getUTCDate();day++) {
 	    $(".day-" + day + " .content").removeClass("hide");
+	    $(".day-" + day + " .door").addClass("transform");
 	  }
         }
     });
@@ -138,7 +140,7 @@ label:hover .door {
   border-color: #f9d72c;
 }
 
-:checked + .door {
+:checked + .transform {
   transform: translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
 }
 
@@ -237,3 +239,4 @@ label:hover .door {
   <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2019/24.scad">24.scad</a></div></div></input></label></div>
 </section>
 </body>
+</html>
