@@ -68,7 +68,9 @@ section div {
 
 label {
   perspective: 1000px;
+  -webkit-perspective: 1000px;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   cursor: pointer;
 
   display: flex;
@@ -79,8 +81,11 @@ label {
 .door {
   width: 100%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
   transform-origin: left center;
+  -webkit-transform-origin: left center;
 
   border: 2px dashed transparent;
   border-radius: 12px;
@@ -97,6 +102,7 @@ label {
    height: 100%;
    width: 100%;
    backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
    border-radius: 12px;
 
    display: flex;
