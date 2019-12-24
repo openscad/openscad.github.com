@@ -19,13 +19,19 @@
     document.addEventListener('DOMContentLoaded', function() {
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
-	$(".day-1 .door").addClass("transform");
+        /*
         if (date.getUTCMonth() === 11) {
 	  for (day = 1;day <= date.getUTCDate();day++) {
 	    $(".day-" + day + " .content").removeClass("hide");
 	    $(".day-" + day + " .door").addClass("transform");
 	  }
         }
+        */
+	for (day = 1;day <= 24;day++) {
+	  $(".day-" + day + " .content").removeClass("hide");
+	  $(".day-" + day + " .door").addClass("transform");
+          $(".day-" + day + " input").prop("checked",true);
+	}
     });
 </script>
 <style>
