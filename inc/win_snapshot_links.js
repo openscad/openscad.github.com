@@ -1,7 +1,7 @@
-fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2019.12.21'
-fileinfo['WIN_SNAPSHOT_SIZE']   = '19 MB'
-fileinfo['WIN32_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.12.21.ci4162-x86-32'
-fileinfo['WIN64_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2019.12.21.ci4161-x86-64'
+fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2020.04.22'
+fileinfo['WIN_SNAPSHOT_SIZE']   = '21 MB'
+fileinfo['WIN32_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2020.04.22.ci4922-x86-32'
+fileinfo['WIN64_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2020.04.22.ci4920-x86-64'
 
 fileinfo['WIN32_SNAPSHOT_INSTALLER_URL'] = fileinfo['WIN32_SNAPSHOT_BASE'] + '-Installer.exe'
 fileinfo['WIN32_SNAPSHOT_INSTALLER_NAME'] = fileinfo['WIN_SNAPSHOT_NAME']
