@@ -1,3 +1,7 @@
+/*
+ *  NOT USED ANYMORE: See https://files.openscad.org/snapshots/.snapshot_{win32,win64}.js
+ */
+
 fileinfo['WIN_SNAPSHOT_NAME']   = 'OpenSCAD-2020.04.23'
 fileinfo['WIN_SNAPSHOT_SIZE']   = '21 MB'
 fileinfo['WIN32_SNAPSHOT_BASE'] = 'https://files.openscad.org/snapshots/OpenSCAD-2020.04.23.ci4930-x86-32'
