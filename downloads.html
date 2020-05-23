@@ -395,6 +395,12 @@
 			<pre>
 				<small><code># snap install openscad-nightly</code></small>
 			</pre>
+			<p>To use Gamepads or supported 3D Mouse devices (like the SpaceMouse series
+			from 3D Connexion) the following command is needed to allow the snap package
+			access to the joystick interface.</p>
+			<pre>
+				<small><code># snap connect openscad:joystick snapd:joystick</code></small>
+			</pre>
 
 			    <h2><a id="snapshots-linux-distro">Linux - Distribution Packages</a></h2>
                             <p>The packages are automatically built based on the <a href="https://github.com/openscad/openscad/tree/master">master branch</a>
