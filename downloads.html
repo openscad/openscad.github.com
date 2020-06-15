@@ -66,7 +66,8 @@
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_macos.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win32.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win64.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux.js"></script>
+	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux_x86_64.js"></script>
+	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux_aarch64.js"></script>
 </head>
 <body>
 
@@ -375,6 +376,10 @@
 			supported distribution (see <a href="#snapshots-linux-distro">below</a>), the
 			following AppImage builds are still experimental.</p>
 
+      <p>The ARM 64-bit (aarch64) AppImage is built and tested only for
+      <a href="https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/">Raspberry PI OS 64-bit</a>
+      (which may still be in <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=275370">beta test</a>).</p>
+
 			<div class="left, download-button">
 				<a id="LIN64_SNAPSHOT_URL" href="https://files.openscad.org">
 				<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3></a>
@@ -384,7 +389,16 @@
 				<small><a id="LIN64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
 			</div>
 
-			<h2>Linux - Snap</h2>
+			<div class="download-button">
+				<a id="LIN_AARCH64_SNAPSHOT_URL" href="https://files.openscad.org">
+				<h3 id="LIN_AARCH64_SNAPSHOT_NAME">OpenSCAD</h3></a>
+				<small>ARM (64-bit) - AppImage - </small><small id="LIN_AARCH64_SNAPSHOT_SIZE">?? MB</small><br>
+				<!-- <small><a id="LIN_AARCH64_SNAPSHOT_ASC_URL" href="">asc</a></small> - -->
+				<small><a id="LIN_AARCH64_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="LIN_AARCH64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+			</div>
+
+      <h2>Linux - Snap</h2>
 
 			<div class="store-button">
 				<a href="https://snapcraft.io/openscad-nightly">
