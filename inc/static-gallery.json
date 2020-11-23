@@ -1,6 +1,16 @@
 [
     {
         "id": 1,
+        "name": "Volkswagen Beetle 1/24th scale motorization",
+        "public_url": "http://commandermodel.com/393/Volkswagen_Beetle",
+        "thumbnail": "http://commandermodel.com/beetle.000.jpg",
+        "creator": {
+            "name": "Martin H. Meng",
+            "public_url": "http://www.commandermodel.com"
+        }
+    },
+    {
+        "id": 2,
         "name": "Mendel 90",
         "public_url": "https://hydraraptor.blogspot.ca",
         "thumbnail": "assets/img/gallery-mendel90.png",
@@ -10,7 +20,7 @@
         }
     },
     {
-        "id": 2,
+        "id": 3,
         "name": "Prusa Mendel iteration3",
         "public_url": "https://github.com/josefprusa/Prusa3",
         "thumbnail": "assets/img/gallery-prusa-i3.png",
@@ -20,7 +30,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "name": "Metamáquina 2",
         "public_url": "https://github.com/Metamaquina/Metamaquina2",
         "thumbnail": "assets/img/gallery-MM2.png",
@@ -30,7 +40,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "name": "Cyclone PCB Factory",
         "public_url": "https://github.com/carlosgs/Cyclone-PCB-Factory/",
         "thumbnail": "assets/img/gallery-cyclone.png",
@@ -40,7 +50,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 6,
         "name": "Tapster - Mobile Automation Robot",
         "public_url": "https://github.com/hugs/tapsterbot",
         "thumbnail": "https://camo.githubusercontent.com/3ead8996912fa34265cd92ef0a700714f9e2a0cd/687474703a2f2f687567732e6769746875622e696f2f696d672f746170737465722d322d6465736b2e6a7067",
@@ -50,7 +60,7 @@
         }
     },
     {
-        "id": 6,
+        "id": 7,
         "name": "ShimonBox - 3D printable cases for development boards",
         "public_url": "https://github.com/ubitux/shimonbox/",
         "thumbnail": "https://raw.githubusercontent.com/ubitux/shimonbox/master/pics/small/orangepi_zero.jpg",
@@ -60,7 +70,7 @@
         }
     },
     {
-        "id": 7,
+        "id": 8,
         "name": "PELA Blocks - LEGO-compatible Parametric 3D Printed Blocks and Gadgets",
         "public_url": "https://github.com/paulirotta/PELA-blocks",
         "thumbnail": "https://raw.githubusercontent.com/paulirotta/PELA-blocks/master/sign/PELA-vertical-sign.png",
