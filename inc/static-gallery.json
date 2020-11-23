@@ -62,11 +62,11 @@
     {
         "id": 7,
         "name": "PELA Blocks - LEGO-compatible Parametric 3D Printed Blocks and Gadgets",
-        "public_url": "https://pelablocks.org/",
-        "thumbnail": "https://driftcar.pelablocks.org/images/pela-drift-car.jpg",
+        "public_url": "https://github.com/paulirotta/PELA-blocks",
+        "thumbnail": "https://raw.githubusercontent.com/paulirotta/PELA-blocks/master/sign/PELA-vertical-sign.png",
         "creator": {
             "name": "Paul Houghton",
-            "public_url": "https://medium.com/@paulhoughton"
+            "public_url": "https://github.com/paulirotta"
         }
     }
 ]
