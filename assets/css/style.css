@@ -277,6 +277,11 @@ ul.bullet {list-style-type:disc; list-style-position:inside;}
 ul.indent {padding-left:20px;}
 ul.bullet li{line-height:200%;}
 
+.book-desc > ul li { list-style-type:circle; }
+.book-data > ul { padding-top: 1em; }
+.book-data > ul li { padding-left: 0pt; }
+.book-data > ul li:before { content: "\00bb"; margin-right: 0.4em; }
+
 li{line-height:180%;}
 
 #navigation {text-align:right; margin-top:35px;}
