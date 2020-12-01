@@ -1,0 +1,329 @@
+<html>
+<head>
+    <!--
+      ** Copyright (c) 2020 Torsten Paul
+      ** Released under the MIT license
+      **
+      ** With thanks to tutorial at
+      ** https://webdesign.tutsplus.com/tutorials/how-to-build-a-festive-advent-calendar-with-css-grid--cms-30070
+      -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <link href="https://fonts.googleapis.com/css?family=Kalam" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="snow.css">
+    <title>OpenSCAD Advent Calendar 2020</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="snow.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Snow('#snow', { number:20, r: 2.5, v: 1 });
+        date = new Date();
+        if (date.getUTCMonth() === 11) {
+          for (day = 1;day <= date.getUTCDate();day++) {
+            $(".day-" + day + " .content").removeClass("hide");
+            $(".day-" + day + " .door").addClass("transform");
+          }
+        }
+        for (day = 1;day <= 24;day++) {
+            $(".day-" + day + " .content").removeClass("hide");
+            $(".day-" + day + " .door").addClass("transform");
+          }
+    });
+</script>
+<style>
+#snow {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:transparent;
+  z-index: -1;
+}
+
+.cal {
+  display: grid;
+  width: 1000px;
+  margin: 2% auto;
+
+  grid-gap: 25px 50px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas:
+    "h   h   h   h   d11 d17 d1 "
+    "h   h   h   h   d13 d9  d22"
+    "d8  d23 d2  d24 d24 d3  d15"
+    "d4  d19 d7  d24 d24 d10 d5 "
+    "d12 d16 d20 d14 d6  d21 d18";
+}
+
+body {
+  background-color: #444;
+}
+
+input { margin: 0; }
+
+.cal input { display: none; }
+
+section div {
+  padding: 0px;
+}
+
+label {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  cursor: pointer;
+
+  display: flex;
+  min-height: 100%;
+  height: 100px;
+}
+
+.door {
+  width: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transform-origin: left center;
+  -webkit-transform-origin: left center;
+
+  border: 2px dashed transparent;
+  border-radius: 12px;
+
+  font-family: 'Kalam', cursive;
+  color: #9dcb51;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgba(249, 215, 44, 1);
+}
+
+.door div {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   border-radius: 12px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.door .back {
+   background-color: #9dcb51;
+   transform: rotateY(180deg);
+}
+
+.hide {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  opacity: 0.0;
+  z-index: -1;
+  transition: opacity 0.2s ease-out;
+  vertical-align: text-bottom;
+}
+
+.content .link {
+  position: absolute;
+  bottom: 2px;
+  left: 12px;
+  right: 12px;
+  text-align: center;
+  background: white;
+  border: solid 1px;
+  font-family: 'Fira Mono', monospace;
+  font-size: 12px;
+}
+
+label:hover .door {
+  border-color: #f9d72c;
+}
+
+:checked + .transform {
+  transform: translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+:checked ~ .content {
+  opacity: 1;
+  transition: opacity 2s ease-in;
+}
+
+.title {
+  grid-area: t;
+  display: flex;
+  background: no-repeat left/90% url(http://www.openscad.org/images/openscad.png);
+}
+
+.header {
+  grid-area: h;
+  display: flex;
+  color: #9dcb51;
+  font-family: 'Kalam', cursive;
+  font-size: 3em;
+}
+
+.small {
+  font-size: 0.4em;
+}
+
+.header p {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+}
+
+.header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.green {
+  color: #9dcb51;
+}
+
+.yellow {
+  color: rgba(249, 215, 44, 1);
+}
+
+.gray {
+  color: #aaa;
+}
+
+.sep {
+  color: #9dcb51;
+}
+
+div.footer {
+  position: fixed;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+  font-family: sans;
+  color: #aaa;
+}
+
+a.link {
+  color: #aaa;
+}
+
+a.link:hover {
+  color: rgba(249, 215, 44, 1);
+}
+
+.day-1 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/01.png); }
+.day-2 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/02.png); }
+.day-3 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/03.png); }
+.day-4 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/04.png); }
+.day-5 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/05.png); }
+.day-6 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/06.png); }
+.day-7 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/07.png); }
+.day-8 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/08.png); }
+.day-9 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/09.png); }
+.day-10 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/10.png); }
+.day-11 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/11.png); }
+.day-12 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/12.png); }
+.day-13 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/13.png); }
+.day-14 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/14.png); }
+.day-15 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/15.png); }
+.day-16 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/16.png); }
+.day-17 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/17.png); }
+.day-18 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/18.png); }
+.day-19 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/19.png); }
+.day-20 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/20.png); }
+.day-21 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/21.png); }
+.day-22 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/22.png); }
+.day-23 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/23.png); }
+.day-24 .content { background: no-repeat center/100% url(https://files.openscad.org/advent-calendar-2020/24.png); }
+
+.day-1 { grid-area: d1; }
+.day-2 { grid-area: d2; }
+.day-3 { grid-area: d3; }
+.day-4 { grid-area: d4; }
+.day-5 { grid-area: d5; }
+.day-6 { grid-area: d6; }
+.day-7 { grid-area: d7; }
+.day-8 { grid-area: d8; }
+.day-9 { grid-area: d9; }
+.day-10 { grid-area: d10; }
+.day-11 { grid-area: d11; }
+.day-12 { grid-area: d12; }
+.day-13 { grid-area: d13; }
+.day-14 { grid-area: d14; }
+.day-15 { grid-area: d15; }
+.day-16 { grid-area: d16; }
+.day-17 { grid-area: d17; }
+.day-18 { grid-area: d18; }
+.day-19 { grid-area: d19; }
+.day-20 { grid-area: d20; }
+.day-21 { grid-area: d21; }
+.day-22 { grid-area: d22; }
+.day-23 { grid-area: d23; }
+.day-24 { grid-area: d24; }
+
+</style>
+</head>
+<body>
+<div id="snow"></div>
+<section class="cal">
+  <div class="title"></div>
+  <div class="header">
+    <p>
+      <span class="green">OpenSC</span><span class="yellow">AD</span><br><span class="gray small"><small>Advent Calendar 2020</small></span>
+      <img src="http://www.openscad.org/images/openscad.png">
+    </p>
+  </div>
+  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/01.scad">01.scad</a></div></div></input></label></div>
+  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/02.scad">02.scad</a></div></div></input></label></div>
+  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/03.scad">03.scad</a></div></div></input></label></div>
+  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/04.scad">04.scad</a></div></div></input></label></div>
+  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/05.scad">05.scad</a></div></div></input></label></div>
+  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/06.scad">06.scad</a></div></div></input></label></div>
+  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/07.scad">07.scad</a></div></div></input></label></div>
+  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/08.scad">08.scad</a></div></div></input></label></div>
+  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/09.scad">09.scad</a></div></div></input></label></div>
+  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/10.scad">10.scad</a></div></div></input></label></div>
+  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/11.scad">11.scad</a></div></div></input></label></div>
+  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/12.scad">12.scad</a></div></div></input></label></div>
+  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/13.scad">13.scad</a></div></div></input></label></div>
+  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/14.scad">14.scad</a></div></div></input></label></div>
+  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/15.scad">15.scad</a></div></div></input></label></div>
+  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/16.scad">16.scad</a></div></div></input></label></div>
+  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/17.scad">17.scad</a></div></div></input></label></div>
+  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/18.scad">18.scad</a></div></div></input></label></div>
+  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/19.scad">19.scad</a></div></div></input></label></div>
+  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/20.scad">20.scad</a></div></div></input></label></div>
+  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/21.scad">21.scad</a></div></div></input></label></div>
+  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/22.scad">22.scad</a></div></div></input></label></div>
+  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/23.scad">23.scad</a></div></div></input></label></div>
+  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div class="content hide"><div class="link"><a href="https://files.openscad.org/advent-calendar-2020/24.scad">24.scad</a></div></div></input></label></div>
+</section>
+<div class="footer">
+<span class="sep">||</span>
+<a class="link" href="https://www.openscad.org/downloads.html">Download OpenSCAD</a>
+<span class="sep">||</span>
+<a class="link" href="https://en.wikibooks.org/wiki/OpenSCAD_Tutorial">OpenSCAD Tutorial</a>
+<span class="sep">||</span>
+All scripts are licensed <a class="link" href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">CC0</a>
+<span class="sep">||</span>
+<a class="link" href="https://github.com/openscad/openscad-advent-calendar-2020/">Design repo on github</a>
+<span class="sep">||</span>
+</div>
+</body>
+</html>
