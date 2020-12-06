@@ -17,7 +17,7 @@ $(document).ready(function() {
 	
 	$('#sidebar.sticky').parent().css('width',$("#sidebar.sticky").css('width'));
 
-	$("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
+	// $("a[href^='#']").click(function(e){e.preventDefault(); $('body').scrollTo($(this).attr('href'),1000, {offset:-20}); });
 
 	$('section ul li').prepend("» ");	
 
