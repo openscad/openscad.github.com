@@ -95,6 +95,30 @@
 	</div>
 	
   <article>
+    <section id="20201218">
+      <h1 class="title">OpenSCAD release candidate: 2020.12-RC3</h1>
+      <h2 class="date">18 December 2020</h2>
+      <div class="entry">
+        <p>Release candidate 3 is now available, fixes relative to RC2:</p>
+        <ul>
+          <li>Handle case of flattening during iteration over VectorType. (<a href="https://github.com/openscad/openscad/issues/3541">#3541</a>)</li>
+          <li>Fix log output to separate preview/render executions. (<a href="https://github.com/openscad/openscad/issues/3533">#3533</a>)</li>
+          <li>Handle SCN_URIDROPPED introduced in QScintilla 2.11. (<a href="https://github.com/openscad/openscad/issues/3536">#3536</a>)</li>
+          <li>Add window menu to allow keyboard access to docked windows. (<a href="https://github.com/openscad/openscad/issues/3509">#3509</a>)</li>
+          <li>Calling tabifyDockWidget breaks window state save with Qt5.15/Linux.</li>
+          <li>Handle empty first geometry in 2D Minkowski. (<a href="https://github.com/openscad/openscad/issues/3527">#3527</a>)</li>
+          <li>Abort Nef conversion early on invalid input, to avoid segfault. (<a href="https://github.com/openscad/openscad/issues/2847">#2847</a>)</li>
+          <li>Disable context menu editor switch if editor hidden. (<a href="https://github.com/openscad/openscad/issues/3519">#3519</a>)</li>
+          <li>Ensure experimental features are disabled in release. (<a href="https://github.com/openscad/openscad/issues/3517">#3517</a>)</li>
+        </ul>
+        <p>Big thanks go to everyone helping with testing and fixing those
+          issues. There's some more issues to check, so I expect at least
+          one more RC.</p>
+        <p>The builds are available in the <a href="downloads.html#rc">Release Candidates</a>
+          section of the download page. The usual Windows and Linux (64-bit)
+          build are already available, MacOS builds will hopefully follow soon.</p>
+      </div>
+    </section>
     <section id="20201206">
       <h1 class="title">OpenSCAD release candidate: 2020.12-RC2</h1>
       <h2 class="date">6 December 2020</h2>
