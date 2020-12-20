@@ -1,26 +1,30 @@
+fileinfo['VERSION']       = 'OpenSCAD 2020.12-RC3'
+
 fileinfo['MAC_RC_URL']    = 'N/A'
-fileinfo['MAC_RC_NAME']   = 'OpenSCAD 2020.12-RC3'
 fileinfo['MAC_RC_SIZE']   = '?? MB'
 
-fileinfo['WIN_RC_NAME']   = 'OpenSCAD 2020.12-RC3'
 fileinfo['WIN32_RC_SIZE'] = '20 MB'
 fileinfo['WIN32_RC_BASE'] = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-x86-32'
 fileinfo['WIN64_RC_SIZE'] = '21 MB'
 fileinfo['WIN64_RC_BASE'] = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-x86-64'
 
-fileinfo['LIN_RC_NAME']   = 'OpenSCAD 2020.12-RC3'
 fileinfo['LIN32_RC_SIZE'] = 'N/A'
 fileinfo['LIN32_RC_URL']  = 'N/A'
 fileinfo['LIN64_RC_SIZE'] = '39 MB'
 fileinfo['LIN64_RC_URL']  = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-x86_64.AppImage'
 
+fileinfo['ARM64_RC_SIZE'] = '43 MB'
+fileinfo['ARM64_RC_URL']  = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-aarch64.AppImage'
+
 fileinfo['SRC_RC_URL']    = 'https://files.openscad.org/rc/openscad-2020.12-RC3.src.tar.gz'
-fileinfo['SRC_RC_NAME']   = 'OpenSCAD 2020.12-RC3'
+fileinfo['SRC_RC_NAME']   = fileinfo['VERSION']
 fileinfo['SRC_RC_SIZE']   = '16 MB'
 
+fileinfo['MAC_RC_NAME']   = fileinfo['VERSION']
 fileinfo['MAC_RC_SHA256_URL'] = fileinfo['MAC_RC_URL'] + '.sha256'
 fileinfo['MAC_RC_SHA512_URL'] = fileinfo['MAC_RC_URL'] + '.sha512'
 
+fileinfo['WIN_RC_NAME']   = fileinfo['VERSION']
 fileinfo['WIN32_RC_INSTALLER_URL'] = fileinfo['WIN32_RC_BASE'] + '-Installer.exe'
 fileinfo['WIN32_RC_INSTALLER_NAME'] = fileinfo['WIN_RC_NAME']
 fileinfo['WIN32_RC_INSTALLER_SIZE'] = fileinfo['WIN32_RC_SIZE']
@@ -50,6 +54,8 @@ fileinfo['WIN64_RC_ZIP_SHA1_URL'] = fileinfo['WIN64_RC_ZIP_URL'] + '.sha1'
 fileinfo['WIN64_RC_ZIP_SHA256_URL'] = fileinfo['WIN64_RC_ZIP_URL'] + '.sha256'
 fileinfo['WIN64_RC_ZIP_SHA512_URL'] = fileinfo['WIN64_RC_ZIP_URL'] + '.sha512'
 
+fileinfo['LIN_RC_NAME']   = fileinfo['VERSION']
+
 fileinfo['LIN32_RC_NAME'] = fileinfo['LIN_RC_NAME']
 fileinfo['LIN32_RC_ASC_URL'] = fileinfo['LIN32_RC_URL'] + '.asc'
 fileinfo['LIN32_RC_SHA256_URL'] = fileinfo['LIN32_RC_URL'] + '.sha256'
@@ -59,6 +65,11 @@ fileinfo['LIN64_RC_NAME'] = fileinfo['LIN_RC_NAME']
 fileinfo['LIN64_RC_ASC_URL'] = fileinfo['LIN64_RC_URL'] + '.asc'
 fileinfo['LIN64_RC_SHA256_URL'] = fileinfo['LIN64_RC_URL'] + '.sha256'
 fileinfo['LIN64_RC_SHA512_URL'] = fileinfo['LIN64_RC_URL'] + '.sha512'
+
+fileinfo['ARM64_RC_NAME'] = fileinfo['LIN_RC_NAME']
+fileinfo['ARM64_RC_ASC_URL']  = fileinfo['ARM64_RC_URL'] + '.asc'
+fileinfo['ARM64_RC_SHA256_URL']  = fileinfo['ARM64_RC_URL'] + '.sha256'
+fileinfo['ARM64_RC_SHA512_URL']  = fileinfo['ARM64_RC_URL'] + '.sha512'
 
 fileinfo['SRC_RC_ASC_URL'] = fileinfo['SRC_RC_URL'] + '.asc'
 fileinfo['SRC_RC_SHA256_URL'] = fileinfo['SRC_RC_URL'] + '.sha256'
