@@ -95,6 +95,32 @@
 	</div>
 	
   <article>
+    <section id="20201231">
+      <h1 class="title">OpenSCAD release candidate: 2020.12-RC4</h1>
+      <h2 class="date">31 December 2020</h2>
+      <div class="entry">
+        <p>Release candidate 4 is now available, fixes relative to RC3:</p>
+        <ul>
+          <li>Don't return empty group for "if" statement with failing condition and no "else". (<a href="https://github.com/openscad/openscad/issues/3452">#3452</a>)</li>
+          <li>Fix template action shortcut to not clash with Copy&Paste. (<a href="https://github.com/openscad/openscad/issues/3558">#3558</a>)</li>
+          <li>Change context menu in 3D view to right-click only.</li>
+          <li>Fix customizer presets. (<a href="https://github.com/openscad/openscad/issues/3522">#3522</a>)</li>
+          <li>Disable $vpX warning in GUI mode. (<a href="https://github.com/openscad/openscad/issues/3548">#3548</a>)</li>
+          <li>Fix initial console output. (<a href="https://github.com/openscad/openscad/issues/3549">#3549</a>)</li>
+          <li>Fix missing UI_Error group name. (<a href="https://github.com/openscad/openscad/issues/3551">#3551</a>)</li>
+          <li>Don't show trace lines in ErrorLog window.</li>
+          <li>Fix location output in console.</li>
+          <li>Show render statistics even if error resulted in no top level geometry. (<a href="https://github.com/openscad/openscad/issues/3532">#3532</a>)</li>
+          <li>Setup CGAL error behavior to allow catching processing problems.</li>
+        </ul>
+        <p>Big thanks go to everyone helping with testing and fixing those
+          issues. There's some more issues to check, so RC5 is already work
+          in progress.</p>
+        <p>The builds are available in the <a href="downloads.html#rc">Release Candidates</a>
+          section of the download page. The usual Windows and Linux (x86 64-bit, AArch64)
+          builds are already available, MacOS builds will hopefully follow soon.</p>
+      </div>
+    </section>
     <section id="20201218">
       <h1 class="title">OpenSCAD release candidate: 2020.12-RC3</h1>
       <h2 class="date">18 December 2020</h2>
