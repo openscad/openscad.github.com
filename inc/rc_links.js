@@ -1,22 +1,22 @@
-fileinfo['VERSION']       = 'OpenSCAD 2020.12-RC3'
+fileinfo['VERSION']       = 'OpenSCAD 2020.12-RC4'
 
 fileinfo['MAC_RC_URL']    = 'N/A'
 fileinfo['MAC_RC_SIZE']   = '?? MB'
 
 fileinfo['WIN32_RC_SIZE'] = '20 MB'
-fileinfo['WIN32_RC_BASE'] = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-x86-32'
+fileinfo['WIN32_RC_BASE'] = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC4-x86-32'
 fileinfo['WIN64_RC_SIZE'] = '21 MB'
-fileinfo['WIN64_RC_BASE'] = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-x86-64'
+fileinfo['WIN64_RC_BASE'] = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC4-x86-64'
 
 fileinfo['LIN32_RC_SIZE'] = 'N/A'
 fileinfo['LIN32_RC_URL']  = 'N/A'
 fileinfo['LIN64_RC_SIZE'] = '39 MB'
-fileinfo['LIN64_RC_URL']  = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-x86_64.AppImage'
+fileinfo['LIN64_RC_URL']  = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC4-x86_64.AppImage'
 
 fileinfo['ARM64_RC_SIZE'] = '43 MB'
-fileinfo['ARM64_RC_URL']  = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC3-aarch64.AppImage'
+fileinfo['ARM64_RC_URL']  = 'https://files.openscad.org/rc/OpenSCAD-2020.12-RC4-aarch64.AppImage'
 
-fileinfo['SRC_RC_URL']    = 'https://files.openscad.org/rc/openscad-2020.12-RC3.src.tar.gz'
+fileinfo['SRC_RC_URL']    = 'https://files.openscad.org/rc/openscad-2020.12-RC4.src.tar.gz'
 fileinfo['SRC_RC_NAME']   = fileinfo['VERSION']
 fileinfo['SRC_RC_SIZE']   = '16 MB'
 
