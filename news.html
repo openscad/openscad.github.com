@@ -95,6 +95,31 @@
 	</div>
 	
   <article>
+    <section id="20210106">
+      <h1 class="title">OpenSCAD release candidate: 2021.01-RC5</h1>
+      <h2 class="date">6 January 2021</h2>
+      <div class="entry">
+        <p>Release candidate 5 is now available, fixes relative to RC4:</p>
+        <ul>
+          <li>Fix save error handling (<a href="https://github.com/openscad/openscad/issues/3582">#3582</a>)</li>
+          <li>Don't show autocomplete in strings. (<a href="https://github.com/openscad/openscad/issues/3563">#3563</a>)</li>
+          <li>Fix formatting of ECHO/NONE as plain text in console. (<a href="https://github.com/openscad/openscad/issues/3585">#3585</a>)</li>
+          <li>Make sure opencsg.h is included for version number reporting. (<a href="https://github.com/openscad/openscad/issues/3586">#3586</a>)</li>
+          <li>Fix uncaught exception from boost::fs.</li>
+          <li>Close window on successful save all. (<a href="https://github.com/openscad/openscad/issues/3556">#3556</a>)</li>
+          <li>Fix autocomplete setup on show/hide editor to follow preferences. (<a href="https://github.com/openscad/openscad/issues/3572">#3572</a>)</li>
+          <li>Fix caching of Geometry. (<a href="https://github.com/openscad/openscad/issues/3547">#3547</a>)</li>
+          <li>Update examples/logo_and_text.scad and expected test results. (<a href="https://github.com/openscad/openscad/issues/3566">#3566</a>)</li>
+          <li>Omit "Features" from LibraryInfo when ENABLE_EXPERIMENTAL not defined.</li>
+          <li>Show message in console when caches are flushed. (<a href="https://github.com/openscad/openscad/issues/3540">#3540</a>)</li>
+        </ul>
+        <p>Big thanks go to everyone helping with testing and fixing those issues. At
+          this point there's no showstopper for a release, so if there's no new reports
+          coming in, this could be the final release candidate.</p>
+        <p>The builds are available in the <a href="downloads.html#rc">Release Candidates</a>
+          section of the download page. All builds, including MacOS are available now.</p>
+      </div>
+    </section>
     <section id="20201231">
       <h1 class="title">OpenSCAD release candidate: 2020.12-RC4</h1>
       <h2 class="date">31 December 2020</h2>
