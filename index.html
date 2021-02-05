@@ -11,6 +11,7 @@
         <meta name="p:domain_verify" content="e7ccfb283cc55dd8e8ce7a4641376553"/>
 	<link href="assets/css/style.css" rel="stylesheet"/>
 
+  <link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
@@ -105,35 +106,52 @@
 	
 	<article>
 
-		<section>
+    <section-area style="width: 100%; text-align: center; background-color: #e5f1d3; border: 1px solid #f9d72c;">
+      <h1 style="font-weight: normal;">New release is out <a href="downloads.html">OpenSCAD 2021.01</a></h1>
+    </section-area>
+
+    <section>
 			<h1><strong><span class="green">Open</span>SCAD</strong> is software for creating solid 3D CAD objects.</h1>
 			<h1 class="normal">It is free software and available for Linux/UNIX, MS Windows and Mac OS X.</h1>
 
 			<img src="assets/img/screenshot.png"/>
 
-<!--
-			<div style="width:100px; float:left; margin-left:80px; text-align:center;">
-			<h2>Report a Bug</h2>
-			<img src="assets/img/bug.png"/>
-			</div>
--->
+      <div id="home-download">
+        <a id="download-link" href="downloads.html">
+          <div id="home-download-link">
+            <div style="width:250px; position:absolute; top:1px; left:90px;">
+              <h1 style="margin:2px; padding:0px;">Download OpenSCAD</h1>
+              <h4></h4>
+            </div>
+            <div id="home-download-logo"></div>
+          </div>
+        </a>
+        <h4 style="position:absolute; left:135px; bottom:35px;"><a href="downloads.html">Other OSs and Versions</a></h4>
+      </div>
+    </section>
 
+    <section-area>
+      <div class="link-grid">
+        <div class="link-button">
+          <h1><a href="documentation.html#tutorial">Tutorial</a></h1>
+          <small>Get started with OpenSCAD</small>
+        </div>
+        <div class="link-button">
+          <h1><a href="libraries.html">Libraries</a></h1>
+          <small>Ready-made building blocks</small>
+        </div>
+        <div class="link-button">
+          <h1><a href="documentation-books.html">Books</a></h1>
+          <small>List of books on OpenSCAD</small>
+        </div>
+        <div class="link-button">
+          <h1><a href="cheatsheet/index.html" target="_blank">Cheat Sheet</a></h1>
+          <small>Overview of modules and functions</small>
+        </div>
+      </div>
+    </section-area>
 
-			<div id="home-download">
-				<a id="download-link" href="downloads.html">
-				<div id="home-download-link">
-					<div style="width:250px; position:absolute; top:1px; left:90px;">
-					<h1 style="margin:2px; padding:0px;">Download OpenSCAD</h1>
-					<h4></h4>
-					</div>
-				<div id="home-download-logo"></div>
-			</div>
-			</a>
-				<h4 style="position:absolute; left:135px; bottom:35px;"><a href="downloads.html">Other OSs and Versions</a></h4>
-			</div>
-		</section>
-
-	</article>
+  </article>
 
 <div class="clear"></div>
 

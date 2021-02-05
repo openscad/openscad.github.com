@@ -139,10 +139,10 @@
 			<li><a href="#linux">Linux</a></li>
 			<li><a href="#other-systems">Other Systems</a></li>
 			<li><a href="#source-code">Source Code</a></li>
-			<li><a href="#rc">Release Candidates</a></li>
+			<!--<li><a href="#rc">Release Candidates</a></li>-->
 			<li><a href="#snapshots">Development Snapshots</a></li>
 			<li><a href="#priorreleases">Prior Releases</a></li>
-			<li><a href="#pgp">PGP Signature</a></li>
+			<li><a href="#gnupg">GnuPG Signature</a></li>
 		</ul>
 	</div>
 	
@@ -151,23 +151,23 @@
 			<h1>macOS</h1>
 			<div class="subsection">
 				<p>System requirements: OS X 10.9 or newer</p>
-				<a id="MAC_RELEASE_URL" href="https://files.openscad.org">
-				<button class="download-button">
-					<h3 id="MAC_RELEASE_NAME">OpenSCAD</h3>
-					<small>64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small><br/>
-					<small><a id="MAC_RELEASE_SHA256_URL" href="">sha256</a></small> -
-					<small><a id="MAC_RELEASE_SHA512_URL" href="">sha512</a></small>
-				</button>
-				</a>
+        <div class="download-button">
+          <a id="MAC_RELEASE_URL" href="https://files.openscad.org">
+          <h3 id="MAC_RELEASE_NAME">OpenSCAD</h3></a>
+          <small>64 bit Intel - dmg package - </small><small id="MAC_RELEASE_SIZE">?? MB</small><br>
+          <small><a id="MAC_RELEASE_ASC_URL" href="">asc</a></small> -
+          <small><a id="MAC_RELEASE_SHA256_URL" href="">sha256</a></small> -
+          <small><a id="MAC_RELEASE_SHA512_URL" href="">sha512</a></small>
+        </div>
 			</div>
 			<div class="subsection">
-				<p>OpenSCAD is also available on <a href="http://www.macports.org/" target="_blank">MacPorts</a>:</p>
+				<p>OpenSCAD is also available on <a href="http://www.macports.org/" target="_blank">MacPorts</a> (<a href="https://ports.macports.org/port/openscad/summary">check version</a>):</p>
 				<pre>
 					<code>$ sudo port install openscad</code>
 				</pre>
 			</div>
 			<div class="subsection">
-				<p>OpenSCAD is also available on <a href="https://brew.sh/" target="_blank">Homebrew</a>:</p>
+				<p>OpenSCAD is also available on <a href="https://brew.sh/" target="_blank">Homebrew</a> (<a href="https://formulae.brew.sh/cask/openscad#default">check version</a>):</p>
 				<pre>
 					<code>$ brew install openscad</code>
 				</pre>
@@ -181,7 +181,7 @@
 				<a id="WIN32_RELEASE_INSTALLER_URL" href="https://files.openscad.org">
 			  <h3 id="WIN32_RELEASE_INSTALLER_NAME">OpenSCAD</h3></a>
 				<small>x86 (32-bit) - exe installer - </small><small id="WIN32_RELEASE_INSTALLER_SIZE">?? MB</small><br>
-				<!--<small><a id="WIN32_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> - -->
+				<small><a id="WIN32_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> -
 				<small><a id="WIN32_RELEASE_INSTALLER_SHA256_URL" href="">sha256</a></small> -
 				<small><a id="WIN32_RELEASE_INSTALLER_SHA512_URL" href="">sha512</a></small>
 			</div>
@@ -189,7 +189,7 @@
 				<a id="WIN32_RELEASE_ZIP_URL" href="https://files.openscad.org">
 			  <h3 id="WIN32_RELEASE_ZIP_NAME">OpenSCAD</h3></a>
 				<small>x86 (32-bit) - zip package - </small><small id="WIN32_RELEASE_ZIP_SIZE">?? MB</small><br>
-				<!--<small><a id="WIN32_RELEASE_ZIP_ASC_URL" href="">asc</a></small> - -->
+				<small><a id="WIN32_RELEASE_ZIP_ASC_URL" href="">asc</a></small> -
 				<small><a id="WIN32_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
 				<small><a id="WIN32_RELEASE_ZIP_SHA512_URL" href="">sha512</a></small>
 			</div>
@@ -198,7 +198,7 @@
 				<a id="WIN64_RELEASE_INSTALLER_URL" href="https://files.openscad.org">
 			  <h3 id="WIN64_RELEASE_INSTALLER_NAME">OpenSCAD</h3></a>
 				<small>x86 (64-bit) - exe installer - </small><small id="WIN64_RELEASE_INSTALLER_SIZE">?? MB</small><br>
-				<!--<small><a id="WIN64_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> - -->
+				<small><a id="WIN64_RELEASE_INSTALLER_ASC_URL" href="">asc</a></small> -
 				<small><a id="WIN64_RELEASE_INSTALLER_SHA256_URL" href="">sha256</a></small> -
 				<small><a id="WIN64_RELEASE_INSTALLER_SHA512_URL" href="">sha512</a></small>
 			</div>
@@ -206,8 +206,8 @@
 				<a id="WIN64_RELEASE_ZIP_URL" href="https://files.openscad.org">
 			  <h3 id="WIN64_RELEASE_ZIP_NAME">OpenSCAD</h3></a>
 				<small>x86 (64-bit) - zip package - </small><small id="WIN64_RELEASE_ZIP_SIZE">?? MB</small><br>
-				<!-- <small><a id="WIN64_RELEASE_ZIP_ASC_URL" href="">asc</a></small> - -->
-				<small><a id="WIN64_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="WIN64_RELEASE_ZIP_ASC_URL" href="">asc</a></small> -
+        <small><a id="WIN64_RELEASE_ZIP_SHA256_URL" href="">sha256</a></small> -
 				<small><a id="WIN64_RELEASE_ZIP_SHA512_URL" href="">sha512</a></small>
 			</div>
 		</section>
@@ -216,8 +216,7 @@
 			<h1>Linux</h1>
 			<div id="ubuntu" class="subsection">
 				<h2>Debian / Ubuntu / Kubuntu</h2>
-				<p>OpenSCAD is available in the repositories of most recent distributions
-				   (Currently <a href="https://bugs.launchpad.net/ubuntu/+source/openscad/+bug/1766555">missing</a> in Ubuntu 18.04).
+				<p>OpenSCAD is available in the repositories of most recent distributions.
 				<pre>
 					<code>$ sudo apt-get install openscad</code>
 				</pre>
@@ -253,16 +252,26 @@
 				</pre>
 			</div>
 			<div id="other-linux" class="subsection">
-			<h2>Other Linux</h2>
+
+      <h2>Other Linux</h2>
 			<div class="download-button">
 				<a id="LIN64_RELEASE_URL" href="https://files.openscad.org">
 				<h3 id="LIN64_RELEASE_NAME">OpenSCAD</h3></a>
 				<small>x86 (64-bit) - AppImage - </small><small id="LIN64_RELEASE_SIZE">?? MB</small><br>
-				<!-- <small><a id="LIN64_RELEASE_ASC_URL" href="">asc</a></small> - -->
+				<small><a id="LIN64_RELEASE_ASC_URL" href="">asc</a></small> -
 				<small><a id="LIN64_RELEASE_SHA256_URL" href="">sha256</a></small> -
 				<small><a id="LIN64_RELEASE_SHA512_URL" href="">sha512</a></small>
 			</div>
-			<h2>App Stores</h2>
+			<div class="download-button">
+				<a id="ARM64_RELEASE_URL" href="https://files.openscad.org">
+				<h3 id="ARM64_RELEASE_NAME">OpenSCAD</h3></a>
+				<small>ARM (64-bit) - AppImage - </small><small id="ARM64_RELEASE_SIZE">?? MB</small><br>
+				<small><a id="ARM64_RELEASE_ASC_URL" href="">asc</a></small> -
+				<small><a id="ARM64_RELEASE_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="ARM64_RELEASE_SHA512_URL" href="">sha512</a></small>
+			</div>
+
+      <h2>App Stores</h2>
 			<div class="store-button">
 				<a href="https://snapcraft.io/openscad">
 					<img width="200" alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
@@ -305,27 +314,27 @@
 			<p>It's possible to build OpenSCAD on other systems as long as a C++ compiler and the prerequisite software libraries are available.</p>
 		</section>
 
-                <a href="https://github.com/openscad/openscad"><img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/openscad/openscad"><img class="github-ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 		<section id="source-code" class="github-ribbon">
 			<h1>Source Code</h1>
-			<a id="SRC_RELEASE_URL" href="https://files.openscad.org">
-			<button class="left, last, download-button">
-			  <h3 id="SRC_RELEASE_NAME">OpenSCAD</h3>
-			  <small>source code - tgz archive -</small><small id="SRC_RELEASE_SIZE">?? MB</small><br/>
-			  <!-- <small><a id="SRC_RELEASE_ASC_URL" href="">asc</a></small> - -->
-			  <small><a id="SRC_RELEASE_SHA256_URL" href="">sha256</a></small> - 
-			  <small><a id="SRC_RELEASE_SHA512_URL" href="">sha512</a></small>
-			</button>
-                        </a>
+			<div class="download-button">
+				<a id="SRC_RELEASE_URL" href="https://files.openscad.org">
+				<h3 id="SRC_RELEASE_NAME">OpenSCAD</h3></a>
+				<small>source code - tgz archive - </small><small id="SRC_RELEASE_SIZE">?? MB</small><br>
+				<small><a id="SRC_RELEASE_ASC_URL" href="">asc</a></small> -
+				<small><a id="SRC_RELEASE_SHA256_URL" href="">sha256</a></small> -
+				<small><a id="SRC_RELEASE_SHA512_URL" href="">sha512</a></small>
+			</div>
 			<p>You can also access the latest source code on github: <a href="https://github.com/openscad/openscad" target="_blank">openscad/openscad on github</a></p>
 		</section>
 
+    <!--
     <section id="rc">
       <h1>Release Candidates</h1>
       <p>Release Candidates are builds that contain all features that will be included in the next release and are intended
         to reach a wider audience for testing before the final release.
       <p>
-      <p>Binaries are signed with GPG</p>
+      <p>The Binaries are signed with <a href="#gnupg">GnuPG</a></p>
       <ul>
         <li>The OpenSCAD Developers &lt;dev@openscad.org&gt;</li>
         <li>Key ID: <a href="http://keys.gnupg.net/pks/lookup?search=0x8af822a975097442&fingerprint=on&op=index">0x8AF822A975097442</a></li>
@@ -417,6 +426,7 @@
         </div>
       </div>
     </section>
+    -->
 
 		<section id="snapshots">
 			<h1>Development Snapshots</h1>
@@ -658,6 +668,17 @@
 
 			<p>Prior releases are available at <a href="https://files.openscad.org">files.openscad.org</a></p>
 		</section>
+
+    <section id="gnupg">
+      <h1>Signature</h1>
+      <p>Releases are signed with GnuPG</p>
+      <ul>
+        <li>The OpenSCAD Developers &lt;dev@openscad.org&gt;</li>
+        <li>Key ID: <a href="http://keys.gnupg.net/pks/lookup?search=0x8af822a975097442&fingerprint=on&op=index">0x8AF822A975097442</a></li>
+        <li>Fingerprint: <code>B3C9 4B42 50DC 097E 9FFF 8177 8AF8 22A9 7509 7442</code></li>
+        <li>Download: <a href="http://files.openscad.org/openscad-signing-key_0x8AF822A975097442.asc">openscad-signing-key_0x8AF822A975097442.asc</a></li>
+      </ul>
+    </section>
 
 </article>
 
