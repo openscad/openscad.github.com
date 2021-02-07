@@ -95,7 +95,143 @@
 	</div>
 	
   <article>
-    <section id="2021014">
+
+    <section id="20210131">
+      <h1 class="title">OpenSCAD 2021.01 released</h1>
+      <h2 class="date">31 January 2021</h2>
+      <div class="entry">
+        <p>Even though the development cycle was a bit shorter than last time, it's still
+        been almost 2 years and this has collected quite a long list of new features and
+        bugixes for this release.</p>
+
+        <p>The big language change is the introduction of
+        <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Function_Literals">function
+        literals</a> but there are a number of other useful changes too, like the
+        new exponent operator (<code>^</code>) and much better and more general support for tail
+        recursion optimization.</p>
+
+        <p>The GUI and especially the Editor has seen a huge amount of new features. Most
+        visible is probably the auto-complete which can propose built-in functions and
+        modules.</p>
+
+        <p>Another much anticipated feature is the "jump to code" from the 3d preview.
+        While it's not possible to go into the deepest levels of the design in all cases,
+        it's a great tool to navigate designs.</p>
+
+        <p>But it's worth highlighting also some of the not so obvious smaller features which
+        might improve the editing workflow.
+        <ul>
+          <li><i>Bookmarks</i> - Ctrl+F2 to toogle bookmarks, F2 / Shift+F2 for jumping to next/previous bookmark.</li>
+          <li><i>Changing numbers via mouse</i> - Similar to ALT+Cursor-Up/Down, numbers can be modified by placing the cursor at the number and using the mouse scroll wheel while pressing the ALT key.</li>
+          <li><i>Code snippets</i> - Insert often used code snippets using ALT+Insert or via editor context menu, custom templates can be added as simple files.</li>
+        </ul>
+        </p>
+
+        <p>Thanks to everyone who has contributed to this release through development
+        and community management, bug reports and fixes, documentation, translation,
+        discussions, as well as testing the release candidates!</p>
+
+        <p>A special <i>thank you</i> goes to the Google Summer of Code students who have
+        joined the OpenSCAD team for a couple of month and have helped to make some of those
+        new features possible (details on those projects can be found in the
+        <a href="https://github.com/openscad/openscad/issues?q=label%3A%22Tag%3A+GSoC%22">project reports</a>
+        on github). It's been a nice time and an opportunity learn and disucss ideas.</p>
+
+        <p>The source code, as well as binaries for Mac OS X, Windows and Linux are ready
+        for <a href="downloads.html">download</a>.</p>
+
+        <p>An overview of changes since last release follows, for all the details
+        including a list of bugfixes, see the
+        <a href="https://github.com/openscad/openscad/releases/tag/openscad-2021.01">release
+        page</a> on github.</p>
+
+        <p>Enjoy,<br/>&nbsp;&nbsp;The OpenSCAD Development Team.</p>
+
+        <br>
+
+        <h2>Language Features</h2>
+        <h3>New</h3>
+        <ul>
+          <li>Add function literals</li>
+          <li>Add exponent function (e.g. 2^3)</li>
+          <li>Add convexity parameter to resize()</li>
+          <li>Add support for generic tail recursion</li>
+          <li>Add $vpf for viewport field of view</li>
+          <li>Add warnings for ranges with begin &lt; end</li>
+          <li>Add warnings for matrix structure problems</li>
+        </ul>
+        <h3>Changed</h3>
+        <ul>
+          <li>Allow random seeds to stick between rands() calls</li>
+          <li>Make comparison operators on mixed types return undef</li>
+          <li>Track reason for values turning undef</li>
+        </ul>
+        <h3>Fixed</h3>
+        <ul>
+          <li>Fix Range precision</li>
+          <li>Fix empty geometry handling</li>
+          <li>Fix search order for imported modules</li>
+          <li>Improve internal handling of data values</li>
+          <li>Improve performance of array concatenation</li>
+          <li>Improve float accuracy of mirror matrix calculation</li>
+          <li>Improve polygon and polyhedron warnings/errors</li>
+        </ul>
+        <h2>Program Features</h2>
+        <h3>GUI</h3>
+        <ul>
+          <li>Add jump to source code from 3D preview</li>
+          <li>Add Error-Log window for tracking errors and warnings</li>
+          <li>Add window menu to allow keyboard access to all docked windows</li>
+          <li>Enable default binary stl output, and ascii option</li>
+          <li>Show message in console when caches are flushed</li>
+          <li>Disable HTML rendering in console</li>
+          <li>Enable color scheme for CGAL 2D render</li>
+          <li>Simplified OpenCSG edge shader, with added smoothing</li>
+          <li>New and updated translations: Chinese, Armenian, French, Russian, Polish, German</li>
+        </ul>
+        <h3>Editor</h3>
+        <ul>
+          <li>Edit multiple files in tabs</li>
+          <li>Switch tabs via Ctrl+Tab / Ctrl+Shift+Tab</li>
+          <li>Modify numbers via mouse scroll (when holding ALT)</li>
+          <li>Add auto-complete &amp; call-tips for built-ins</li>
+          <li>Add configurable code snippets</li>
+          <li>Add (line) bookmarks</li>
+          <li>Add jump to error</li>
+          <li>Add support for line/block copy and move</li>
+          <li>Add convenience context menu to tab header</li>
+          <li>Open include&lt;&gt;/use&lt;&gt; files via inline link</li>
+          <li>Fix search highlight for utf8 text</li>
+          <li>Fix display of matches in search field</li>
+          <li>Add Find/Find Next/Find Previous to editor context menu</li>
+        </ul>
+        <h3>Command line</h3>
+        <ul>
+          <li>Support reading scripts from STDIN</li>
+          <li>Support export to STDOUT</li>
+          <li>Add multi-export on command line</li>
+          <li>Add --animate command line option</li>
+          <li>Add --export-format command line option</li>
+          <li>Allow view-port variables in command-line mode</li>
+          <li>Allow export to .ast, .csg, .echo and .term in preview mode</li>
+          <li>Print statistics in cmdline mode as in GUI</li>
+        </ul>
+        <h3>General</h3>
+        <ul>
+          <li>Add PDF export (single page only)</li>
+          <li>Add support for line-cap and line-join in SVG import</li>
+          <li>Add support stroke-linejoin in SVG import</li>
+          <li>Change CGAL Union to join least complex geometries first</li>
+          <li>Install start shortcut for all users on Windows</li>
+          <li>Install icons with defined sizes (e.g. required by flathub)</li>
+          <li>Switch to C++14 and allow usage of header-only CGAL</li>
+          <li>Add support for lib3MF v2.0 API</li>
+          <li>Update AppStream release info</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="20210114">
       <h1 class="title">OpenSCAD release candidate: 2021.01-RC6</h1>
       <h2 class="date">14 January 2021</h2>
       <div class="entry">
