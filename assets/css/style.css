@@ -184,6 +184,7 @@ article.full{}
 
 section-area { margin-bottom:20px; display:inline-block; border-radius:8px; padding:0px; }
 section-area h1 { padding: 8px 20px 8px 20px; }
+section-area p { padding: 8px 20px 8px 20px; }
 section {margin-bottom:20px; background:#fff; border-radius:8px; border:1px solid #ddd; padding:10px 20px 20px 20px;}
 .subsection {margin-bottom:20px;}
 .subsection:last-child {margin-bottom:0px;}
