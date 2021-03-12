@@ -16,9 +16,9 @@ $(document).ready(function() {
       image_thumb = image.replace("thumb_medium", "preview_large");
       image_preview = image.replace("thumb_medium", "preview_featured");
 
-      if(key<24){
+      if(key<32){
 
-	$("#gallery").append("<div id="+id+" class='gallery-links'><div class='img-container'><a href='"+url+"' target='_blank'><img src='"+image_preview+"'/><h4>"+title+"</h4></a><h5>by <a href='"+creator_url+"' target='_blank'>"+creator_name+"</a></h5></div></a></div>");
+	$("#gallery").append("<div id='"+id+"' class='gallery-links'><div class='img-container'><a href='"+url+"' target='_blank'><img src='"+image_preview+"'/><h4>"+title+"</h4></a><h5>by <a href='"+creator_url+"' target='_blank'>"+creator_name+"</a></h5></div></a></div>");
 
       }
       
