@@ -385,6 +385,8 @@ a:active #home-download-link{
 .tutorial-links .img-container {float:left; width:320px; margin-right:20px;}
 .tutorial-links .img-title {float:left; width:300px; font-size: 50%; font-weight: normal; font-family: sans-serif; }
 .tutorial-links .text-container {float:left; width:300px;}
+.tutorial-links h2 {margin: 0px; padding: 0px;}
+.tutorial-links ul {margin: 0px; padding: 16px;}
 
 .tutorial-links.multi:hover {opacity:1;}
 
