@@ -1,5 +1,15 @@
 [
     {
+        "id": "s-11",
+        "name": "Keebcu - Keyboard Customizer",
+        "public_url": "https://github.com/andimoto/keebcu",
+        "thumbnail": "https://raw.githubusercontent.com/andimoto/keebcu/master/pics/pics/keebcu_017.JPG",
+        "creator": {
+            "name": "andimoto",
+            "public_url": "http://www.andimotoblog.de/"
+        }
+    },
+    {
         "id": "s-10",
         "name": "Koke - quadruped robot",
         "public_url": "https://schpin.org/robots/koke.html",
