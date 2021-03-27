@@ -53,14 +53,23 @@
         </dl>
       </article>
       <article>
-        <h2>Lists</h2>
+        <h2>Operators</h2>
         <dl>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Vectors">list = [&hellip;, &hellip;, &hellip;];</a></code></dt>
-          <dd>&nbsp;&nbsp;create a list</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Indexing_elements_within_vectors">var = list[2];</a></code></dt>
-          <dd>&nbsp;&nbsp;index a list (from 0)</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Dot_notation_indexing">var = list.z;</a></code></dt>
-          <dd>&nbsp;&nbsp;dot notation indexing (x/y/z)</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n + m</a></code></dt><dd>Addition</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n - m</a></code></dt><dd>Subtraction</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n * m</a></code></dt><dd>Multiplication</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n / m</a></code></dt><dd>Division</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n % m</a></code></dt><dd>Modulo</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n ^ m</a></code></dt><dd>Exponentiation</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n < m</a></code></dt><dd>Less Than</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n <= m</a></code></dt><dd>Less or Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">b == c</a></code></dt><dd>Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">b != c</a></code></dt><dd>Not Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n >= m</a></code></dt><dd>Greater or Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n > m</a></code></dt><dd>Greater Than</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators">b && c</a></code></dt> <dd>Logical And</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators">b || c</a></code></dt> <dd>Logical Or</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators">!b</a></code></dt> <dd>Negation</dd>
         </dl>
       </article>
       <article>
@@ -80,12 +89,14 @@
           <dd>viewport translation</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#.24vpr.2C_.24vpt_and_.24vpd">$vpd</a></code></dt>
           <dd>viewport camera distance</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#children">$children</a></code></dt>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Children">$children</a></code></dt>
           <dd>&nbsp;number of module children</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$preview">$preview</a></code></dt>
           <dd>&nbsp;true in F5 preview, false for F6</dd>
         </dl>
       </article>
+    </section>
+    <section>
       <article>
         <h2>Modifier Characters</h2>
         <dl>
@@ -99,8 +110,6 @@
           <dd>transparent / background</dd>
         </dl>
       </article>
-    </section>
-    <section>
       <article>
         <h2>2D</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#circle">circle</a>(radius | d=diameter)</code>
@@ -142,8 +151,18 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">minkowski</a>()</code>
       </article>
     </section>
-
     <section>
+      <article>
+        <h2>Lists</h2>
+        <dl>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Vectors">list = [&hellip;, &hellip;, &hellip;];</a></code></dt>
+          <dd>&nbsp;&nbsp;create a list</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Indexing_elements_within_vectors">var = list[2];</a></code></dt>
+          <dd>&nbsp;&nbsp;index a list (from 0)</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Dot_notation_indexing">var = list.z;</a></code></dt>
+          <dd>&nbsp;&nbsp;dot notation indexing (x/y/z)</dd>
+        </dl>
+      </article>
       <article>
         <h2>Boolean operations</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#union">union</a>()</code>
@@ -161,10 +180,10 @@
       </article>
       <article>
         <h2>Flow Control</h2>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop">for</a> (i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop">for</a> (i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop">for</a> (i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_Loop">for</a> (i = &hellip;, j = &hellip;, &hellip;) { &hellip; }</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = &hellip;, j = &hellip;, &hellip;) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
