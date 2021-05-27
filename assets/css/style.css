@@ -373,7 +373,7 @@ a:active #home-download-link{
 .store-button {text-align:center; display:inline-block; padding:8px;}
 .download-button {background:#e5f1d3; border-radius:12px; border:4px solid #233d00; text-align:center; display:inline-block; padding:8px; margin:8px;}
 
-.link-grid { display: grid; grid-column-gap: 8px; grid-template-columns: auto auto auto auto; }
+.link-grid { display: grid; grid-column-gap: 8px; grid-template-columns: auto auto auto auto auto; }
 .link-button { height:100%; display: block; background:#e5f1d3; border-radius:8px; border:1px solid #f9d72c; text-align:center; padding: 2px 8px; margin:0px;}
 .link-button h1 { margin: 0px; padding: 0px; }
 
