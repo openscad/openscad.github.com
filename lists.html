@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>OpenSCAD - Documentation</title>
+
+	<link href="assets/css/style.css" rel="stylesheet">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/modernizr-1.7.min.js"></script>
+
+	<script src="assets/js/header.js"></script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26999768-1']);
+    _gaq.push(['_setDomainName', 'openscad.org']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+
+<div id="page-wrap">
+<header>
+	<div class="clear"></div>
+	<div id="logo" class="left"></div>
+	<div id="donate" class="right">
+    <a href="https://opencollective.com/openscad/donate" target="_blank">
+      <img src="https://opencollective.com/openscad/donate/button@2x.png?color=white" width="200" />
+    </a>
+	</div>
+	<div id="title" style="margin-top:35px; width:620px;">
+		<h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
+		<h2 class="subtitle" style="position:relative; left:45px;">The Programmers Solid 3D CAD Modeller</h2>
+	</div>
+
+	<div id="navigation">
+	<div id="navigation-inner">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="documentation.html">Documentation</a></li>
+      <li><a href="libraries.html">Libraries</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="https://github.com/openscad/openscad/" target="_blank">GitHub</a></li>
+    </ul>
+	</div>
+	</div>
+</header>
+
+<div id="page-content">
+
+	<div id="sidebar" class="sticky">
+		<h1><a href="documentation.html">Documentation</a></h1>
+  </div>
+
+  <article>
+    <section id="news">
+      <div id="news"></div>
+    </section>
+
+    <section id="gallery">
+      <div id="gallery"></div>
+    </section>
+  </article>
+
+<div class="clear"></div>
+
+<script type="text/javascript">
+  function news(data) {
+    out = document.getElementById('news');
+    for (idx in data) {
+      e = data[idx];
+      if (e.type == 'twitter') {
+        out.innerHTML += "[Twitter]: " + e.url + "<br>";
+      } else if (e.type = 'thingiverse') {
+        out.innerHTML += "[Thing]: " + e.thing_id + "<br>";
+      }
+    }
+  }
+  function gallery(data) {
+    out = document.getElementById('gallery');
+    for (idx in data) {
+      e = data[idx];
+      out.innerHTML += '<p><img align="left" width="200" src="' + e.thumbnail + '">' + e.name + '</p><br clear="all">';
+    }
+  }
+</script>
+<script src="https://files.openscad.org/lists/news.jsonp"></script>
+<script src="https://files.openscad.org/lists/gallery.jsonp"></script>
+
+</div><!--#page-content end-->
+
+<footer>
+
+</footer>
+</div><!--#page-wrap end-->
+
+</body>
+</html>
