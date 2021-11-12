@@ -72,7 +72,23 @@
     <h1>Libraries</h1>
     <ul>
       <li><a href="#general">General</a></li>
+      <ul>
+        <li>&centerdot;&nbsp;<a href="#BOSL">BOSL</a></li>
+        <li>&centerdot;&nbsp;<a href="#dotSCAD">dotSCAD</a></li>
+        <li>&centerdot;&nbsp;<a href="#NopSCADlib">NopSCADlib</a></li>
+        <li>&centerdot;&nbsp;<a href="#UB.scad">UB.scad</a></li>
+        <li>&centerdot;&nbsp;<a href="#BOLTS">BOLTS</a></li>
+      </ul>
       <li><a href="#singletopic">Single Topic</a></li>
+      <ul>
+        <li>&centerdot;&nbsp;<a href="#RoundAnything">Round Anything</a></li>
+        <li>&centerdot;&nbsp;<a href="#MarksEnclosureHelper">Mark's Enclosure Helper</a></li>
+        <li>&centerdot;&nbsp;<a href="#funcutils">funcutils</a></li>
+        <li>&centerdot;&nbsp;<a href="#threads.scad">threads.scad Module</a></li>
+        <li>&centerdot;&nbsp;<a href="#SmoothPrimitives">Smooth Primitives Library</a></li>
+        <li>&centerdot;&nbsp;<a href="#FunctionPlotting">Function Plotting Library</a></li>
+        <li>&centerdot;&nbsp;<a href="#ClosePoints">ClosePoints Library</a></li>
+      </ul>
     </ul>
   </div>
 
@@ -80,7 +96,7 @@
     <section id="general">
       <h1>General</h1>
       <img class="libimg" src="images/bosl.gif" width="200" align="right">
-      <h2>BOSL</h2>
+      <h2 id="BOSL">BOSL</h2>
       <p>The Belfry OpenScad Library - A library of tools, shapes, and helpers to make OpenScad easier to use.</p>
       <ul>
         <li><a href="https://github.com/revarbat/BOSL">Library</a></li>
@@ -89,7 +105,7 @@
       </ul>
       <p style="clear: both"></p>
       <img class="libimg" src="images/dotscad.gif" width="200" align="right">
-      <h2>dotSCAD</h2>
+      <h2 id="dotSCAD">dotSCAD</h2>
       <p>Reduce the burden of 3D modeling in mathematics.</p>
       <ul>
         <li><a href="https://github.com/JustinSDK/dotSCAD">Library</a></li>
@@ -98,7 +114,7 @@
       </ul>
       <p style="clear: both"></p>
       <img class="libimg" src="https://raw.githubusercontent.com/nophead/NopSCADlib/master/libtest.png" width="200" align="right">
-      <h2>NopSCADlib</h2>
+      <h2 id="NopSCADlib">NopSCADlib</h2>
       <p>An ever expanding library of parts modelled in OpenSCAD useful for 3D printers and enclosures for electronics, etc.</p>
       <ul>
         <li><a href="https://github.com/nophead/NopSCADlib">Library</a></li>
@@ -107,7 +123,7 @@
       </ul>
       <p style="clear: both"></p>
       <img class="libimg" src="images/ub.gif" width="200" align="right">
-      <h2>UB.scad</h2>
+      <h2 id="UB.scad">UB.scad</h2>
       <p>This library is a full 3D printing workflow solution for OpenSCAD, bringing tools for modifying and
          generating 3D objects, view helpers and a selection of mechanical parts.</p>
       <ul>
@@ -117,7 +133,7 @@
       </ul>
       <p style="clear: both"></p>
       <img class="libimg" src="images/bolts.gif" width="200" align="right">
-      <h2>BOLTS</h2>
+      <h2 id="BOLTS">BOLTS</h2>
       <p>BOLTS is an Open Library of Technical Specifications.</p>
       <ul>
         <li><a href="https://github.com/boltsparts/BOLTS">Library</a></li>
@@ -130,7 +146,7 @@
     <section id="singletopic">
       <h1>Single Topic</h1>
       <img class="libimg" src="images/round-anything.gif" width="200" align="right">
-      <h2>Round Anything</h2>
+      <h2 id="RoundAnything">Round Anything</h2>
       <p>Round-Anything is primarily a set of OpenSCAD utilities that help with rounding
          parts, but it also embodies a robust approach to developing OpenSCAD parts.</p>
       <ul>
@@ -142,7 +158,7 @@
       <p style="clear: both"></p>
 
       <img class="libimg" src="images/marks-enclosure-helper.gif" width="200" align="right">
-      <h2>Mark's Enclosure Helper</h2>
+      <h2 id="MarksEnclosureHelper">Mark's Enclosure Helper</h2>
       <p>A script for generating a two piece hinged box, with rounded corners, lid,
          interlocking rims, snap fit, magnet, or screw closures, and easy places
          for adding cutouts or additions to any face..</p>
@@ -153,8 +169,19 @@
       </ul>
       <p style="clear: both"></p>
 
+      <h2 id="funcutils">funcutils</h2>
+      <p>This library is a collection of OpenSCAD functions for use with the function-literals feature. It
+         is meant to provide algorithms and tools to help build efficient scripts using functional programming
+         techniques in OpenSCAD.</p>
+      <ul>
+        <li><a href="https://github.com/thehans/funcutils">Library</a></li>
+        <li><a href="https://github.com/thehans/funcutils/blob/master/README.md">Documentation</a></li>
+        <li>License: CC0-1.0</li>
+      </ul>
+      <p style="clear: both"></p>
+
       <img class="libimg" src="images/rcolyer_threads.gif" width="200" align="right">
-      <h2>OpenSCAD threads.scad module</h2>
+      <h2 id="threads.scad">OpenSCAD threads.scad Module</h2>
       <p>This is an efficient OpenSCAD threading library intended primarily to be used
          as a component in other designs. It supports metric compatible internal and
          external threads, auger threads, thread tapering, clearance holes, countersunk
@@ -170,7 +197,7 @@
       <p style="clear: both"></p>
 
       <img class="libimg" src="images/rcolyer_smooth_prim.gif" width="200" align="right">
-      <h2>OpenSCAD smooth primitives library</h2>
+      <h2 id="SmoothPrimitives">OpenSCAD Smooth Primitives Library</h2>
       <p>This library is a collection of some smooth primitives, i.e. having specified
         rounded edges, for use in other designs. It's not a comprehensive collection,
         but a useful set.</p>
@@ -182,7 +209,7 @@
       <p style="clear: both"></p>
 
       <img class="libimg" src="images/rcolyer_plot_function.gif" width="200" align="right">
-      <h2>OpenSCAD Function Plotting Library</h2>
+      <h2 id="FunctionPlotting">OpenSCAD Function Plotting Library</h2>
       <p>This is a general purpose function plotting library for OpenSCAD which will
          render functions with Cartesian coordinates (x & y input, z output),
          polar/cylindrical coordinates (r & angle input, z output), or axial coordinates
@@ -198,7 +225,7 @@
       <p style="clear: both"></p>
 
       <img class="libimg" src="images/rcolyer_closepoints.gif" width="200" align="right">
-      <h2>OpenSCAD ClosePoints Library</h2>
+      <h2 id="ClosePoints">OpenSCAD ClosePoints Library</h2>
       <p>This is a general purpose OpenSCAD library for easily creating diverse shapes by
         simply creating lists of points which trace out layers in an outline of the desired
         shape. The library consists of modules for creating polyhedrons from these lists of
