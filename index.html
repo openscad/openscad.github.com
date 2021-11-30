@@ -11,9 +11,10 @@
         <meta name="p:domain_verify" content="e7ccfb283cc55dd8e8ce7a4641376553"/>
 	<link href="assets/css/style.css" rel="stylesheet"/>
 
-  <link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
+	<link href="assets/fontawesome/css/all.min.css" rel="stylesheet">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'/>
 
+	<script src="advent-calendar-2021/snow.js"></script>
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 	<script src="assets/js/modernizr-1.7.min.js"></script>
 
@@ -42,7 +43,33 @@
           ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
           var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
-  </script>
+	  document.addEventListener('DOMContentLoaded', function() {
+	    new Snow('#snow', { number:12, r: 2.5, v: 1 });
+	  });
+	</script>
+<style>
+.header {
+  background-color: #444;
+  font-size: 3em;
+  font-weight: normal;
+  font-family: 'Kalam', cursive;
+  text-align: center;
+  vertical-align: center;
+  z-index: 1;
+  position: relative;
+}
+.header a {
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #aaa;
+}
+.header a.link {
+  color: #aaa;
+}
+#canvas {
+  position:relative !important;
+}
+</style>
 </head>
 <body>
 
@@ -86,12 +113,19 @@
 	</div>
 	
   <article>
+    <!--
     <section-area style="width: 100%; text-align: center; background-color: #e5f1d3; border: 1px solid #f9d72c;">
       <p>
         OpenSCAD IRC channel moved to <a href="https://libera.chat/">libera.chat</a>. Chat with us in channel
         <a href="https://web.libera.chat/?channel=#openscad">#openscad</a>.
       </p>
     </section-area>
+    -->
+    <section id="snow" class="header">
+      <span style="color: #9dcb51;">Open</span><span style="color: rgba(249, 215, 44, 1);">SCAD</span>
+      <br>
+      <a href="advent-calendar-2021/">Advent Calendar 2021</a>
+    </section>
 
     <section>
 			<h1><strong><span class="green">Open</span>SCAD</strong> is software for creating solid 3D CAD objects.</h1>
