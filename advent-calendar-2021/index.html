@@ -82,17 +82,18 @@
         feather.replace();
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
+        /*
         if (date.getUTCMonth() === 11) {
           for (day = 1;day <= date.getUTCDate();day++) {
             $(".day-" + day + " .content").removeClass("hide");
             $(".day-" + day + " .door").addClass("transform");
           }
         }
+        */
         for (day = 1;day <= 24;day++) {
-          if (window.location.protocol === "file:") {
-            $(".day-" + day + " .content").removeClass("hide");
-            $(".day-" + day + " .door").addClass("transform");
-          }
+          $(".day-" + day + " .content").removeClass("hide");
+          $(".day-" + day + " .door").addClass("transform");
+          $(".day-" + day + " input").prop("checked", true);
           div = document.getElementById("day-" + day);
           data = days.get("day" + day);
           if (data) {
