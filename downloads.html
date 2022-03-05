@@ -64,6 +64,7 @@
 	    }
 	  });
 	</script>
+	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_wasm.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_macos.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win32.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win64.js"></script>
@@ -479,7 +480,7 @@
 					<small><a id="WIN32_SNAPSHOT_ZIP_SHA512_URL" href="">sha512</a></small>
 				</div>
 
-        <br>
+		        <br>
 
 				<div class="left, download-button">
 					<a id="WIN64_SNAPSHOT_INSTALLER_URL" href="https://files.openscad.org">
@@ -501,170 +502,210 @@
 			</div>
 
 			<div id="snapshots-linux" class="subsection">
-			<h2>Linux - AppImage</h2>
-
-			<p>Please try the automatically built snapshots first if you are running a
-			supported distribution (see <a href="#snapshots-linux-distro">below</a>), the
-			following AppImage builds are still experimental.</p>
-
-      <p>The ARM 64-bit (aarch64) AppImage is built and tested only for
-      <a href="https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/">Raspberry PI OS 64-bit</a>
-      (which may still be in <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=275370">beta test</a>).</p>
-
-			<div class="left, download-button">
-				<a id="LIN64_SNAPSHOT_URL" href="https://files.openscad.org">
-				<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3></a>
-				<small>x86 (64-bit) - AppImage - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small><br>
-				<!-- <small><a id="LIN64_SNAPSHOT_ASC_URL" href="">asc</a></small> - -->
-				<small><a id="LIN64_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
-				<small><a id="LIN64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+				<h2>Linux - AppImage</h2>
+			
+				<p>Please try the automatically built snapshots first if you are running a
+					supported distribution (see <a href="#snapshots-linux-distro">below</a>), the
+					following AppImage builds are still experimental.</p>
+			
+				<p>The ARM 64-bit (aarch64) AppImage is built and tested only for
+					<a href="https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/">Raspberry PI OS 64-bit</a>
+					(which may still be in <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=275370">beta test</a>).
+				</p>
+			
+				<div class="left, download-button">
+					<a id="LIN64_SNAPSHOT_URL" href="https://files.openscad.org">
+						<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3>
+					</a>
+					<small>x86 (64-bit) - AppImage - </small><small id="LIN64_SNAPSHOT_SIZE">?? MB</small><br>
+					<!-- <small><a id="LIN64_SNAPSHOT_ASC_URL" href="">asc</a></small> - -->
+					<small><a id="LIN64_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="LIN64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+				</div>
+			
+				<div class="download-button">
+					<a id="LIN_AARCH64_SNAPSHOT_URL" href="https://files.openscad.org">
+						<h3 id="LIN_AARCH64_SNAPSHOT_NAME">OpenSCAD</h3>
+					</a>
+					<small>ARM (64-bit) - AppImage - </small><small id="LIN_AARCH64_SNAPSHOT_SIZE">?? MB</small><br>
+					<!-- <small><a id="LIN_AARCH64_SNAPSHOT_ASC_URL" href="">asc</a></small> - -->
+					<small><a id="LIN_AARCH64_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="LIN_AARCH64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+				</div>
 			</div>
 
-			<div class="download-button">
-				<a id="LIN_AARCH64_SNAPSHOT_URL" href="https://files.openscad.org">
-				<h3 id="LIN_AARCH64_SNAPSHOT_NAME">OpenSCAD</h3></a>
-				<small>ARM (64-bit) - AppImage - </small><small id="LIN_AARCH64_SNAPSHOT_SIZE">?? MB</small><br>
-				<!-- <small><a id="LIN_AARCH64_SNAPSHOT_ASC_URL" href="">asc</a></small> - -->
-				<small><a id="LIN_AARCH64_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
-				<small><a id="LIN_AARCH64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+			<div id="snapshots-snap" class="subsection">
+				<h2>Linux - Snap</h2>
+			
+				<div class="store-button">
+					<a href="https://snapcraft.io/openscad-nightly">
+						<img width="200" alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
+					</a>
+				</div>
+				<p>Or install with</p>
+				<pre>
+					<small><code># snap install openscad-nightly</code></small>
+				</pre>
+				<p>To use Gamepads or supported 3D Mouse devices (like the SpaceMouse series
+					from 3D Connexion) the following command is needed to allow the snap package
+					access to the joystick interface.</p>
+				<pre>
+					<small><code># snap connect openscad:joystick snapd:joystick</code></small>
+				</pre>
 			</div>
 
-      <h2>Linux - Snap</h2>
+			<div id="snapshots-WASM" class="subsection">
+				<h2>WebAssembly</h2>
 
-			<div class="store-button">
-				<a href="https://snapcraft.io/openscad-nightly">
-					<img width="200" alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
-				</a>
+				<img alt="WebAssembly Logo" style="margin-bottom: 2em" src="assets/img/web-assembly-icon-64px.png">
+
+				<p>Many thanks to Dominick (<a href="https://github.com/DSchroer">DSchroer</a>) for making this
+					possible. Build instructions and examples can be found in the
+					<a href="https://github.com/DSchroer/openscad-wasm">openscad-wasm</a> repository on github</p>
+
+				<p>The ZIP package contains an experimental build based on this work for
+					<a href="https://webassembly.org/">WebAssembly</a> allowing OpenSCAD to run inside a web browser.
+					Right now it's a bit slow and there's no support for preview, fonts or a built-in GUI. Some of
+					those things will hopefully be supported or improved soon, however GUI support is unlikely to
+					be added.</p>
+
+				<p>Try it out at <a href="https://ochafik.com/openscad">https://ochafik.com/openscad</a> or start with a
+					slightly bigger <a href="https://tinyurl.com/262hkuu7">example</a>.</p>
+
+				<div class="download-button">
+
+					<a id="WASM_SNAPSHOT_URL" href="https://files.openscad.org">
+						<h3 id="WASM_SNAPSHOT_NAME">OpenSCAD</h3>
+					</a>
+					<small>WebAssembly - zip package - </small><small id="WASM_SNAPSHOT_SIZE">?? MB</small><br>
+					<small><a id="WASM_SNAPSHOT_ASC_URL" href="">asc</a></small> -
+					<small><a id="WASM_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="WASM_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+				</div>
 			</div>
-			<p>Or install with</p>
-			<pre>
-				<small><code># snap install openscad-nightly</code></small>
-			</pre>
-			<p>To use Gamepads or supported 3D Mouse devices (like the SpaceMouse series
-			from 3D Connexion) the following command is needed to allow the snap package
-			access to the joystick interface.</p>
-			<pre>
-				<small><code># snap connect openscad:joystick snapd:joystick</code></small>
-			</pre>
 
-			    <h2><a id="snapshots-linux-distro">Linux - Distribution Packages</a></h2>
-                            <p>The packages are automatically built based on the <a href="https://github.com/openscad/openscad/tree/master">master branch</a>
-                                on github.</p>
+			<div id="snapshots-linux-distro" class="subsection">
+				<h2>Linux - Distribution Packages</h2>
+				<p>The packages are automatically built based on the
+					<a href="https://github.com/openscad/openscad/tree/master">master branch</a> on github.</p>
 
-                            <p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to
-				install the development snapshot packages in parallel to the release version
-				from the official repositories.</p>
+				<p>Note: The packages are called "<b>openscad-nightly</b>" so it's possible to
+					install the development snapshot packages in parallel to the release version
+					from the official repositories.</p>
 
-                            <h2>Debian / Ubuntu packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
-                        
-                            <p>To install the packages, the release key must be added with apt-key to the key-ring to allow
-                                apt-get / aptitude to validate the packages.<br/>
-                                Key ID: 75F3214F30EB8E08 (valid till 2023-06-14)<br/>
-                                Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</p>
+				<h2>Debian / Ubuntu packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
 
-			    <p>NOTE: If you get errors about an expired key valid till 2021-04-18, please re-import via the following command.</p>
+				<p>To install the packages, the release key must be added with apt-key to the key-ring to allow
+					apt-get / aptitude to validate the packages.<br />
+					Key ID: 75F3214F30EB8E08 (valid till 2023-06-14)<br />
+					Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</p>
+			
+				<p>NOTE: If you get errors about an expired key valid till 2021-04-18, please re-import via the following command.
+				</p>
+			
+				<pre>
+					<small><code># wget -qO - https://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
+				</pre>
 
-                            <pre>
-                                <small><code># wget -qO - https://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
-                            </pre>
-
-                            <br/>
-                            <p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
-                                file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.</p>
-				
-			    <p>The repository links below are shown as <code>https</code>, please check for your installation if <code>https</code> is supported. In Debian/Ubuntu this is usually handled by the <code>apt-transport-https</code> package. OBS also supports HTTP links, but it's recommended to use <code>https</code> whenever possible.</p>
-
-                            <h3>Debian 10 (Buster)</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_10/ ./</code></small>
-                            </pre>
-
-                            <h3>Debian 11 (Bullseye)</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_11/ ./</code></small>
-                            </pre>
-
-                            <h3>Debian Testing</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Testing/ ./</code></small>
-                            </pre>
-
-                            <h3>Debian Unstable</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Unstable/ ./</code></small>
-                            </pre>
-
-                            <h3>Ubuntu 18.04</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_18.04/ ./</code></small>
-                            </pre>
-
-                            <h3>Ubuntu 20.04</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_20.04/ ./</code></small>
-                            </pre>
-
-                            <h3>Ubuntu 20.10 (x86_64, aarch64)</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_20.10/ ./</code></small>
-                            </pre>
-
-                            <h3>Ubuntu 21.04 (x86_64, aarch64)</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_21.04/ ./</code></small>
-                            </pre>
-
-                            <h3>Ubuntu 21.10 (x86_64, aarch64)</h3>
-                            <pre>
-                                <small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_21.10/ ./</code></small>
-                            </pre>
-
-                            <h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
-                            
-                            <h3>openSUSE Leap 15.3 (64-bit only)</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.3/</code></small>
-                            </pre>
-
-                            <h3>openSUSE Leap 15.4 (64-bit only)</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.4/</code></small>
-                            </pre>
-
-                            <h3>openSUSE Tumbleweed</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
-                            </pre>
-                            
-                            <h2>Fedora packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
-
-                            <h3>Fedora 33 (x86_64, armv7l, aarch64, ppc64le)</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_33/</code></small>
-                            </pre>
-
-                            <h3>Fedora 34 (x86_64, armv7l, aarch64, ppc64le)</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_34/</code></small>
-                            </pre>
-
-                            <h3>Fedora 35 (x86_64, armv7l, aarch64, ppc64le)</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_35/</code></small>
-                            </pre>
-
-                            <h3>Fedora Rawhide (x86_64, i586)</h3>
-                            <pre>
-                                <small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_Rawhide/</code></small>
-                            </pre>
-
-                            <h2>Arch Linux</h2>
-                            To install OpenSCAD from git on Arch Linux the <a href="https://aur.archlinux.org/packages/openscad-git/">openscad-git pkgbuild</a>
-                            is available on <a href="https://aur.archlinux.org/">AUR</a>.
-                        </div>
-
+				<br />
+				<p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
+					file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.</p>
+			
+				<p>The repository links below are shown as <code>https</code>, please check for your installation if
+					<code>https</code> is supported. In Debian/Ubuntu this is usually handled by the
+					<code>apt-transport-https</code> package. OBS also supports HTTP links, but it's recommended to use
+					<code>https</code> whenever possible.</p>
+			
+				<h3>Debian 10 (Buster)</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_10/ ./</code></small>
+				</pre>
+			
+				<h3>Debian 11 (Bullseye)</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_11/ ./</code></small>
+				</pre>
+			
+				<h3>Debian Testing</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Testing/ ./</code></small>
+				</pre>
+			
+				<h3>Debian Unstable</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Unstable/ ./</code></small>
+				</pre>
+			
+				<h3>Ubuntu 18.04</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_18.04/ ./</code></small>
+				</pre>
+			
+				<h3>Ubuntu 20.04</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_20.04/ ./</code></small>
+				</pre>
+			
+				<h3>Ubuntu 20.10 (x86_64, aarch64)</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_20.10/ ./</code></small>
+				</pre>
+			
+				<h3>Ubuntu 21.04 (x86_64, aarch64)</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_21.04/ ./</code></small>
+				</pre>
+			
+				<h3>Ubuntu 21.10 (x86_64, aarch64)</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_21.10/ ./</code></small>
+				</pre>
+			
+				<h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
+			
+				<h3>openSUSE Leap 15.3 (64-bit only)</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.3/</code></small>
+				</pre>
+			
+				<h3>openSUSE Leap 15.4 (64-bit only)</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.4/</code></small>
+				</pre>
+			
+				<h3>openSUSE Tumbleweed</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
+				</pre>
+			
+				<h2>Fedora packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
+			
+				<h3>Fedora 33 (x86_64, armv7l, aarch64, ppc64le)</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_33/</code></small>
+				</pre>
+			
+				<h3>Fedora 34 (x86_64, armv7l, aarch64, ppc64le)</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_34/</code></small>
+				</pre>
+			
+				<h3>Fedora 35 (x86_64, armv7l, aarch64, ppc64le)</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_35/</code></small>
+				</pre>
+			
+				<h3>Fedora Rawhide (x86_64, i586)</h3>
+				<pre>
+					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_Rawhide/</code></small>
+				</pre>
+			
+				<h2>Arch Linux</h2>
+				To install OpenSCAD from git on Arch Linux the
+				<a href="https://aur.archlinux.org/packages/openscad-git/">openscad-git pkgbuild</a>
+				is available on <a href="https://aur.archlinux.org/">AUR</a>.
+			</div>
 		</section>
-		
 
 		<section id="priorreleases">
 			<h1>Prior Releases</h1>
