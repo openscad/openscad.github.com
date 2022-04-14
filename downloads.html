@@ -604,7 +604,14 @@
 				</p>
 			
 				<pre>
-					<small><code># wget -qO - https://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
+					<small><code># wget -qO- https://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
+				</pre>
+
+				<p>In newer Debian the storage for the key is changed, more information can be found in the <code>apt-key(8)</code>
+				manual page. In this case the following command will download and store the key.</p>
+
+				<pre>
+					<small><code># wget -qO- https://files.openscad.org/OBS-Repository-Key.pub | sudo tee /etc/apt/trusted.gpg.d/obs-openscad-nightly.asc</code></small>
 				</pre>
 
 				<br />
