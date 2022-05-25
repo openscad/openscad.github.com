@@ -443,3 +443,41 @@ i.fab {
 	color:#00aced
 }
 
+.ticker-wrap, .ticker-item {
+	height: 3rem;
+	line-height: 1.5rem;
+	font-size: 1.1rem;
+}
+
+.ticker-wrap {
+	overflow: hidden;
+	margin: 0.3rem;
+}
+
+.ticker-item {
+	text-align: center;
+}
+
+.ticker-animation {
+	position: relative;
+	animation-name: ticker;
+	animation-duration: 60s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-out;
+}
+
+.ticker-move:hover {
+	animation-play-state: paused;
+}
+
+@keyframes ticker {
+	0% { transform:translate(0, 0px); }
+	24% { transform:translate(0, 0px); }
+	25% { transform:translate(0, -3rem); }
+	49% { transform:translate(0, -3rem); }
+	50% { transform:translate(0, -6rem); }
+	74% { transform:translate(0, -6rem); }
+	75% { transform:translate(0, -9rem); }
+	99% { transform:translate(0, -9rem); }
+	100% { transform:translate(0, -12rem); }
+}
