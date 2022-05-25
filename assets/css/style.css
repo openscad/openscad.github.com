@@ -444,14 +444,14 @@ i.fab {
 }
 
 .ticker-wrap, .ticker-item {
-	height: 3rem;
-	line-height: 1.5rem;
-	font-size: 1.1rem;
+	height: 2rem;
+	line-height: 1rem;
+	font-size: 0.8rem;
 }
 
 .ticker-wrap {
 	overflow: hidden;
-	margin: 0.3rem;
+	margin: 0.2rem;
 }
 
 .ticker-item {
@@ -473,11 +473,11 @@ i.fab {
 @keyframes ticker {
 	0% { transform:translate(0, 0px); }
 	24% { transform:translate(0, 0px); }
-	25% { transform:translate(0, -3rem); }
-	49% { transform:translate(0, -3rem); }
-	50% { transform:translate(0, -6rem); }
-	74% { transform:translate(0, -6rem); }
-	75% { transform:translate(0, -9rem); }
-	99% { transform:translate(0, -9rem); }
-	100% { transform:translate(0, -12rem); }
+	25% { transform:translate(0, -2rem); }
+	49% { transform:translate(0, -2rem); }
+	50% { transform:translate(0, -4rem); }
+	74% { transform:translate(0, -4rem); }
+	75% { transform:translate(0, -6rem); }
+	99% { transform:translate(0, -6rem); }
+	100% { transform:translate(0, -8rem); }
 }
