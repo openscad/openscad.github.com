@@ -475,15 +475,17 @@ i.fab {
 }
 
 @keyframes ticker {
-	0% { transform:translate(0, 0px); }
-	15% { transform:translate(0, 0px); }
-	16% { transform:translate(0, -2.5rem); }
-	47% { transform:translate(0, -2.5rem); }
-	48% { transform:translate(0, -5rem); }
-	63% { transform:translate(0, -5rem); }
-	64% { transform:translate(0, -7.5rem); }
-	79% { transform:translate(0, -7.5rem); }
-	80% { transform:translate(0, -10rem); }
-	99% { transform:translate(0, -10rem); }
-	100% { transform:translate(0, -12.5rem); }
+    0% { transform:translate(0, 0.0rem); }
+    15% { transform:translate(0, 0.0rem); }
+    16% { transform:translate(0, -2.5rem); }
+    32% { transform:translate(0, -2.5rem); }
+    33% { transform:translate(0, -5.0rem); }
+    49% { transform:translate(0, -5.0rem); }
+    50% { transform:translate(0, -7.5rem); }
+    65% { transform:translate(0, -7.5rem); }
+    66% { transform:translate(0, -10.0rem); }
+    82% { transform:translate(0, -10.0rem); }
+    83% { transform:translate(0, -12.5rem); }
+    99% { transform:translate(0, -12.5rem); }
+    100% { transform:translate(0, -15.0rem); }
 }
