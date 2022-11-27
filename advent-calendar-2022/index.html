@@ -1,0 +1,554 @@
+<html>
+<head>
+    <!--
+      ** Copyright (c) 2022 Torsten Paul
+      ** Released under the MIT license
+      **
+      ** With thanks to tutorials at
+      ** https://webdesign.tutsplus.com/tutorials/how-to-build-a-festive-advent-calendar-with-css-grid--cms-30070
+      ** https://www.w3schools.com/howto/howto_css_modals.asp
+      -->
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@openscad">
+    <meta name="twitter:title" content="OpenSCAD Advent Calendar 2022">
+    <meta name="twitter:description" content="#SCADvent">
+    <meta name="twitter:image" content="https://openscad.org/advent-calendar-2022/card.png">
+    <meta property="og:updated_time" content="1638230813"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="OpenSCAD Advent Calendar 2022"/>
+    <meta property="og:description" content="#SCADvent"/>
+    <meta property="og:image" content="https://openscad.org/advent-calendar-2022/card.png">
+    <meta property="og:image:width" content="1400"/>
+    <meta property="og:image:height" content="700"/>
+    <link href="../assets/fonts/kalam/latin.css" rel="stylesheet">
+    <link href="../assets/fonts/open-sans/all.css" rel="stylesheet">
+    <link href="../assets/fontawesome/css/regular.css" rel="stylesheet">
+    <link href="../assets/fontawesome/css/solid.min.css" rel="stylesheet">
+    <link href="../assets/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="../assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="snow.css">
+    <title>OpenSCAD Advent Calendar 2022</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="snow.js"></script>
+    <script type="text/javascript" src="feather.min.js"></script>
+<script>
+    url = "https://files.openscad.org/advent-calendar-2022/";
+    days = new Map();
+    function setDay(day, dayData) {
+      days.set("day" + day, dayData);
+    }
+    function pad(num, size) {
+      var s = "000000000" + num;
+      return s.substr(s.length-size);
+    }
+    function getName(path) {
+      return path.replace(/^.*[\\\/]/, '')
+    }
+    function getChild(id, tag) {
+      var e = document.getElementById(id);
+      for (let a = 0; a < e.children.length; a++) {
+        if (e.children[a].tagName === tag) {
+          return e.children[a];
+        }
+      }
+    }
+    function setupDay(button) {
+      day = button.day;
+      data = days.get("day" + day);
+      if (!data) {
+        return false;
+      }
+      dir = data.dir + "/";
+      getChild("modal-body", "H1").innerHTML = "Day " + day;
+      getChild("modal-body", "IMG").src = url + dir + data.urlImg;
+      getChild("urlScad", "A").href = url + dir + data.urlScad;
+      getChild("urlScad", "A").innerHTML = getName(data.urlScad);
+      url3mf = document.getElementById("url3mf");
+      url3mf.hidden = true;
+      if (data.url3mf) {
+        url3mf.hidden = false;
+        getChild("url3mf", "A").href = url + dir + data.url3mf;
+        getChild("url3mf", "A").innerHTML = getName(data.url3mf);
+      }
+      url3mf2 = document.getElementById("url3mf2");
+      url3mf2.hidden = true;
+      if (data.url3mf2) {
+        url3mf2.hidden = false;
+        getChild("url3mf2", "A").href = url + dir + data.url3mf2;
+        getChild("url3mf2", "A").innerHTML = getName(data.url3mf2);
+      }
+      document.getElementById("author").innerHTML = data.author;
+      document.getElementById("license").innerHTML = data.license;
+      return true;
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        feather.replace();
+        new Snow('#snow', { number:20, r: 2.5, v: 1 });
+        date = new Date();
+        if (date.getUTCMonth() === 11) {
+          for (day = 1;day <= date.getUTCDate();day++) {
+            $(".day-" + day + " .content").removeClass("hide");
+            $(".day-" + day + " .door").addClass("transform");
+          }
+        }
+        for (day = 1;day <= 24;day++) {
+          if (window.location.protocol === "file:") {
+            $(".day-" + day + " .content").removeClass("hide");
+            $(".day-" + day + " .door").addClass("transform");
+          }
+          div = document.getElementById("day-" + day);
+          data = days.get("day" + day);
+          if (data) {
+            div.style.backgroundImage = 'url(' + url + data.dir + '/' + data.urlImg + ')';
+          }
+        }
+        var modal = document.getElementById("modal");
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        for (b = 1;b <= 24;b++) {
+          var btn = document.getElementById("btn" + b);
+          if (btn) {
+            btn.day = b;
+            btn.onclick = function() {
+              if (setupDay(this)) {
+                modal.style.display = "block";
+              } else {
+                modal.style.display = "none";
+              }
+            }
+          }
+        }
+    });
+
+</script>
+<script type="text/javascript" src="https://files.openscad.org/advent-calendar-2022/index.js"></script>
+<style>
+#snow {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:transparent;
+  z-index: -1;
+}
+
+.cal {
+  display: grid;
+  width: 1000px;
+  margin: 2% auto;
+
+  grid-gap: 25px 50px;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-areas:
+    "d17 d1  d23 d15 d21 d14 d9 "
+    "d3  d10 d16 h   h   h   h  "
+    "d24 d24 d11 h   h   h   h  "
+    "d24 d24 d7  d18 d6  d22 d19"
+    "d13 d20 d5  d12 d2  d8  d4 ";
+}
+
+body {
+  background-color: #444;
+}
+
+input { margin: 0; }
+
+.cal input { display: none; }
+
+section div {
+  padding: 0px;
+}
+
+section > div {
+  height: 100%;
+}
+
+label {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  cursor: pointer;
+
+  display: flex;
+  min-height: 100%;
+  height: 100px;
+}
+
+.door {
+  width: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  transform-origin: left center;
+  -webkit-transform-origin: left center;
+
+  border: 2px dashed transparent;
+  border-radius: 12px;
+
+  font-family: 'Kalam', cursive;
+  color: #9dcb51;
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px rgba(249, 215, 44, 1);
+}
+
+.door div {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   border-radius: 12px;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.door .back {
+   background-color: #9dcb51;
+   transform: rotateY(180deg);
+}
+
+.hide {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.0;
+  z-index: -1;
+  transition: opacity 0.2s ease-out;
+  vertical-align: text-bottom;
+}
+
+.content .link {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  text-align: center;
+}
+
+.link button {
+  cursor: pointer;
+  opacity: 0.4;
+  border: 0;
+  background-color: transparent;
+  color: #9dcb51;
+  font-size: 1.5em;
+  margin: 2px;
+}
+
+.link button:hover {
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+}
+
+label:hover .door {
+  border-color: #f9d72c;
+}
+
+:checked + .transform {
+  transform: translateZ(0px) translateX(0px) translateY(0px) rotateY(-105deg);
+}
+
+:checked ~ .content {
+  opacity: 1;
+  transition: opacity 2s ease-in;
+}
+
+.header {
+  grid-area: h;
+  display: flex;
+  color: #9dcb51;
+  font-family: 'Kalam', cursive;
+  font-size: 4em;
+}
+
+.small {
+  font-size: 0.4em;
+}
+
+.header p {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: center;
+}
+
+.header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 100%;
+    opacity: 0.1;
+}
+
+.green {
+  color: #9dcb51;
+}
+
+.yellow {
+  color: rgba(249, 215, 44, 1);
+}
+
+.gray {
+  color: #aaa;
+}
+
+.sep {
+  color: #9dcb51;
+}
+
+div.footer {
+  position: fixed;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+  font-family: "Open Sans";
+  color: #aaa;
+}
+
+a.link {
+  color: #aaa;
+}
+
+a.link:hover {
+  color: rgba(249, 215, 44, 1);
+}
+
+.day-1 { grid-area: d1; }
+.day-2 { grid-area: d2; }
+.day-3 { grid-area: d3; }
+.day-4 { grid-area: d4; }
+.day-5 { grid-area: d5; }
+.day-6 { grid-area: d6; }
+.day-7 { grid-area: d7; }
+.day-8 { grid-area: d8; }
+.day-9 { grid-area: d9; }
+.day-10 { grid-area: d10; }
+.day-11 { grid-area: d11; }
+.day-12 { grid-area: d12; }
+.day-13 { grid-area: d13; }
+.day-14 { grid-area: d14; }
+.day-15 { grid-area: d15; }
+.day-16 { grid-area: d16; }
+.day-17 { grid-area: d17; }
+.day-18 { grid-area: d18; }
+.day-19 { grid-area: d19; }
+.day-20 { grid-area: d20; }
+.day-21 { grid-area: d21; }
+.day-22 { grid-area: d22; }
+.day-23 { grid-area: d23; }
+.day-24 { grid-area: d24; }
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 5; /* Sit on top */
+  transform: translate3d(0, 0, 1000px); /* Safari workaround. */
+  padding-top: 60px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  z-index: 5; /* Sit on top */
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 32px;
+  color: #f9d72c;
+  border: 2px solid #9dcb51;
+  background-color: #444;
+}
+
+.modal-body h1 {
+  font-family: 'Kalam', cursive;
+  font-size: 5em;
+  line-height: 1.2em;
+  margin: 0 0 0 80px;
+}
+
+.modal-body p {
+  font-family: "Open Sans";
+  line-height: 1em;
+  margin: 16px 0 0 0;
+  color: #eee;
+}
+
+.modal-body img {
+  border-radius: 24px;
+  width: 50%;
+  margin: 0 20px 0px 0px;
+}
+
+.modal-body ul {
+  padding-top: 2.5em;
+}
+
+.modal-body svg {
+  margin: 0 0.3em -0.2em 0;
+}
+
+.modal-body li {
+  font-family: "Open Sans";
+  font-size: 1.5em;
+  color: #9dcb51;
+  list-style: none;
+  line-height: 2em;
+}
+
+.modal-body a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.modal-body br {
+  display: block;
+  margin-bottom: 0em;
+}
+
+.modal-body a:hover {
+  color: rgba(249, 215, 44, 1);
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div id="snow"></div>
+<section class="cal">
+  <div class="header">
+    <p>
+      <span class="green">Open</span><span class="yellow">SCAD</span>
+      <br><span class="gray small">Advent Calendar 2022</span>
+      <br><span class="gray small">#SCADvent &nbsp;
+      <a class="gray" href="http://twitter.com/openscad" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a class="gray" href="https://fosstodon.org/@OpenSCAD" title="Mastodon" rel="me"><i class="fab fa-mastodon"></i></a>
+      </span>
+      <img src="https://openscad.org/images/openscad.png">
+    </p>
+  </div>
+  <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div id="day-1" class="content hide"><div class="link"><button id="btn1"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div id="day-2" class="content hide"><div class="link"><button id="btn2"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-3"><label><input type="checkbox"><div class="door"><div class="front">3</div><div class="back"></div></div><div id="day-3" class="content hide"><div class="link"><button id="btn3"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-4"><label><input type="checkbox"><div class="door"><div class="front">4</div><div class="back"></div></div><div id="day-4" class="content hide"><div class="link"><button id="btn4"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-5"><label><input type="checkbox"><div class="door"><div class="front">5</div><div class="back"></div></div><div id="day-5" class="content hide"><div class="link"><button id="btn5"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-6"><label><input type="checkbox"><div class="door"><div class="front">6</div><div class="back"></div></div><div id="day-6" class="content hide"><div class="link"><button id="btn6"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-7"><label><input type="checkbox"><div class="door"><div class="front">7</div><div class="back"></div></div><div id="day-7" class="content hide"><div class="link"><button id="btn7"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-8"><label><input type="checkbox"><div class="door"><div class="front">8</div><div class="back"></div></div><div id="day-8" class="content hide"><div class="link"><button id="btn8"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-9"><label><input type="checkbox"><div class="door"><div class="front">9</div><div class="back"></div></div><div id="day-9" class="content hide"><div class="link"><button id="btn9"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-10"><label><input type="checkbox"><div class="door"><div class="front">10</div><div class="back"></div></div><div id="day-10" class="content hide"><div class="link"><button id="btn10"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-11"><label><input type="checkbox"><div class="door"><div class="front">11</div><div class="back"></div></div><div id="day-11" class="content hide"><div class="link"><button id="btn11"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-12"><label><input type="checkbox"><div class="door"><div class="front">12</div><div class="back"></div></div><div id="day-12" class="content hide"><div class="link"><button id="btn12"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-13"><label><input type="checkbox"><div class="door"><div class="front">13</div><div class="back"></div></div><div id="day-13" class="content hide"><div class="link"><button id="btn13"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-14"><label><input type="checkbox"><div class="door"><div class="front">14</div><div class="back"></div></div><div id="day-14" class="content hide"><div class="link"><button id="btn14"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-15"><label><input type="checkbox"><div class="door"><div class="front">15</div><div class="back"></div></div><div id="day-15" class="content hide"><div class="link"><button id="btn15"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-16"><label><input type="checkbox"><div class="door"><div class="front">16</div><div class="back"></div></div><div id="day-16" class="content hide"><div class="link"><button id="btn16"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-17"><label><input type="checkbox"><div class="door"><div class="front">17</div><div class="back"></div></div><div id="day-17" class="content hide"><div class="link"><button id="btn17"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-18"><label><input type="checkbox"><div class="door"><div class="front">18</div><div class="back"></div></div><div id="day-18" class="content hide"><div class="link"><button id="btn18"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-19"><label><input type="checkbox"><div class="door"><div class="front">19</div><div class="back"></div></div><div id="day-19" class="content hide"><div class="link"><button id="btn19"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-20"><label><input type="checkbox"><div class="door"><div class="front">20</div><div class="back"></div></div><div id="day-20" class="content hide"><div class="link"><button id="btn20"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-21"><label><input type="checkbox"><div class="door"><div class="front">21</div><div class="back"></div></div><div id="day-21" class="content hide"><div class="link"><button id="btn21"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-22"><label><input type="checkbox"><div class="door"><div class="front">22</div><div class="back"></div></div><div id="day-22" class="content hide"><div class="link"><button id="btn22"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-23"><label><input type="checkbox"><div class="door"><div class="front">23</div><div class="back"></div></div><div id="day-23" class="content hide"><div class="link"><button id="btn23"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+  <div class="day-24"><label><input type="checkbox"><div class="door"><div class="front">24</div><div class="back"></div></div><div id="day-24" class="content hide"><div class="link"><button id="btn24"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
+</section>
+<div class="footer">
+<span class="sep">||</span>
+<a class="link" href="https://openscad.org/downloads.html">Download OpenSCAD</a>
+<span class="sep">||</span>
+<a class="link" href="https://en.wikibooks.org/wiki/OpenSCAD_Tutorial">OpenSCAD Tutorial</a>
+<span class="sep">||</span>
+All scripts are licensed <a class="link" href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">CC0</a>
+<span class="sep">||</span>
+Doors open midnight UTC
+<span class="sep">||</span>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <div id="modal-body" class="modal-body">
+      <span class="close">&times;</span>
+      <img align="left">
+      <h1>&nbsp;</h1>
+      <ul>
+        <li><b>Author:</b> <span id="author"></span></li>
+        <li><b>License:</b> <span id="license"></span></li>
+        <li id="urlScad"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="url3mf"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="url3mf2"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+      </ul>
+      <br clear="all">
+      <p>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
