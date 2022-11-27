@@ -177,14 +177,17 @@ opacity:0.8;
 #sidebar div.title.top {visibility:hidden; margin-bottom:-20px; text-transform:lowercase;}
 #sidebar.stuck div.title.top {visibility:visible; margin-bottom:-3px;}
 
-//#sidebar .current {text-decoration:underline;}
+/* #sidebar .current {text-decoration:underline;} */
 
 article{width:695px; float:left; margin-left:20px; padding:0px; }
 article.full{}
 
-section-area { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; }
+section-area { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; border: 1px solid #f9d72c; background:#e5f1d3; }
+section-area.snow { color: rgba(249, 215, 44, 1); background:#444; }
+section-area.snow a { color: #e5f1d3; }
 section-area h1 { padding: 8px 20px 8px 20px; }
 section-area p { padding: 8px 20px 8px 20px; }
+
 section {margin-bottom:20px; background:#fff; border-radius:8px; border:1px solid #ddd; padding:10px 20px 20px 20px;}
 .subsection {margin-bottom:20px;}
 .subsection:last-child {margin-bottom:0px;}
