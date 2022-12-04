@@ -46,12 +46,43 @@
     function getName(path) {
       return path.replace(/^.*[\\\/]/, '')
     }
-    function getChild(id, tag) {
+    function getList(v) {
+      if (v) {
+        if (typeof v === 'string' || v instanceof String) {
+          return [ v ];
+        }
+        if (v instanceof Array) {
+          return v;
+        }
+      }
+      return [];
+    }
+    function getChild(id, tag, func) {
       var e = document.getElementById(id);
       for (let a = 0; a < e.children.length; a++) {
         if (e.children[a].tagName === tag) {
-          return e.children[a];
+          c = e.children[a];
+          if (func) {
+            func(c, e);
+          }
+          return c;
         }
+      }
+    }
+    function setUrls(data, name) {
+      list = getList(data);
+      list.forEach((filename, idx) => {
+        getChild(name + "-" + idx, "A", (c, p) => {
+          p.style.display = "block";
+          c.href = url + dir + filename;
+          c.innerHTML = getName(filename);
+        });
+      });
+    }
+    function resetVisibility(name) {
+      elements = document.getElementsByClassName(name);
+      for (idx = 0;idx < elements.length;idx++) {
+        elements[idx].style.display = "none";
       }
     }
     function setupDay(button) {
@@ -60,27 +91,22 @@
       if (!data) {
         return false;
       }
+      resetVisibility("src");
+      resetVisibility("bin");
+      resetVisibility("info");
       dir = data.dir + "/";
       getChild("modal-body", "H1").innerHTML = "Day " + day;
-      getChild("modal-body", "IMG").src = url + dir + data.urlImg;
-      getChild("urlScad", "A").href = url + dir + data.urlScad;
-      getChild("urlScad", "A").innerHTML = getName(data.urlScad);
-      url3mf = document.getElementById("url3mf");
-      url3mf.hidden = true;
-      if (data.url3mf) {
-        url3mf.hidden = false;
-        getChild("url3mf", "A").href = url + dir + data.url3mf;
-        getChild("url3mf", "A").innerHTML = getName(data.url3mf);
-      }
-      url3mf2 = document.getElementById("url3mf2");
-      url3mf2.hidden = true;
-      if (data.url3mf2) {
-        url3mf2.hidden = false;
-        getChild("url3mf2", "A").href = url + dir + data.url3mf2;
-        getChild("url3mf2", "A").innerHTML = getName(data.url3mf2);
-      }
+      getChild("modal-body", "IMG").src = url + dir + data.img;
       document.getElementById("author").innerHTML = data.author;
       document.getElementById("license").innerHTML = data.license;
+      setUrls(data.src, "src");
+      setUrls(data.bin, "bin");
+      getChild("info", "P", (c, p) => {
+        if (data.info) {
+          p.style.display = "block";
+          c.innerHTML = data.info;
+        }
+      });
       return true;
     }
     document.addEventListener('DOMContentLoaded', function() {
@@ -94,14 +120,14 @@
           }
         }
         for (day = 1;day <= 24;day++) {
-          if (window.location.protocol === "file:") {
+          if (window.location.protocol === "file:" || window.location.pathname.includes("83ef")) {
             $(".day-" + day + " .content").removeClass("hide");
             $(".day-" + day + " .door").addClass("transform");
           }
           div = document.getElementById("day-" + day);
           data = days.get("day" + day);
           if (data) {
-            div.style.backgroundImage = 'url(' + url + data.dir + '/' + data.urlImg + ')';
+            div.style.backgroundImage = 'url(' + url + data.dir + '/' + data.img + ')';
           }
         }
         var modal = document.getElementById("modal");
@@ -479,6 +505,14 @@ a.link:hover {
   color: rgba(249, 215, 44, 1);
   text-decoration: underline;
 }
+
+.src, .bin, .info {
+  display: none;
+}
+
+.info p { color: #9dcb51; font-size: 1.2em; }
+.info p a { color: rgba(249, 215, 44, 1); }
+
 </style>
 </head>
 <body>
@@ -540,13 +574,21 @@ Doors open midnight UTC
       <ul>
         <li><b>Author:</b> <span id="author"></span></li>
         <li><b>License:</b> <span id="license"></span></li>
-        <li id="urlScad"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
-        <li id="url3mf"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
-        <li id="url3mf2"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="src-0" class="src"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="src-1" class="src"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="src-2" class="src"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="src-3" class="src"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="src-4" class="src"><i data-feather="file-text" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="bin-0" class="bin"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="bin-1" class="bin"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="bin-2" class="bin"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="bin-3" class="bin"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
+        <li id="bin-4" class="bin"><i data-feather="printer" width="32" height="32" stroke-width="1"></i><a></a></li>
       </ul>
       <br clear="all">
-      <p>
-      </p>
+      <div id="info" class="info">
+        <p>&nbsp;</p>
+      </div>
     </div>
   </div>
 </div>
