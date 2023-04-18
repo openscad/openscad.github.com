@@ -1,3 +1,7 @@
 openclipart-j4p4n-newsicon.svg:
 https://openclipart.org/detail/280414/newspaper-icon
 CC0 - Creative Commons Zero 1.0 Public Domain License
+
+flatpak-logo-horizontal-black.svg:
+https://flatpak.org/press/
+CC-BY-3.0 Creative Commons Attribution 3.0

@@ -541,6 +541,28 @@
 				</pre>
 			</div>
 
+			<div id="snapshots-flatpak" class="subsection">
+				<h2>Linux - Flatpak</h2>
+
+				<div class="store-button">
+					<a href="https://github.com/flathub/org.openscad.OpenSCAD/blob/master/README.md#beta-versions">
+						<img border="1" width="200" alt="Get from flathub beta repository" src="images/flatpak-logo-horizontal-black.svg" />
+					</a>
+				</div>
+				<br clear="all">
+				<p>Note that this is not automatically updated as with most other nightly builds, but
+				instead is manually selected builds.</p>
+				<p>Setup beta repository</p>
+				<pre>
+					<small><code># flatpak remote-add --user --if-not-exists flathub-beta \</code></small>
+					<small><code>&nbsp;&nbsp;https://flathub.org/beta-repo/flathub-beta.flatpakrepo</code></small>
+				</pre>
+				<p>Install OpenSCAD beta version</p>
+				<pre>
+					<small><code># flatpak install --user flathub-beta org.openscad.OpenSCAD</code></small>
+				</pre>
+			</div>
+
 			<div id="snapshots-WASM" class="subsection">
 				<h2>WebAssembly</h2>
 
