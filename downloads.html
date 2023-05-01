@@ -604,26 +604,17 @@
 
 				<h2>Debian / Ubuntu packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
 
-				<p>To install the packages, the release key must be added with apt-key to the key-ring to allow
-					apt-get / aptitude to validate the packages.<br />
-					Key ID: 75F3214F30EB8E08 (valid till 2023-06-14)<br />
-					Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</p>
-			
-				<p>NOTE: If you get errors about an expired key valid till 2021-04-18, please re-import via the following command.
-				</p>
-			
-				<pre>
-					<small><code># wget -qO- https://files.openscad.org/OBS-Repository-Key.pub | sudo apt-key add -</code></small>
-				</pre>
+				<p>The release key must be added to the apt key-ring so apt-get, apt and other tools can validate the packages.<br>
+					<code>Key ID: 75F3214F30EB8E08 (valid till 2025-07-09)</code><br/>
+					<code>Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</code>
+					<code>Fingerprint: 5F4A 8A2C 8BB1 1716 F294 82BB 75F3 214F 30EB 8E08</code></p>
 
-				<p>In newer Debian the storage for the key is changed, more information can be found in the <code>apt-key(8)</code>
-				manual page. In this case the following command will download and store the key.</p>
+				<p>NOTE: If you get errors about an expired key valid till 2023-06-14, please re-import the key.</p>
 
-				<pre>
+				<p><pre>
 					<small><code># wget -qO- https://files.openscad.org/OBS-Repository-Key.pub | sudo tee /etc/apt/trusted.gpg.d/obs-openscad-nightly.asc</code></small>
-				</pre>
+				</pre></p>
 
-				<br />
 				<p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
 					file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.</p>
 			
