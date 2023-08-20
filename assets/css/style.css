@@ -193,7 +193,7 @@ section-area.warning a { color: #e5f1d3; text-decoration:underline; }
 section {margin-bottom:20px; background:#fff; border-radius:8px; border:1px solid #ddd; padding:10px 20px 20px 20px;}
 .subsection {margin-bottom:20px;}
 .subsection:last-child {margin-bottom:0px;}
-img.github-ribbon {float: right; position: relative; top: 0; right: 0; border: 0;}
+.github-ribbon {float: right; position: relative; top: -10px; right: -20px; border: 0; z-index: 0;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
 ::-moz-selection {background: #000; color: #fff; text-shadow: none;}
