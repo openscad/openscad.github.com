@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>OpenSCAD - How-To</title>
+
+    <link href="../assets/css/style-gsod.css" rel="stylesheet" />
+
+    <link href="../assets/fonts/open-sans/all.css" rel="stylesheet">
+
+    <script src="../assets/js/d3.js"></script>
+    <script src="../assets/js/d3.layout.cloud.js"></script>
+
+    <style>
+        img {
+            padding: 0 1em 0 1em;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #ffffe5;
+        }
+
+        th,
+        td {
+            border-style: solid;
+            padding: 4px;
+            text-align: left;
+            vertical-align: top;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="page-wrap">
+
+        <div id="page-content">
+
+            <h1><span class="green">Open</span><span class="yellow">SCAD</span> - HowTo</h1>
+
+            <div style="background-color: azure; border-radius: 20px; border: 1px solid #000;" id="vis"></div>
+
+            <p>Filter: <span id="filter"></span></p>
+
+            <p>Originally posted on Mastodon by <a
+                    href="https://chaos.social/@linux_mclinuxface@fosstodon.org/110282806758421340">Kyle Davis</a>.
+                Reposted here with permission. License CC-BY-SA, All code snippets can be freely used under CC0 license.
+            </p>
+
+            <p>A lesson in making better #OpenSCAD.</p>
+
+            <p>Newer users tend to hard code in values which leads to non-parametric or otherwise painful code.</p>
+
+            <p>Let's take a simple set of stacked cubes with hard coded values:</p>
+
+            <pre>
+/* This is bad OpenSCAD */
+module wide_cube() translate([-4.5, -4.5, 0]) cube([9, 9, 3]);
+module thin_cube() translate([-1.5, -1.5, 0]) cube([3, 3, 9]);
+
+thin_cube();
+translate([0, 0, 9]) wide_cube();
+translate([0, 0, 12]) thin_cube();
+</pre>
+
+            <p>A 3D rendering of 3 rectangular prisms. The bottom one is tall and thin, the middle is short and fat, and
+                the top one is tall and thin like the bottom one. The background is black and the prisms are blue and
+                flat shaded.</p>
+
+            <p>If you wanted to change any dimension of a cube, you have to recalculate the translations. Not good. But
+                you can use variables!</p>
+
+            <pre>
+wide_s = 9;
+wide_h = 3;
+
+thin_s = 3;
+thin_h = 9;
+
+module wide_cube() translate([-wide_s/2, -wide_s/2, 0]) cube([wide_s, wide_s, wide_h]);
+module thin_cube() translate([-thin_s/2, -thin_s/2, 0]) cube([thin_s, thin_s, thin_h]);
+
+thin_cube();
+translate([0, 0, thin_h]) wide_cube();
+translate([0, 0, thin_h + wide_h]) thin_cube();
+</pre>
+
+            <p>This is far better as you can change the variables and everything still works.</p>
+
+            <p>However, it's still not that clean. It's easy to forget that OpenSCAD is a real programming language and
+                with that there is a lot of possibility.</p>
+
+            <p>Let's setup some reusable functions. First, sum a vector (or a subset of a vector).</p>
+
+            <pre>
+function vecsum(v,until= -1) = [ 
+    for (
+        a=0, b= v[0]; 
+        a < (until > 0 ? until : len(v)); 
+        a= a+1, b= b + (v[a] == undef ? 0 : v[a])
+    ) b
+];
+</pre>
+
+            <p>I know this goes deep quickly.</p>
+
+            <p>But the use is not that complicated: it takes parameter `v`, a vector, and sums the values cumulatively.
+            </p>
+
+            <pre>
+vecsum([2, 4, 6]);
+// returns [2, 6, 12]
+
+Adding the optional parameter `until` stops it early.
+vecsum([2, 4, 6], until = 2);
+// returns [2, 6];
+</pre>
+
+            <p>This is super useful in a variety of contexts but let's add some more reusable functions.</p>
+
+            <p>Now, a simple function that gets the last element of a vector.</p>
+
+            <p>Vectors are zero-based and the built-in function `len` returns a count of elements, so the last element
+                of a vector is len-1.</p>
+
+            <p>So this is only syntax sugar:</p>
+
+            <pre>
+// v = [1,2,3], returns 3
+function last_vec_element(v) = v[len(v)-1];
+</pre>
+
+            <p>Let's add some additional sugar to get the sum of all the elements of a vector instead of a cumulative
+                sum over a vector.</p>
+
+            <pre>
+// v = [2, 4, 6], returns 12
+function vec_total(v, until= -1) =  last_vec_element(vecsum(v,until));
+</pre>
+
+            <p>When you're stacking things up, you don't need to translate the first shape.</p>
+
+            <p>The 2nd shape needs to be translated to the height of the first, and the 3rd is the height of the 1st +
+                2nd (and so on).</p>
+
+            <p>If you have the heights of the objects in an vector (`v`) and `i` represents the cardinality of the
+                shape, you can represent this as a function:</p>
+
+            <pre>
+function z_offset_from_vec(v, i) = i == 0 ? 0 : vec_total(v, i);
+
+// returns 2
+z_offset_from_vec([2, 4, 6], 1);
+</pre>
+
+            <p>Now, how do you apply this to the original example? This is still not great OpenSCAD, but it's progress.
+            </p>
+
+            <pre>
+heights = [ thin_h, wide_h, thin_h ];
+
+module translate_z(v, i) 
+    translate([0, 0, z_offset_from_vec(v, i)]) 
+        children();
+
+translate_z(heights, 0) thin_cube();
+translate_z(heights, 1) wide_cube();
+translate_z(heights, 2) thin_cube();
+</pre>
+
+            <p>(Modules and variables from previous examples)</p>
+
+            <p>The `translate_z` syntax is very repetitive and requires coordination between the `heights`, `i` and
+                child module.</p>
+
+            <p>Let's make that better!</p>
+
+            <pre>
+module translate_z_stack(stack_v)
+    for (i= ([0:$children-1]))
+        translate([0, 0, z_offset_from_vec(stack_v, i)])
+            children(i);
+
+translate_z_stack(heights) {
+    thin_cube();
+    wide_cube();
+    thin_cube();
+}
+</pre>
+
+            <p>To my eye, this is way cleaner.</p>
+
+            <p>If you change the heights, it adapts and the actual stacking is evident from the code.</p>
+
+            <p>However, you still have some setup can you optimize it further? Maybe!</p>
+
+            <p>What if you could combine the height and the z offset?</p>
+
+            <p>These particular shapes could be expressed as 2D objects then extruded!</p>
+
+            <p>This is only an incremental change by adding `linear_extrude` before the `children`.</p>
+
+            <pre>
+module translate_extrude_z_stack(stack_v)
+    for (i= ([0:$children-1]))
+        translate([0, 0, z_offset_from_vec(stack_v, i)])
+            linear_extrude(stack_v[i])
+                children(i);
+</pre>
+
+            <p>The actual code that deals with your shapes will look like this:</p>
+
+            <pre>
+module thin_2d() square([thin_s, thin_s], center= true);
+module wide_2d() square([wide_s, wide_s], center= true);
+
+translate_extrude_z_stack(heights) {
+    thin_2d();
+    wide_2d();
+    thin_2d();
+}
+</pre>
+
+            <p>This code is, of course, far longer than the original, non-parametric version. For a single part I
+                wouldn't go to these lengths. However, most projects don't involve only 3 polygons and this is reusable
+                across the project.</p>
+
+            <p>All the general-purpose functions/modules should be stowed away in another file and `use &lt;...&gt;`
+                them over and over across files that represent logical parts.</p>
+
+        </div>
+
+    </div>
+
+    <script>
+        function draw(words) {
+            d3.select("#vis").append("svg")
+                .attr("width", layout.size()[0])
+                .attr("height", layout.size()[1])
+                .append("g")
+                .attr("transform", "translate(" + layout.size()[0] / 2 + "," + layout.size()[1] / 2 + ")")
+                .selectAll("text")
+                .data(words)
+                .enter()
+                .append("a")
+                .attr("xlink:href", function(d) { return '#' + d.text; })
+                .append("text")
+                .style("fill", function(d) { return d.color; })
+                .style("stroke", "#000")
+                .style("stroke-width", "0.2px")
+                .style("font-size", function(d) { return d.size + "px"; })
+                .style("font-family", "Impact")
+                .attr("text-anchor", "middle")
+                .attr("transform", function(d) {
+                    return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+                })
+                .text(function(d) { return d.text; });
+        }
+
+        function hashChanged(hash) {
+            console.log(hash);
+            var filter = hash.replace(/^#/, '');
+            document.getElementById('filter').innerText = filter;
+        }
+
+        window.onhashchange = function () {
+           hashChanged(window.location.hash);
+        }
+
+        hashChanged(window.location.hash);
+        var width = document.getElementById("vis").offsetWidth;
+        var layout = d3.layout.cloud()
+            .padding(10)
+            .spiral("archimedean")
+            .size([width, 2 * width / 4])
+            .words([
+                "linear_extrude", "translate", "cube", "cylinder", "function", "children", "module", "vector",
+                "recursive", "parametric", "echo"
+            ].map(function(d) {
+                    return {text: d, size: 10 + Math.random() * 90, color: Math.random() < 0.3 ? '#518e04' : '#f9d72c'};
+            }))
+            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .font("Impact")
+            .fontSize(function(d) { return d.size; })
+            .on("end", draw);
+        layout.start();
+</script>
+</body>
+
+</html>
