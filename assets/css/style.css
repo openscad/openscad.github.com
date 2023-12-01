@@ -189,6 +189,7 @@ section-area.snow { color: rgba(249, 215, 44, 1); background:#444; }
 section-area.snow a { color: #e5f1d3; }
 section-area.warning { color: rgba(249, 215, 44, 1); background:#a00; }
 section-area.warning a { color: #e5f1d3; text-decoration:underline; }
+#snow { position: relative; }
 
 section {margin-bottom:20px; background:#fff; border-radius:8px; border:1px solid #ddd; padding:10px 20px 20px 20px;}
 .subsection {margin-bottom:20px;}
