@@ -127,7 +127,7 @@
           div = document.getElementById("day-" + day);
           data = days.get("day" + day);
           if (data) {
-            div.style.backgroundImage = 'url(' + url + data.dir + '/' + data.img + ')';
+            div.style.backgroundImage = 'url(' + url + encodeURIComponent(data.dir) + '/' + encodeURIComponent(data.img) + ')';
           }
         }
         var modal = document.getElementById("modal");
