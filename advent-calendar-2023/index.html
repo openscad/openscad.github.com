@@ -113,17 +113,18 @@
         feather.replace();
         new Snow('#snow', { number:20, r: 2.5, v: 1 });
         date = new Date();
+/*
         if (date.getUTCMonth() === 11) {
           for (day = 1;day <= date.getUTCDate();day++) {
             $(".day-" + day + " .content").removeClass("hide");
             $(".day-" + day + " .door").addClass("transform");
           }
         }
+*/
         for (day = 1;day <= 24;day++) {
-          if (window.location.protocol === "file:" || window.location.hostname == "localhost") {
-            $(".day-" + day + " .content").removeClass("hide");
-            $(".day-" + day + " .door").addClass("transform");
-          }
+          $(".day-" + day + " .content").removeClass("hide");
+          $(".day-" + day + " .door").addClass("transform");
+          $(".day-" + day + " input").prop("checked", true);
           div = document.getElementById("day-" + day);
           data = days.get("day" + day);
           if (data) {
@@ -561,8 +562,20 @@ a.link:hover {
 <span class="sep">||</span>
 All scripts are licensed <a class="link" href="https://creativecommons.org/publicdomain/zero/1.0/legalcode">CC0</a>
 <span class="sep">||</span>
-Doors open midnight UTC
+<a class="link" href="https://github.com/openscad/openscad-advent-calendar-2023/">Design repo on github</a>
 <span class="sep">||</span>
+<br>
+<span class="sep">-</span>
+<a class="link" href="https://openscad.org/advent-calendar-2019/">2019</a>
+<span class="sep">-</span>
+<a class="link" href="https://openscad.org/advent-calendar-2020/">2020</a>
+<span class="sep">-</span>
+<a class="link" href="https://openscad.org/advent-calendar-2021/">2021</a>
+<span class="sep">-</span>
+<a class="link" href="https://openscad.org/advent-calendar-2022/">2022</a>
+<span class="sep">-</span>
+<a class="link" href="https://openscad.org/advent-calendar-2023/">2023</a>
+<span class="sep">-</span>
 </div>
 <div id="modal" class="modal">
   <div class="modal-content">
