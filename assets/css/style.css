@@ -182,6 +182,7 @@ opacity:0.8;
 article{width:695px; float:left; margin-left:20px; padding:0px; }
 article.full{}
 
+section-head { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; }
 section-area { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; border: 1px solid #f9d72c; background:#e5f1d3; }
 section-area h1 { padding: 8px 20px 8px 20px; }
 section-area p { padding: 8px 20px 8px 20px; }
