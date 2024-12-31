@@ -14,26 +14,39 @@
   <header>
     <h1 class="title" style="position:relative;"><span class="green">Open</span>SCAD</h1>
     <h2>(<a href="https://openscad.org/downloads.html#snapshots">dev snapshot</a>)</h2>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advanced: <input type="checkbox" id="adv_check" checked title="Only show basics that elementary school kids can comprehend in single 45 minute lesson." />
+    <script>
+      const checkbox = document.getElementById('adv_check')
+
+      checkbox.addEventListener('change', (event) => {
+        if (event.currentTarget.checked) {
+          document.querySelectorAll(".advanced").forEach(a=>a.style.display = null);
+        } else {
+          document.querySelectorAll(".advanced").forEach(a=>a.style.display = "none");
+        }
+      })
+    </script>
+
   </header>
   <section>
     <section>
       <article>
         <h2>Syntax</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Values_and_Data_Types">value</a>;</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = cond <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:">?</a> value_if_true <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:">:</a> value_if_false;</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Function_Literals">function</a> (x) x + x;</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Modules">module</a> name(&hellip;) { &hellip; }<br/>
-        name();</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Functions">function</a> name(&hellip;) = &hellip;<br/>
-        name();</code>
+        <code class="advanced"><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = cond <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:">?</a> value_if_true <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:">:</a> value_if_false;</code>
+        <code class="advanced"><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Function_Literals">function</a> (x) x + x;</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Modules">module</a> name(&hellip;) { &hellip; }<br/>name();</code>
+        <div class="advanced"><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Functions">function</a> name(&hellip;) = &hellip;<br/>name();</code></div>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement">include</a> &lt;&hellip;.scad&gt;</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement">use</a> &lt;&hellip;.scad&gt;</code>
+        <code class="advanced"><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement">use</a> &lt;&hellip;.scad&gt;</code>
       </article>
       <article>
         <h2>Constants</h2>
-        <dl>
+        <dl class="advanced">
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#The_Undefined_Value">undef</a></code></dt>
           <dd>undefined value</dd>
+        </dl>
+        <dl>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Numbers">PI</a></code></dt>
           <dd>mathematical constant <a href="https://en.wikipedia.org/wiki/Pi">&pi;</a> (~3.14159)</dd>
         </dl>
@@ -45,6 +58,8 @@
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n - m</a></code></dt><dd>Subtraction</dd>
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n * m</a></code></dt><dd>Multiplication</dd>
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n / m</a></code></dt><dd>Division</dd>
+        </dl>
+        <dl class="advanced">
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n % m</a></code></dt><dd>Modulo</dd>
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n ^ m</a></code></dt><dd>Exponentiation</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n < m</a></code></dt><dd>Less Than</dd>
@@ -67,6 +82,8 @@
           <dd>minimum size</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$fn">$fn</a></code></dt>
           <dd>number of fragments</dd>
+        </dl>
+        <dl class="advanced">
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$t">$t</a></code></dt>
           <dd>animation step</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#$vpr">$vpr</a></code></dt>
@@ -98,7 +115,7 @@
           <dd>transparent / background</dd>
         </dl>
       </article>
-      <article>
+      <article class="advanced">
         <h2>2D</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#circle">circle</a>(radius | d=diameter)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#square">square</a>(size,center)</code>
@@ -116,11 +133,13 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cube">cube</a>([width,depth,height], center)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cylinder">cylinder</a>(h,r|d,center)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#cylinder">cylinder</a>(h,r1|d1,r2|d2,center)</code>
+        <div class="advanced">
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Primitive_Solids#polyhedron">polyhedron</a>(points, faces, convexity)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Importing_Geometry#import">import</a>("&hellip;.<span class="tooltip">ext<span class="tooltiptext">formats: STL|OFF|AMF|3MF</span></span>", convexity)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#linear_extrude">linear_extrude</a>(height,v,center,convexity,twist,slices)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#rotate_extrude">rotate_extrude</a>(angle,convexity)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#surface">surface</a>(file = "&hellip;.<span class="tooltip">ext<span class="tooltiptext">formats: DAT|PNG</span></span>",center,convexity)</code>
+	</div>
       </article>
       <article>
         <h2>Transformations</h2>
@@ -128,20 +147,22 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#rotate">rotate</a>([x,y,z])</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#rotate">rotate</a>(a, [x,y,z])</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#scale">scale</a>([x,y,z])</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize">resize</a>([x,y,z],auto,convexity)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#mirror">mirror</a>([x,y,z])</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#multmatrix">multmatrix</a>(m)</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color</a>("colorname",alpha)</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color</a>("#<span class="tooltip">hexvalue<span class="tooltiptext">#rgb|#rgba|#rrggbb|#rrggbbaa</span></span>")</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color</a>([r,g,b,a])</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#offset">offset</a>(r|delta,chamfer)</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#fill">fill</a>()</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#hull">hull</a>()</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#minkowski">minkowski</a>(convexity)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color</a>("colorname",alpha)</code>
+        <div class="advanced">
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color</a>("#<span class="tooltip">hexvalue<span class="tooltiptext">#rgb|#rgba|#rrggbb|#rrggbbaa</span></span>")</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#color">color</a>([r,g,b,a])</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#resize">resize</a>([x,y,z],auto,convexity)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#multmatrix">multmatrix</a>(m)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#offset">offset</a>(r|delta,chamfer)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Transformations#fill">fill</a>()</code>
+        </div>
       </article>
     </section>
     <section>
-      <article>
+      <article class="advanced">
         <h2>Lists</h2>
         <dl>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Vectors">list = [&hellip;, &hellip;, &hellip;];</a></code></dt>
@@ -158,7 +179,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#difference">difference</a>()</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#intersection">intersection</a>()</code>
       </article>
-      <article>
+      <article class="advanced">
         <h2>List Comprehensions</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (i = <i>range</i>|<i>list</i>) i ]</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (<i>init</i>;<i>condition</i>;<i>next</i>) i ]</code>
@@ -167,7 +188,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if/else">Conditions</a> [ for (i = &hellip;) if (condition(i)) x else y ] </code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#let">Assignments</a> [ for (i = &hellip;) let (assignments) a ] </code>
       </article>
-      <article>
+      <article class="advanced">
         <h2>Flow Control</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
@@ -179,7 +200,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#If_Statement">if</a> (&hellip;) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Let_Statement">let</a> (&hellip;) { &hellip; }</code>
       </article>
-      <article>
+      <article class="advanced">
         <h2>Type test functions</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_undef">is_undef</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_bool">is_bool</a></code>
@@ -188,7 +209,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_list">is_list</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_function">is_function</a></code>
       </article>
-      <article>
+      <article class="advanced">
         <h2>Other</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#echo">echo</a>(&hellip;)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#render">render</a>(convexity)</code>
@@ -199,7 +220,7 @@
     </section>
 
     <section>
-      <article>
+      <article class="advanced">
         <h2>Functions</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#concat">concat</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#lookup">lookup</a></code>
@@ -213,18 +234,20 @@
       </article>
       <article>
         <h2>Mathematical</h2>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#rands">rands</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#abs">abs</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sign">sign</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#floor">floor</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#round">round</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ceil">ceil</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sin">sin</a></code>
+        <div class="advanced">
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#cos">cos</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#tan">tan</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#acos">acos</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#asin">asin</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#atan">atan</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#atan2">atan2</a></code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#floor">floor</a></code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#round">round</a></code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ceil">ceil</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#ln">ln</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#len">len</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#let">let</a></code>
@@ -232,11 +255,11 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#pow">pow</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#sqrt">sqrt</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#exp">exp</a></code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#rands">rands</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#min">min</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#max">max</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#norm">norm</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#cross">cross</a></code>
+        </div>
       </article>
     </section>
             
