@@ -153,6 +153,15 @@
         </dl>
       </article>
       <article>
+        <h2>Objects</h2>
+        <dl>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj["name"];</a></code></dt>
+          <dd>&nbsp;&nbsp;get value from object by string</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj.name;</a></code></dt>
+          <dd>&nbsp;&nbsp;get value from object by identifier</dd>
+        </dl>
+      </article>
+      <article>
         <h2>Boolean operations</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#union">union</a>()</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/CSG_Modelling#difference">difference</a>()</code>
@@ -160,7 +169,7 @@
       </article>
       <article>
         <h2>List Comprehensions</h2>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (i = <i>range</i>|<i>list</i>) i ]</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (i = <i>range</i>|<i>list</i>|<i>object</i>) i ]</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#for">Generate</a> [ for (<i>init</i>;<i>condition</i>;<i>next</i>) i ]</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#each">Flatten</a> [ each i ]</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/List_Comprehensions#if">Conditions</a> [ for (i = &hellip;) if (condition(i)) i ] </code>
@@ -173,9 +182,11 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = &hellip;, j = &hellip;, &hellip;) { &hellip; }</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#For_loop">for</a> (i = <span>object</span>) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = [<span>start</span>:<span>end</span>]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = [<span>start</span>:<span>step</span>:<span>end</span>]) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = [&hellip;,&hellip;,&hellip;]) { &hellip; }</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Intersection_For_Loop">intersection_for</a>(i = object) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#If_Statement">if</a> (&hellip;) { &hellip; }</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Let_Statement">let</a> (&hellip;) { &hellip; }</code>
       </article>
@@ -187,6 +198,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_string">is_string</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_list">is_list</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_function">is_function</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_object">is_object</a></code>
       </article>
       <article>
         <h2>Other</h2>
@@ -210,6 +222,8 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#OpenSCAD_Version">version</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#OpenSCAD_Version">version_num</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#parent_module.28n.29_and_.24parent_modules">parent_module</a>(idx)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text#textmetrics()">textmetrics</a>(t, size, font,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halign, valign, spacing,<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;direction, language, script)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text#fontmetrics()">fontmetrics</a>(size, font)</code>
       </article>
       <article>
         <h2>Mathematical</h2>
