@@ -2,7 +2,7 @@
 <html lang="en">
 	<!--[if lt IE 9]>
 	Your web browser is too old to be compatible with our download page. Please
-	visit <a href="https://files.openscad.org">https://files.openscad.org</a> 
+	visit <a href="https://files.openscad.org">https://files.openscad.org</a>
 	directly to download the file you wish to use. Thanks.
 	<![endif]-->
 <head>
@@ -10,7 +10,7 @@
 	<title>OpenSCAD - Downloads</title>
 
 	<link href="assets/css/style.css" rel="stylesheet">
-  
+
 	<link href="assets/fonts/open-sans/all.css" rel="stylesheet">
 
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
@@ -44,7 +44,7 @@
 	    for (var fileid in fileinfo) {
 	      if (fileid.indexOf("_URL") >= 0) {
 	        $("a[id="+fileid+"]").attr('href',fileinfo[fileid]);
-	      } else { 
+	      } else {
 	        $("#"+fileid).text(fileinfo[fileid]);
 	      }
 	    }
@@ -98,7 +98,7 @@
 </header>
 
 <div id="page-content">
-	
+
 	<div id="sidebar" class="sticky">
 		<h1>Downloads</h1>
 		<ul>
@@ -114,7 +114,7 @@
 			<li><a href="#gnupg">GnuPG Signature</a></li>
 		</ul>
 	</div>
-	
+
 	<article>
 		<section id="osx">
 			<h1>macOS</h1>
@@ -454,7 +454,7 @@
 			<div id="snapshots-windows" class="subsection">
 				<h2>Windows</h2>
 
-				<p>System requirements: Windows 10 (64-bit), or newer, Intel system.</p>
+				<p>System requirements: Windows 10 (64-bit), or newer, Intel/AMD system (ARM based systems are not supported).</p>
 
 				<div class="left, download-button">
 					<a id="WIN64_SNAPSHOT_INSTALLER_URL" href="https://files.openscad.org">
@@ -477,16 +477,16 @@
 
 			<div id="snapshots-linux" class="subsection">
 				<h2>Linux - AppImage</h2>
-			
+
 				<p>Please try the automatically built snapshots first if you are running a
 					supported distribution (see <a href="#snapshots-linux-distro">below</a>), the
 					following AppImage builds are still experimental.</p>
-			
+
 				<p>The ARM 64-bit (aarch64) AppImage is built and tested only for
 					<a href="https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/">Raspberry PI OS 64-bit</a>
 					(which may still be in <a href="https://www.raspberrypi.org/forums/viewtopic.php?t=275370">beta test</a>).
 				</p>
-			
+
 				<div class="left, download-button">
 					<a id="LIN64_SNAPSHOT_URL" href="https://files.openscad.org">
 						<h3 id="LIN64_SNAPSHOT_NAME">OpenSCAD</h3>
@@ -496,7 +496,7 @@
 					<small><a id="LIN64_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
 					<small><a id="LIN64_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
 				</div>
-			
+
 				<div class="download-button">
 					<a id="LIN_AARCH64_SNAPSHOT_URL" href="https://files.openscad.org">
 						<h3 id="LIN_AARCH64_SNAPSHOT_NAME">OpenSCAD</h3>
@@ -510,7 +510,7 @@
 
 			<div id="snapshots-snap" class="subsection">
 				<h2>Linux - Snap</h2>
-			
+
 				<div class="store-button">
 					<a href="https://snapcraft.io/openscad-nightly">
 						<img width="200" alt="Get it from the Snap Store" src="https://snapcraft.io/static/images/badges/en/snap-store-white.svg" />
@@ -605,27 +605,27 @@
 
 				<p>After the key is added, the repository URL needs to be configured. This can be done by creating a new
 					file <b>/etc/apt/sources.list.d/openscad.list</b> with the URL specific to the distribution.</p>
-			
+
 				<p>The repository links below are shown as <code>https</code>, please check for your installation if
 					<code>https</code> is supported. In Debian/Ubuntu this is usually handled by the
 					<code>apt-transport-https</code> package. OBS also supports HTTP links, but it's recommended to use
 					<code>https</code> whenever possible.</p>
-			
+
 				<h3>Debian 11 (Bullseye)</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_11/ ./</code></small>
 				</pre>
-			
+
 				<h3>Debian 12 (Bookworm)</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_12/ ./</code></small>
 				</pre>
-			
+
 				<h3>Debian Testing</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Testing/ ./</code></small>
 				</pre>
-			
+
 				<h3>Debian Unstable</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Unstable/ ./</code></small>
@@ -662,29 +662,29 @@
 				</pre>
 
 				<h2>openSUSE packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
-			
+
 				<h3>openSUSE Leap 15.3 (64-bit only)</h3>
 				<pre>
 					<small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.3/</code></small>
 				</pre>
-			
+
 				<h3>openSUSE Leap 15.4 (64-bit only)</h3>
 				<pre>
 					<small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Leap_15.4/</code></small>
 				</pre>
-			
+
 				<h3>openSUSE Tumbleweed</h3>
 				<pre>
 					<small><code>https://download.opensuse.org/repositories/home:/t-paul/openSUSE_Tumbleweed/</code></small>
 				</pre>
-			
+
 				<h2>Fedora packages built on <a href="https://build.opensuse.org/">OpenSUSE build service</a></h2>
-			
+
 				<h3>Fedora 34 (x86_64, armv7l, aarch64, ppc64le)</h3>
 				<pre>
 					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_34/</code></small>
 				</pre>
-			
+
 				<h3>Fedora 35 (x86_64, armv7l, aarch64, ppc64le)</h3>
 				<pre>
 					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_35/</code></small>
@@ -704,7 +704,7 @@
 				<pre>
 					<small><code>https://download.opensuse.org/repositories/home:/t-paul/Fedora_Rawhide/</code></small>
 				</pre>
-			
+
 				<h2>Arch Linux</h2>
 				To install OpenSCAD from git on Arch Linux the
 				<a href="https://aur.archlinux.org/packages/openscad-git/">openscad-git pkgbuild</a>
@@ -736,7 +736,7 @@
 </div><!--#page-content end-->
 
 <footer>
-	
+
 </footer>
 </div><!--#page-wrap end-->
 
