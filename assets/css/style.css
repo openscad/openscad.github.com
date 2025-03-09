@@ -126,8 +126,8 @@ button {width: auto; overflow: visible;}
 /* Stylings
 -------------------------------------------------------------------------------*/
 
-:root[data-applied-mode="light"] { color-scheme: light; }
-:root[data-applied-mode="dark"] { color-scheme: dark; }
+:root[data-applied-theme="light"] { color-scheme: light; }
+:root[data-applied-theme="dark"] { color-scheme: dark; }
 
 body {
 	color:light-dark(#1b2f01, #d2dbc5);
@@ -498,4 +498,31 @@ i.fab {
     83% { transform:translate(0, -12.5rem); }
     99% { transform:translate(0, -12.5rem); }
     100% { transform:translate(0, -15.0rem); }
+}
+
+#displayMode {
+	margin: 10px 10px 0 0;
+	padding: 2px 10px;
+	line-height: 27px;
+	height: 27px;
+    background: light-dark(#f2f2ee, #141405);
+    border: 1px solid light-dark(#ddd, #333);
+	border-radius: 10px;
+	cursor: pointer;
+}
+#displayMode ul.pickMode {
+	position: relative;
+	margin: -33px;
+	padding: 2px 10px;
+    background: light-dark(#f2f2ee, #141405);
+    border: 1px solid light-dark(#ddd, #333);
+	border-radius: 10px;	
+}
+#displayMode ul.pickMode li {
+	padding: 2px;
+	border-radius: 10px;	
+	cursor: pointer;
+}
+#displayMode ul.pickMode li:hover {
+	background: light-dark(#dbdbcd, #25250a);
 }
