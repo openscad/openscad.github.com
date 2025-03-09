@@ -12,30 +12,22 @@ $(document).ready(function() {
 	$('section ul li').prepend("» ");
 
 	// Mode picker
-	applyMode(getDisplayMode());
+	setDisplayModeIcon(getDisplayMode());
 	$('#displayMode .currentMode').click(function () {
 		$('#displayMode .pickMode').show();
 	});
 	$('#displayMode .pickMode li').click(function () {
-		setDisplayMode(this.className);
-		applyMode(this.className);
+		changeMode(this.className);
+		setDisplayModeIcon(this.className);
 		$('#displayMode .pickMode').hide();
 	});
 });
 
-function getDisplayMode() { return localStorage.getItem('mode') || 'system'; }
-function setDisplayMode(mode) { localStorage.setItem('mode', mode); }
-function modeToTheme(mode) {
-	if (mode === 'light' || mode === 'dark') { return mode; }
-	if (matchMedia('(prefers-color-scheme: light').matches) { return 'light'; }
-	return 'dark';
-}
-function modeIconClasses(mode) {
-	if (mode === 'light') { return "fa fa-sun"};
-	if (mode === 'dark') { return "fa fa-moon"};
-	return "fa fa-circle-half-stroke"
-}
-function applyMode(mode) {
-	document.documentElement.dataset.appliedTheme = modeToTheme(mode);
-	$('#displayMode .currentMode i').removeClass().addClass(modeIconClasses(mode));
+function setDisplayModeIcon(mode) {
+	let iconClass = "fa fa-circle-half-stroke";
+	let title = "OS Default"
+	if (mode === 'light') { iconClass = "fa fa-sun"; title = "Light Theme"; }
+	else if (mode === 'dark') { iconClass = "fa fa-moon"; title = "Dark Theme";}
+	$('#displayMode .currentMode i').removeClass().addClass(iconClass);
+	$('#displayMode .currentMode').attr({title});
 }
