@@ -9,12 +9,12 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 	font-size: 100%;
 	vertical-align: baseline;
 	background: transparent;
-}									
+}
 
 article, aside, figure, footer, header, hgroup, nav, section {display: block;}
 
 /* Responsive images and other embedded objects
-   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers.
    There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
 img,
 object,
@@ -23,16 +23,16 @@ embed {max-width: 100%;}
 /* force a vertical scrollbar to prevent a jumpy page */
 html {overflow-y: scroll;}
 
-/* we use a lot of ULs that aren't bulleted. 
+/* we use a lot of ULs that aren't bulleted.
 	don't forget to restore the bullets within content. */
 ul {list-style: none;}
 
 
 blockquote, q {quotes: none;}
 
-blockquote:before, 
-blockquote:after, 
-q:before, 
+blockquote:before,
+blockquote:after,
+q:before,
 q:after {content: ''; content: none;}
 
 a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration:none;}
@@ -62,8 +62,8 @@ pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
-	background-color: #f5f5f5;
-	border: 1px solid #ccc;
+	background-color: light-dark(#f5f5f5, #151515);
+	border: 1px solid light-dark(#ccc, #222);
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	-webkit-border-radius: 4px;
 	-moz-border-radius: 4px;
@@ -126,22 +126,25 @@ button {width: auto; overflow: visible;}
 /* Stylings
 -------------------------------------------------------------------------------*/
 
+:root[data-applied-mode="light"] { color-scheme: light; }
+:root[data-applied-mode="dark"] { color-scheme: dark; }
+
 body {
-	color:#1b2f01;
+	color:light-dark(#1b2f01, #d2dbc5);
 	font-family:"Open Sans"; font-size:14px;
-	background:#fff;
+	background:light-dark(#fff, #111);
 }
 
-#page-wrap {width:1000px; margin:0px auto; border:1px solid #fff; padding:20px;}
+#page-wrap {width:1000px; margin:0px auto; border:1px solid light-dark(#fff, #111); padding:20px;}
 
-header {background:#fff; padding:10px 20px 12px 20px; position:relative;
--moz-box-shadow: 1px 1px 12px 2px #aaa;
--webkit-box-shadow: 1px 1px 12px 2px #aaa;
-box-shadow:         1px 1px 12px 2px #aaa;
+header {background:light-dark(#fff, #171717); padding:10px 20px 12px 20px; position:relative;
+-moz-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
+-webkit-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
+box-shadow:         1px 1px 12px 2px light-dark(#aaa, #222);
 border-radius:12px 12px 0px 0px;
 }
 
-header a {color: #1b2f01; text-decoration:none;}
+header a {color: light-dark(#1b2f01,#d2dbc5); text-decoration:none;}
 header a:hover {text-decoration:underline;}
 
 
@@ -163,13 +166,13 @@ opacity:0.8;
 }
 
 #page-content {
-	background:#ffffe5; /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */																					 
+	background:light-dark(#ffffe5,#141400); /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */	 
 	position:relative; padding:20px 20px 0px 20px;
-	-moz-box-shadow: 1px 1px 12px 2px #aaa; -webkit-box-shadow: 1px 1px 12px 2px #aaa; box-shadow: 1px 1px 12px 2px #aaa;
+	-moz-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222); -webkit-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222); box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
 	border-radius:0px 0px 12px 12px;
 }
 
-#sidebar{width:220px; padding:10px; float:left; background:#fff; border-radius:8px; border:1px solid #ddd; margin-bottom:20px;}
+#sidebar{width:220px; padding:10px; float:left; background:light-dark(#fff, #1b1b1b); border-radius:8px; border:1px solid light-dark(#ddd, #444); margin-bottom:20px;}
 
 .sticky-wrapper {float:left; padding:0px 0px 0px 0px; margin-right:20px;}
 
@@ -183,7 +186,7 @@ article{width:695px; float:left; margin-left:20px; padding:0px; }
 article.full{}
 
 section-head { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; }
-section-area { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; border: 1px solid #f9d72c; background:#e5f1d3; }
+section-area { margin-bottom:20px; display:inline-block; width:100%; border-radius:8px; padding:0px; text-align: center; border: 1px solid light-dark(#f9d72c, #333); background:light-dark(#e5f1d3, #1b1b1b); }
 section-area h1 { padding: 8px 20px 8px 20px; }
 section-area p { padding: 8px 20px 8px 20px; }
 section-area.snow { color: rgba(249, 215, 44, 1); background:#444; }
@@ -192,19 +195,19 @@ section-area.warning { color: rgba(249, 215, 44, 1); background:#a00; }
 section-area.warning a { color: #e5f1d3; text-decoration:underline; }
 #snow { position: relative; }
 
-section {margin-bottom:20px; background:#fff; border-radius:8px; border:1px solid #ddd; padding:10px 20px 20px 20px;}
+section {margin-bottom:20px; background:light-dark(#fff, #1b1b1b); border-radius:8px; border:1px solid light-dark(#ddd, #333); padding:10px 20px 20px 20px;}
 .subsection {margin-bottom:20px;}
 .subsection:last-child {margin-bottom:0px;}
 .github-ribbon {float: right; position: relative; top: -10px; right: -20px; border: 0; z-index: 0;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
-::-moz-selection {background: #000; color: #fff; text-shadow: none;}
-::selection {background: #000; color: #fff; text-shadow: none;} 
+::-moz-selection {background: #000; color: light-dark(#fff, #1b1b1b); text-shadow: none;}
+::selection {background: #000; color: light-dark(#fff, #1b1b1b); text-shadow: none;} 
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #1b2f01;} 
 
-a {color:#1b2f01; font-weight:600;}
+a {color:light-dark(#1b2f01, #8fa76e); font-weight:600;}
 
 .imgLink:hover{opacity:0.8;}
 
@@ -249,10 +252,10 @@ Open - #9dcb51;} OPENCSG_FACE_BACK_COLOR - green
 SCAD - #f9d72c;} OPENCSG_FACE_FRONT_COLOR - yellow
  - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above 
 */
-header h1.title {color:#f9d72c; letter-spacing:-1px; font-weight:700;}
+header h1.title {color:light-dark(#f9d72c, ); letter-spacing:-1px; font-weight:700;}
 header h1 span.green {color:#9dcb51; letter-spacing:0px;}
 
-header h2.subtitle {color:black; letter-spacing:-1px;}
+header h2.subtitle {color:light-dark(black, #eee); letter-spacing:-1px;}
 
 /* colour OPEN & SCAD in the home sub-page heading the same*/
 section h1 strong {color:#f9d72c; font-weight:700; letter-spacing:-1px;}
@@ -326,7 +329,7 @@ li{line-height:180%;}
 	//padding:0px;
 }
 
-#navigation ul li.current {border-radius:8px; background:#f2f2ee; border:1px solid #ddd; padding:3px 9px 4px 9px;}
+#navigation ul li.current {border-radius:8px; background:light-dark(#f2f2ee, #141405); border:1px solid light-dark(#ddd, #333); padding:3px 9px 4px 9px;}
 
 #navigation ul li:last-child .nav-divider {
 	display:none;
@@ -361,7 +364,7 @@ li{line-height:180%;}
 
 #home-download {text-align:center; position:relative; margin-top:0px; height:130px; left:150px; width:355px;}
 
-#home-download-link {position:absolute; top:10px; background:#e5f1d3; height:55px; width:350px; border-radius:12px; border:4px solid #233d00;}
+#home-download-link {position:absolute; top:10px; background:light-dark(#e5f1d3, #242521); height:55px; width:350px; border-radius:12px; border:4px solid light-dark(#233d00, #233d00);}
 
 #home-download-logo {position:absolute; background:url('../img/download.png'); height:106px; width:101px;}
 
@@ -378,10 +381,10 @@ a:active #home-download-link{
 }
 
 .store-button {text-align:center; display:inline-block; padding:8px;}
-.download-button {background:#e5f1d3; border-radius:12px; border:4px solid #233d00; text-align:center; display:inline-block; padding:8px; margin:8px;}
+.download-button {background:light-dark(#e5f1d3, #171815); border-radius:12px; border:4px solid light-dark(#233d00, #182b01); text-align:center; display:inline-block; padding:8px; margin:8px;}
 
 .link-grid { display: grid; width:100%; grid-column-gap: 8px; grid-auto-columns: auto; grid-auto-flow: column;}
-.link-button { height:100%; display: block; background:#e5f1d3; border-radius:8px; border:1px solid #f9d72c; text-align:center; padding: 2px 8px; margin:0px;}
+.link-button { height:100%; display: block; background:light-dark(#e5f1d3, #1a220f); border-radius:8px; border:1px solid light-dark(#f9d72c, #252006); text-align:center; padding: 2px 8px; margin:0px;}
 .link-button h1 { margin: 0px; padding: 0px; }
 .link-button i { color: rgba(0, 0, 0, 0.4); font-size: 3em; margin: 0.2em; }
 .link-button .selected { color: rgba(0, 0, 0, 0.6); }
