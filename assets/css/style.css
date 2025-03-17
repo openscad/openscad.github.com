@@ -386,7 +386,7 @@ a:active #home-download-link{
 .link-grid { display: grid; width:100%; grid-column-gap: 8px; grid-auto-columns: auto; grid-auto-flow: column;}
 .link-button { height:100%; display: block; background:light-dark(#e5f1d3, #1a220f); border-radius:8px; border:1px solid light-dark(#f9d72c, #252006); text-align:center; padding: 2px 8px; margin:0px;}
 .link-button h1 { margin: 0px; padding: 0px; }
-.link-button i { color: rgba(0, 0, 0, 0.4); font-size: 3em; margin: 0.2em; }
+.link-button i { color: light-dark(rgba(0, 0, 0, 0.4), rgba(143, 167, 110, 0.7)); font-size: 3em; margin: 0.2em; }
 .link-button .selected { color: rgba(0, 0, 0, 0.6); }
 
 .tutorial-links {width:640px; height:200px; border-top:1px solid #ddd; padding:30px 0px 40px 0px; }
