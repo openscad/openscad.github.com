@@ -36,26 +36,38 @@
           <dd>undefined value</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Numbers">PI</a></code></dt>
           <dd>mathematical constant <a href="https://en.wikipedia.org/wiki/Pi">&pi;</a> (~3.14159)</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Numbers">0xHHH&hellip;</a></code></dt>
+          <dd>Hexadecimal number</dd>
         </dl>
       </article>
       <article>
         <h2>Operators</h2>
         <dl>
-          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n + m</a></code></dt><dd>Addition</dd>
-          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n - m</a></code></dt><dd>Subtraction</dd>
-          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n * m</a></code></dt><dd>Multiplication</dd>
-          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n / m</a></code></dt><dd>Division</dd>
-          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n % m</a></code></dt><dd>Modulo</dd>
-          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_Arithmetical_Operators">n ^ m</a></code></dt><dd>Exponentiation</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n < m</a></code></dt><dd>Less Than</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n <= m</a></code></dt><dd>Less or Equal</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">b == c</a></code></dt><dd>Equal</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">b != c</a></code></dt><dd>Not Equal</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n >= m</a></code></dt><dd>Greater or Equal</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_Operators">n > m</a></code></dt><dd>Greater Than</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators">b && c</a></code></dt> <dd>Logical And</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators">b || c</a></code></dt> <dd>Logical Or</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_Operators">!b</a></code></dt> <dd>Negation</dd>
+          <!-- Scalar -->
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">n + m</a></code></dt><dd>Addition</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">n - m</a></code></dt><dd>Subtraction</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">n * m</a></code></dt><dd>Multiplication</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">n / m</a></code></dt><dd>Division</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">n % m</a></code></dt><dd>Modulo</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">n ^ m</a></code></dt><dd>Exponentiation</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Scalar_arithmetic_operators">- n</a></code></dt><dd>Negation</dd>
+          <!-- Binary -->
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">n | m</a></code></dt><dd>Binary Or</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">n &amp; m</a></code></dt><dd>Binary And</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">n &lt;&lt; m</a></code></dt><dd>Left shift</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">n &gt;&gt; m</a></code></dt><dd>Right shift (sign preserving)</dd>
+          <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">~ n</a></code></dt><dd>Binary Not</dd>
+          <!-- Relational -->
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n < m</a></code></dt><dd>Less Than</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n <= m</a></code></dt><dd>Less or Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">b == c</a></code></dt><dd>Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">b != c</a></code></dt><dd>Not Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n >= m</a></code></dt><dd>Greater or Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n > m</a></code></dt><dd>Greater Than</dd>
+          <!-- Logical -->
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_operators">b && c</a></code></dt> <dd>Logical And</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_operators">b || c</a></code></dt> <dd>Logical Or</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Logical_operators">! b</a></code></dt> <dd>Logical Negation</dd>
         </dl>
       </article>
       <article>
