@@ -121,7 +121,8 @@ button {width: auto; overflow: visible;}
 .clearfix:after { clear: both; }  
 .clearfix { zoom: 1; }  
 
-
+.link-hover span {display:none;}
+.link-hover:hover span {display:inline;}
 
 /* Stylings
 -------------------------------------------------------------------------------*/
