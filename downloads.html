@@ -57,7 +57,6 @@
 	</script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_wasm.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_macos.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win32.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win64.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux_x86_64.js"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux_aarch64.js"></script>
@@ -450,8 +449,8 @@
 		<section id="snapshots">
 			<h1>Development Snapshots</h1>
 
-			<div id="snapshots-osx" class="subsection">
-				<h2>macOS</h2>
+			<div id="snapshots-osx" class="subsection"> 
+				<h2 class="link-hover">macOS<span> <a class="section-link" href="#snapshots-osx">§</a></span></h2>
 
 				<p>System requirements: macOS 11 "Big Sur" or newer, universal build supporting Intel and Apple Silicon systems.</p>
 
@@ -465,7 +464,7 @@
 			</div>
 
 			<div id="snapshots-windows" class="subsection">
-				<h2>Windows</h2>
+				<h2 class="link-hover">Windows<span> <a class="section-link" href="#snapshots-windows">§</a></span></h2>
 
 				<p>System requirements: Windows 10 (64-bit), or newer, Intel/AMD system (ARM based systems are not supported).</p>
 
@@ -489,7 +488,7 @@
 			</div>
 
 			<div id="snapshots-linux" class="subsection">
-				<h2>Linux - AppImage</h2>
+				<h2 class="link-hover">Linux - AppImage<span> <a class="section-link" href="#snapshots-linux">§</a></span></h2>
 
 				<p>The ARM 64-bit (aarch64) AppImage is built and tested only for
 					<a href="https://www.raspberrypi.org/blog/latest-raspberry-pi-os-update-may-2020/">Raspberry PI OS 64-bit</a>
@@ -518,7 +517,7 @@
 			</div>
 
 			<div id="snapshots-snap" class="subsection">
-				<h2>Linux - Snap</h2>
+				<h2 class="link-hover">Linux - Snap<span> <a class="section-link" href="#snapshots-snap">§</a></span></h2>
 
 				<div class="store-button">
 					<a href="https://snapcraft.io/openscad-nightly">
@@ -538,7 +537,7 @@
 			</div>
 
 			<div id="snapshots-flatpak" class="subsection">
-				<h2>Linux - Flatpak</h2>
+				<h2 class="link-hover">Linux - Flatpak<span> <a class="section-link" href="#snapshots-flatpak">§</a></span></h2>
 
 				<div class="store-button">
 					<a href="https://github.com/flathub/org.openscad.OpenSCAD/blob/master/README.md#beta-versions">
@@ -560,7 +559,7 @@
 			</div>
 
 			<div id="snapshots-WASM" class="subsection">
-				<h2>WebAssembly</h2>
+				<h2 class="link-hover">WebAssembly<span> <a class="section-link" href="#snapshots-WASM">§</a></span></h2>
 
 				<img alt="WebAssembly Logo" style="margin-bottom: 2em" src="assets/img/web-assembly-icon-64px.png">
 
@@ -577,15 +576,24 @@
 				<p>Try it out at <a href="https://ochafik.com/openscad">https://ochafik.com/openscad</a> or start with a
 					slightly bigger <a href="https://tinyurl.com/262hkuu7">example</a>.</p>
 
-				<div class="download-button">
-
-					<a id="WASM_SNAPSHOT_URL" href="https://files.openscad.org">
-						<h3 id="WASM_SNAPSHOT_NAME">OpenSCAD</h3>
+				<div class="left, download-button">
+					<a id="WASM_WEB_SNAPSHOT_URL" href="https://files.openscad.org">
+						<h3 id="WASM_WEB_SNAPSHOT_NAME">OpenSCAD</h3>
 					</a>
-					<small>WebAssembly - zip package - </small><small id="WASM_SNAPSHOT_SIZE">?? MB</small><br>
-					<small><a id="WASM_SNAPSHOT_ASC_URL" href="">asc</a></small> -
-					<small><a id="WASM_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
-					<small><a id="WASM_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+					<small>WebAssembly - WEB package - </small><small id="WASM_WEB_SNAPSHOT_SIZE">?? MB</small><br>
+					<small><a id="WASM_WEB_SNAPSHOT_ASC_URL" href="">asc</a></small> -
+					<small><a id="WASM_WEB_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="WASM_WEB_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
+				</div>
+
+				<div class="download-button">
+					<a id="WASM_NODE_SNAPSHOT_URL" href="https://files.openscad.org">
+						<h3 id="WASM_NODE_SNAPSHOT_NAME">OpenSCAD</h3>
+					</a>
+					<small>WebAssembly - NODE package - </small><small id="WASM_NODE_SNAPSHOT_SIZE">?? MB</small><br>
+					<small><a id="WASM_NODE_SNAPSHOT_ASC_URL" href="">asc</a></small> -
+					<small><a id="WASM_NODE_SNAPSHOT_SHA256_URL" href="">sha256</a></small> -
+					<small><a id="WASM_NODE_SNAPSHOT_SHA512_URL" href="">sha512</a></small>
 				</div>
 			</div>
 
