@@ -67,13 +67,13 @@
 </header>
 
 <div id="page-content">
-	
+
 	<div id="sidebar" class="sticky">
 		<h1>News</h1>
 		<ul>
 		</ul>
 	</div>
-	
+
   <article>
     <section id="20240309">
       <h1 class="title">Google Summer of Code 2024</h1>
@@ -119,12 +119,12 @@
         strange directions with surprising similarities to the freenode disaster like
         <a href="https://help.twitter.com/en/rules-and-policies/social-platforms-policy">banning
         links to other social media sites</a> we have removed the freshly added link to
-        <a href="https://fosstodon.org/@OpenSCAD">Mastodon</a> from the Twitter bio again.
+        <a href="https://floss.social/@OpenSCAD">Mastodon</a> from the Twitter bio again.
       </p>
       <p>
         So here are the links to the 2 official accounts that are currently active:
         <ul>
-          <li>Mastodon: <a href="https://fosstodon.org/@OpenSCAD">@OpenSCAD@fosstodon.org</a></li>
+          <li>Mastodon: <a href="https://floss.social/@OpenSCAD">@OpenSCAD@floss.social</a></li>
           <li>Twitter: <a href="https://twitter.com/openscad">openscad</a></li>
         </ul>
       </p>
@@ -217,10 +217,10 @@
             load it shall support.
         </p>
         <p>
-            The project is geared toward functional mechanical parts, with built-in support for common 
-            printing materials, customizable printer configurations and dynamically generated documentation 
-            based on component requirements. You can have a look at <a href="https://www.sol75.com/">SOL75 landing page</a> 
-            or try <a href="https://www.sol75.com/component/electronic_enclosure_if">the online demo</a> 
+            The project is geared toward functional mechanical parts, with built-in support for common
+            printing materials, customizable printer configurations and dynamically generated documentation
+            based on component requirements. You can have a look at <a href="https://www.sol75.com/">SOL75 landing page</a>
+            or try <a href="https://www.sol75.com/component/electronic_enclosure_if">the online demo</a>
             directly.
         </p>
       </div>
@@ -666,7 +666,7 @@
                     <p><img class="newsimg_large" src="images/customizer.png"/>
 
                       <p>The topic of this year's Google Summer of Code project is <i>customization</i>. This is a small mid-term update on the status of this project.</p>
-                      
+
                       <p>One of the primary benefits of OpenSCAD is the ability to design <i>customizable</i> content. These are designs which are parametrized using parameters or top-level variables.</p>
 
                     <p>Some projects utilize OpenSCAD's ability to customize designs as part of their web services, e.g. <a href="http://customizer.makerbot.com/docs">Thingiverse Customizer</a>, <a href="https://www.sculpteo.com/fr/developer/webapi/create/openscad/">Sculpteo Parametric Designs</a> and <a href="http://enablingthefuture.org/handomatic/">e-NABLE Handomatic</a>.</p>
@@ -827,7 +827,7 @@
                       <li><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Conditional_and_Iterator_Functions">Ranges</a> can have a negative step value</li>
                       <li>Added <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#norm">norm()</a> and  <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/The_OpenSCAD_Language#cross">cross()</a> functions</li>
                     </ul>
-                    
+
                     <h3>Program Features</h3>
                     <ul>
                       <li>Cmd-line: <code>--info</code> parameter prints system/library info</li>
@@ -839,7 +839,7 @@
                       <li>GUI: We now create a backup file before rendering to allow for recovery if OpenSCAD crashes/freezes</li>
                       <li>GUI: Accessibility features enabled (e.g. screenreading)</li>
                     </ul>
-                    
+
                     <h3>Bugfixes/improvements</h3>
                     <ul>
                       <li>Reading empty STL files sometimes caused a crash</li>
@@ -861,13 +861,13 @@
                       <li>Fixed a crash running the cmd-line without a HOME env. variable</li>
                       <li>Intersecting something with nothing now correctly results in an empty object</li>
                     </ul>
-                    
+
                     <h3>Deprecations</h3>
                     <ul>
                       <li>child() is no longer supported. Use children() instead.</li>
                       <li>polyhedron(triangles=[...]): Use polyhedron(faces=[...]) instead.</li>
                     </ul>
-                    
+
                     <h3>Misc</h3>
                     <ul>
                       <li>Test framework now shares more code with the GUI app</li>
@@ -935,7 +935,7 @@
                     <ul>
                       <li>Added basic syntax highlighting in the editor</li>
                       <li>There is now a <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Libraries#Library_Locations">built-in library path</a> in user-space</li>
-                      <li>Commandline output to PNG, with various camera and rendering settings.<br/>        
+                      <li>Commandline output to PNG, with various camera and rendering settings.<br/>
                         Run <code>openscad -h</code> to see usage info or see the <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_OpenSCAD_in_a_command_line_environment">user manual</a></li>
                       <li>Attempting to open or drag&amp;drop dxf, off or stl files in the GUI will now create an import statement.</li>
                       <li>The preview operator (%) will now preserve any manually set color</li>
@@ -944,7 +944,7 @@
                       <li>Mac: Added auto-update check</li>
                       <li>Windows: Better cmd-line support using the openscad.com executable</li>
                     </ul>
-                    
+
                     <h3>Bugfixes</h3>
                     <ul>
                       <li>Importing files is now always relative to the importing script, also for libraries</li>
@@ -961,7 +961,7 @@
                       <li>The hull() module could crash if any of the children were empty objects</li>
                       <li>Some problems using unicode filenames have been fixed</li>
                     </ul>
-                    
+
                     <h3>Misc</h3>
                     <ul>
                       <li>Build scripts have been further improved</li>
@@ -970,7 +970,7 @@
                       <li>The backend is finally independent of Qt</li>
                       <li>Windows: We now have a 64-bit version</li>
                     </ul>
-                    
+
                     <h3>Known Bugs</h3>
                     <ul>
                       <li>Linux: command-line png rendering on Gallium is flaky.<br/>
@@ -994,7 +994,7 @@
 				<p>I've just released OpenSCAD 2013.01. The source package as well as the Mac OS X binaries can be downloaded from <a href="https://openscad.org">openscad.org</a>. Binaries for Linux and Windows will appear when the package managers get them built and tested.</p>
 				<p>Thanks a lot to all contributors - there has been significant contributions, especially towards build systems and automated testing!</p>
 				<p>Have fun,<br />-Marius</p>
-			
+
 				<h2>Summary of changes in this release:</h2>
 				<h3>Features</h3>
 				<ul>
@@ -1043,7 +1043,7 @@
 			  <p>This release of OpenSCAD has taken a lot of time to get out the door, primarily due to the backend being refactored to facilitate further development and the introduction of a regression test framework. The combination of these should make it possible to do more rapid releases in the future.</p>
 			  <p>Thanks a lot to all contributors!</p>
 				<p>Have fun,<br />-Marius</p>
-			
+
 				<h2>Summary of changes in this release:</h2>
 			  <h3>Features</h3>
 			  <ul>
@@ -1101,7 +1101,7 @@
 </div><!--#page-content end-->
 
 <footer>
-	
+
 </footer>
 </div><!--#page-wrap end-->
 
