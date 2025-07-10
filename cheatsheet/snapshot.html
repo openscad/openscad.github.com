@@ -167,10 +167,20 @@
       <article>
         <h2>Objects</h2>
         <dl>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = object(&hellip;,object,&hellip;);</a></code></dt>
+          <dd>&nbsp;&nbsp;copy</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = object(&hellip;,name=value,&hellip;);</a></code></dt>
+          <dd>&nbsp;&nbsp;assign/override</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects_edits">var = object(&hellip;,[&hellip;,["name"],&hellip;],&hellip;);</a></code></dt>
+          <dd>&nbsp;&nbsp;remove name</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects_edits">var = object(&hellip;,[&hellip;,["name",value],&hellip;],&hellip;);</a></code></dt>
+          <dd>&nbsp;&nbsp;add name=value</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj["name"];</a></code></dt>
-          <dd>&nbsp;&nbsp;get value from object by string</dd>
+          <dd>&nbsp;&nbsp;get value from object by name</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj.name;</a></code></dt>
           <dd>&nbsp;&nbsp;get value from object by identifier</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Has_key">has_key(object,"name");</a></code></dt>
+          <dd>&nbsp;&nbsp;</dd>
         </dl>
       </article>
       <article>
@@ -212,6 +222,8 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_function">is_function</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Type_Test_Functions#is_object">is_object</a></code>
       </article>
+    </section>
+    <section>
       <article>
         <h2>Other</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#echo">echo</a>(&hellip;)</code>
@@ -220,9 +232,6 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#assert">assert</a>(condition, message)</code>
         <s><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Assign_Statement">assign</a> (&hellip;) { &hellip; }</code></s>
       </article>
-    </section>
-
-    <section>
       <article>
         <h2>Functions</h2>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#concat">concat</a></code>
