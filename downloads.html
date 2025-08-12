@@ -655,6 +655,21 @@
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_12/ ./</code></small>
 				</pre>
 
+				<h3>Debian 13 (Trixie)</h3>
+				<pre>
+					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_13/ ./</code></small>
+				</pre>
+        New style (modernized) configuration as separate file <code>obs-openscad-nightly.sources</code> in the
+        apt configuration directory <code>/etc/apt/sources.list.d/</code>, example for 64bit Intel/AMD.
+        <pre>
+          <small>X-Repolib-Name: obs-openscad-nightly
+            Types: deb
+            Suites: ./
+            URIs: https://download.opensuse.org/repositories/home:/t-paul/Debian_Testing/
+            Architectures: amd64
+            Signed-By: /etc/apt/trusted.gpg.d/obs-openscad-nightly.asc</small>
+        </pre>
+
 				<h3>Debian Testing</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Testing/ ./</code></small>
