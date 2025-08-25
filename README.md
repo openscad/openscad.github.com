@@ -1,4 +1,6 @@
-# Source of the OpenSCAD website.
+# WebSite pages for OpenSCAD.
+
+For the source code repository of OpenSCAD, see https://github.com/openscad/openscad/.
 
 [OpenSCAD website](https://openscad.org)
 
