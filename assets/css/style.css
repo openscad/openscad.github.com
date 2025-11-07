@@ -65,8 +65,6 @@ pre {
 	background-color: light-dark(#f5f5f5, #151515);
 	border: 1px solid light-dark(#ccc, #222);
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	-webkit-border-radius: 4px;
-	-moz-border-radius: 4px;
 	border-radius: 4px;
 }
 
@@ -132,8 +130,6 @@ body {
 #page-wrap {width:1000px; margin:0px auto; border:1px solid light-dark(#fff, #111); padding:20px;}
 
 header {background:light-dark(#fff, #171717); padding:10px 20px 12px 20px; position:relative;
--moz-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
--webkit-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
 box-shadow:         1px 1px 12px 2px light-dark(#aaa, #222);
 border-radius:12px 12px 0px 0px;
 }
@@ -162,7 +158,7 @@ opacity:0.8;
 #page-content {
 	background:light-dark(#ffffe5,#141400); /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */	 
 	position:relative; padding:20px 20px 0px 20px;
-	-moz-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222); -webkit-box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222); box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
+	box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
 	border-radius:0px 0px 12px 12px;
 }
 
@@ -195,8 +191,7 @@ section {margin-bottom:20px; background:light-dark(#fff, #1b1b1b); border-radius
 .github-ribbon {float: right; position: relative; top: -10px; right: -20px; border: 0; z-index: 0;}
 
 /* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
-::-moz-selection {background: #000; color: light-dark(#fff, #1b1b1b); text-shadow: none;}
-::selection {background: #000; color: light-dark(#fff, #1b1b1b); text-shadow: none;} 
+::selection {background: #000; color: light-dark(#fff, #1b1b1b); text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
 a:link {-webkit-tap-highlight-color: #1b2f01;} 
