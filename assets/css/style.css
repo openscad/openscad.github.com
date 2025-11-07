@@ -33,7 +33,9 @@ blockquote, q {quotes: none;}
 blockquote:before,
 blockquote:after,
 q:before,
-q:after {content: ''; content: none;}
+q:after {
+    content: none;
+}
 
 a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; text-decoration:none;}
 a:hover {text-decoration:underline;}
@@ -59,9 +61,7 @@ pre {
 	line-height: 20px;
 	word-break: break-all;
 	word-wrap: break-word;
-	white-space: pre;
-	white-space: pre-wrap;
-	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	white-space: pre-line;
 	background-color: light-dark(#f5f5f5, #151515);
 	border: 1px solid light-dark(#ccc, #222);
 	border: 1px solid rgba(0, 0, 0, 0.15);
