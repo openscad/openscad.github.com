@@ -20,6 +20,7 @@
 	<link href="assets/fontawesome/css/brands.min.css" rel="stylesheet">
 	<link href="assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
 
+  <script src="advent-calendar-2025/snow.js"></script>
 	<script src="assets/js/jquery-1.9.1.min.js"></script>
 
 	<!-- One-Page-Nav  -->
@@ -36,6 +37,11 @@
 	<script src="inc/win_release_links.js"></script>
 	<script src="assets/js/header.js"></script>
 	<script src="assets/js/home.js"></script>
+  <script type="text/javascript">
+    window.onload = function() {
+      new Snow('#snow', { number:12, r: 2.5, v: 1 });
+    }
+  </script>
 <style>
 .header {
   background-color: #444;
@@ -116,19 +122,21 @@
 	</div>
 
   <article>
-    <section-area id="ticker">
+    <div id="snow">
+    <section-area id="ticker" class="snow">
       <div class="ticker-wrap">
         <div class="ticker-move ticker-animation">
+          <div class="ticker-item"><div class="ticker-content"><big><a href="/advent-calendar-2025">OpenSCAD Advent Calendar 2025</a></big></div></div>
           <div class="ticker-item"><div class="ticker-content">OpenSCAD Discussion, talk with Humans: <a target="_blank" href="https://web.libera.chat/?channel=#openscad">#openscad</a> (on IRC network <a target="_blank" href="https://libera.chat/">libera.chat</a>)</div></div>
           <div class="ticker-item"><div class="ticker-content">OpenSCAD <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual">User Manual</a> and <a href="https://en.wikibooks.org/wiki/OpenSCAD_Tutorial">Tutorial</a> on Wikibooks</div></div>
           <div class="ticker-item"><div class="ticker-content">OpenSCAD on <a href="https://floss.social/@OpenSCAD">Mastodon</a> and <a href="https://bsky.app/profile/openscad.bsky.social">Bluesky</a></div></div>
           <div class="ticker-item"><div class="ticker-content">Find OpenSCAD Designs on <a href="https://www.printables.com/search/models?q=tag:openscad">Printables</a> and <a href="https://www.thingiverse.com/tag:openscad">Thingiverse</a></div></div>
           <div class="ticker-item"><div class="ticker-content"><a href="https://openscad.org/documentation-books.html">OpenSCAD Books</a></div></div>
-          <div class="ticker-item"><div class="ticker-content">Prototype: OpenSCAD <a href="https://ochafik.com/openscad2/">Playground</a> directly in your WebBrowser</div></div>
-          <div class="ticker-item"><div class="ticker-content">OpenSCAD Discussion, talk with Humans: <a target="_blank" href="https://web.libera.chat/?channel=#openscad">#openscad</a> (on IRC network <a target="_blank" href="https://libera.chat/">libera.chat</a>)</div></div>
+          <div class="ticker-item"><div class="ticker-content"><big><a href="/advent-calendar-2025">OpenSCAD Advent Calendar 2025</a></big></div></div>
         </div>
       </div>
     </section-area>
+    </div>
 
     <section>
 			<h1><strong><span class="green">Open</span>SCAD</strong> is software for creating solid 3D CAD objects.</h1>
