@@ -305,7 +305,12 @@ label:hover .door {
 
 .header {
   grid-area: h;
+}
+
+.header p {
+  position: relative;
   display: flex;
+  height: 100%;
   color: #9dcb51;
   font-family: 'Kalam', cursive;
   font-size: 4em;
@@ -516,6 +521,7 @@ a.link:hover {
 <div id="snow"></div>
 <section class="cal">
   <div class="header">
+    <p>
       <span><span class="green">Open</span><span class="yellow">SCAD</span></span>
       <span class="gray small">Advent Calendar 2025</span>
       <span class="gray small">#SCADvent &nbsp;
@@ -523,6 +529,7 @@ a.link:hover {
       <a class="gray" href="https://bsky.app/profile/openscad.bsky.social" title="Bluesky" rel="me"><i class="fab fa-bluesky"></i></a>
       </span>
       <img src="https://openscad.org/images/openscad.png">
+    </p>
   </div>
   <div class="day-1"><label><input type="checkbox"><div class="door"><div class="front">1</div><div class="back"></div></div><div id="day-1" class="content hide"><div class="link"><button id="btn1"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
   <div class="day-2"><label><input type="checkbox"><div class="door"><div class="front">2</div><div class="back"></div></div><div id="day-2" class="content hide"><div class="link"><button id="btn2"><i data-feather="zoom-in" width="32" height="32"></i></button></div></div></input></label></div>
