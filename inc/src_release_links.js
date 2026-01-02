@@ -1,6 +1,0 @@
-fileinfo['SRC_RELEASE_URL'] = 'https://files.openscad.org/openscad-2021.01.src.tar.gz'
-fileinfo['SRC_RELEASE_NAME'] = 'OpenSCAD 2021.01'
-fileinfo['SRC_RELEASE_SIZE'] = '16 MB'
-fileinfo['SRC_RELEASE_ASC_URL'] = fileinfo['SRC_RELEASE_URL'] + '.asc'
-fileinfo['SRC_RELEASE_SHA256_URL'] = fileinfo['SRC_RELEASE_URL'] + '.sha256'
-fileinfo['SRC_RELEASE_SHA512_URL'] = fileinfo['SRC_RELEASE_URL'] + '.sha512'
