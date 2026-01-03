@@ -1,6 +1,0 @@
-fileinfo['MAC_RELEASE_URL'] = 'https://files.openscad.org/OpenSCAD-2021.01.dmg'
-fileinfo['MAC_RELEASE_NAME'] = 'OpenSCAD 2021.01'
-fileinfo['MAC_RELEASE_SIZE'] = '27 MB'
-fileinfo['MAC_RELEASE_ASC_URL'] = fileinfo['MAC_RELEASE_URL'] + '.asc'
-fileinfo['MAC_RELEASE_SHA256_URL'] = fileinfo['MAC_RELEASE_URL'] + '.sha256'
-fileinfo['MAC_RELEASE_SHA512_URL'] = fileinfo['MAC_RELEASE_URL'] + '.sha512'

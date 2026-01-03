@@ -31,11 +31,6 @@
 	<script>
 	  var fileinfo = {};
 	</script>
-	<script src="inc/mac_release_links.js"></script>
-	<script src="inc/win_release_links.js"></script>
-	<script src="inc/linux_release_links.js"></script>
-	<script src="inc/src_release_links.js"></script>
-	<script src="inc/rc_links.js"></script>
 	<script>
 	  function setSnapshotFileInfo(key, name, size, url) {
 	    fileinfo[key + "_NAME"] = name;
@@ -55,11 +50,9 @@
 	    }
 	  });
 	</script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_wasm.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_macos.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_win64.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux_x86_64.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshot_linux_aarch64.js"></script>
+	<script src="inc/releases.js"></script>
+	<script type="text/javascript" src="https://files.openscad.org/rc/.rc.js" onload="jQuery(function(){ jQuery('#rc').show(); jQuery('#nav-rc').show(); });"></script>
+	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshots.js"></script>
 </head>
 <body>
 
@@ -119,7 +112,7 @@
 			<li><a href="#linux">Linux</a></li>
 			<li><a href="#other-systems">Other Systems</a></li>
 			<li><a href="#source-code">Source Code</a></li>
-			<!--<li><a href="#rc">Release Candidates</a></li>-->
+			<li id="nav-rc" style="display:none"><a href="#rc">Release Candidates</a></li>
 			<li><a href="#docker">Docker</a></li>
 			<li><a href="#snapshots">Development Snapshots</a></li>
 			<li><a href="#priorreleases">Prior Releases</a></li>
@@ -340,8 +333,7 @@
 			<p>You can also access the latest source code on github: <a href="https://github.com/openscad/openscad" target="_blank">openscad/openscad on github</a></p>
 		</section>
 
-    <!--
-    <section id="rc">
+    <section id="rc" style="display:none">
       <h1>Release Candidates</h1>
       <p>Release Candidates are builds that contain all features that will be included in the next release and are intended
         to reach a wider audience for testing before the final release.
@@ -438,7 +430,6 @@
         </div>
       </div>
     </section>
-    -->
 
 		<section id="docker">
 			<h1>Docker</h1>
