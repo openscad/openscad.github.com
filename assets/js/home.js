@@ -13,12 +13,12 @@ $(document).ready(function() {
   var DLName = "OpenSCAD 2021.01";
   var downloadLink = "downloads.html";
 	if (fi("Win")) { 
-    OSName="Windows";
+    OSName=`Windows ${bits} bit`;
     DLName = fileinfo[`WIN${bits}_RELEASE_INSTALLER_NAME`];
     downloadLink = fileinfo[`WIN${bits}_RELEASE_INSTALLER_URL`];
   }
 	else if (fi("Mac")) { 
-    OSName = "Mac OS X";
+    OSName = "Mac OS X Intel";
     DLName = fileinfo['MAC_RELEASE_NAME'];
     downloadLink = fileinfo['MAC_RELEASE_URL'];
   }
@@ -27,9 +27,11 @@ $(document).ready(function() {
     downloadLink = "downloads.html#linux";
 
     if (bits === 64) {
+      OSName += " 64 bit";
       DLName = fileinfo['LIN64_RELEASE_NAME'];
       downloadLink = fileinfo['LIN64_RELEASE_URL'];
     } else if (fi("aarch64")) {
+      OSName += " ARM 64 bit";
       DLName = fileinfo['ARM64_RELEASE_NAME'];
       downloadLink = fileinfo['ARM64_RELEASE_URL'];
     }
