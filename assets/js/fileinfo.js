@@ -1,3 +1,5 @@
+var fileinfo = {};
+
 function setSnapshotFileInfo(key, name, size, url) {
     fileinfo[key + "_NAME"] = name;
     fileinfo[key + "_SIZE"] = size;
