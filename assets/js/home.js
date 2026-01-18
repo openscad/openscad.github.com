@@ -11,31 +11,31 @@ $(document).ready(function() {
   
 	var OSName="Unknown OS";
 	if (navigator.appVersion.indexOf("Win")!=-1) { 
-          OSName="Windows"; 
-          if (bits == 64) {
-            DLName = fileinfo['WIN64_RELEASE_INSTALLER_NAME'];
-            downloadLink = fileinfo['WIN64_RELEASE_INSTALLER_URL'];
-          }
-          else {
-            DLName = fileinfo['WIN32_RELEASE_INSTALLER_NAME'];
-            downloadLink = fileinfo['WIN32_RELEASE_INSTALLER_URL'];
-          }
-        }
+    OSName="Windows"; 
+    if (bits == 64) {
+      DLName = fileinfo['WIN64_RELEASE_INSTALLER_NAME'];
+      downloadLink = fileinfo['WIN64_RELEASE_INSTALLER_URL'];
+    }
+    else {
+      DLName = fileinfo['WIN32_RELEASE_INSTALLER_NAME'];
+      downloadLink = fileinfo['WIN32_RELEASE_INSTALLER_URL'];
+    }
+  }
 	else if (navigator.appVersion.indexOf("Mac")!=-1) { 
-          OSName="Mac OS X"; 
-          DLName = fileinfo['MAC_RELEASE_NAME'];
-          downloadLink = fileinfo['MAC_RELEASE_URL']; 
-        }
+    OSName="Mac OS X"; 
+    DLName = fileinfo['MAC_RELEASE_NAME'];
+    downloadLink = fileinfo['MAC_RELEASE_URL']; 
+  }
 	else if (navigator.appVersion.indexOf("X11")!=-1) { 
-          OSName="Linux"; 
-          DLName = fileinfo['MAC_RELEASE_NAME'];
-          downloadLink = "downloads.html#linux"; 
-        }
+    OSName="Linux"; 
+    DLName = fileinfo['MAC_RELEASE_NAME'];
+    downloadLink = "downloads.html#linux"; 
+  }
 	else if (navigator.appVersion.indexOf("Linux")!=-1) {
-          OSName="Linux"; 
-          DLName = fileinfo['MAC_RELEASE_NAME'];
-          downloadLink = "downloads.html#linux"; 
-        }
+    OSName="Linux"; 
+    DLName = fileinfo['MAC_RELEASE_NAME'];
+    downloadLink = "downloads.html#linux"; 
+  }
 
 	$("#home-download a#download-link").attr("href",downloadLink);
 	$("#home-download-link h4").text(DLName + " " + OSName);
