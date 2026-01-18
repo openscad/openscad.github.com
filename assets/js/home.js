@@ -9,8 +9,9 @@ $(document).ready(function() {
     bits = 64;
   }
   
-	var OSName="Unknown OS";
-	if (navigator.appVersion.indexOf("Win")!=-1) { 
+	var OSName = "Unsupported OS";
+  var DLName = "OpenSCAD 2021.01";
+	if (navigator.appVersion.indexOf("Win") != -1) { 
     OSName="Windows"; 
     if (bits == 64) {
       DLName = fileinfo['WIN64_RELEASE_INSTALLER_NAME'];
@@ -21,23 +22,18 @@ $(document).ready(function() {
       downloadLink = fileinfo['WIN32_RELEASE_INSTALLER_URL'];
     }
   }
-	else if (navigator.appVersion.indexOf("Mac")!=-1) { 
-    OSName="Mac OS X"; 
+	else if (navigator.appVersion.indexOf("Mac") != -1) { 
+    OSName = "Mac OS X"; 
     DLName = fileinfo['MAC_RELEASE_NAME'];
-    downloadLink = fileinfo['MAC_RELEASE_URL']; 
+    downloadLink = fileinfo['MAC_RELEASE_URL'];
   }
-	else if (navigator.appVersion.indexOf("X11")!=-1) { 
-    OSName="Linux"; 
-    DLName = fileinfo['MAC_RELEASE_NAME'];
-    downloadLink = "downloads.html#linux"; 
-  }
-	else if (navigator.appVersion.indexOf("Linux")!=-1) {
-    OSName="Linux"; 
-    DLName = fileinfo['MAC_RELEASE_NAME'];
-    downloadLink = "downloads.html#linux"; 
+	else if ((navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) && bits == 64) { 
+    OSName = "Linux"; 
+    DLName = fileinfo['LIN64_RELEASE_NAME'];
+    downloadLink = "downloads.html#linux";
   }
 
-	$("#home-download a#download-link").attr("href",downloadLink);
+	$("#home-download a#download-link").attr("href", downloadLink ?? "downloads.html");
 	$("#home-download-link h4").text(DLName + " " + OSName);
 	
 	var news, i;
