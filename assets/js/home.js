@@ -11,7 +11,7 @@ $(document).ready(function() {
   
 	var OSName = "Unsupported OS";
   var DLName = "OpenSCAD 2021.01";
-  var downloadLink = null;
+  var downloadLink = "downloads.html";
 	if (fi("Win")) { 
     OSName="Windows";
     DLName = fileinfo[`WIN${bits}_RELEASE_INSTALLER_NAME`];
@@ -35,7 +35,7 @@ $(document).ready(function() {
     }
   }
 
-	$("#home-download a#download-link").attr("href", downloadLink ?? "downloads.html");
+	$("#home-download a#download-link").attr("href", downloadLink);
 	$("#home-download-link h4").text(DLName + " " + OSName);
 	
 	var news, i;
