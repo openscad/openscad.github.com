@@ -22,10 +22,17 @@ $(document).ready(function() {
     DLName = fileinfo['MAC_RELEASE_NAME'];
     downloadLink = fileinfo['MAC_RELEASE_URL'];
   }
-	else if ((fi("X11") || fi("Linux")) && bits == 64) { 
+	else if (fi("X11") || fi("Linux")) { 
     OSName = "Linux";
-    DLName = fileinfo['LIN64_RELEASE_NAME'];
     downloadLink = "downloads.html#linux";
+
+    if (bits === 64) {
+      DLName = fileinfo['LIN64_RELEASE_NAME'];
+      downloadLink = fileinfo['LIN64_RELEASE_URL'];
+    } else if (fi("aarch64")) {
+      DLName = fileinfo['ARM64_RELEASE_NAME'];
+      downloadLink = fileinfo['ARM64_RELEASE_URL'];
+    }
   }
 
 	$("#home-download a#download-link").attr("href", downloadLink ?? "downloads.html");
