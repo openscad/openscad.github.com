@@ -3,7 +3,7 @@ $(document).ready(function() {
   var w = window.navigator.platform;
   var bits = 32;
   fi = function(s) {
-    return window.navigator.userAgent.indexOf(s) > -1;
+    return window.navigator.userAgent.includes(s);
   };
   if (fi('x86_64') || fi('x86-64') || fi('Win64') || fi('x64;') || fi('amd64') || fi('AMD64') || fi('WOW64') || fi('x64_64') || w === 'MacIntel' || w === 'Linux x86_64') {
     bits = 64;
@@ -11,24 +11,19 @@ $(document).ready(function() {
   
 	var OSName = "Unsupported OS";
   var DLName = "OpenSCAD 2021.01";
-	if (navigator.appVersion.indexOf("Win") != -1) { 
-    OSName="Windows"; 
-    if (bits == 64) {
-      DLName = fileinfo['WIN64_RELEASE_INSTALLER_NAME'];
-      downloadLink = fileinfo['WIN64_RELEASE_INSTALLER_URL'];
-    }
-    else {
-      DLName = fileinfo['WIN32_RELEASE_INSTALLER_NAME'];
-      downloadLink = fileinfo['WIN32_RELEASE_INSTALLER_URL'];
-    }
+  var downloadLink = null;
+	if (fi("Win")) { 
+    OSName="Windows";
+    DLName = fileinfo[`WIN${bits}_RELEASE_INSTALLER_NAME`];
+    downloadLink = fileinfo[`WIN${bits}_RELEASE_INSTALLER_URL`];
   }
-	else if (navigator.appVersion.indexOf("Mac") != -1) { 
-    OSName = "Mac OS X"; 
+	else if (fi("Mac")) { 
+    OSName = "Mac OS X";
     DLName = fileinfo['MAC_RELEASE_NAME'];
     downloadLink = fileinfo['MAC_RELEASE_URL'];
   }
-	else if ((navigator.appVersion.indexOf("X11") != -1 || navigator.appVersion.indexOf("Linux") != -1) && bits == 64) { 
-    OSName = "Linux"; 
+	else if ((fi("X11") || fi("Linux")) && bits == 64) { 
+    OSName = "Linux";
     DLName = fileinfo['LIN64_RELEASE_NAME'];
     downloadLink = "downloads.html#linux";
   }
