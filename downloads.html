@@ -624,11 +624,14 @@
 				<p>The <a href="https://build.opensuse.org/projects/home:t-paul/signing_keys">release key</a> must be added to
 					the apt key-ring so apt-get, apt and other tools can validate the packages.<br>
 
-					<code>Key ID: 75F3214F30EB8E08 (valid till 2027-07-27)</code><br/>
-					<code>Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</code>
-					<code>Fingerprint: 5F4A 8A2C 8BB1 1716 F294 82BB 75F3 214F 30EB 8E08</code></p>
+        <code>Key ID: 75F3214F30EB8E08 (valid till 2028-04-04)</code><br/>
+				<code>Key UID: home:t-paul OBS Project &lt;home:t-paul@build.opensuse.org&gt;</code>
+				<code>Fingerprint: 5F4A 8A2C 8BB1 1716 F294 82BB 75F3 214F 30EB 8E08</code></p>
 
-				<p>NOTE: If you get errors about an expired key valid till 2025-07-09, please re-import the key.</p>
+				<p style="color:coral">NOTE: 2026-01-25: Please re-import the key, it was updated to fix issue <a
+          href="https://github.com/openscad/openscad/issues/5899"
+          title="The release key on OpenSUSE build service causes 'Policy will reject signature within a year'">#5899</a>.
+        </p>
 
 				<p><pre>
 					<small><code># wget -qO- https://files.openscad.org/OBS-Repository-Key.pub | sudo tee /etc/apt/trusted.gpg.d/obs-openscad-nightly.asc</code></small>
@@ -642,10 +645,12 @@
 					<code>apt-transport-https</code> package. OBS also supports HTTP links, but it's recommended to use
 					<code>https</code> whenever possible.</p>
 
+        <!--
 				<h3>Debian 11 (Bullseye)</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_11/ ./</code></small>
 				</pre>
+        -->
 
 				<h3>Debian 12 (Bookworm)</h3>
 				<pre>
@@ -677,10 +682,12 @@
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Debian_Unstable/ ./</code></small>
 				</pre>
 
+        <!--
 				<h3>Raspbian 11 (64-bit only)</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Raspbian_11/ ./</code></small>
 				</pre>
+        -->
 
 				<h3>Raspbian 12 (64-bit only)</h3>
 				<pre>
@@ -692,10 +699,12 @@
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/Raspbian_13/ ./</code></small>
 				</pre>
 
+        <!--
 				<h3>Ubuntu 22.04 (x86_64, aarch64)</h3>
 				<pre>
 					<small><code>deb https://download.opensuse.org/repositories/home:/t-paul/xUbuntu_22.04/ ./</code></small>
 				</pre>
+        -->
 
 				<h3>Ubuntu 24.04 (x86_64, aarch64)</h3>
 				<pre>
