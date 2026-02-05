@@ -31,9 +31,16 @@
 
 	<script type="text/javascript">
 	  var fileinfo = {};
+	  function setSnapshotFileInfo(key, name, size, url) {
+	    fileinfo[key + "_NAME"] = name;
+	    fileinfo[key + "_SIZE"] = size;
+	    fileinfo[key + "_URL"] = url;
+	    fileinfo[key + "_ASC_URL"] = url + ".asc";
+	    fileinfo[key + "_SHA256_URL"] = url + ".sha256";
+	    fileinfo[key + "_SHA512_URL"] = url + ".sha512";
+	  }
 	</script>
-	<script src="inc/mac_release_links.js"></script>
-	<script src="inc/win_release_links.js"></script>
+	<script src="inc/releases.js"></script>
 	<script src="assets/js/header.js"></script>
 	<script src="assets/js/home.js"></script>
 <style>
