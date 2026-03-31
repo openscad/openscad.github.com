@@ -171,12 +171,13 @@
       </article>
       <article>
         <h2>Objects</h2>
-        <dl>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj["name"];</a></code></dt>
-          <dd>&nbsp;&nbsp;get value from object by string</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj.name;</a></code></dt>
-          <dd>&nbsp;&nbsp;get value from object by identifier</dd>
-        </dl>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">obj = object(&hellip;,name=value,&hellip;);</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">obj = object(&hellip;,[&hellip;,["name",value],&hellip;],&hellip;);</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">obj = object(&hellip;,object,&hellip;);</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">obj = object(&hellip;,[&hellip;,["name"],&hellip;],&hellip;);</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj.name;</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">var = obj["name"];</a></code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Objects">has_key(object,"name");</a></code>
       </article>
       <article>
         <h2>Boolean operations</h2>
