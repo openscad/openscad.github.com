@@ -1,0 +1,15 @@
+.flag-container {
+  height: fit-content;
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.flag {
+  position: relative;
+  font-size: 3em;
+  margin-left: 3em;
+  margin-right: 3em;
+  overflow: hidden;
+}
