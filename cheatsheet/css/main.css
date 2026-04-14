@@ -24,6 +24,12 @@ header h1 {
 	margin-right: 1ex;
 }
 
+/* colour the header 'Open' & 'SCAD' and make bolder and chunky
+like the cornfield default scheme from colormap.cc
+Open - #9dcb51;} OPENCSG_FACE_BACK_COLOR - green
+SCAD - #f9d72c;} OPENCSG_FACE_FRONT_COLOR - yellow
+ - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above 
+*/
 header h1.title {color:#f9d72c; letter-spacing:-1px; font-weight:700;}
 header h1 span.green {color:#9dcb51; letter-spacing:0px;}
 
