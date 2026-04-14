@@ -15,7 +15,7 @@ h1 {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1.8em;
-	color: #DEBA00;
+	color: #deba00;
 	margin: 0 0 0.6em 0;
 }
 
@@ -24,12 +24,6 @@ header h1 {
 	margin-right: 1ex;
 }
 
-/* colour the header 'Open' & 'SCAD' and make bolder and chunky
-like the cornfield default scheme from colormap.cc
-Open - #9dcb51;} OPENCSG_FACE_BACK_COLOR - green
-SCAD - #f9d72c;} OPENCSG_FACE_FRONT_COLOR - yellow
- - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above 
-*/
 header h1.title {color:#f9d72c; letter-spacing:-1px; font-weight:700;}
 header h1 span.green {color:#9dcb51; letter-spacing:0px;}
 
@@ -44,7 +38,7 @@ h2 {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1.4em;
-	color: #79A22E;
+	color: #79a22e;
 	margin: 0 0 10px 0;
 }
 
@@ -66,14 +60,14 @@ section section article {
 }
 
 article {
-	background: #FFFFDD;
+	background: #ffffdd;
 	-webkit-border-radius: 0.6em;
 	-moz-border-radius: 0.6em;
 	border-radius: 0.6em;
 	padding: 0.6em 0.6em 0.6em 0.6em;
 	float: left;
 	margin: 0 0.6em 0.6em 0;
-	border: 1px solid #DEBA00;
+	border: 1px solid #deba00;
 }
 
 article.info {
@@ -116,7 +110,6 @@ ul {
 }
 
 ul li {
-	/*margin: 0 0 0.2em 0;*/
 	line-height: 1.2em;
 }
 
@@ -150,7 +143,7 @@ footer {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #79A22E;
+  background-color: #79a22e;
   color: #fff;
   text-align: center;
   white-space: nowrap;
@@ -175,5 +168,5 @@ footer {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #79A22E transparent transparent transparent;
+  border-color: #79a22e transparent transparent transparent;
 }
