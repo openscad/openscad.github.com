@@ -15,7 +15,7 @@ h1 {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1.8em;
-	color: #DEBA00;
+	color: #deba00;
 	margin: 0 0 0.6em 0;
 }
 
@@ -44,7 +44,7 @@ h2 {
 	font-weight: normal;
 	font-style: normal;
 	font-size: 1.4em;
-	color: #79A22E;
+	color: #79a22e;
 	margin: 0 0 10px 0;
 }
 
@@ -66,14 +66,14 @@ section section article {
 }
 
 article {
-	background: #FFFFDD;
+	background: #ffffdd;
 	-webkit-border-radius: 0.6em;
 	-moz-border-radius: 0.6em;
 	border-radius: 0.6em;
 	padding: 0.6em 0.6em 0.6em 0.6em;
 	float: left;
 	margin: 0 0.6em 0.6em 0;
-	border: 1px solid #DEBA00;
+	border: 1px solid #deba00;
 }
 
 article.info {
@@ -116,7 +116,6 @@ ul {
 }
 
 ul li {
-	/*margin: 0 0 0.2em 0;*/
 	line-height: 1.2em;
 }
 
@@ -150,7 +149,7 @@ footer {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: #79A22E;
+  background-color: #79a22e;
   color: #fff;
   text-align: center;
   white-space: nowrap;
@@ -175,5 +174,5 @@ footer {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: #79A22E transparent transparent transparent;
+  border-color: #79a22e transparent transparent transparent;
 }
