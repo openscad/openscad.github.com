@@ -67,8 +67,6 @@ section section article {
 
 article {
 	background: #ffffdd;
-	-webkit-border-radius: 0.6em;
-	-moz-border-radius: 0.6em;
 	border-radius: 0.6em;
 	padding: 0.6em 0.6em 0.6em 0.6em;
 	float: left;
