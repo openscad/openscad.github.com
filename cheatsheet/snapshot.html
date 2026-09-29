@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;"/>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link type="text/css" rel="stylesheet" href="css/normalize.css" media="all" />
-  <link type="text/css" rel="stylesheet" href="css/fonts.css" media="all" />
-  <link type="text/css" rel="stylesheet" href="css/main.css" media="all" />
-  <link type="text/css" rel="stylesheet" href="css/print.css" media="print" />
+  <link type="text/css" rel="stylesheet" href="css/normalize.css" media="all">
+  <link type="text/css" rel="stylesheet" href="css/fonts.css" media="all">
+  <link type="text/css" rel="stylesheet" href="css/main.css" media="all">
+  <link type="text/css" rel="stylesheet" href="css/print.css" media="print">
   <title>OpenSCAD CheatSheet</title>
 </head>
 <body>
@@ -22,9 +22,9 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Values_and_Data_Types">value</a>;</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = cond <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:">?</a> value_if_true <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Conditional_?_:">:</a> value_if_false;</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/General#Variables">var</a> = <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Function_Literals">function</a> (x) x + x;</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Modules">module</a> name(&hellip;) { &hellip; }<br/>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Modules">module</a> name(&hellip;) { &hellip; }<br>
         name();</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Functions">function</a> name(&hellip;) = &hellip;<br/>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Functions">function</a> name(&hellip;) = &hellip;<br>
         name();</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement">include</a> &lt;&hellip;.scad&gt;</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Include_Statement">use</a> &lt;&hellip;.scad&gt;</code>
@@ -58,8 +58,8 @@
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">n &gt;&gt; m</a></code></dt><dd>Right shift (sign preserving)</dd>
           <dt><code><a href="https://en.wikibooks.org/w/index.php?title=OpenSCAD_User_Manual/Mathematical_Operators#Binary_arithmetic">~ n</a></code></dt><dd>Binary Not</dd>
           <!-- Relational -->
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n < m</a></code></dt><dd>Less Than</dd>
-          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n <= m</a></code></dt><dd>Less or Equal</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n &lt; m</a></code></dt><dd>Less Than</dd>
+          <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n &lt;= m</a></code></dt><dd>Less or Equal</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">b == c</a></code></dt><dd>Equal</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">b != c</a></code></dt><dd>Not Equal</dd>
           <dt><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Operators#Relational_operators">n >= m</a></code></dt><dd>Greater or Equal</dd>
@@ -121,7 +121,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#polygon">polygon</a>([points],[paths])</code>
         <code>
           <a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text">text</a>(text,size,font,direction,language,script,
-          <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halign,valign,spacing,em)
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;halign,valign,spacing,em)
         </code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Importing_Geometry#import">import</a>("&hellip;.<span class="tooltip">ext<span class="tooltiptext">formats: DXF|SVG</span></span>", center, convexity)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Using_the_2D_Subsystem#3D_to_2D_Projection">projection</a>(cut)</code>
@@ -224,7 +224,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#render">render</a>(convexity)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/User-Defined_Functions_and_Modules#Children">children</a>([idx])</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#assert">assert</a>(condition, message)</code>
-        <s><code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Assign_Statement">assign</a> (&hellip;) { &hellip; }</code></s>
+        <code class="deprecated"><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Conditional_and_Iterator_Functions#Assign_Statement">assign</a> (&hellip;) { &hellip; }</code>
       </article>
     </section>
 
@@ -241,7 +241,7 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#OpenSCAD_Version">version</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#OpenSCAD_Version">version_num</a></code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Other_Language_Features#parent_module.28n.29_and_.24parent_modules">parent_module</a>(idx)</code>
-        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text#textmetrics()">textmetrics</a>(text,size,font,<br/>&nbsp;&nbsp;&nbsp;&nbsp;direction,language,script,<br/>&nbsp;&nbsp;&nbsp;&nbsp;halign,valign,spacing,em)</code>
+        <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text#textmetrics()">textmetrics</a>(text,size,font,<br>&nbsp;&nbsp;&nbsp;&nbsp;direction,language,script,<br>&nbsp;&nbsp;&nbsp;&nbsp;halign,valign,spacing,em)</code>
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Text#fontmetrics()">fontmetrics</a>(size, font, em)</code>
       </article>
       <article>
@@ -272,8 +272,8 @@
         <code><a href="https://en.wikibooks.org/wiki/OpenSCAD_User_Manual/Mathematical_Functions#cross">cross</a></code>
       </article>
     </section>
-            
-    <br clear="all"/>
+    
+    <div class="clear"></div>
     
     <section>
       <article class="info">
@@ -290,7 +290,7 @@
   </section>
 
   <footer>
-    <a href="https://github.com/openscad/openscad.github.com/tree/main/cheatsheet" target="_blank">Edit me on GitHub!</a><br/>
+    <a href="https://github.com/openscad/openscad.github.com/tree/main/cheatsheet" target="_blank">Edit me on GitHub!</a><br>
     By Peter Uithoven @ <a href="https://www.fablabamersfoort.nl/" target="_blank">Fablab Amersfoort</a> (<a href="https://freedomdefined.org/Licenses/CC-BY" target="_blank">CC-BY</a>)
   </footer>
 </body>
