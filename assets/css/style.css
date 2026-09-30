@@ -488,6 +488,11 @@ i.fab {
 	background: light-dark(#dbdbcd, #25250a);
 }
 
+#sidebar.sticky {
+    position: sticky;
+    top: 20px;
+}
+
 section ul li::before {
     content: '» ';
 }
