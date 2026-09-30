@@ -55,26 +55,25 @@ input, select {vertical-align: middle;}
 
 pre {
 	display: block;
-	padding: 9.5px;
+	padding: 9px;
 	margin: 0 0 10px;
 	font-size: 13px;
 	line-height: 20px;
 	word-break: break-all;
-	word-wrap: break-word;
+	overflow-wrap: break-word;
 	white-space: pre-line;
 	background-color: light-dark(#f5f5f5, #151515);
 	border: 1px solid light-dark(#ccc, #222);
-	border: 1px solid rgba(0, 0, 0, 0.15);
 	border-radius: 4px;
 }
 
-input[type="radio"] {vertical-align: text-bottom;}
-input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+input[type='radio'] {vertical-align: text-bottom;}
+input[type='checkbox'] {vertical-align: bottom;}
 
 select, input, textarea {font: 99% sans-serif;}
 
-table {font-size: inherit; font: 100%;}
- 
+table {font-size: inherit;}
+
 /* Accessible focus treatment
 	people.opera.com/patrickl/experiments/keyboard/test */
 a:hover, a:active {outline: none;}
@@ -83,7 +82,7 @@ small {font-size: 85%;}
 
 strong, th {font-weight: bold;}
 
-td, td img {vertical-align: top;} 
+td, td img {vertical-align: top;}
 
 /* Make sure sup and sub don't screw with your line-heights
 	gist.github.com/413930 */
@@ -96,21 +95,17 @@ pre, code, kbd, samp {font-family: monospace, sans-serif;}
 
 /* hand cursor on clickable elements */
 .clickable,
-label, 
-input[type=button], 
-input[type=submit], 
+label,
+input[type=button],
+input[type=submit],
 button {cursor: pointer;}
 
 /* Webkit browsers add a 2px margin outside the chrome of form elements */
 button, input, select, textarea {margin: 0;}
 
-/* make buttons play nice in IE */
-button {width: auto; overflow: visible;}
-
 /* let's clear some floats */
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
 .clearfix:after { clear: both; }  
-.clearfix { zoom: 1; }  
 
 .link-hover span {display:none;}
 .link-hover:hover span {display:inline;}
@@ -145,18 +140,21 @@ header a:hover {text-decoration:underline;}
 
 .newsimg_large {float:left; width:300px; margin:4px 12px 0px 0px;}
 
-.libimg { border: 1px; border-style: solid; margin: 0 0.6em; }
+.libimg {
+	border: 1px solid;
+	margin: 0 0.6em;
+}
 
 #donate {margin-top:10px;}
 #donate h4 {margin-bottom:5px; font-weight:600;}
-	
+
 a:hover img {
 border: none !important;
 opacity:0.8;
 }
 
 #page-content {
-	background:light-dark(#ffffe5,#141400); /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */	 
+	background:light-dark(#ffffe5,#141400); /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */
 	position:relative; padding:20px 20px 0px 20px;
 	box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
 	border-radius:0px 0px 12px 12px;
@@ -194,7 +192,7 @@ section {margin-bottom:20px; background:light-dark(#fff, #1b1b1b); border-radius
 ::selection {background: #000; color: light-dark(#fff, #1b1b1b); text-shadow: none;}
 
 /*	j.mp/webkit-tap-highlight-color */
-a:link {-webkit-tap-highlight-color: #1b2f01;} 
+a:link {-webkit-tap-highlight-color: #1b2f01;}
 
 a {color:light-dark(#1b2f01, #8fa76e); font-weight:600;}
 
@@ -225,7 +223,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover{text-decoration:under
 
 h1 {font-size:18px; line-height:150%; padding-bottom:10px;}
 h2 {font-size:15px; line-height:150%; padding-bottom:5px;}
-h3 {font-size:13px; line-height:150%; padding-bottom:2px}
+h3 {font-size:13px; line-height:150%; padding-bottom:2px;}
 h4 {font-size:12px; line-height:150%; padding-bottom:2px;}
 h5 {font-size:11px; line-height:150%; padding-bottom:2px;}
 
@@ -239,9 +237,9 @@ header h4 {font-size:12px; margin:0px; padding:0px; font-weight:500; line-height
 like the cornfield default scheme from colormap.cc
 Open - #9dcb51;} OPENCSG_FACE_BACK_COLOR - green
 SCAD - #f9d72c;} OPENCSG_FACE_FRONT_COLOR - yellow
- - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above 
+ - for reference #FFFFE5;} BACKGROUND_COLOR - pale yellow/cream, used above
 */
-header h1.title {color:light-dark(#f9d72c, ); letter-spacing:-1px; font-weight:700;}
+header h1.title {color:#f9d72c; letter-spacing:-1px; font-weight:700;}
 header h1 span.green {color:#9dcb51; letter-spacing:0px;}
 
 header h2.subtitle {color:light-dark(black, #eee); letter-spacing:-1px;}
@@ -315,7 +313,7 @@ li{line-height:180%;}
 }
 
 #navigation ul li:last-child {
-	//padding:0px;
+	/*padding:0px;*/
 }
 
 #navigation ul li.current {border-radius:8px; background:light-dark(#f2f2ee, #141405); border:1px solid light-dark(#ddd, #333); padding:3px 9px 4px 9px;}
@@ -333,7 +331,6 @@ li{line-height:180%;}
 #navigation ul li:hover	{
 }
 
-
 #navigation ul li a:hover {
 	position: relative;
 	text-decoration: underline;
@@ -347,7 +344,6 @@ li{line-height:180%;}
 
 #navigation ul li.active a {
 /*	border-bottom: 1px solid #333; */
-
 }
 
 
@@ -406,7 +402,6 @@ span.link:hover {text-decoration:underline;}
 .tutorial-links .current {text-decoration:underline;}
 
 /* Social media icons */
- 
 i.fab {
 	width: 30px;
 	height: 30px;
@@ -482,11 +477,11 @@ i.fab {
 	padding: 2px 10px;
     background: light-dark(#f2f2ee, #141405);
     border: 1px solid light-dark(#ddd, #333);
-	border-radius: 10px;	
+	border-radius: 10px;
 }
 #displayMode ul.pickMode li {
 	padding: 2px;
-	border-radius: 10px;	
+	border-radius: 10px;
 	cursor: pointer;
 }
 #displayMode ul.pickMode li:hover {
