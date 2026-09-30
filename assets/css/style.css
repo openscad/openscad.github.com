@@ -492,3 +492,7 @@ i.fab {
 #displayMode ul.pickMode li:hover {
 	background: light-dark(#dbdbcd, #25250a);
 }
+
+section ul li::before {
+    content: '» ';
+}
