@@ -24,3 +24,23 @@ body {
 .green{color:#518e04;}
 
 .yellow{color:#f9d72c;}
+
+img {
+	padding: 0 1em 0 1em;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #ffffe5;
+}
+
+th, td {
+	border-style: solid;
+	padding: 4px;
+	text-align: left;
+	vertical-align: top;
+}
