@@ -496,3 +496,8 @@ i.fab {
 section ul li::before {
     content: '» ';
 }
+
+:root[data-applied-theme='dark'] img.make-dark-mode {
+	filter: invert(1) hue-rotate(180deg) brightness(2);
+}
+
