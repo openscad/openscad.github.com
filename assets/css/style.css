@@ -153,11 +153,12 @@ border: none !important;
 opacity:0.8;
 }
 
-#page-content {
-	background:light-dark(#ffffe5,#141400); /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */
-	position:relative; padding:20px 20px 0px 20px;
-	box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
-	border-radius:0px 0px 12px 12px;
+main {
+    background: light-dark(#ffffe5, #141400); /* #FFFFE5 BACKGROUND_COLOR - pale yellow/cream from colormap.cc */
+    border-radius: 0px 0px 12px 12px;
+    box-shadow: 1px 1px 12px 2px light-dark(#aaa, #222);
+    padding: 20px 20px 0px 20px;
+    position: relative;
 }
 
 #sidebar{width:220px; padding:10px; float:left; background:light-dark(#fff, #1b1b1b); border-radius:8px; border:1px solid light-dark(#ddd, #444); margin-bottom:20px;}
