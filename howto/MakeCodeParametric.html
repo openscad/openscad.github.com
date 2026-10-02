@@ -9,8 +9,8 @@
 
     <link href="../assets/fonts/open-sans/all.css" rel="stylesheet">
 
-    <script src="../assets/js/d3.js"></script>
-    <script src="../assets/js/d3.layout.cloud.js"></script>
+    <script src="../assets/js/d3/d3.js"></script>
+    <script src="../assets/js/d3/d3.layout.cloud.js"></script>
 </head>
 
 <body>
@@ -76,10 +76,10 @@ translate([0, 0, thin_h + wide_h]) thin_cube();
             <p>Let's setup some reusable functions. First, sum a vector (or a subset of a vector).</p>
 
             <pre>
-function vecsum(v,until= -1) = [ 
+function vecsum(v,until= -1) = [
     for (
-        a=0, b= v[0]; 
-        a < (until > 0 ? until : len(v)); 
+        a=0, b= v[0];
+        a < (until > 0 ? until : len(v));
         a= a+1, b= b + (v[a] == undef ? 0 : v[a])
     ) b
 ];
@@ -142,8 +142,8 @@ z_offset_from_vec([2, 4, 6], 1);
             <pre>
 heights = [ thin_h, wide_h, thin_h ];
 
-module translate_z(v, i) 
-    translate([0, 0, z_offset_from_vec(v, i)]) 
+module translate_z(v, i)
+    translate([0, 0, z_offset_from_vec(v, i)])
         children();
 
 translate_z(heights, 0) thin_cube();
