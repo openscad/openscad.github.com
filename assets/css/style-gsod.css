@@ -11,7 +11,12 @@ body {
 	background:#fff;
 }
 
-#page-wrap {width:1000px; margin:0px auto; border:1px solid #fff; padding:20px;}
+body {
+	width: 1000px;
+	margin: 0px auto;
+	border: 1px solid #fff;
+	padding: 20px;
+}
 
 main {
 	background:#fff;
