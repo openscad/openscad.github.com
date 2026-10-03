@@ -122,7 +122,12 @@ body {
 	background:light-dark(#fff, #111);
 }
 
-#page-wrap {width:1000px; margin:0px auto; border:1px solid light-dark(#fff, #111); padding:20px;}
+body {
+	width: 1000px;
+	margin: 0px auto;
+	border: 1px solid light-dark(#fff, #111);
+	padding: 20px;
+}
 
 header {background:light-dark(#fff, #171717); padding:10px 20px 12px 20px; position:relative;
 box-shadow:         1px 1px 12px 2px light-dark(#aaa, #222);
