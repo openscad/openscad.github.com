@@ -13,40 +13,18 @@
 	<link href="assets/fontawesome/css/fontawesome.min.css" rel="stylesheet">
 	<link href="assets/fonts/open-sans/all.css" rel="stylesheet">
 
-	<script src="assets/js/jquery-1.9.1.min.js"></script>
+	<script src="assets/js/download.js"></script>
 
-	<script>
-	  var fileinfo = {};
-	</script>
-	<script>
-	  function setSnapshotFileInfo(key, name, size, url) {
-	    fileinfo[key + "_NAME"] = name;
-	    fileinfo[key + "_SIZE"] = size;
-	    fileinfo[key + "_URL"] = url;
-	    fileinfo[key + "_ASC_URL"] = url + ".asc";
-	    fileinfo[key + "_SHA256_URL"] = url + ".sha256";
-	    fileinfo[key + "_SHA512_URL"] = url + ".sha512";
-	  }
-	  jQuery(document).ready(function(){
-	    for (var fileid in fileinfo) {
-	      if (fileid.indexOf("_URL") >= 0) {
-	        $("a[id="+fileid+"]").attr('href',fileinfo[fileid]);
-	      } else {
-	        $("#"+fileid).text(fileinfo[fileid]);
-	      }
-	    }
-	  });
-	</script>
 	<script src="inc/releases.js"></script>
-	<script type="text/javascript" src="https://files.openscad.org/rc/.rc.js" onload="jQuery(function(){ jQuery('#rc').show(); jQuery('#nav-rc').show(); });"></script>
+	<script type="text/javascript" src="https://files.openscad.org/rc/.rc.js" onload="showReleaseCandidate();"></script>
 	<script type="text/javascript" src="https://files.openscad.org/snapshots/.snapshots.js"></script>
 </head>
 <body>
 
 <noscript>
 	<div style="text-align: center; background-color: #ffe8e8">
-	<p>Your browser has javascript disabled -- file links will go to a folder on <a href="https://files.openscad.org.">files.openscad.org</a></p>
-	<p>Please find your desired file inside the folder.</p>
+		<p>Your browser has JavaScript disabled -- file links will go to a folder on <a href="https://files.openscad.org.">files.openscad.org</a></p>
+		<p>Please find your desired file inside the folder.</p>
 	</div>
 </noscript>
 
