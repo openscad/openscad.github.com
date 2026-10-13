@@ -1,9 +1,9 @@
 setSnapshotFileInfo('MAC_RELEASE', 'OpenSCAD 2021.01', '27 MB', 'https://files.openscad.org/OpenSCAD-2021.01.dmg');
 
-setSnapshotFileInfo('WIN32_RELEASE_INSTALLER', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe');
-setSnapshotFileInfo('WIN32_RELEASE_ZIP', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-32.zip');
-setSnapshotFileInfo('WIN64_RELEASE_INSTALLER', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-64-Installer.exe');
-setSnapshotFileInfo('WIN64_RELEASE_ZIP', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-64.zip');
+setSnapshotFileInfo('WIN32_INSTALLER_RELEASE', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-32-Installer.exe');
+setSnapshotFileInfo('WIN32_ZIP_RELEASE', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-32.zip');
+setSnapshotFileInfo('WIN64_INSTALLER_RELEASE', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-64-Installer.exe');
+setSnapshotFileInfo('WIN64_ZIP_RELEASE', 'OpenSCAD 2021.01', '21 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86-64.zip');
 
 setSnapshotFileInfo('LIN32_RELEASE', 'OpenSCAD 2021.01', 'N/A', 'N/A');
 setSnapshotFileInfo('LIN64_RELEASE', 'OpenSCAD 2021.01', '39 MB', 'https://files.openscad.org/OpenSCAD-2021.01-x86_64.AppImage');
