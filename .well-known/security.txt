@@ -1,0 +1,5 @@
+Contact: mailto:security@openscad.org
+Preferred-Languages: en
+Canonical: https://openscad.org/.well-known/security.txt
+Policy: https://github.com/openscad/openscad/blob/master/SECURITY.md
+Expires: 2028-02-01T00:00:00.000Z
