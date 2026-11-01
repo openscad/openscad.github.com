@@ -33,6 +33,8 @@ const showReleaseCandidate = () => {
     const show = () => {
         document.querySelector('#rc')?.style.removeProperty('display');
         document.querySelector('#nav-rc')?.style.removeProperty('display');
+        document.querySelector('#head-rc')?.style.removeProperty('display');
+        document.querySelector('#head-snapshots')?.style.setProperty('display', 'none');
         updateDownloadLinks();
     };
     if (document.readyState === "loading") {
