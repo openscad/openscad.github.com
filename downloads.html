@@ -299,7 +299,7 @@
       <h1>Release Candidates</h1>
       <p>Release Candidates are builds that contain all features that will be included in the next release and are intended
         to reach a wider audience for testing before the final release.
-      <p>
+      </p>
       <p>The Binaries are signed with <a href="#gnupg">GnuPG</a></p>
       <ul>
         <li>OpenSCAD &lt;dev@openscad.org&gt;</li>
@@ -320,26 +320,7 @@
       </div>
       <div id="rc-windows" class="subsection">
         <h2>Windows</h2>
-        <div class="left, download-button">
-          <a id="WIN32_INSTALLER_RC_URL" href="https://files.openscad.org">
-            <h3 id="WIN32_INSTALLER_RC_NAME">OpenSCAD</h3>
-          </a>
-          <small>x86 (32-bit) - exe installer - </small><small id="WIN32_INSTALLER_RC_SIZE">?? MB</small><br>
-          <small><a id="WIN32_INSTALLER_RC_ASC_URL" href="">asc</a></small> -
-          <small><a id="WIN32_INSTALLER_RC_SHA256_URL" href="">sha256</a></small> -
-          <small><a id="WIN32_INSTALLER_RC_SHA512_URL" href="">sha512</a></small>
-        </div>
         <div class="download-button">
-          <a id="WIN32_ZIP_RC_URL" href="https://files.openscad.org">
-            <h3 id="WIN32_ZIP_RC_NAME">OpenSCAD</h3>
-          </a>
-          <small>x86 (32-bit) - zip package - </small><small id="WIN32_ZIP_RC_SIZE">?? MB</small><br>
-          <small><a id="WIN32_ZIP_RC_ASC_URL" href="">asc</a></small> -
-          <small><a id="WIN32_ZIP_RC_SHA256_URL" href="">sha256</a></small> -
-          <small><a id="WIN32_ZIP_RC_SHA512_URL" href="">sha512</a></small>
-        </div>
-        <br>
-        <div class="left, download-button">
           <a id="WIN64_INSTALLER_RC_URL" href="https://files.openscad.org">
             <h3 id="WIN64_INSTALLER_RC_NAME">OpenSCAD</h3>
           </a>
@@ -360,7 +341,7 @@
       </div>
       <div id="rc-linux" class="subsection">
         <h2>Linux - AppImage</h2>
-        <div class="left, download-button">
+        <div class="download-button">
           <a id="LIN64_RC_URL" href="https://files.openscad.org">
             <h3 id="LIN64_RC_NAME">OpenSCAD</h3>
           </a>
@@ -369,7 +350,7 @@
           <small><a id="LIN64_RC_SHA256_URL" href="">sha256</a></small> -
           <small><a id="LIN64_RC_SHA512_URL" href="">sha512</a></small>
         </div>
-        <div class="download-button">
+        <div class="download-button" style="display:none">
           <a id="LIN_AARCH64_RC_URL" href="https://files.openscad.org">
             <h3 id="LIN_AARCH64_RC_NAME">OpenSCAD</h3>
           </a>
@@ -381,34 +362,32 @@
       </div>
       <div id="rc-wasm" class="subsection">
         <h2 class="link-hover">WebAssembly<span> <a class="section-link" href="#rc-wasm">§</a></span></h2>
-        <div class="row">
-          <div class="card">
-            <a id="WASM_WEB_RC_URL" href="https://files.openscad.org">
-              <h3 id="WASM_WEB_RC_NAME">OpenSCAD</h3>
-            </a>
-            <small>WebAssembly - WEB package - </small><small id="WASM_WEB_RC_SIZE">?? MB</small><br />
-            <small><a id="WASM_WEB_RC_ASC_URL" href="">asc</a></small> -
-            <small><a id="WASM_WEB_RC_SHA256_URL" href="">sha256</a></small> -
-            <small><a id="WASM_WEB_RC_SHA512_URL" href="">sha512</a></small>
-          </div>
-          <div class="card">
-            <a id="WASM_NODE_RC_URL" href="https://files.openscad.org">
-              <h3 id="WASM_NODE_RC_NAME">OpenSCAD</h3>
-            </a>
-            <small>WebAssembly - NODE package - </small><small id="WASM_NODE_RC_SIZE">?? MB</small><br />
-            <small><a id="WASM_NODE_RC_ASC_URL" href="">asc</a></small> -
-            <small><a id="WASM_NODE_RC_SHA256_URL" href="">sha256</a></small> -
-            <small><a id="WASM_NODE_RC_SHA512_URL" href="">sha512</a></small>
-          </div>
-          <div class="card">
-            <a id="WASM_NODE_MODULE_RC_URL" href="https://files.openscad.org">
-              <h3 id="WASM_NODE_MODULE_RC_NAME">OpenSCAD</h3>
-            </a>
-            <small>WebAssembly - Node.js Library Module - </small><small id="WASM_NODE_MODULE_RC_SIZE">?? MB</small><br />
-            <small><a id="WASM_NODE_MODULE_RC_ASC_URL" href="">asc</a></small> -
-            <small><a id="WASM_NODE_MODULE_RC_SHA256_URL" href="">sha256</a></small> -
-            <small><a id="WASM_NODE_MODULE_RC_SHA512_URL" href="">sha512</a></small>
-          </div>
+        <div class="download-button">
+          <a id="WASM_WEB_RC_URL" href="https://files.openscad.org">
+            <h3 id="WASM_WEB_RC_NAME">OpenSCAD</h3>
+          </a>
+          <small>WebAssembly - WEB package - </small><small id="WASM_WEB_RC_SIZE">?? MB</small><br>
+          <small><a id="WASM_WEB_RC_ASC_URL" href="">asc</a></small> -
+          <small><a id="WASM_WEB_RC_SHA256_URL" href="">sha256</a></small> -
+          <small><a id="WASM_WEB_RC_SHA512_URL" href="">sha512</a></small>
+        </div>
+        <div class="download-button">
+          <a id="WASM_NODE_RC_URL" href="https://files.openscad.org">
+            <h3 id="WASM_NODE_RC_NAME">OpenSCAD</h3>
+          </a>
+          <small>WebAssembly - NODE package - </small><small id="WASM_NODE_RC_SIZE">?? MB</small><br>
+          <small><a id="WASM_NODE_RC_ASC_URL" href="">asc</a></small> -
+          <small><a id="WASM_NODE_RC_SHA256_URL" href="">sha256</a></small> -
+          <small><a id="WASM_NODE_RC_SHA512_URL" href="">sha512</a></small>
+        </div>
+        <div class="download-button">
+          <a id="WASM_NODE_MODULE_RC_URL" href="https://files.openscad.org">
+            <h3 id="WASM_NODE_MODULE_RC_NAME">OpenSCAD</h3>
+          </a>
+          <small>WebAssembly - Node.js Library Module - </small><small id="WASM_NODE_MODULE_RC_SIZE">?? MB</small><br>
+          <small><a id="WASM_NODE_MODULE_RC_ASC_URL" href="">asc</a></small> -
+          <small><a id="WASM_NODE_MODULE_RC_SHA256_URL" href="">sha256</a></small> -
+          <small><a id="WASM_NODE_MODULE_RC_SHA512_URL" href="">sha512</a></small>
         </div>
       </div>
       <div id="rc-source" class="subsection">
